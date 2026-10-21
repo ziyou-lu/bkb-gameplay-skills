@@ -906,3 +906,13 @@ https://www.instagram.com/p/DYOpA7zDmEU/
 - 限制：没有核验碰撞、伤害、射程、预警时机或其他玩法规则改变；不能把旧画面未见主体扩写为旧系统完全没有发射实体。没有算法、socket/挂点实现、数值或代码证据，音频未核听。先修可见来源再考虑追加特效是本库迁移提炼，不是作者的量化收益或固定制作流程。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+
+## DdsDp8YRW_y · BABELBEAM 升级装置的机械、蓄能与能量柱分层
+
+https://www.instagram.com/p/DdsDp8YRW_y/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：Babelled 的 BABELBEAM 制作展示中，编辑器可见三层机械环盘分开，以及顶端小金球和青亮蓄能球。同位置长圆柱从无发光灰色形体（字幕 GROW OR SHRINK）变为青白高亮能量柱（AND YOU'RE DONE），构成局部明确对照。最终实机可见白蓝电弧及控制面板 UPGRADING COMPLETE；正文说明启动升级会向天空释放能量激光。另见电弧路径点和偏移箭头图，但未核完整算法。
+- 限制：不是全流程旧版/新版 A/B，也不是各层独立贡献测试；未完整核实机械环、蓄能球、光柱与电弧的实际播放顺序、持续时间或触发条件。没有伸缩幅度、时序、shader、随机/偏移算法、性能或代码执行证据，音频未核听。完成文字是画面信息，不证明升级结算、素材消耗或中断恢复逻辑。视觉光柱不证明攻击伤害或碰撞功能。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)

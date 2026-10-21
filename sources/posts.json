@@ -1743,6 +1743,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DdsDp8YRW_y",
+      "url": "https://www.instagram.com/p/DdsDp8YRW_y/",
+      "creator": "neonpolygonsdev",
+      "title": "BABELBEAM 升级装置的机械、蓄能与能量柱分层",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "Babelled 的 BABELBEAM 制作展示中，编辑器可见三层机械环盘分开，以及顶端小金球和青亮蓄能球。同位置长圆柱从无发光灰色形体（字幕 GROW OR SHRINK）变为青白高亮能量柱（AND YOU'RE DONE），构成局部明确对照。最终实机可见白蓝电弧及控制面板 UPGRADING COMPLETE；正文说明启动升级会向天空释放能量激光。另见电弧路径点和偏移箭头图，但未核完整算法。",
+      "limitations": "不是全流程旧版/新版 A/B，也不是各层独立贡献测试；未完整核实机械环、蓄能球、光柱与电弧的实际播放顺序、持续时间或触发条件。没有伸缩幅度、时序、shader、随机/偏移算法、性能或代码执行证据，音频未核听。完成文字是画面信息，不证明升级结算、素材消耗或中断恢复逻辑。视觉光柱不证明攻击伤害或碰撞功能。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-breakables-loot"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
