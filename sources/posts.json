@@ -1352,6 +1352,25 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DcXJwumOuBK",
+      "url": "https://www.instagram.com/p/DcXJwumOuBK/",
+      "creator": "roadside_games",
+      "title": "弹球碰撞的粒子、缩放、镜头与文字反馈展示",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "GameDev Adding Juice To Collisions 展示青色球与红色碰撞体的同场景测试。No Juice 为普通反弹；Particles 标签对应碰撞后白色碎粒；Tween Scale 标签可读；Camera Shake 标签段可见棋盘格背景位移；Word Effects 段在撞击处出现 POW 并淡出；Audio 标签可读。",
+      "limitations": "Tween Scale 的具体缩放对象、形变方式和幅度未捕清，不能推断球或碰撞体如何压缩拉伸。镜头具体方向、幅度和衰减未知；完整层间顺序及是否累加没有全部核实，不按上述观察列表复刻有序教程。Audio 仅为标签，音频未核听；代码和参数未验证，也不能仅从视觉推断物理参数保持不变。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-impact-visuals",
+        "gameplay-motion-deformation",
+        "gameplay-camera-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

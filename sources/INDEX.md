@@ -692,3 +692,13 @@ https://www.instagram.com/p/DdXfzEbJnsN/
 - 限制：完整运动轨迹、精确时长、单层开关对比和音频未核实，不补参数，也不宣称每一层独立改善了体验。素材消耗、成功判定、取消/失败分支及合成配方未由代码验证；对业务事件和结果确认的约束是本库迁移建议。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+
+## DcXJwumOuBK · 弹球碰撞的粒子、缩放、镜头与文字反馈展示
+
+https://www.instagram.com/p/DcXJwumOuBK/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：GameDev Adding Juice To Collisions 展示青色球与红色碰撞体的同场景测试。No Juice 为普通反弹；Particles 标签对应碰撞后白色碎粒；Tween Scale 标签可读；Camera Shake 标签段可见棋盘格背景位移；Word Effects 段在撞击处出现 POW 并淡出；Audio 标签可读。
+- 限制：Tween Scale 的具体缩放对象、形变方式和幅度未捕清，不能推断球或碰撞体如何压缩拉伸。镜头具体方向、幅度和衰减未知；完整层间顺序及是否累加没有全部核实，不按上述观察列表复刻有序教程。Audio 仅为标签，音频未核听；代码和参数未验证，也不能仅从视觉推断物理参数保持不变。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)

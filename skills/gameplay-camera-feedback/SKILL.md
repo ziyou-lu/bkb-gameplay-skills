@@ -1,6 +1,6 @@
 ---
 name: gameplay-camera-feedback
-description: "用方向性震动、镜头冲击或短促推近强调射击、落地和重击；先保证操作可读性，不把更大震动等同更好。"
+description: "用方向性震动、镜头冲击或短促推近强调射击、弹球碰撞、落地和重击；先保证操作可读性，不把更大震动等同更好。"
 ---
 
 # 镜头冲击与短促聚焦
@@ -28,13 +28,14 @@ description: "用方向性震动、镜头冲击或短促推近强调射击、落
 ## 适用限制
 
 - DVGe1E9iDdi 是后坐强度对照，DYfFEpzIa-H 是爆炸加震动对照，均没有通用最佳数值。
+- DcXJwumOuBK 的弹球案例在 Camera Shake 标签下可见棋盘背景位移；没有验证震动算法、方向、幅度或衰减，不将背景位移解释成实际球速或反弹规则改变。
 - 可复用 shake 脚本是作者声称，不代表已取得或验证脚本；该爆炸帖声音仍属未来计划。
 
 ## 验收
 
 - [ ] 事件结束镜头回到原基准，不累积漂移。
 - [ ] 连续命中不会让镜头无限放大，减少运动设置有效。
-- [ ] 准星、危险边界、落点和下一步路径仍可读；记录对照结论而非仅评价更炫。
+- [ ] 准星、危险边界、落点和下一步路径仍可读；弹球场景尤其检查连续碰撞后的球位、下一接触面和运动方向。记录对照结论而非仅评价更炫。
 
 ## 组合而不复制
 
@@ -55,3 +56,4 @@ description: "用方向性震动、镜头冲击或短促推近强调射击、落
 - [DecdQ9ltnjf](https://www.instagram.com/p/DecdQ9ltnjf/)：剑击五层。
 - [DVGe1E9iDdi](https://www.instagram.com/p/DVGe1E9iDdi/)：炮塔后坐强度 A/B/C。
 - [Deo9lu7tzCT](https://www.instagram.com/p/Deo9lu7tzCT/)：宝箱七步反馈。
+- [DcXJwumOuBK](https://www.instagram.com/p/DcXJwumOuBK/)：弹球碰撞的 Camera Shake 标签与棋盘格背景位移；具体镜头参数未知。

@@ -27,12 +27,13 @@ description: "在受击、落地、弹跳、后坐或角色运动中增加 squas
 
 ## 适用限制
 
+- DcXJwumOuBK 的弹球碰撞只确认 Tween Scale 标签，具体缩放对象、形变方式和幅度未清楚捕获；不能把标签当成已核验的球体 squash/stretch 做法，仍需先明确视觉节点和碰撞体关系。
 - 五点链、递减圆形是该头发案例方案，不是通用骨骼架构。
 - 踩头中“更高反弹”可能是玩法变化；仅做视觉优化时不能未经说明改跳高。
 
 ## 验收
 
-- [ ] 形变开关 A/B 下碰撞和操作目标保持一致，任何预期玩法变化单列。
+- [ ] 形变开关 A/B 下碰撞和操作目标保持一致，任何预期玩法变化单列；弹球等物理场景使用相同初始条件比较接触位置和反弹轨迹，不能只比较外观。
 - [ ] 转身、连续落地、传送、打断后无反向翻折和残留缩放。
 - [ ] 强度与速度/高度的映射有上限，小事件不会像终结技。
 
@@ -56,3 +57,4 @@ description: "在受击、落地、弹跳、后坐或角色运动中增加 squas
 - [DeXJvO9kg94](https://www.instagram.com/reel/DeXJvO9kg94/)：法力宝石 UI。
 - [DerYowOhdHs](https://www.instagram.com/p/DerYowOhdHs/)：NeonBlade 动作调整。
 - [DcCF3ZmBNl2](https://www.instagram.com/p/DcCF3ZmBNl2/)：3D 击打灰盒增强。
+- [DcXJwumOuBK](https://www.instagram.com/p/DcXJwumOuBK/)：弹球碰撞展示含 Tween Scale 标签；对象、具体形变和参数未核清，仅作有限证据。
