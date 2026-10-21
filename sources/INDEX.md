@@ -814,3 +814,13 @@ https://www.instagram.com/p/DcCFXGItxdJ/
 - 限制：修改物理包及弹性近似是作者说明，未见代码、具体 API、穿入量或参数，也没有独立量化验证；不认定为完整软体仿真或已验证的稳定物理解法。视觉凹陷与接触响应不是同一层，不从画面推断实际碰撞体更新方式。不能将局部演示泛化成应放宽全局碰撞容差；音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## DWsXLFEDVVf · 车辆转向从全局输入减速改为可关闭的辅助
+
+https://www.instagram.com/p/DWsXLFEDVVf/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：作者展示手柄直接转向输入难以细控且车辆突然转向，再以放慢转向输入补救，字幕称这样让操作显得延迟。随后以车轮趋向行进方向的现象作灵感，说明把 self-steer 与控制器输入叠加；手柄与游戏同屏展示驾驶/漂移，字幕称减少突兀转向并帮助维持漂移控制。正文说明可关闭辅助回到 direct input，WASD/方向键输入也可受益。
+- 限制：转向原理、改进效果与键盘受益属于作者说明和演示，未独立测量输入延迟、控制误差或漂移成绩。没有混合公式、增益、角度限制或代码，不称零延迟、自动驾驶或普遍汽车物理定律。状态相关辅助与一味放慢输入的取舍是本库提炼，不证明所有车辆都应加入此辅助；音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)

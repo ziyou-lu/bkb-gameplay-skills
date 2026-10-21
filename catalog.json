@@ -251,7 +251,8 @@
         "dash-composition",
         "landing-composition",
         "directional-animation",
-        "coyote-time"
+        "coyote-time",
+        "steering-assistance"
       ],
       "source_ids": [
         "DehPnhjxUvB",
@@ -261,7 +262,8 @@
         "Ddb6gDmzmAE",
         "DerYowOhdHs",
         "DX6_8HIo_GT",
-        "DeaF1wMgtg1"
+        "DeaF1wMgtg1",
+        "DWsXLFEDVVf"
       ],
       "related_skills": [
         "gameplay-motion-deformation",

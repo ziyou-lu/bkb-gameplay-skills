@@ -1576,6 +1576,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DWsXLFEDVVf",
+      "url": "https://www.instagram.com/p/DWsXLFEDVVf/",
+      "creator": "osoi.dev",
+      "title": "车辆转向从全局输入减速改为可关闭的辅助",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "作者展示手柄直接转向输入难以细控且车辆突然转向，再以放慢转向输入补救，字幕称这样让操作显得延迟。随后以车轮趋向行进方向的现象作灵感，说明把 self-steer 与控制器输入叠加；手柄与游戏同屏展示驾驶/漂移，字幕称减少突兀转向并帮助维持漂移控制。正文说明可关闭辅助回到 direct input，WASD/方向键输入也可受益。",
+      "limitations": "转向原理、改进效果与键盘受益属于作者说明和演示，未独立测量输入延迟、控制误差或漂移成绩。没有混合公式、增益、角度限制或代码，不称零延迟、自动驾驶或普遍汽车物理定律。状态相关辅助与一味放慢输入的取舍是本库提炼，不证明所有车辆都应加入此辅助；音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-movement-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
