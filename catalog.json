@@ -76,7 +76,8 @@
         "punch-in",
         "speed-fov",
         "radial-speed-blur",
-        "screen-speed-lines"
+        "screen-speed-lines",
+        "completion-camera-handoff"
       ],
       "source_ids": [
         "DYfFEpzIa-H",
@@ -88,7 +89,8 @@
         "DVGe1E9iDdi",
         "Deo9lu7tzCT",
         "DcXJwumOuBK",
-        "DRfuWODEvzF"
+        "DRfuWODEvzF",
+        "DLAeZtVPER7"
       ],
       "related_skills": [
         "gameplay-hitstop",

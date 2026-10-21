@@ -946,3 +946,13 @@ https://www.instagram.com/p/DNv1TB93uxh/
 - 限制：没有旧版视觉 A/B，未核验计数持续时间、速度曲线/easing、计分公式、跳过输入或完成与失败的结算规则；不完整字幕不补齐为规则说明。1520、3498、10000 仅本次画面分数，不是动画参数或通用奖励量。未读或运行代码，音频未核听。显示动画与真实总分分离、跳过仍显示正确终值和防重复奖励是本库实施建议，不是视频已证功能。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+
+## DLAeZtVPER7 · 终点镜头交接与结算文字后的车辆驶离尾声
+
+https://www.instagram.com/p/DLAeZtVPER7/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：towgame_dev 与 korion.interactive 合发。作者字幕称旧版拖车到终点硬停、完成界面立即出现；旧版只据作者说明，未完整核到旧新视觉 A/B。制作段展示独立终点摄像机，编辑器中可见路径和 camera，字幕提到 spline。新版实机从追车视角转到低位终点视角，结算文字出现后汽车继续驶离，在画面中变小。
+- 限制：spline 的具体编辑操作未核清，不补成确定跟随、插值或路径算法。没有镜头切换时长、插值曲线、完成界面延迟、输入可用性、跳过/恢复或真实奖励结算证据；不能把新镜头误称仍允许玩家驾驶，也不能从车辆继续运动推定自动驾驶实现。未读或运行代码，音频未核听。完成事件与尾声独立、重复触发安全及支持的跳过恢复属于本库实施建议。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
