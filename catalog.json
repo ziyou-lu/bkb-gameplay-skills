@@ -101,7 +101,8 @@
         "visual-recoil",
         "secondary-motion",
         "aim-pose-composition",
-        "motion-smear"
+        "motion-smear",
+        "action-phase-timing"
       ],
       "source_ids": [
         "Deuo1C7TfMW",
@@ -117,12 +118,14 @@
         "CW0Su7-sy5-",
         "CW8BHbmsy_r",
         "DP53MiuDIpH",
-        "DP3HI8yjFUS"
+        "DP3HI8yjFUS",
+        "DeuiO0UjRLM"
       ],
       "related_skills": [
         "gameplay-movement-feedback",
         "gameplay-camera-feedback",
-        "gameplay-projectile-spells"
+        "gameplay-projectile-spells",
+        "gameplay-attack-readability"
       ]
     },
     {

@@ -16,7 +16,7 @@
 - [命中停顿与表现节奏](skills/gameplay-hitstop/SKILL.md)：在命中缺少接触感、或发射/翻牌揭示缺少节奏时设计接触 hit-stop 与非接触表现停顿；不把冰冻状态或全局暂停混为一谈。
 - [接触闪光、冲击帧与粒子](skills/gameplay-impact-visuals/SKILL.md)：在接触反馈难辨或常驻特效遮挡角色时编排 flash、impact frame、冲击线、局部粒子和接触文字，必要时删减而非叠加；不凭特效推断伤害范围或 shader 实现。
 - [镜头冲击与短促聚焦](skills/gameplay-camera-feedback/SKILL.md)：用方向性震动、镜头冲击或短促推近强调射击、弹球碰撞、落地和重击；先保证操作可读性，不把更大震动等同更好。
-- [压缩拉伸与次级运动](skills/gameplay-motion-deformation/SKILL.md)：在受击、落地、弹跳、后坐或角色运动/瞄准中增加 squash/stretch、回弹、跟随、分件姿态与快速过渡 smear；以既有运动和判定为基线，不套用于无游戏语境的泛动画。
+- [压缩拉伸与次级运动](skills/gameplay-motion-deformation/SKILL.md)：改善游戏动作的形变、回弹、跟随、瞄准姿态、快速过渡 smear 与相位节奏；区分冗余表演和必要前后摇，以真实运动和判定为基线，不处理泛动画。
 - [攻击预警与反制可读性](skills/gameplay-attack-readability/SKILL.md)：在敌人招式、Boss 区域攻击或危险路径难读时改善姿态、前摇、落点与窗口；将可读性修改与伤害、碰撞、难度修改分开验收。
 - [生命血条与浮动数值](skills/gameplay-health-damage-ui/SKILL.md)：优化生命血条及伤害、治疗、得分浮字的可读性；共享数字动画但区分事件语义，统一平滑、残影条与去拥挤，不另建每个作者版本。
 

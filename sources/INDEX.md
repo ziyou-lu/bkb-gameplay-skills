@@ -793,3 +793,13 @@ https://www.instagram.com/p/DeaF1wMgtg1/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "jump_grace_seconds", "value": 0.1, "unit": "seconds", "provenance": "caption_or_post_text"}]
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+
+## DeuiO0UjRLM · 局部压缩准备段与整段加速的响应取舍
+
+https://www.instagram.com/p/DeuiO0UjRLM/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：视频把挥剑表示为 anticipation、action、follow-through 三阶段，展示 1× 与 2× 整段加速的上下对照，字幕评价加速会损失重量感；随后把蓝色准备段卡片从时间轴移出，保留红色动作与绿色收势。Diablo 3 双手挥砍实机逐帧条由作者标注 1 FRAME，展示从中立姿态进入动作起势；另有 Mario 按 A 后下一帧起跳的示意。作者正文明确排除准备/蓄力本身就是玩法组成的场景。
+- 限制：三阶段各约三分之一是教学图，不是普遍动画比例；1 FRAME 是作者展示标注，未独立测量游戏输入延迟，Mario 也仅是该来源示意。没有命中盒、伤害生效时点、冷却或引擎实现证据，音频未核听。优先检查输入后冗余准备而非整段加速是迁移原则，不能据此要求所有攻击零前摇；保留敌人预警、必要蓄力与真实规则，并单独核对时序变化，属于本库实施建议。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
