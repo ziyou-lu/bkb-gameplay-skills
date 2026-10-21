@@ -886,3 +886,13 @@ https://www.instagram.com/p/DbqZZNQz95x/
 - 限制：没有捕获完整淡出连续过程，不把 fade-out 当作已证步骤；没有时长、曲线、加载与场景切换顺序、输入锁定或恢复条件证据。视觉遮蔽不等于修复出生点问题，也不证明消除了加载停顿。场景真正就绪后解除遮挡、失败退出与输入恢复属于本库实施建议，不是原帖已核机制。未读或运行代码，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DaIdIURzME9 · 瓶子倾倒后的水洼表面适配阶梯地形
+
+https://www.instagram.com/p/DaIdIURzME9/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：游戏中鱼推倒瓶子后的水洼效果以 OLD/NEW 三个 case 对照。Case 3 近侧视确认旧固定平面水片从阶梯向外悬空伸出，新水面按阶梯高低铺开；Case 2 俯视可见旧圆水片伸出窄槽两侧白色边框，新水面沿狭长槽内延展，没有同样的圆形穿边。作者正文称旧固定圆形网格不感知边缘或阻挡，并描述四步实现：从中心用 BFS 生成扩散球；横向射线检查墙并删除与 collider 相交的球；向下射线寻找 floor 并定位球的高度；用 Marching Cubes 转为游戏网格。四步是作者文字说明，不是已核读的代码。
+- 限制：Case 1 未完整核验；Case 2 的边界贴合是视觉证据，不等于代码或所有碰撞情形验证，不把三种 case 都记成已通过。未核验 BFS 停止条件、采样间距/上限、射线配置、碰撞层、网格更新时间或性能；没有代码阅读、运行或定量测试，音频未核听。它支持表面余效与承载地形一致性的方向，不证明真实流体、体积守恒、任意地形稳定性或玩法碰撞随网格改变。不得把作者描述的管线当成所有项目通用最佳实现。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)

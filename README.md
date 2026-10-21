@@ -14,7 +14,7 @@
 ### 共享机制
 
 - [命中停顿与表现节奏](skills/gameplay-hitstop/SKILL.md)：在命中缺少接触感、或发射/翻牌揭示缺少节奏时设计接触 hit-stop 与非接触表现停顿；不把冰冻状态或全局暂停混为一谈。
-- [接触闪光、冲击帧与粒子](skills/gameplay-impact-visuals/SKILL.md)：在接触反馈难辨或常驻特效遮挡角色时编排 flash、impact frame、冲击线、局部粒子和接触文字，必要时删减而非叠加；不凭特效推断伤害范围或 shader 实现。
+- [接触闪光、冲击帧与粒子](skills/gameplay-impact-visuals/SKILL.md)：改善接触闪光、冲击帧、粒子、文字与表面余效的可读性和空间一致性；常驻特效遮挡时优先删减，不凭视觉推断伤害、流体物理或具体渲染实现。
 - [镜头冲击与短促聚焦](skills/gameplay-camera-feedback/SKILL.md)：用方向性震动、短促推近及速度相关视野/屏幕效果强调接触或高速移动；先保证操作可读性与可减弱性，不把更多镜头运动当作更好或实际加速。
 - [压缩拉伸与次级运动](skills/gameplay-motion-deformation/SKILL.md)：改善游戏动作的形变、回弹、跟随、瞄准姿态、快速过渡 smear 与相位节奏；区分视觉形变和物理响应、冗余表演和必要前后摇，不处理泛动画。
 - [攻击预警与反制可读性](skills/gameplay-attack-readability/SKILL.md)：在敌人招式、Boss 区域攻击或危险路径难读时改善姿态、前摇、落点与窗口；将可读性修改与伤害、碰撞、难度修改分开验收。
