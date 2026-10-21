@@ -789,10 +789,11 @@ https://www.instagram.com/p/DeaF1wMgtg1/
 
 - 分类：included；证据：visual_comparison_and_post_text
 - 观察：作者声明是 Celeste 机制的简化重建，并非原游戏实机。STRICT RULES 段标注晚 4 帧按跳，方块落坑；加入 0.1 秒离地宽限后，粉色计时条显示剩余窗口，方块可在边缘外起跳并沿粉色示意轨迹到达对岸，画面另有约 1 格空气的比例说明。正文描述 jumpGraceTimer 在地面维持 0.1 秒、离地后递减，仍有剩余时允许起跳。
-- 限制：视频仍是作者简化重建，不是 Celeste 发行版实机；本次另静态核读固定公开代码快照，不等同运行、完整审计或响应测量。Maddy 的 Celeste & Forgiveness 未独立核验。输入缓冲只见消费调用，未核其实现/时长；半重力条件已获静态代码佐证，但没有独立 A/B 或运行验证。0.1 秒、40 速度阈值及重力倍率均为此快照参数，不是通用默认；晚 4 帧与约 1 格空气仅为视频演示条件/比例。音频未核听；异常状态与所有可达路径未全面审计。
+- 限制：视频仍是作者简化重建，不是 Celeste 发行版实机；本次另静态核读固定公开代码快照，不等同运行、完整审计或响应测量。已独立读取 Maddy 的 Celeste & Forgiveness 第 2 节作为输入缓冲的第一方文字说明，但该文章未给时窗数值；原视频未核验输入缓冲 A/B。代码只见消费调用，未核缓冲实现/时长；半重力条件已获静态代码佐证，但没有独立 A/B 或运行验证。0.1 秒、40 速度阈值及重力倍率均为此快照参数，不是通用默认；晚 4 帧与约 1 格空气仅为视频演示条件/比例。音频未核听；异常状态与所有可达路径未全面审计。
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "jump_grace_seconds", "value": 0.1, "unit": "seconds", "provenance": "visible_code", "source_url": "https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L48", "note": "视频明示值由固定公开代码常量佐证；未运行。"}]
 - 补齐：独立静态核读 [Player.cs 固定快照](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs)：L48、L714–720 确认 0.1 秒常量、接地刷新及离地剩余值按 DeltaTime 递减；L2970–2976 的普通状态分支要求跳跃按下且剩余值 > 0，L1660–1665 的 Jump 清零窗口。L25、L2927–2957：普通状态空中且纵向速度绝对值 < 40，并满足按住跳跃或 AutoJump，重力倍率为 0.5，否则为 1；InSpace 再乘 L2782 的 0.6。L2960–2967 另有可变跳跃速度处理，所以不能由半重力分支单独推导完整轨迹。
+- 补齐：独立读取 [Celeste & Forgiveness](https://www.mattmakesgames.com/articles/celeste_and_forgiveness/index.html) 第 2 节 Jump Buffering：开发者描述落地前短时间按下并保持跳跃，在落地当帧起跳；未提供缓冲时窗数值。第 1/3 节也描述离地宽限/持跳半重力，与此前证据相互佐证，不作为新的独立效果测试。落地前输入缓存与离地后宽限方向不同，不能把已知 0.1 秒宽限值当作输入缓冲参数。
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
 
 ## DeuiO0UjRLM · 局部压缩准备段与整段加速的响应取舍

@@ -31,14 +31,15 @@ description: "优化角色移动表现，并按需评估跳跃容错、车辆转
 8. 转向过于突兀时，先比较直接输入与输入整体减速，不把平滑等同响应改善。DWsXLFEDVVf 改用作者称为 self-steer 的行进方向相关辅助叠加玩家输入，并保留关闭选项。若项目明确需要此类控制变化，单独评估状态相关辅助和全局延迟的取舍，保留直接输入对照；混合方式、强度与角度约束须由项目实现验证，不从展示反推公式，也不以辅助代替玩家转向意图。
 9. 若问题来自移动接触覆盖，先明确玩法需要底部、侧面还是其他方向的接触，再比较表示方案。DWFm4_eDlCm 展示了单线、轮周多线与圆柱三版，后者演示 V 形沟渠中的轮胎侧接触；这不是模型换得更圆而已。用相同轮胎尺度、地形和速度对照所需接触是否被覆盖，同时测稳定性与成本；保留满足需求的较简单方案，不把加线/体积碰撞当作必然升级。复用[视觉形变与物理响应的分离原则](../gameplay-motion-deformation/SKILL.md)，避免把网格损伤、吸震、转向辅助与接触形状的贡献混在一起。
 
-### DeaF1wMgtg1 的原始代码佐证边界
+### DeaF1wMgtg1 的代码与第一方文字佐证边界
 
 - [固定 Player.cs 快照的窗口更新](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L713-L720) 配合 [普通状态跳跃分支](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2969-L2976)：常量为 0.1 秒，接地刷新，离地且窗口仍正时按 DeltaTime 递减；执行到该分支还需跳跃按下，不能省掉输入/状态条件。[Jump](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L1660-L1665) 清零宽限。它不是输入缓冲窗口。
 - [普通状态空中重力段](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2927-L2967) 在纵向速度绝对值小于 40、且按住跳跃或 AutoJump 时用 0.5 倍率，否则为 1；InSpace 再乘 0.6，随后另有可变跳跃处理。只确认这些静态条件，不简写成“顶点必然半重力”，不从单段推导完整轨迹；此项也不是 coyote time 的必需组成。
+- [Celeste & Forgiveness](https://www.mattmakesgames.com/articles/celeste_and_forgiveness/index.html) 第 2 节的开发者文字说明：落地前短时间按下并保持跳跃，可在落地当帧起跳。它补证的是落地前输入缓冲，不是离地后宽限；没有给出缓冲数值，不能套用 0.1 秒。原帖未核输入缓冲 A/B，代码实现与窗口仍未知；是否引入应由项目需求另行决定，文字不能替代代码审计或运行验收。
 
 ## 适用限制
 
-- DeaF1wMgtg1 仍不是 Celeste 发行版实机。固定代码快照已静态核读，未执行、未完整审计或测量响应，引用文章未核验；Input.Jump 的消费调用不证明输入缓冲的实现/时长。0.1 秒与上述重力条件只属该快照，晚 4 帧和约 1 格空气仍是视频示意，不设为通用参数或容错距离。
+- DeaF1wMgtg1 仍不是 Celeste 发行版实机。固定代码快照已静态核读，未执行、未完整审计或测量响应；引用文章现仅补齐开发者的行为说明，Input.Jump 的消费调用不证明输入缓冲的实现/时长。0.1 秒与上述重力条件只属该快照，晚 4 帧和约 1 格空气仍是视频示意，不设为通用参数或容错距离。
 - 离地宽限改变可起跳条件，转向辅助改变输入到车辆运动的映射，均需单列玩法变更与验收，不混入“仅优化特效”。DWsXLFEDVVf 没有给出混合公式、增益或实测延迟；不能称零延迟、普遍提升漂移成绩或真实汽车的通用规律。
 - DWFm4_eDlCm 没有给出采样数量、圆柱 API、悬架/摩擦参数或性能实测；所有版本已有吸震，掉轮只是未来设想。作者称操控略有改善不是量化结果，也不能据此指定 sweep、刚体或其他引擎实现。
 - DerYowOhdHs 引擎标签不一致，不能由帖子决定项目引擎。
@@ -76,6 +77,6 @@ description: "优化角色移动表现，并按需评估跳跃容错、车辆转
 - [Ddb6gDmzmAE](https://www.instagram.com/cheese_eyes_games/reel/Ddb6gDmzmAE/)：四向改八向动画。
 - [DerYowOhdHs](https://www.instagram.com/p/DerYowOhdHs/)：NeonBlade 动作调整。
 - [DX6_8HIo_GT](https://www.instagram.com/p/DX6_8HIo_GT/)：同场景冲刺三种拖尾样式对照，不是逐层累加升级。
-- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：Celeste 离地跳跃宽限的作者简化重建 A/B；关联固定代码已静态佐证宽限和有条件半重力，未运行。详细补证、链接及剩余缺口见来源登记。
+- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：Celeste 离地跳跃宽限的作者简化重建 A/B；关联固定代码已静态佐证宽限和有条件半重力，第一方文章另说明落地前输入缓冲；缓冲实现/时窗未核，未运行。详细补证与缺口见来源登记。
 - [DWsXLFEDVVf](https://www.instagram.com/p/DWsXLFEDVVf/)：直接转向、输入减速与可关闭 self-steer 辅助的取舍演示；公式、强度、角度限制与延迟未核验。
 - [DWFm4_eDlCm](https://www.instagram.com/p/DWFm4_eDlCm/)：轮胎单线、多线和圆柱接触表示的版本迭代；侧接触可见，吸震为既有功能，API/数量/性能与操控量化未核验。
