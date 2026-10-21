@@ -672,3 +672,13 @@ https://www.instagram.com/p/DemTrHmK44j/
 - 限制：ripples 标签已确认，但独立涟漪形态和参数未核清；无具体大小/距离数值，音频未核听。前半新增螃蟹、鱼、矛、鲨鱼与烹饪是功能展示，不应拼成目标可读性优化链。优先检查目标屏幕尺寸/出现位置、再加环境提示是本库提炼；没有代码、玩家研究或难度指标验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DXcMn-gCGaS · 四向攻击到全方向攻击的操作对照
+
+https://www.instagram.com/p/DXcMn-gCGaS/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：旧版字幕 Before: limited to 4 direction attacks；新版字幕 Now you can attack in all directions!，正文也说明 all directions。同一俯视场景可见角色从目标周边不同方位攻击，末尾放大展示攻击石头。
+- 限制：未核实输入设备、鼠标或摇杆映射、任意角度算法、动画混合或碰撞形状，不推断自动瞄准。全方向是作者描述及画面方向变化，不证明连续角度实现。画面原有闪光和伤害数字不证明它们是本次新增层。减少斜向目标的正交对齐操作成本是本库机制分析，不是作者量化结果；音频未核听，代码未执行。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)

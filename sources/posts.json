@@ -1318,6 +1318,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DXcMn-gCGaS",
+      "url": "https://www.instagram.com/p/DXcMn-gCGaS/",
+      "creator": "hollowa.game",
+      "title": "四向攻击到全方向攻击的操作对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "旧版字幕 Before: limited to 4 direction attacks；新版字幕 Now you can attack in all directions!，正文也说明 all directions。同一俯视场景可见角色从目标周边不同方位攻击，末尾放大展示攻击石头。",
+      "limitations": "未核实输入设备、鼠标或摇杆映射、任意角度算法、动画混合或碰撞形状，不推断自动瞄准。全方向是作者描述及画面方向变化，不证明连续角度实现。画面原有闪光和伤害数字不证明它们是本次新增层。减少斜向目标的正交对齐操作成本是本库机制分析，不是作者量化结果；音频未核听，代码未执行。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-melee-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
