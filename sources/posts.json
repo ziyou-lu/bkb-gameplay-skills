@@ -1516,13 +1516,15 @@
       "status": "included",
       "evidence_basis": "visual_comparison_and_post_text",
       "observations": "作者声明是 Celeste 机制的简化重建，并非原游戏实机。STRICT RULES 段标注晚 4 帧按跳，方块落坑；加入 0.1 秒离地宽限后，粉色计时条显示剩余窗口，方块可在边缘外起跳并沿粉色示意轨迹到达对岸，画面另有约 1 格空气的比例说明。正文描述 jumpGraceTimer 在地面维持 0.1 秒、离地后递减，仍有剩余时允许起跳。",
-      "limitations": "作者声称参考 NoelFB/Celeste 的 Player.cs 与 Maddy 的 Celeste & Forgiveness，但本库未独立读取或运行这些原始来源。input buffering 与顶点持跳半重力只有正文提及，没有核验各自 A/B，不扩写成已证机制。0.1 秒是本来源明示示例，不是通用默认；晚 4 帧是该对照迟按示例，约 1 格空气是重建比例，不是普遍可跳距离。音频未核听；窗口消耗/重置和异常状态处理是目标项目的实施事项，未由该展示验证。",
+      "limitations": "视频仍是作者简化重建，不是 Celeste 发行版实机；本次另静态核读固定公开代码快照，不等同运行、完整审计或响应测量。Maddy 的 Celeste & Forgiveness 未独立核验。输入缓冲只见消费调用，未核其实现/时长；半重力条件已获静态代码佐证，但没有独立 A/B 或运行验证。0.1 秒、40 速度阈值及重力倍率均为此快照参数，不是通用默认；晚 4 帧与约 1 格空气仅为视频演示条件/比例。音频未核听；异常状态与所有可达路径未全面审计。",
       "parameters": [
         {
           "name": "jump_grace_seconds",
           "value": 0.1,
           "unit": "seconds",
-          "provenance": "caption_or_post_text"
+          "provenance": "visible_code",
+          "source_url": "https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L48",
+          "note": "视频明示值由固定公开代码常量佐证；未运行。"
         }
       ],
       "skill_ids": [
@@ -1530,7 +1532,16 @@
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
-      "audio_verified": false
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-21",
+          "basis": "static_code_read",
+          "source_url": "https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs",
+          "change": "独立静态核读 [Player.cs 固定快照](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs)：L48、L714–720 确认 0.1 秒常量、接地刷新及离地剩余值按 DeltaTime 递减；L2970–2976 的普通状态分支要求跳跃按下且剩余值 > 0，L1660–1665 的 Jump 清零窗口。L25、L2927–2957：普通状态空中且纵向速度绝对值 < 40，并满足按住跳跃或 AutoJump，重力倍率为 0.5，否则为 1；InSpace 再乘 L2782 的 0.6。L2960–2967 另有可变跳跃速度处理，所以不能由半重力分支单独推导完整轨迹。",
+          "supersedes": "此前“原代码未独立读取”和“半重力只有正文提及”的缺口；不改变视频证据级别，也不声称原代码已运行、输入缓冲已核验或所有状态已审计。"
+        }
+      ]
     },
     {
       "id": "DeuiO0UjRLM",

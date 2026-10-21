@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated_date": "2026-10-21",
   "language": "zh-CN",
-  "evidence_policy": "操作步骤是基于公开视频研究的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码和实测必须区分。",
+  "evidence_policy": "操作步骤是基于公开视频研究与公开代码静态阅读的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码、静态核读和实测必须区分。",
   "skills": [
     {
       "id": "gameplay-hitstop",

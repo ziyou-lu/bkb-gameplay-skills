@@ -25,11 +25,16 @@ description: "优化角色冲刺、落地、转向与装饰跟随，并按需处
 4. 在四向/八向动作选择中保证姿势与真实朝向一致，斜向动画的改善是方向表现，不声称降低控制延迟。
 5. 头发/眼部次级运动引用形变技能，检验走、转、跳、冲刺和停止；真实角色应先响应，装饰随后跟随。
 6. 按需要组合短停顿和白闪，但常规小跳应可轻量或完全不使用，避免每次落地抢镜头。
-7. 只有明确需要改变跳跃容错时，再评估 coyote time：DeaF1wMgtg1 的简化重建对照了严格落地判定与离地后 0.1 秒窗口，正文描述在地面刷新 jumpGraceTimer、离地递减、剩余窗口允许起跳。实施时将 grounded、离地、真实起跳与窗口消耗/重新建立分清，避免一次离地意外提供多次跳跃；暂停、死亡、传送和重生的计时/重置由项目定义。这些边界是迁移建议，不是已运行的 Celeste 源码结论；不要顺带加入来源仅提及的输入缓冲或半重力。
+7. 只有明确需要改变跳跃容错时，再评估 coyote time：DeaF1wMgtg1 是严格判定与 0.1 秒离地窗口的简化重建 A/B；另已静态核读其引用的公开代码，具体条件见下方证据边界。实施时分清 grounded、离地、真实起跳、窗口消耗与重建，避免一次离地意外提供多次跳跃。暂停、死亡、传送和重生的处理由项目定义并验证；不能把局部源码阅读当成所有状态均正确，不顺带加入输入缓冲或改重力。
+
+### DeaF1wMgtg1 的原始代码佐证边界
+
+- [固定 Player.cs 快照的窗口更新](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L713-L720) 配合 [普通状态跳跃分支](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2969-L2976)：常量为 0.1 秒，接地刷新，离地且窗口仍正时按 DeltaTime 递减；执行到该分支还需跳跃按下，不能省掉输入/状态条件。[Jump](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L1660-L1665) 清零宽限。它不是输入缓冲窗口。
+- [普通状态空中重力段](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2927-L2967) 在纵向速度绝对值小于 40、且按住跳跃或 AutoJump 时用 0.5 倍率，否则为 1；InSpace 再乘 0.6，随后另有可变跳跃处理。只确认这些静态条件，不简写成“顶点必然半重力”，不从单段推导完整轨迹；此项也不是 coyote time 的必需组成。
 
 ## 适用限制
 
-- DeaF1wMgtg1 是作者简化重建，不是 Celeste 原实机；其引用的原始代码/文章未独立核验。0.1 秒只作该例参数，晚 4 帧与约 1 格空气也只是演示条件/比例，不换算成通用容错距离。
+- DeaF1wMgtg1 仍不是 Celeste 发行版实机。固定代码快照已静态核读，未执行、未完整审计或测量响应，引用文章未核验；Input.Jump 的消费调用不证明输入缓冲的实现/时长。0.1 秒与上述重力条件只属该快照，晚 4 帧和约 1 格空气仍是视频示意，不设为通用参数或容错距离。
 - 离地宽限改变可起跳条件，可能影响关卡可达性和难度；必须单列玩法变更与验收，不混入“仅优化特效”。
 - DerYowOhdHs 引擎标签不一致，不能由帖子决定项目引擎。
 - 原帖未给冲刺风阻、角度阈值或高度映射；使用项目参数并标注新实现。
@@ -64,4 +69,4 @@ description: "优化角色冲刺、落地、转向与装饰跟随，并按需处
 - [Ddb6gDmzmAE](https://www.instagram.com/cheese_eyes_games/reel/Ddb6gDmzmAE/)：四向改八向动画。
 - [DerYowOhdHs](https://www.instagram.com/p/DerYowOhdHs/)：NeonBlade 动作调整。
 - [DX6_8HIo_GT](https://www.instagram.com/p/DX6_8HIo_GT/)：同场景冲刺三种拖尾样式对照，不是逐层累加升级。
-- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：Celeste 离地跳跃宽限的作者简化重建 A/B；0.1 秒为该例，原代码/文章与额外机制未独立核验。
+- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：Celeste 离地跳跃宽限的作者简化重建 A/B；关联固定代码已静态佐证宽限和有条件半重力，未运行。详细补证、链接及剩余缺口见来源登记。
