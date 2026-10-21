@@ -57,7 +57,8 @@
         "DXNr6m4hSDk",
         "DcXJwumOuBK",
         "DMC2EddsCML",
-        "Ddvr0NYNkNF"
+        "Ddvr0NYNkNF",
+        "DepYLX-vnhw"
       ],
       "related_skills": [
         "gameplay-surface-aftermath",
@@ -1425,7 +1426,8 @@
     {
       "id": "impact-visuals",
       "request_examples": [
-        "冲穿敌人时看不出命中点，请加方向性接触反馈。"
+        "冲穿敌人时看不出命中点，请加方向性接触反馈。",
+        "已有弹壳和血迹，想保留一局的战斗痕迹，怎样定义寿命与实测累积预算而不是默认立刻清除？"
       ],
       "primary_skill": "gameplay-impact-visuals",
       "mechanisms": [
@@ -1436,7 +1438,7 @@
         "impact-word-cue"
       ],
       "evidence_status": "workflow",
-      "boundary": "改善接触闪光、冲击帧、粒子与碰撞文字的可读性；常驻特效遮挡时优先删减，贴地余效的地形生成使用独立工作流。",
+      "boundary": "改善接触闪光、冲击帧、粒子与碰撞文字，并管理既有战斗残留的寿命和遮挡预算；不把发射残留当命中，贴地余效生成与通用渲染实现不在本入口。",
       "distinct_from": [
         "hitstop",
         "camera-feedback",

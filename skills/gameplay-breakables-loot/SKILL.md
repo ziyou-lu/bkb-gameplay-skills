@@ -46,6 +46,8 @@ description: "为可破坏物、敌人死亡和资源采集组织受击到终态
 
 ## 组合而不复制
 
+- 终态后的纯视觉碎片/痕迹若需较长保留，复用[残留寿命与预算](../gameplay-impact-visuals/SKILL.md)；真实产物、拾取和主体终态仍由本页与对应领取流程管理，不能当作同类装饰实例清理。
+
 - 已有物理倒伏但首次触地前姿态/重量感不合目标时，使用[重心与施力诊断](../gameplay-prop-toppling-dynamics/SKILL.md)；只缺倒伏中间态不等于需要新增物理调参。
 
 - 倒伏后突出部穿地使用[突出部接触](../gameplay-prop-appendage-contacts/SKILL.md)；切开后缺面或内外材质错位使用[切割新表面](../gameplay-cut-surface-rendering/SKILL.md)。两者不改变本页的终态/产物职责。

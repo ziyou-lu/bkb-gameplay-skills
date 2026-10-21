@@ -2485,6 +2485,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DepYLX-vnhw",
+      "url": "https://www.instagram.com/p/DepYLX-vnhw/",
+      "creator": "ratcreamgames",
+      "title": "战斗残留的长寿命意图与表示预算声明",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "实见射击角色、枪口闪光、角色脚边小型黄铜/黄色弹壳状物；另一战斗场景地面有局部血迹，暗处与植被遮住部分地面。作者称用 hierarchical instanced static meshes（HISM）让大量弹壳、弹匣/弹夹及碎块以较小性能代价累积并保留整局，以地面记录战斗历史；字幕 The ground tells a story。",
+      "limitations": "画面只支持局部少量残留，单次结果不建立寿命。HISM、数十万规模、低成本和整局保留全为作者声明，未核旧新 A/B、FPS/性能分析、实例配置、源码或整局运行。无动态物理转静态实例交接、对象池、碰撞、网络或重置实现证据，不推所有对象同一表示。作者规模不作预算推荐或容量保证；没有代码执行、性能/可读性测量，音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-impact-visuals"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

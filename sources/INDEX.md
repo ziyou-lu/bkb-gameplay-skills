@@ -1215,3 +1215,13 @@ https://www.instagram.com/p/DY0v7Ssthtb/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "text_length_duration_multiplier", "value": 0.05, "unit": "显示代码的时长乘数 / text.length() 计数单位", "provenance": "visible_code", "note": "来源显示 duration = text.length() * 0.05；不是跨语言逐字时长默认值，未运行计时或核验完整字形计数。"}]
 - 归入：[gameplay-dialogue-presentation](../skills/gameplay-dialogue-presentation/SKILL.md)
+
+## DepYLX-vnhw · 战斗残留的长寿命意图与表示预算声明
+
+https://www.instagram.com/p/DepYLX-vnhw/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：实见射击角色、枪口闪光、角色脚边小型黄铜/黄色弹壳状物；另一战斗场景地面有局部血迹，暗处与植被遮住部分地面。作者称用 hierarchical instanced static meshes（HISM）让大量弹壳、弹匣/弹夹及碎块以较小性能代价累积并保留整局，以地面记录战斗历史；字幕 The ground tells a story。
+- 限制：画面只支持局部少量残留，单次结果不建立寿命。HISM、数十万规模、低成本和整局保留全为作者声明，未核旧新 A/B、FPS/性能分析、实例配置、源码或整局运行。无动态物理转静态实例交接、对象池、碰撞、网络或重置实现证据，不推所有对象同一表示。作者规模不作预算推荐或容量保证；没有代码执行、性能/可读性测量，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
