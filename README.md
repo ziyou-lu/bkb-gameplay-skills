@@ -2,7 +2,7 @@
 
 把游戏玩法与效果优化案例整理成可复用中文技能。按独立工作流维护，不按帖子复制，也不把同一大类下的独立任务强行合并。
 
-当前：**45 个任务入口（44 个内容工作流 + 1 个维护），95 个主来源（92 纳入、3 排除）**。本次是对原 14 个入口的全面重整，不是新增研究来源；详见[迁移说明](docs/MIGRATION.md)。
+当前：**50 个任务入口（49 个内容工作流 + 1 个维护），98 个主来源（95 纳入、3 排除）**。此前原 14 入口已全面重整；本次新增 3 条来源，形成 5 个独立规则工作流，并升级已有共享机制。结构沿革与理由见[迁移说明](docs/MIGRATION.md)。
 
 ## 使用
 
@@ -40,20 +40,25 @@
 - [剑刃轨迹采样与网格拖尾](skills/gameplay-blade-trails/SKILL.md)：当挥剑方向不清或拖尾断裂、串段和残留时，组织剑尖采样、弧形网格、尾端渐隐与纹理遮罩；轨迹只表达动作，不替代攻击判定。
 - [弹反窗口、成功确认与反击反馈](skills/gameplay-parry-feedback/SKILL.md)：当弹反预备、成功和反击机会难以区分时，按真实判定窗口与结果组织反馈；不因特效示例自动新增宽容窗口、击退或反击加伤。
 - [踩踏反弹与连续命中确认](skills/gameplay-stomp-combos/SKILL.md)：为踩头成功、主角反弹和连续踩踏组织反馈，区分接触确认、实际反弹与连击结算；不从拉伸或递增分数推断跳高和经济规则。
-- [连续受击恢复与脱身策略边界](skills/gameplay-hit-recovery/SKILL.md)：当连续受击使角色难以恢复操作时，评估一段时间内受击阈值脱身及其状态提示；受击保护仅保留 Mercy Frames 标题证据，不提供完整无敌窗口实现。
+- [连续受击恢复与脱身策略边界](skills/gameplay-hit-recovery/SKILL.md)：当连续受击使角色难以恢复操作时，评估一段时间内受击阈值脱身及其状态提示；单次受击后的免疫窗口另用独立入口，不将阈值脱身当作无敌。
 - [射击、持续喷射与来源对齐](skills/gameplay-shooting-feedback/SKILL.md)：为重复射击组织枪口光、视觉后坐和弹壳，并核对弹丸或持续喷射与可见发射源对齐；发射不等于命中，视觉连接不证明碰撞正确。
 - [多阶段法术生命周期与形状层级](skills/gameplay-projectile-spells/SKILL.md)：在蓄力、释放、持续运动、接触和消散脱节时组织法术生命周期；用事件和主体形状区分阶段，枪械发射与枪口对齐改用独立射击入口。
 - [Boss 入场、转阶段与终结](skills/gameplay-boss-sequences/SKILL.md)：为 Boss 入场、阶段转换和死亡高潮编排可中断的反馈序列；战斗预警复用共享技能，不凭 Final Hit 标题推断保命机制。
+- [低血量伤害缩放与生存余量](skills/gameplay-low-health-damage-reduction/SKILL.md)：在残血时下一次普通命中立即结束尝试、希望增加有限生存机会时，设计按生命状态缩放伤害的规则与边界测试；不负责固定 1 HP 保命、血条显示或受击无敌窗口。
+- [小于视觉轮廓的受伤区域](skills/gameplay-hurtbox-tolerance/SKILL.md)：当擦过角色边缘的攻击仍造成伤害、项目希望增加空间闪避余量时，设计小于可见形象的受伤区域并验证命中边界；不把受伤区域等同于世界移动碰撞体，也不提供时间无敌。
+- [受击后的短时保护](skills/gameplay-post-hit-protection/SKILL.md)：当密集命中在玩家反应前连续扣血时，设计一次有效受击后的短时伤害免疫、计时边界和状态提示；不负责残血减伤、缩小受伤区域或累计受击次数后的阈值脱身。
 
 ### 移动与车辆控制
 
 - [移动方向动画与姿态一致性](skills/gameplay-movement-feedback/SKILL.md)：当四向/八向移动动画或跑姿与真实运动朝向不一致时校对方向表现；冲刺、落地、跳跃许可和车辆物理使用独立入口，不宣称方向帧增加就降低输入延迟。
 - [冲刺路径与残像反馈](skills/gameplay-dash-feedback/SKILL.md)：当冲刺速度存在但路径、起止或角色轮廓难读时，组合方向形变、残像与速度线并做样式对照；不因幽灵外观新增无敌或改变实际移动规则。
 - [落地事件与强度分级反馈](skills/gameplay-landing-feedback/SKILL.md)：当落地缺少重量或每帧接地重复播反馈时，绑定真实着地边沿并按高度/接触速度分级；不改跳高、接触物理或落地伤害。
-- [离地跳跃宽限](skills/gameplay-jump-forgiveness/SKILL.md)：当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理防止离台，不将输入缓冲的文字佐证包装成完整实现。
+- [离地跳跃宽限](skills/gameplay-jump-forgiveness/SKILL.md)：当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理落地前命令缓冲、顶角纠偏或防止离台。
 - [移动交互的停留与接续](skills/gameplay-traversal-transitions/SKILL.md)：当平台边缘或抓杆交互的停留、释放选择不符合目标移动节奏时，设计防误落或连续接续状态；保留自主控制取舍，不以动画快慢替代规则设计。
 - [车辆转向辅助与直接控制](skills/gameplay-steering-assistance/SKILL.md)：当车辆直接转向突兀、整体平滑输入又迟滞时，评估状态相关 self-steer 辅助及可关闭的直接控制对照；不负责轮胎碰撞或视觉后坐。
 - [移动部件的接触表示](skills/gameplay-locomotion-contacts/SKILL.md)：当轮胎等移动部件漏掉路缘或侧面接触时，比较线采样与体积表示的覆盖、稳定性和成本；区分接触物理、网格外观与转向辅助。
+- [落地前跳跃输入缓冲](skills/gameplay-jump-input-buffer/SKILL.md)：当落地前略早按跳被丢弃时，设计有限期的跳跃命令保留、合法时机执行与一次性消费；不同于离地后延长起跳许可，不声称已有可直接移植的输入实现。
+- [上升碰撞的顶角宽容](skills/gameplay-ceiling-corner-correction/SKILL.md)：当上升角色轻擦顶角便被截断跳跃时，评估受限的横向角落修正及目标位置可达性；不处理输入早晚、缩小受伤区域或允许穿过实体。
 
 ### 数值与资源状态
 
@@ -85,8 +90,9 @@
 ## 证据边界与去重
 
 - [来源清单](sources/INDEX.md) 与 [机器可读登记](sources/posts.json) 保留每条观察、参数出处、署名与缺口。源码/音频核验状态不因迁移升级。
-- 输入缓冲在冻结的 95 来源中只有第一方行为说明，未核实现/时窗，路由标为 evidence_only；不是完整输入缓冲实现技能。Mercy Frames 也只有标题，Boss 屏障材质同样只保留有限证据，不包装成通用 shader 能力。
-- [入库流程](skills/gameplay-skill-ingestion/SKILL.md)：同 ID 的 URL 变体去重；同工作流新证据融合；独立触发、状态或关键失败验收应有独立入口。新作者、参数、颜色不构成拆分理由。
+- 新的简化对照补充早按缓冲、顶角纠偏、低血减伤、小受伤区域与受击后保护。它们提供设计/验收入口，不是已运行实现；旧 Celeste 缓冲来源和旧 Mercy Frames 标题的缺口仍以限定来源的 evidence_only 路由保留，不用新帖参数补旧帖。Boss 屏障材质仍不包装成通用 shader 能力。
+- Ddvr0NYNkNF 的 hitstop 主段 55 ms 与开头 60 ms 标签存在冲突，均保留为未测示例。各来源给出的毫秒、像素、倍率和百分比都不是本库默认参数。
+- [入库流程](skills/gameplay-skill-ingestion/SKILL.md)：同 ID 的 URL 变体去重；同工作流新证据融合；独立触发、状态或关键失败验收应有独立入口。同一大类不等于同一工作流，新作者、参数、颜色也不构成拆分理由。
 - 排除项继续保留：终端工具、泛美术展示和未达证据要求的 Director 概述；不转载视频/音频/代码，不含私人账户或认证信息。
 
 ## 校验与集成
@@ -94,6 +100,6 @@
     python scripts/validate.py
     python -m unittest discover -s tests -v
 
-另用安装环境的 skill-creator quick_validate.py 检查 skills/*。结构校验覆盖 owner、双向来源、路由与已审定 distinct_from 边界；它不自动理解自然语言，不替代实际请求演练或游戏测试。详见[验证记录](docs/VALIDATION.md)。
+另用安装环境的 skill-creator quick_validate.py 检查 skills/*。结构校验覆盖 owner、双向来源、路由与已审定 distinct_from 边界；它不自动理解自然语言，不替代实际请求演练或游戏测试。详见[验证记录](docs/VALIDATION.md)。当前未配置仓库 CI workflow，本地校验通过不等于远端 CI 通过。
 
 维护目标：[GitHub 仓库](https://github.com/ziyou-lu/bkb-gameplay-skills)。[集成说明](docs/INTEGRATION.md)要求保留已有历史、普通提交与非强制更新，分别核对本地提交、发布和远端 SHA。

@@ -20,3 +20,8 @@ SSH 地址：git@github.com:ziyou-lu/bkb-gameplay-skills.git
 ## 证据与检查范围
 
 文件校验不能证明游戏手感、碰撞、性能或无障碍测试已通过。引用视频中的代码没有实际执行；源帖声明、画面观察与新增工程建议必须保持区分。验证范围详见 VALIDATION.md。
+
+
+## 远端 CI 与本地校验
+
+当前仓库没有配置 CI workflow。本地结构、单元测试和格式检查的结果只能称本地验证；发布后另查该提交的 Actions/status，空结果不是 CI 通过。结构重整提交 eef0aca4 的只读远端查询为 Actions runs 0、commit statuses 空；后续提交仍需单独核验，不能沿用该结果。

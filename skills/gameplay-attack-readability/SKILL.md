@@ -36,7 +36,7 @@ description: "在敌人招式、Boss 区域攻击或危险路径难读时改善�
 - [ ] 实测特效边缘与判定一致，提示到生效延迟可记录。
 - [ ] 普通、连续、墙角情境均有预期反制；未改动机制的对照保持同样判定结果。
 
-受围困后的无敌许可或阈值脱身不是预警表现，转到[受击恢复规则](../gameplay-hit-recovery/SKILL.md)；弹反成功/失败的状态闭环转到[弹反反馈](../gameplay-parry-feedback/SKILL.md)。
+受围困后的保护窗口和阈值脱身不是预警表现，分别转到[受击后保护](../gameplay-post-hit-protection/SKILL.md)或[受击阈值脱身](../gameplay-hit-recovery/SKILL.md)；弹反成功/失败的状态闭环转到[弹反反馈](../gameplay-parry-feedback/SKILL.md)。
 
 ## 组合而不复制
 

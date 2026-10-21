@@ -43,6 +43,8 @@ description: "在 HP 变化突兀、损失量难读或低血量提示不清时�
 
 ## 组合而不复制
 
+- [低血量伤害缩放](../gameplay-low-health-damage-reduction/SKILL.md)与[受击后保护](../gameplay-post-hit-protection/SKILL.md)是独立伤害规则，不从血条长度或闪烁推导。
+
 只在需要相应机制时读取，沿用其事件与预算约束：
 
 - [伤害、治疗与得分浮字](../gameplay-floating-numbers/SKILL.md)

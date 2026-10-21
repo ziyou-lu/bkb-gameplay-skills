@@ -25,7 +25,8 @@
         "Depb7BiTAuG",
         "Deuo1C7TfMW",
         "DemZuPozqeb",
-        "Deo9lu7tzCT"
+        "Deo9lu7tzCT",
+        "Ddvr0NYNkNF"
       ],
       "related_skills": [
         "gameplay-impact-visuals",
@@ -55,7 +56,8 @@
         "DcCF3ZmBNl2",
         "DXNr6m4hSDk",
         "DcXJwumOuBK",
-        "DMC2EddsCML"
+        "DMC2EddsCML",
+        "Ddvr0NYNkNF"
       ],
       "related_skills": [
         "gameplay-surface-aftermath",
@@ -83,7 +85,8 @@
         "DecdQ9ltnjf",
         "DVGe1E9iDdi",
         "Deo9lu7tzCT",
-        "DcXJwumOuBK"
+        "DcXJwumOuBK",
+        "Ddvr0NYNkNF"
       ],
       "related_skills": [
         "gameplay-speed-camera",
@@ -112,7 +115,8 @@
         "DeXJvO9kg94",
         "DcCF3ZmBNl2",
         "DcXJwumOuBK",
-        "DP53MiuDIpH"
+        "DP53MiuDIpH",
+        "Ddvr0NYNkNF"
       ],
       "related_skills": [
         "gameplay-secondary-motion",
@@ -150,7 +154,8 @@
         "gameplay-hit-recovery",
         "gameplay-parry-feedback",
         "gameplay-health-damage-ui",
-        "gameplay-boss-sequences"
+        "gameplay-boss-sequences",
+        "gameplay-post-hit-protection"
       ]
     },
     {
@@ -173,7 +178,9 @@
       "related_skills": [
         "gameplay-floating-numbers",
         "gameplay-result-counting",
-        "gameplay-impact-visuals"
+        "gameplay-impact-visuals",
+        "gameplay-low-health-damage-reduction",
+        "gameplay-post-hit-protection"
       ],
       "path": "skills/gameplay-health-damage-ui/SKILL.md"
     },
@@ -204,7 +211,8 @@
         "gameplay-motion-deformation",
         "gameplay-floating-numbers",
         "gameplay-health-damage-ui",
-        "gameplay-attack-readability"
+        "gameplay-attack-readability",
+        "gameplay-post-hit-protection"
       ],
       "path": "skills/gameplay-melee-feedback/SKILL.md"
     },
@@ -252,7 +260,9 @@
         "gameplay-jump-forgiveness",
         "gameplay-traversal-transitions",
         "gameplay-steering-assistance",
-        "gameplay-locomotion-contacts"
+        "gameplay-locomotion-contacts",
+        "gameplay-jump-input-buffer",
+        "gameplay-ceiling-corner-correction"
       ]
     },
     {
@@ -712,12 +722,12 @@
         "surround-escape-threshold"
       ],
       "source_ids": [
-        "DelJO3qusJE",
         "DdAIJqcPzPn"
       ],
       "related_skills": [
         "gameplay-melee-feedback",
-        "gameplay-attack-readability"
+        "gameplay-attack-readability",
+        "gameplay-post-hit-protection"
       ],
       "path": "skills/gameplay-hit-recovery/SKILL.md"
     },
@@ -819,14 +829,17 @@
         "coyote-time"
       ],
       "source_ids": [
-        "DeaF1wMgtg1"
+        "DeaF1wMgtg1",
+        "Dd1oVudtQj8"
       ],
       "path": "skills/gameplay-jump-forgiveness/SKILL.md",
       "title": "离地跳跃宽限",
       "related_skills": [
         "gameplay-traversal-transitions",
         "gameplay-dash-feedback",
-        "gameplay-landing-feedback"
+        "gameplay-landing-feedback",
+        "gameplay-jump-input-buffer",
+        "gameplay-ceiling-corner-correction"
       ]
     },
     {
@@ -935,6 +948,91 @@
         "gameplay-reward-reveal",
         "gameplay-camera-feedback"
       ]
+    },
+    {
+      "id": "gameplay-jump-input-buffer",
+      "title": "落地前跳跃输入缓冲",
+      "category": "recipes",
+      "path": "skills/gameplay-jump-input-buffer/SKILL.md",
+      "mechanisms": [
+        "jump-input-buffer"
+      ],
+      "source_ids": [
+        "DeaF1wMgtg1",
+        "Dd1oVudtQj8"
+      ],
+      "related_skills": [
+        "gameplay-jump-forgiveness",
+        "gameplay-ceiling-corner-correction",
+        "gameplay-landing-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-ceiling-corner-correction",
+      "title": "上升碰撞的顶角宽容",
+      "category": "recipes",
+      "path": "skills/gameplay-ceiling-corner-correction/SKILL.md",
+      "mechanisms": [
+        "ceiling-corner-correction"
+      ],
+      "source_ids": [
+        "Dd1oVudtQj8"
+      ],
+      "related_skills": [
+        "gameplay-jump-forgiveness",
+        "gameplay-jump-input-buffer",
+        "gameplay-motion-deformation"
+      ]
+    },
+    {
+      "id": "gameplay-low-health-damage-reduction",
+      "title": "低血量伤害缩放与生存余量",
+      "category": "shared",
+      "path": "skills/gameplay-low-health-damage-reduction/SKILL.md",
+      "mechanisms": [
+        "low-health-damage-reduction"
+      ],
+      "source_ids": [
+        "Dd34wEnt_Ki"
+      ],
+      "related_skills": [
+        "gameplay-health-damage-ui",
+        "gameplay-post-hit-protection"
+      ]
+    },
+    {
+      "id": "gameplay-hurtbox-tolerance",
+      "title": "小于视觉轮廓的受伤区域",
+      "category": "shared",
+      "path": "skills/gameplay-hurtbox-tolerance/SKILL.md",
+      "mechanisms": [
+        "hurtbox-tolerance"
+      ],
+      "source_ids": [
+        "Dd34wEnt_Ki"
+      ],
+      "related_skills": [
+        "gameplay-post-hit-protection",
+        "gameplay-low-health-damage-reduction"
+      ]
+    },
+    {
+      "id": "gameplay-post-hit-protection",
+      "title": "受击后的短时保护",
+      "category": "shared",
+      "path": "skills/gameplay-post-hit-protection/SKILL.md",
+      "mechanisms": [
+        "post-hit-invulnerability"
+      ],
+      "source_ids": [
+        "DelJO3qusJE",
+        "Dd34wEnt_Ki"
+      ],
+      "related_skills": [
+        "gameplay-hit-recovery",
+        "gameplay-low-health-damage-reduction",
+        "gameplay-hurtbox-tolerance"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -966,7 +1064,18 @@
     "score numbers": "floating-numbers",
     "得分飘字": "floating-numbers",
     "coyote time": "coyote-time",
-    "离地宽限": "coyote-time"
+    "离地宽限": "coyote-time",
+    "jump buffering": "jump-input-buffer",
+    "early jump buffer": "jump-input-buffer",
+    "早按跳跃缓冲": "jump-input-buffer",
+    "corner nudge": "ceiling-corner-correction",
+    "顶角纠偏": "ceiling-corner-correction",
+    "low hp damage": "low-health-damage-reduction",
+    "残血减伤": "low-health-damage-reduction",
+    "hurtbox": "hurtbox-tolerance",
+    "受伤区域": "hurtbox-tolerance",
+    "mercy frames": "post-hit-invulnerability",
+    "受击后保护": "post-hit-invulnerability"
   },
   "task_routes": [
     {
@@ -985,7 +1094,8 @@
       "distinct_from": [
         "impact-visuals",
         "camera-feedback",
-        "speed-camera"
+        "speed-camera",
+        "post-hit-protection"
       ]
     },
     {
@@ -1088,7 +1198,10 @@
         "floating-numbers",
         "result-counting",
         "resource-ui",
-        "cooldown-ui"
+        "cooldown-ui",
+        "low-health-damage-reduction",
+        "hurtbox-tolerance",
+        "post-hit-protection"
       ]
     },
     {
@@ -1306,7 +1419,8 @@
         "motion-deformation",
         "secondary-motion",
         "aim-pose",
-        "contact-response"
+        "contact-response",
+        "jump-input-buffer"
       ]
     },
     {
@@ -1324,7 +1438,8 @@
         "motion-deformation",
         "secondary-motion",
         "aim-pose",
-        "action-timing"
+        "action-timing",
+        "ceiling-corner-correction"
       ]
     },
     {
@@ -1618,14 +1733,16 @@
         "surround-escape-threshold"
       ],
       "evidence_status": "workflow",
-      "boundary": "当连续受击使角色难以恢复操作时，评估一段时间内受击阈值脱身及其状态提示；受击保护仅保留 Mercy Frames 标题证据，不提供完整无敌窗口实现。",
+      "boundary": "当连续受击使角色难以恢复操作时，评估一段时间内受击阈值脱身及其状态提示；单次受击后的免疫窗口另用独立入口，不将阈值脱身当作无敌。",
       "distinct_from": [
         "melee-feedback",
         "blade-trails",
         "parry-feedback",
         "stomp-combos",
         "attack-direction",
-        "attack-readability"
+        "attack-readability",
+        "low-health-damage-reduction",
+        "post-hit-protection"
       ]
     },
     {
@@ -1715,14 +1832,16 @@
         "coyote-time"
       ],
       "evidence_status": "workflow",
-      "boundary": "当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理防止离台，不将输入缓冲的文字佐证包装成完整实现。",
+      "boundary": "当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理落地前命令缓冲、顶角纠偏或防止离台。",
       "distinct_from": [
         "movement-feedback",
         "dash-feedback",
         "landing-feedback",
         "traversal-transitions",
         "steering-assistance",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "jump-input-buffer",
+        "ceiling-corner-correction"
       ]
     },
     {
@@ -1743,7 +1862,9 @@
         "landing-feedback",
         "jump-forgiveness",
         "steering-assistance",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "jump-input-buffer",
+        "ceiling-corner-correction"
       ]
     },
     {
@@ -1783,7 +1904,8 @@
         "landing-feedback",
         "jump-forgiveness",
         "traversal-transitions",
-        "steering-assistance"
+        "steering-assistance",
+        "hurtbox-tolerance"
       ]
     },
     {
@@ -1848,12 +1970,12 @@
     {
       "id": "jump-buffer-evidence",
       "request_examples": [
-        "落地前按住跳跃的输入缓冲，在本批有哪些已核证据和实现缺口？"
+        "DeaF1wMgtg1 关联的 Celeste 文章与源码能证明输入缓冲的时窗和实现吗？"
       ],
-      "primary_skill": "gameplay-jump-forgiveness",
+      "primary_skill": "gameplay-jump-input-buffer",
       "mechanisms": [],
       "evidence_status": "evidence_only",
-      "boundary": "冻结95来源只有第一方行为文字；未核原视频独立AB、缓冲实现或时窗，不提供完整输入缓冲能力。",
+      "boundary": "仅检查旧来源 DeaF1wMgtg1 的 Celeste 第一方文字与实现缺口：该来源没有缓冲数值、已核实现或缓冲 A/B；新来源演示不能反向补证旧源码。",
       "distinct_from": []
     },
     {
@@ -1870,13 +1992,110 @@
     {
       "id": "mercy-frames-evidence",
       "request_examples": [
-        "Mercy Frames 标题能证明无敌时窗、免疫种类和叠加规则吗？"
+        "DelJO3qusJE 的 Mercy Frames 标题能证明具体无敌时窗和代码吗？"
       ],
-      "primary_skill": "gameplay-hit-recovery",
+      "primary_skill": "gameplay-post-hit-protection",
       "mechanisms": [],
       "evidence_status": "evidence_only",
-      "boundary": "只有来源标题，未核具体保护规则或代码；不包装完整无敌窗口实现。",
+      "boundary": "仅检查旧来源 DelJO3qusJE 的 Mercy Frames 标题，不能证明时窗、免疫种类和实现；新来源参数不能补旧帖。",
       "distinct_from": []
+    },
+    {
+      "id": "jump-input-buffer",
+      "request_examples": [
+        "落地前略早按了一次跳，想保留到接地时执行但不能重复跳。",
+        "缓冲和离地宽限一起启用后会意外多跳，如何分开消费？"
+      ],
+      "primary_skill": "gameplay-jump-input-buffer",
+      "mechanisms": [
+        "jump-input-buffer"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当落地前略早按跳被丢弃时，设计有限期的跳跃命令保留、合法时机执行与一次性消费；不同于离地后延长起跳许可，不声称已有可直接移植的输入实现。",
+      "distinct_from": [
+        "jump-forgiveness",
+        "ceiling-corner-correction",
+        "action-timing",
+        "traversal-transitions"
+      ]
+    },
+    {
+      "id": "ceiling-corner-correction",
+      "request_examples": [
+        "跳起只擦到顶棚角就被卡住，想限量侧移绕角但不能穿墙。"
+      ],
+      "primary_skill": "gameplay-ceiling-corner-correction",
+      "mechanisms": [
+        "ceiling-corner-correction"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当上升角色轻擦顶角便被截断跳跃时，评估受限的横向角落修正及目标位置可达性；不处理输入早晚、缩小受伤区域或允许穿过实体。",
+      "distinct_from": [
+        "jump-forgiveness",
+        "jump-input-buffer",
+        "contact-response",
+        "traversal-transitions",
+        "hurtbox-tolerance"
+      ]
+    },
+    {
+      "id": "low-health-damage-reduction",
+      "request_examples": [
+        "残血时下一次普通命中总是直接结束，想按真实血量条件降低伤害。",
+        "残血减伤在跨阈值的一击和治疗后结算不一致。"
+      ],
+      "primary_skill": "gameplay-low-health-damage-reduction",
+      "mechanisms": [
+        "low-health-damage-reduction"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在残血时下一次普通命中立即结束尝试、希望增加有限生存机会时，设计按生命状态缩放伤害的规则与边界测试；不负责固定 1 HP 保命、血条显示或受击无敌窗口。",
+      "distinct_from": [
+        "health-damage-ui",
+        "post-hit-protection",
+        "hurtbox-tolerance",
+        "hit-recovery"
+      ]
+    },
+    {
+      "id": "hurtbox-tolerance",
+      "request_examples": [
+        "弹体擦过角色边缘也扣血，想缩小真正接收伤害的区域。",
+        "缩小受伤区域后贴墙和落地也变了，怎么隔离？"
+      ],
+      "primary_skill": "gameplay-hurtbox-tolerance",
+      "mechanisms": [
+        "hurtbox-tolerance"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当擦过角色边缘的攻击仍造成伤害、项目希望增加空间闪避余量时，设计小于可见形象的受伤区域并验证命中边界；不把受伤区域等同于世界移动碰撞体，也不提供时间无敌。",
+      "distinct_from": [
+        "post-hit-protection",
+        "low-health-damage-reduction",
+        "health-damage-ui",
+        "ceiling-corner-correction",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "post-hit-protection",
+      "request_examples": [
+        "多个攻击连续命中，想在一次有效受击后短暂免疫后续伤害。",
+        "保护到期时还在闪烁，而且同帧伤害会重复扣血。"
+      ],
+      "primary_skill": "gameplay-post-hit-protection",
+      "mechanisms": [
+        "post-hit-invulnerability"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当密集命中在玩家反应前连续扣血时，设计一次有效受击后的短时伤害免疫、计时边界和状态提示；不负责残血减伤、缩小受伤区域或累计受击次数后的阈值脱身。",
+      "distinct_from": [
+        "hit-recovery",
+        "low-health-damage-reduction",
+        "hurtbox-tolerance",
+        "health-damage-ui",
+        "hitstop"
+      ]
     }
   ]
 }

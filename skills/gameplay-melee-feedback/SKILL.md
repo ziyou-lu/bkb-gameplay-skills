@@ -25,7 +25,7 @@ description: "为普通近战命中、受击与暴击组合共享反馈；剑轨
 
 ## 适用限制
 
-- 受击位移、恢复时间和伤害属于既有玩法规则，不能因增加反馈而自行更改。DelJO3qusJE 的 Mercy Frames 由独立恢复入口处理。
+- 受击位移、恢复时间和伤害属于既有玩法规则，不能因增加反馈而自行更改。DelJO3qusJE 的 Mercy Frames 标题证据由[受击后保护入口](../gameplay-post-hit-protection/SKILL.md)保留，不能从受击动画推断实际免疫规则。
 - DejijtPzhYJ 的 hitstop 3–5 帧与 DeqnlBQzbMY 的冲击帧 3 帧属于原帖示例，不是默认值；音效未核听。3D 灰盒案例并非完整有序步骤记录。
 
 ## 验收

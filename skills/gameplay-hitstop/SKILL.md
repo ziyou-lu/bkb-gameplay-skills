@@ -27,6 +27,8 @@ description: "在命中缺少接触感、或发射/翻牌揭示缺少节奏时�
 
 ## 适用限制
 
+- Ddvr0NYNkNF 主 STEP 2/遥测标 55 ms，开头一次画面标 60 ms，两者冲突均保留，不平均或选成权威值。作者文字称接触后暂停物理再击退，但影响范围、精确时序和实际持续时间未核；不能把组合画面当作已测的 55 ms 冻结实现。
+
 - 示例数值只在来源登记，不作为默认值。Ddy_-6wDMkn 中 5%/140 ms 是展示代码，未运行；DXZ35VuEx0e 的 0.07 秒是伪代码。
 - 多人同步、物理与技能时钟的改动需要项目实现验证；视频只证明表现意图。
 
@@ -58,3 +60,5 @@ description: "在命中缺少接触感、或发射/翻牌揭示缺少节奏时�
 - [Deuo1C7TfMW](https://www.instagram.com/p/Deuo1C7TfMW/)：踩头五层与连续奖励。
 - [DemZuPozqeb](https://www.instagram.com/reel/DemZuPozqeb/)：传说卡牌揭示。
 - [Deo9lu7tzCT](https://www.instagram.com/p/Deo9lu7tzCT/)：宝箱七步反馈。
+
+- [Ddvr0NYNkNF](https://www.instagram.com/p/Ddvr0NYNkNF/)：接触暂停展示；55 ms/60 ms 标签不一致，均为未测示例。

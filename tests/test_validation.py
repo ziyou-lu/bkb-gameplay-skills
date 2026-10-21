@@ -186,6 +186,44 @@ class TaskRouteTests(unittest.TestCase):
                 self.assert_issue('Invalid task route distinct_from')
 
 
+class ReviewedToleranceBoundaryTests(unittest.TestCase):
+    """Protect reviewed real-task boundaries, beyond synthetic schema tests."""
+
+    @classmethod
+    def setUpClass(cls):
+        catalog = json.loads((ROOT / 'catalog.json').read_text())
+        cls.routes = {route['id']: route for route in catalog['task_routes']}
+
+    def assert_independent_workflows(self, route_ids):
+        routes = [self.routes[rid] for rid in route_ids]
+        self.assertTrue(all(r['evidence_status'] == 'workflow' for r in routes))
+        self.assertEqual(len({r['primary_skill'] for r in routes}), len(routes))
+        for left in routes:
+            for right in routes:
+                if left is not right:
+                    self.assertIn(right['id'], left['distinct_from'])
+
+    def test_jump_command_eligibility_and_spatial_correction_are_distinct(self):
+        self.assert_independent_workflows(
+            ['jump-input-buffer', 'jump-forgiveness', 'ceiling-corner-correction'])
+
+    def test_damage_amount_space_and_time_are_distinct(self):
+        self.assert_independent_workflows(
+            ['low-health-damage-reduction', 'hurtbox-tolerance', 'post-hit-protection'])
+        for rid in ('low-health-damage-reduction', 'post-hit-protection'):
+            self.assertIn('health-damage-ui', self.routes[rid]['distinct_from'])
+            self.assertIn('hit-recovery', self.routes[rid]['distinct_from'])
+
+    def test_legacy_evidence_routes_remain_limited_under_current_owner(self):
+        for old, current in [('jump-buffer-evidence', 'jump-input-buffer'),
+                             ('mercy-frames-evidence', 'post-hit-protection')]:
+            with self.subTest(old=old):
+                self.assertEqual(self.routes[old]['evidence_status'], 'evidence_only')
+                self.assertEqual(self.routes[old]['mechanisms'], [])
+                self.assertEqual(self.routes[old]['primary_skill'],
+                                 self.routes[current]['primary_skill'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

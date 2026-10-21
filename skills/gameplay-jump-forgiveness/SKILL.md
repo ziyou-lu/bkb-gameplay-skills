@@ -1,6 +1,6 @@
 ---
 name: gameplay-jump-forgiveness
-description: "当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理防止离台，不将输入缓冲的文字佐证包装成完整实现。"
+description: "当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理落地前命令缓冲、顶角纠偏或防止离台。"
 ---
 
 # 离地跳跃宽限
@@ -29,12 +29,11 @@ grounded 的项目定义、离地/真实起跳事件、跳跃输入的按下与�
 
 - [固定 Player.cs 快照的窗口更新](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L713-L720) 配合 [普通状态跳跃分支](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2969-L2976)：常量为 0.1 秒，接地刷新，离地且窗口仍正时按 DeltaTime 递减；执行到该分支还需跳跃按下，不能省掉输入/状态条件。[Jump](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L1660-L1665) 清零宽限。它不是输入缓冲窗口。
 - [普通状态空中重力段](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L2927-L2967) 在纵向速度绝对值小于 40、且按住跳跃或 AutoJump 时用 0.5 倍率，否则为 1；InSpace 再乘 0.6，随后另有可变跳跃处理。只确认这些静态条件，不简写成“顶点必然半重力”，不从单段推导完整轨迹；此项也不是 coyote time 的必需组成。
-- [Celeste & Forgiveness](https://www.mattmakesgames.com/articles/celeste_and_forgiveness/index.html) 第 2 节的开发者文字说明：落地前短时间按下并保持跳跃，可在落地当帧起跳。它补证的是落地前输入缓冲，不是离地后宽限；没有给出缓冲数值，不能套用 0.1 秒。原帖未核输入缓冲 A/B，代码实现与窗口仍未知；是否引入应由项目需求另行决定，文字不能替代代码审计或运行验收。
-
-
-输入缓冲在本库仅有第一方行为文字和缺口说明，不提供完整算法、窗口或已验收能力；请求实现时应先补项目输入生命周期与新的实现验证，不能照搬 coyote 窗口。上述半重力静态条件也不属于本技能的必要步骤。
+- 落地前按键的保留/消费转到[跳跃输入缓冲](../gameplay-jump-input-buffer/SKILL.md)。旧 Celeste 第一方文字与新简化对照分开登记，不能把离地宽限值移作早按窗口。上述半重力静态条件也不属于本技能必要步骤。
 
 ## 适用限制
+
+- Dd1oVudtQj8 的 COYOTE TIME 段可见 ON 到达对岸，OFF 角色后续未在画面中；上方落坑轨迹没有连续捕获。100 ms / 0.10 s 与约 6 帧是作者标签，帧率换算有条件。SAME INPUTS 没有独立日志验证，幽灵桥是解释图形，不证明地形真的延伸。
 
 - DeaF1wMgtg1 是作者对 Celeste 的简化重建，不是发行版实机；晚 4 帧、约 1 格空气是示意条件/比例，不是通用容错距离。
 - 固定源码仅局部静态核读，未执行、未完整审计或测量响应；正常状态路径的条件不能推广到所有状态。Input.Jump 的消费调用不证明输入缓冲的实现或时长。
@@ -49,6 +48,8 @@ grounded 的项目定义、离地/真实起跳事件、跳跃输入的按下与�
 
 ## 组合而不复制
 
+- [落地前输入缓冲](../gameplay-jump-input-buffer/SKILL.md)与[顶角纠偏](../gameplay-ceiling-corner-correction/SKILL.md)分别拥有待执行命令和空间碰撞修正，不是本窗口的别名。
+
 - [落地反馈](../gameplay-landing-feedback/SKILL.md)：只在跳跃规则确定后叠加着地表现。
 - [移动交互状态](../gameplay-traversal-transitions/SKILL.md)：处理离台前停留或抓杆离开的选择，不代替离台后宽限。
 
@@ -56,4 +57,6 @@ grounded 的项目定义、离地/真实起跳事件、跳跃输入的按下与�
 
 完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../sources/posts.json)。来源不证明本文件工程建议已在原帖实现。
 
-- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：严格规则与离地 0.1 秒窗口的简化重建对照；关联固定代码静态条件与第一方文章见上，不代表已运行。
+- [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：严格规则与离地 0.1 秒窗口的简化重建对照；固定代码静态条件见上，第一方早按文章转见输入缓冲入口；不代表已运行。
+
+- [Dd1oVudtQj8](https://www.instagram.com/p/Dd1oVudtQj8/)：COYOTE TIME 的简化 OFF/ON 与示例标签；不是已核同输入实测。

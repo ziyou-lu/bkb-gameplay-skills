@@ -28,6 +28,8 @@ description: "改善接触闪光、冲击帧、粒子与碰撞文字的可读性
 
 ## 适用限制
 
+- Ddvr0NYNkNF 可见目标闪白、接触环/粒子与目标运动，80 ms 闪白仅作者标签；停顿、形变等同时出现，不将组合对照当成闪白的独立收益或完整消融。
+
 - 弹球案例展示若干标签层，但完整顺序和是否累加未全部核验；不把它重排成确定的逐层配方，也不据此宣称物理轨迹未改变。
 - DMC2EddsCML 只证明待机毒云的视觉删除，没有毒伤/状态规则删除证据；保留可读轮廓不是一律去掉常驻效果的理由。
 - 教程字幕里的 Sound 不等于实际音效已核听；本技能不把视觉观察变成音频实现证据。
@@ -71,3 +73,5 @@ description: "改善接触闪光、冲击帧、粒子与碰撞文字的可读性
 - [DXNr6m4hSDk](https://www.instagram.com/p/DXNr6m4hSDk/)：Lunar Crypt 冲穿攻击的方向性命中粒子对照；停顿/减速/屏震未证。
 - [DcXJwumOuBK](https://www.instagram.com/p/DcXJwumOuBK/)：非战斗弹球碰撞的白色碎粒和 POW 淡出；层间累加顺序未完整核验。
 - [DMC2EddsCML](https://www.instagram.com/p/DMC2EddsCML/)：待机毒云 OLD/NEW 删减与作者轮廓判断；只证明视觉变化，不证明毒伤机制删除。
+
+- [Ddvr0NYNkNF](https://www.instagram.com/p/Ddvr0NYNkNF/)：组合接触段目标变白和环/粒子；80 ms 未独立测量。

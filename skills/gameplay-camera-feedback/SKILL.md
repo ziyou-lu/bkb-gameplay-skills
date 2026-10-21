@@ -29,6 +29,8 @@ description: "在单次击打、落地、后坐或爆炸缺少重量，或现有
 
 ## 适用限制
 
+- Ddvr0NYNkNF 的 SHAKE = TRAUMA² 是作者演示标签，可作为项目评估非线性强度映射的候选，不是已核算法；trauma 范围、叠加与衰减、具体相机位移均未测。±8% 音高变化只有文字，未核听，不能据此声称相机/音频组合收益。
+
 - DVGe1E9iDdi 是后坐强度对照，DYfFEpzIa-H 是爆炸加震动对照，均没有通用最佳数值。
 - DcXJwumOuBK 的弹球案例在 Camera Shake 标签下可见棋盘背景位移；没有验证震动算法、方向、幅度或衰减，不将背景位移解释成实际球速或反弹规则改变。
 - 爆炸帖的可复用 shake 脚本是作者声称，不代表已取得或验证脚本；声音仍属未来计划。来源中的音效文字和展示代码不等于核听或执行验证。
@@ -61,3 +63,5 @@ description: "在单次击打、落地、后坐或爆炸缺少重量，或现有
 - [DVGe1E9iDdi](https://www.instagram.com/p/DVGe1E9iDdi/)：炮塔后坐强度 A/B/C。
 - [Deo9lu7tzCT](https://www.instagram.com/p/Deo9lu7tzCT/)：宝箱七步反馈。
 - [DcXJwumOuBK](https://www.instagram.com/p/DcXJwumOuBK/)：弹球碰撞的粒子、缩放、镜头与文字反馈展示。
+
+- [Ddvr0NYNkNF](https://www.instagram.com/p/Ddvr0NYNkNF/)：trauma² 镜头标签，算法与位移未核；不把声效文字当已听结果。

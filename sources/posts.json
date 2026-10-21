@@ -431,7 +431,7 @@
         "gameplay-impact-visuals",
         "gameplay-health-damage-ui",
         "gameplay-melee-feedback",
-        "gameplay-hit-recovery"
+        "gameplay-post-hit-protection"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -1526,7 +1526,8 @@
         }
       ],
       "skill_ids": [
-        "gameplay-jump-forgiveness"
+        "gameplay-jump-forgiveness",
+        "gameplay-jump-input-buffer"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1852,6 +1853,151 @@
           "change": "[较早绳形制作帖 DJ9eQbOP30H](https://www.instagram.com/p/DJ9eQbOP30H/) 作为同一交互机制的补证，不单独增加主来源条目：字幕出现 LineRenderer，RopeRenderer 面板可见 SegmentCount、MaxSagAmount、SagDistanceThreshold；调节中绳从直线变为下垂弧形，另有较短第二根绳的字幕和脱钩短绳展示。只确认文字、面板和视觉变化，不证明物理解算、参数公式或主帖未核的回收步骤。"
         }
       ]
+    },
+    {
+      "id": "Dd1oVudtQj8",
+      "url": "https://www.instagram.com/p/Dd1oVudtQj8/",
+      "creator": "vorgraphy",
+      "title": "平台跳跃的离地宽限、早按缓冲与顶角纠偏对照",
+      "observations": "简化 OFF/ON 双面板按独立段演示三种容错。COYOTE TIME 段标 +100ms、0.10s 与约6帧，ON红块到达对岸，OFF块后续未在画面中。INPUT BUFFER 段标早按 IGNORED/SAVED、120ms/0.12s，随后 OFF 灰块留在平台、ON红块再次腾空。CORNER NUDGE 段标12px，放大对照中 OFF 停在悬空块下方，ON位于左侧且高于其下沿。正文分别说明离地后可跳、记住早按及绕过轻擦顶角。",
+      "limitations": "制作型简化演示；SAME INPUTS 是作者声明，未检查输入日志或引擎源码。OFF落坑全程未连续捕获。幽灵桥/缓冲区域是解释图形，不证明真实几何延伸或空间检测器。展示代码样标签不是代码审计；0.10/0.12秒和12px不是独立测量或通用默认，约6帧依赖帧率。未核接地/状态重置、按下与按住差异、消费和过期顺序；顶角碰撞体尺寸、选侧、阈值、目标清空检查、速度与帧序均未知。未运行、未核听。",
+      "parameters": [
+        {
+          "name": "coyote_time",
+          "value": 0.1,
+          "unit": "seconds",
+          "provenance": "caption_or_post_text",
+          "note": "作者示例，与+100ms同义；约6帧仅有条件换算。"
+        },
+        {
+          "name": "jump_buffer",
+          "value": 0.12,
+          "unit": "seconds",
+          "provenance": "caption_or_post_text",
+          "note": "作者早按示例；不能反推Celeste源码窗口。"
+        },
+        {
+          "name": "corner_nudge",
+          "value": 12,
+          "unit": "pixels",
+          "provenance": "caption_or_post_text",
+          "note": "作者展示值；像素与世界尺度、真实位移和碰撞尺寸未知。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-jump-forgiveness",
+        "gameplay-jump-input-buffer",
+        "gameplay-ceiling-corner-correction"
+      ],
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Ddvr0NYNkNF",
+      "url": "https://www.instagram.com/p/Ddvr0NYNkNF/",
+      "creator": "vorgraphy",
+      "title": "表现形变与固定碰撞声明，以及组合冲击反馈",
+      "observations": "上灰盒/下橙色 JUICED(3-LAYER STACK) 简化对照。STEP1 为 DEFORM VISUAL MESH(COLLIDER LOCKED1.0x)，可见角色形变、边框与mesh变化/collider(1.00,1.00)遥测，文字说起跳拉伸、落地压扁。STEP2 主标题与遥测写55ms暂停、80ms白闪，可见目标倾斜/白色、+145 IMPULSE标签；开头一次 HITSTOP FREEZE 标签却写60ms。STEP3 标签 SHAKE=TRAUMA²、PITCH VARIANCE±8%，文字称非线性衰减和随机音高；接触环/粒子/目标运动可见。",
+      "limitations": "同输入/1.0x碰撞体是作者声明和演示遥测，不是输入回放、真实物理形状或引擎源码核验；视觉子节点属于迁移建议。微小形变比例未可靠读出，mesh.scale代码行不完整不可复制成已核实现。55ms与60ms冲突均保留，不判断哪项真实生效；暂停物理再击退仅文字，范围/帧序/持续时间未测。+145单位未知，trauma范围/衰减/相机位移未测，公式仅展示。±8%音高仅文字且音频未听；组合A/B不是单项隔离，未量化手感，未运行。",
+      "parameters": [
+        {
+          "name": "hitstop_main_label",
+          "value": 55,
+          "unit": "milliseconds",
+          "provenance": "caption_or_post_text",
+          "note": "主STEP2/遥测标签；与开头60ms冲突，未测。"
+        },
+        {
+          "name": "hitstop_opening_label",
+          "value": 60,
+          "unit": "milliseconds",
+          "provenance": "caption_or_post_text",
+          "note": "开头一次标签；与主段55ms冲突，未测。"
+        },
+        {
+          "name": "white_flash_label",
+          "value": 80,
+          "unit": "milliseconds",
+          "provenance": "caption_or_post_text",
+          "note": "作者标签，未按帧测量。"
+        },
+        {
+          "name": "pitch_variance_label",
+          "value": "±8",
+          "unit": "percent",
+          "provenance": "caption_or_post_text",
+          "note": "文字声称，未核听。"
+        },
+        {
+          "name": "impulse_label",
+          "value": 145,
+          "unit": "unspecified",
+          "provenance": "caption_or_post_text",
+          "note": "展示标签；单位及物理含义未知，不用于复刻。"
+        },
+        {
+          "name": "shake_mapping_label",
+          "value": "trauma²",
+          "unit": "formula label",
+          "provenance": "caption_or_post_text",
+          "note": "作者展示映射，非已核代码；输入范围与衰减未知。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-motion-deformation",
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback"
+      ],
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Dd34wEnt_Ki",
+      "url": "https://www.instagram.com/p/Dd34wEnt_Ki/",
+      "creator": "vorgraphy",
+      "title": "低血减伤、受伤区域容错与命中后保护的独立对照",
+      "observations": "LIE OFF/ON制作型演示，弹丸攻击方块角色。LAST SLIVER 段两边出现25HP后，OFF变0/GONE，ON为17/SURVIVED x1，标签low_hp_damage=x0.33。TINY HITBOX 段标签player_hitbox=38% of sprite，ON中央有小轮廓；OFF掉至50并显-25、ON仍100且弹丸从旁经过。MERCY FRAMES 段标mercy_time=1.0s约60frames，OFF多次-25至0/KO，ON75HP、一条淡化-25、角色透明和余量式环圈，见5F标签。",
+      "limitations": "只核画面与文字，未核真实伤害/碰撞/计时源码、输入日志或完整连续接触过程；作者公平性描述非玩家测试。低血阈值、跨阈值命中、取整、持续/重置与致死例外未知，25→17不能推通用25HP阈值或固定1HP保护。38%具体指宽/高/面积或其他约定不明；未核引擎对象，不把受伤区域等同世界移动碰撞体。1.0s与约60帧是展示值，未测实际时长；环与实际计时对应、受保护命中是否刷新、伤害类别例外未知。各机制独立，不是必须叠加的步骤；无代码执行/音频核听。",
+      "parameters": [
+        {
+          "name": "low_hp_damage_label",
+          "value": 0.33,
+          "unit": "multiplier",
+          "provenance": "caption_or_post_text",
+          "note": "作者示例，阈值/取整/致死规则未知。"
+        },
+        {
+          "name": "player_hitbox_label",
+          "value": 38,
+          "unit": "percent with unspecified dimensional meaning",
+          "provenance": "caption_or_post_text",
+          "note": "未定义宽/高/面积，不据此推算几何。"
+        },
+        {
+          "name": "mercy_time_label",
+          "value": 1.0,
+          "unit": "seconds",
+          "provenance": "caption_or_post_text",
+          "note": "作者示例；约60帧取决帧率，未实际测量。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-low-health-damage-reduction",
+        "gameplay-hurtbox-tolerance",
+        "gameplay-post-hit-protection"
+      ],
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
