@@ -1559,6 +1559,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DcCFXGItxdJ",
+      "url": "https://www.instagram.com/p/DcCFXGItxdJ/",
+      "creator": "osoi.dev",
+      "title": "车辆视觉损伤与接触响应的分离迭代",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "视频先展示车辆碰撞过硬，随后说明已有 visual deformation，画面可见受损车体，但碰撞响应仍显生硬。在线框车辆画面中，作者字幕称修改 NVIDIA physics package，允许碰撞时少量穿入，以近似金属的部分弹性；后续撞围栏可见局部穿入。正文承认效果仍需完善。",
+      "limitations": "修改物理包及弹性近似是作者说明，未见代码、具体 API、穿入量或参数，也没有独立量化验证；不认定为完整软体仿真或已验证的稳定物理解法。视觉凹陷与接触响应不是同一层，不从画面推断实际碰撞体更新方式。不能将局部演示泛化成应放宽全局碰撞容差；音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-motion-deformation"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

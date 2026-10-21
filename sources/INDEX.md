@@ -804,3 +804,13 @@ https://www.instagram.com/p/DeuiO0UjRLM/
 - 限制：三阶段各约三分之一是教学图，不是普遍动画比例；1 FRAME 是作者展示标注，未独立测量游戏输入延迟，Mario 也仅是该来源示意。没有命中盒、伤害生效时点、冷却或引擎实现证据，音频未核听。优先检查输入后冗余准备而非整段加速是迁移原则，不能据此要求所有攻击零前摇；保留敌人预警、必要蓄力与真实规则，并单独核对时序变化，属于本库实施建议。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## DcCFXGItxdJ · 车辆视觉损伤与接触响应的分离迭代
+
+https://www.instagram.com/p/DcCFXGItxdJ/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：视频先展示车辆碰撞过硬，随后说明已有 visual deformation，画面可见受损车体，但碰撞响应仍显生硬。在线框车辆画面中，作者字幕称修改 NVIDIA physics package，允许碰撞时少量穿入，以近似金属的部分弹性；后续撞围栏可见局部穿入。正文承认效果仍需完善。
+- 限制：修改物理包及弹性近似是作者说明，未见代码、具体 API、穿入量或参数，也没有独立量化验证；不认定为完整软体仿真或已验证的稳定物理解法。视觉凹陷与接触响应不是同一层，不从画面推断实际碰撞体更新方式。不能将局部演示泛化成应放宽全局碰撞容差；音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
