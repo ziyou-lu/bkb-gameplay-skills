@@ -51,6 +51,99 @@ def render_source_index(posts):
     return '\n'.join(lines).rstrip() + '\n'
 
 
+def validate_task_routes(catalog):
+    """Check declared discovery routes, not the meaning or sufficiency of their prose.
+
+    Reviewers still decide whether examples express different tasks and whether
+    the stated capability boundary is supported by source evidence. Explicit
+    distinct_from links prevent those reviewed task boundaries from silently
+    being collapsed back into one primary skill.
+    """
+    errors = []
+    routes = catalog.get('task_routes')
+    if not isinstance(routes, list) or not routes:
+        return ['task_routes must be a non-empty array']
+    skills = catalog.get('skills', [])
+    skill_ids = {s['id'] for s in skills}
+    owners = {}
+    for skill in skills:
+        for mechanism in skill.get('mechanisms', []):
+            owners.setdefault(mechanism, []).append(skill['id'])
+
+    route_map = {}
+    for index, route in enumerate(routes):
+        if not isinstance(route, dict):
+            errors.append(f'Invalid task route object: index {index}')
+            continue
+        rid = route.get('id')
+        label = rid if isinstance(rid, str) and rid else f'index {index}'
+        if not isinstance(rid, str) or not SKILL_RE.fullmatch(rid):
+            errors.append(f'Invalid task route ID: {label}')
+        elif rid in route_map:
+            errors.append(f'Duplicate task route ID: {rid}')
+        else:
+            route_map[rid] = route
+
+        examples = route.get('request_examples')
+        if (not isinstance(examples, list) or not examples
+                or any(not isinstance(x, str) or not x.strip() for x in examples)):
+            errors.append(f'Empty/invalid task route request_examples: {label}')
+        boundary = route.get('boundary')
+        if not isinstance(boundary, str) or not boundary.strip():
+            errors.append(f'Empty/invalid task route boundary: {label}')
+        target = route.get('primary_skill')
+        if not isinstance(target, str) or target not in skill_ids:
+            errors.append(f'Unknown task route primary_skill: {label} -> {target}')
+
+        status = route.get('evidence_status')
+        if status not in ('workflow', 'evidence_only'):
+            errors.append(f'Invalid task route evidence_status: {label}')
+        mechanisms = route.get('mechanisms')
+        if (not isinstance(mechanisms, list)
+                or any(not isinstance(x, str) or not x.strip() for x in mechanisms)):
+            errors.append(f'Invalid task route mechanisms: {label}')
+        else:
+            if len(mechanisms) != len(set(mechanisms)):
+                errors.append(f'Duplicate task route mechanism: {label}')
+            if status == 'evidence_only' and mechanisms:
+                errors.append(f'Evidence-only task route cannot claim mechanisms: {label}')
+            if status == 'workflow':
+                if not mechanisms:
+                    errors.append(f'Workflow task route needs owned mechanisms: {label}')
+                for mechanism in mechanisms:
+                    if owners.get(mechanism) != [target]:
+                        errors.append(f'Task route mechanism not uniquely owned by primary_skill: '
+                                      f'{label} -> {mechanism} (expected {target})')
+        distinct = route.get('distinct_from')
+        if (not isinstance(distinct, list)
+                or any(not isinstance(x, str) or not x.strip() for x in distinct)):
+            errors.append(f'Invalid task route distinct_from: {label}')
+        elif len(distinct) != len(set(distinct)):
+            errors.append(f'Duplicate task route distinct_from: {label}')
+
+    for rid, route in route_map.items():
+        distinct = route.get('distinct_from')
+        if not isinstance(distinct, list):
+            continue
+        for other_id in distinct:
+            if not isinstance(other_id, str):
+                continue
+            if other_id not in route_map:
+                errors.append(f'Unknown distinct task route: {rid} -> {other_id}')
+            elif other_id == rid:
+                errors.append(f'Task route cannot be distinct from itself: {rid}')
+            elif route.get('primary_skill') == route_map[other_id].get('primary_skill'):
+                errors.append(f'Distinct task routes share primary_skill: {rid} -> {other_id}')
+    # Valid Markdown and ownership are not enough if a new skill has no task
+    # entry in the declared discovery contract.
+    covered = {route.get('primary_skill') for route in routes
+               if isinstance(route, dict)
+               and isinstance(route.get('primary_skill'), str)}
+    for sid in sorted(skill_ids - covered):
+        errors.append(f'Skill has no discovery route: {sid}')
+    return errors
+
+
 def validate(root):
     root = Path(root).resolve()
     errors = []
@@ -63,6 +156,7 @@ def validate(root):
         return [f'Cannot read catalog/sources: {exc}']
     if catalog.get('schema_version') != 1 or posts_doc.get('schema_version') != 1:
         errors.append('Unsupported schema version')
+    errors.extend(validate_task_routes(catalog))
     ids = [s.get('id') for s in skills]
     source_ids = [s.get('id') for s in posts]
     if len(ids) != len(set(ids)):

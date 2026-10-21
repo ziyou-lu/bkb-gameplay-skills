@@ -51,16 +51,16 @@
         "DeqnlBQzbMY",
         "DetftcbzGnS",
         "DerbjhXTzfy",
-        "DX_mL0Wo3vx",
         "Deuo1C7TfMW",
-        "Dd0GSn2xC62",
         "DcCF3ZmBNl2",
         "DXNr6m4hSDk",
         "DcXJwumOuBK",
-        "DMC2EddsCML",
-        "DaIdIURzME9"
+        "DMC2EddsCML"
       ],
       "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-shooting-feedback",
+        "gameplay-boss-sequences",
         "gameplay-hitstop",
         "gameplay-attack-readability"
       ]
@@ -69,15 +69,10 @@
       "id": "gameplay-camera-feedback",
       "title": "镜头冲击与短促聚焦",
       "category": "shared",
-      "path": "skills/gameplay-camera-feedback/SKILL.md",
       "mechanisms": [
         "camera-shake",
         "camera-impulse",
-        "punch-in",
-        "speed-fov",
-        "radial-speed-blur",
-        "screen-speed-lines",
-        "completion-camera-handoff"
+        "punch-in"
       ],
       "source_ids": [
         "DYfFEpzIa-H",
@@ -88,53 +83,48 @@
         "DecdQ9ltnjf",
         "DVGe1E9iDdi",
         "Deo9lu7tzCT",
-        "DcXJwumOuBK",
-        "DRfuWODEvzF",
-        "DLAeZtVPER7"
+        "DcXJwumOuBK"
       ],
       "related_skills": [
+        "gameplay-speed-camera",
+        "gameplay-completion-sequences",
         "gameplay-hitstop",
         "gameplay-attack-readability"
-      ]
+      ],
+      "path": "skills/gameplay-camera-feedback/SKILL.md"
     },
     {
       "id": "gameplay-motion-deformation",
-      "title": "压缩拉伸与次级运动",
+      "title": "事件形变、回弹与视觉后坐",
       "category": "shared",
-      "path": "skills/gameplay-motion-deformation/SKILL.md",
       "mechanisms": [
         "squash-stretch",
         "overshoot-rebound",
         "visual-recoil",
-        "secondary-motion",
-        "aim-pose-composition",
-        "motion-smear",
-        "action-phase-timing"
+        "motion-smear"
       ],
       "source_ids": [
         "Deuo1C7TfMW",
         "DerbjhXTzfy",
         "DXZ35VuEx0e",
-        "DbS8p3VuhkL",
         "DVGe1E9iDdi",
         "DejFnl2Ru9N",
         "DeXJvO9kg94",
-        "DerYowOhdHs",
         "DcCF3ZmBNl2",
         "DcXJwumOuBK",
-        "CW0Su7-sy5-",
-        "CW8BHbmsy_r",
-        "DP53MiuDIpH",
-        "DP3HI8yjFUS",
-        "DeuiO0UjRLM",
-        "DcCFXGItxdJ"
+        "DP53MiuDIpH"
       ],
       "related_skills": [
-        "gameplay-movement-feedback",
-        "gameplay-camera-feedback",
-        "gameplay-projectile-spells",
-        "gameplay-attack-readability"
-      ]
+        "gameplay-secondary-motion",
+        "gameplay-aim-pose",
+        "gameplay-action-timing",
+        "gameplay-contact-response",
+        "gameplay-landing-feedback",
+        "gameplay-dash-feedback",
+        "gameplay-shooting-feedback",
+        "gameplay-projectile-spells"
+      ],
+      "path": "skills/gameplay-motion-deformation/SKILL.md"
     },
     {
       "id": "gameplay-attack-readability",
@@ -154,169 +144,141 @@
         "DWFNHDmjT-H",
         "DM-5jXrNy1f",
         "DeGQTpgNFfF",
-        "DenLEa4xApp",
-        "DdAIJqcPzPn"
+        "DenLEa4xApp"
       ],
       "related_skills": [
+        "gameplay-hit-recovery",
+        "gameplay-parry-feedback",
         "gameplay-health-damage-ui",
         "gameplay-boss-sequences"
       ]
     },
     {
       "id": "gameplay-health-damage-ui",
-      "title": "生命血条与浮动数值",
+      "title": "生命血条与损失残影",
       "category": "shared",
-      "path": "skills/gameplay-health-damage-ui/SKILL.md",
       "mechanisms": [
         "healthbar-smoothing",
         "damage-ghost",
-        "floating-numbers",
-        "critical-ui",
-        "result-count-up"
+        "health-threshold-cues"
       ],
       "source_ids": [
         "DdhLtbTlTRG",
         "DemP6LfRbug",
         "DamtFQYxYtn",
-        "DcDs7f9uaqo",
-        "Dcynt8ZoEoE",
         "DelJO3qusJE",
         "DejijtPzhYJ",
-        "DcZxryBoCFw",
-        "DcwUHp0O85b",
-        "DNv1TB93uxh"
+        "DcZxryBoCFw"
       ],
       "related_skills": [
+        "gameplay-floating-numbers",
+        "gameplay-result-counting",
         "gameplay-impact-visuals"
-      ]
+      ],
+      "path": "skills/gameplay-health-damage-ui/SKILL.md"
     },
     {
       "id": "gameplay-melee-feedback",
-      "title": "近战、弹反与踩踏组合",
+      "title": "近战命中、受击与暴击编排",
       "category": "recipes",
-      "path": "skills/gameplay-melee-feedback/SKILL.md",
       "mechanisms": [
-        "melee-composition",
-        "blade-trail",
-        "parry-composition",
-        "stomp-combo"
+        "melee-composition"
       ],
       "source_ids": [
-        "DemlZDhNoFi",
         "DecdQ9ltnjf",
-        "DenLEa4xApp",
         "DelJO3qusJE",
         "DeqnlBQzbMY",
-        "Deuo1C7TfMW",
-        "DdAIJqcPzPn",
         "DejijtPzhYJ",
-        "DcCF3ZmBNl2",
-        "DXcMn-gCGaS"
+        "DcCF3ZmBNl2"
       ],
       "related_skills": [
+        "gameplay-action-timing",
+        "gameplay-attack-direction",
+        "gameplay-blade-trails",
+        "gameplay-parry-feedback",
+        "gameplay-stomp-combos",
+        "gameplay-hit-recovery",
         "gameplay-hitstop",
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-motion-deformation",
+        "gameplay-floating-numbers",
         "gameplay-health-damage-ui",
         "gameplay-attack-readability"
-      ]
+      ],
+      "path": "skills/gameplay-melee-feedback/SKILL.md"
     },
     {
       "id": "gameplay-projectile-spells",
-      "title": "射击与法术生命周期",
+      "title": "多阶段法术生命周期与形状层级",
       "category": "recipes",
-      "path": "skills/gameplay-projectile-spells/SKILL.md",
       "mechanisms": [
-        "muzzle-origin",
-        "projectile-lifecycle",
-        "spell-lifecycle"
+        "spell-lifecycle",
+        "spell-shape-hierarchy"
       ],
       "source_ids": [
         "Deff1_AtlFi",
-        "Dehz2z9Nc7F",
-        "Dekh5vBzqhG",
-        "DUYNtcoiCGS",
-        "DVGe1E9iDdi",
-        "DX_mL0Wo3vx",
         "DetoueoNkIr",
         "Depb7BiTAuG",
-        "DMz5XT1M_4s",
-        "DYOpA7zDmEU"
+        "DMz5XT1M_4s"
       ],
       "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-shooting-feedback",
         "gameplay-motion-deformation",
         "gameplay-impact-visuals",
         "gameplay-hitstop",
         "gameplay-camera-feedback",
         "gameplay-attack-readability"
-      ]
+      ],
+      "path": "skills/gameplay-projectile-spells/SKILL.md"
     },
     {
       "id": "gameplay-movement-feedback",
-      "title": "移动、冲刺与落地反馈",
+      "title": "移动方向动画与姿态一致性",
       "category": "recipes",
       "path": "skills/gameplay-movement-feedback/SKILL.md",
       "mechanisms": [
-        "dash-composition",
-        "landing-composition",
-        "directional-animation",
-        "coyote-time",
-        "steering-assistance",
-        "locomotion-contact-representation",
-        "edge-stop-assistance",
-        "traversal-state-flow"
+        "directional-animation"
       ],
       "source_ids": [
-        "DehPnhjxUvB",
-        "DerbjhXTzfy",
-        "DXZ35VuEx0e",
-        "DbS8p3VuhkL",
         "Ddb6gDmzmAE",
-        "DerYowOhdHs",
-        "DX6_8HIo_GT",
-        "DeaF1wMgtg1",
-        "DWsXLFEDVVf",
-        "DWFm4_eDlCm",
-        "DcuTo4UNf25",
-        "DYq3pMtqVGw"
+        "DerYowOhdHs"
       ],
       "related_skills": [
-        "gameplay-motion-deformation",
-        "gameplay-camera-feedback",
-        "gameplay-impact-visuals",
-        "gameplay-hitstop",
-        "gameplay-contextual-ui"
+        "gameplay-dash-feedback",
+        "gameplay-landing-feedback",
+        "gameplay-secondary-motion",
+        "gameplay-jump-forgiveness",
+        "gameplay-traversal-transitions",
+        "gameplay-steering-assistance",
+        "gameplay-locomotion-contacts"
       ]
     },
     {
       "id": "gameplay-breakables-loot",
-      "title": "破坏、掉落与奖励揭示",
+      "title": "破坏、死亡与采集产物过程",
       "category": "recipes",
-      "path": "skills/gameplay-breakables-loot/SKILL.md",
       "mechanisms": [
         "breakable-lifecycle",
-        "death-aftermath",
-        "loot-confirmation",
-        "chest-reveal"
+        "death-aftermath"
       ],
       "source_ids": [
         "DetftcbzGnS",
         "Deh3qQ0RU4e",
         "DenfMc-zPPJ",
-        "DeglnOkRkuI",
-        "Deo9lu7tzCT",
-        "DeikuCgOkof",
-        "DdXfzEbJnsN",
-        "DdsDp8YRW_y",
         "DNODANBoEL6"
       ],
       "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-reward-reveal",
+        "gameplay-loot-pickup",
         "gameplay-motion-deformation",
         "gameplay-hitstop",
         "gameplay-impact-visuals",
         "gameplay-camera-feedback"
-      ]
+      ],
+      "path": "skills/gameplay-breakables-loot/SKILL.md"
     },
     {
       "id": "gameplay-boss-sequences",
@@ -338,6 +300,7 @@
       ],
       "related_skills": [
         "gameplay-attack-readability",
+        "gameplay-completion-sequences",
         "gameplay-hitstop",
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
@@ -346,62 +309,49 @@
     },
     {
       "id": "gameplay-resource-ui",
-      "title": "法力、体力、冷却与蓄力状态",
+      "title": "法力与体力的实时资源读数",
       "category": "recipes",
       "path": "skills/gameplay-resource-ui/SKILL.md",
       "mechanisms": [
         "resource-consumption-ui",
-        "cooldown-ui",
-        "charge-state-ui",
         "stamina-ui"
       ],
       "source_ids": [
         "DeXJvO9kg94",
-        "DeFICP0DMwZ",
-        "DejFnl2Ru9N",
         "DdHNwnyjSPb"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-impact-visuals",
-        "gameplay-health-damage-ui"
+        "gameplay-health-damage-ui",
+        "gameplay-cooldown-ui",
+        "gameplay-contextual-ui"
       ]
     },
     {
       "id": "gameplay-contextual-ui",
-      "title": "游戏内交互、卡牌与对话",
+      "title": "游戏内交互状态与提交反馈",
       "category": "recipes",
       "path": "skills/gameplay-contextual-ui/SKILL.md",
       "mechanisms": [
         "in-game-interaction-state",
-        "worldspace-interaction-indicator",
-        "card-presentation",
-        "dialogue-feedback",
-        "occluded-character-indicator",
-        "scene-transition-masking"
+        "charge-state-ui"
       ],
       "source_ids": [
         "DejFnl2Ru9N",
         "Dej1DUjzTrh",
-        "Dd_3xtlvYef",
-        "DW_wiiPDmlU",
-        "DYCKURdRJQn",
-        "Dauh04XOYhl",
-        "DemZuPozqeb",
-        "Dd9v8pMhc_t",
-        "DemTrHmK44j",
-        "DeY6lNdTxTe",
-        "DPjC2p_jDK-",
-        "Dd7GYLGPlon",
-        "DbqZZNQz95x",
-        "DKrymGwPEVi"
+        "DYCKURdRJQn"
       ],
       "related_skills": [
+        "gameplay-reward-reveal",
         "gameplay-motion-deformation",
-        "gameplay-resource-ui",
-        "gameplay-hitstop",
-        "gameplay-impact-visuals",
-        "gameplay-camera-feedback"
+        "gameplay-card-interaction",
+        "gameplay-dialogue-presentation",
+        "gameplay-worldspace-indicators",
+        "gameplay-world-readability",
+        "gameplay-mechanical-interactions",
+        "gameplay-connection-transitions",
+        "gameplay-scene-transitions"
       ]
     },
     {
@@ -425,6 +375,565 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-health-damage-ui"
+      ]
+    },
+    {
+      "id": "gameplay-speed-camera",
+      "title": "持续速度视野与边缘效果",
+      "category": "shared",
+      "mechanisms": [
+        "speed-fov",
+        "radial-speed-blur",
+        "screen-speed-lines"
+      ],
+      "source_ids": [
+        "DRfuWODEvzF"
+      ],
+      "related_skills": [
+        "gameplay-camera-feedback",
+        "gameplay-dash-feedback"
+      ],
+      "path": "skills/gameplay-speed-camera/SKILL.md"
+    },
+    {
+      "id": "gameplay-secondary-motion",
+      "title": "装饰跟随与次级运动",
+      "category": "shared",
+      "mechanisms": [
+        "secondary-motion"
+      ],
+      "source_ids": [
+        "DbS8p3VuhkL",
+        "DerYowOhdHs"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-movement-feedback"
+      ],
+      "path": "skills/gameplay-secondary-motion/SKILL.md"
+    },
+    {
+      "id": "gameplay-aim-pose",
+      "title": "方向瞄准与分件姿态",
+      "category": "shared",
+      "mechanisms": [
+        "aim-pose-composition"
+      ],
+      "source_ids": [
+        "CW0Su7-sy5-",
+        "CW8BHbmsy_r"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-shooting-feedback"
+      ],
+      "path": "skills/gameplay-aim-pose/SKILL.md"
+    },
+    {
+      "id": "gameplay-action-timing",
+      "title": "输入响应与动作相位",
+      "category": "shared",
+      "mechanisms": [
+        "action-phase-timing"
+      ],
+      "source_ids": [
+        "DP3HI8yjFUS",
+        "DeuiO0UjRLM"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-attack-readability",
+        "gameplay-melee-feedback",
+        "gameplay-shooting-feedback",
+        "gameplay-projectile-spells"
+      ],
+      "path": "skills/gameplay-action-timing/SKILL.md"
+    },
+    {
+      "id": "gameplay-contact-response",
+      "title": "视觉损伤与接触响应诊断",
+      "category": "shared",
+      "mechanisms": [
+        "contact-response-experiment"
+      ],
+      "source_ids": [
+        "DcCFXGItxdJ"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals"
+      ],
+      "path": "skills/gameplay-contact-response/SKILL.md"
+    },
+    {
+      "id": "gameplay-floating-numbers",
+      "title": "伤害、治疗与得分浮字",
+      "category": "shared",
+      "mechanisms": [
+        "floating-numbers",
+        "critical-ui"
+      ],
+      "source_ids": [
+        "DemP6LfRbug",
+        "DcDs7f9uaqo",
+        "Dcynt8ZoEoE",
+        "DejijtPzhYJ",
+        "DcwUHp0O85b"
+      ],
+      "related_skills": [
+        "gameplay-health-damage-ui",
+        "gameplay-result-counting",
+        "gameplay-impact-visuals"
+      ],
+      "path": "skills/gameplay-floating-numbers/SKILL.md"
+    },
+    {
+      "id": "gameplay-result-counting",
+      "title": "结果总分递增计数",
+      "category": "shared",
+      "mechanisms": [
+        "result-count-up"
+      ],
+      "source_ids": [
+        "DNv1TB93uxh"
+      ],
+      "related_skills": [
+        "gameplay-completion-sequences",
+        "gameplay-floating-numbers"
+      ],
+      "path": "skills/gameplay-result-counting/SKILL.md"
+    },
+    {
+      "id": "gameplay-card-interaction",
+      "title": "手牌布局与卡牌选择",
+      "category": "recipes",
+      "path": "skills/gameplay-card-interaction/SKILL.md",
+      "mechanisms": [
+        "card-presentation"
+      ],
+      "source_ids": [
+        "Dd_3xtlvYef",
+        "DW_wiiPDmlU"
+      ],
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-reward-reveal"
+      ]
+    },
+    {
+      "id": "gameplay-dialogue-presentation",
+      "title": "对话文字进度与强调",
+      "category": "recipes",
+      "path": "skills/gameplay-dialogue-presentation/SKILL.md",
+      "mechanisms": [
+        "dialogue-feedback"
+      ],
+      "source_ids": [
+        "Dauh04XOYhl"
+      ],
+      "related_skills": [
+        "gameplay-contextual-ui"
+      ]
+    },
+    {
+      "id": "gameplay-worldspace-indicators",
+      "title": "世界内操作指示与深度对齐",
+      "category": "recipes",
+      "path": "skills/gameplay-worldspace-indicators/SKILL.md",
+      "mechanisms": [
+        "worldspace-interaction-indicator"
+      ],
+      "source_ids": [
+        "Dd9v8pMhc_t"
+      ],
+      "related_skills": [
+        "gameplay-world-readability",
+        "gameplay-contextual-ui"
+      ]
+    },
+    {
+      "id": "gameplay-scene-transitions",
+      "title": "切场遮蔽与就绪恢复",
+      "category": "recipes",
+      "path": "skills/gameplay-scene-transitions/SKILL.md",
+      "mechanisms": [
+        "scene-transition-masking"
+      ],
+      "source_ids": [
+        "DbqZZNQz95x"
+      ],
+      "related_skills": [
+        "gameplay-camera-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-mechanical-interactions",
+      "title": "机关驱动与通行反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-mechanical-interactions/SKILL.md",
+      "mechanisms": [
+        "mechanical-interaction-feedback"
+      ],
+      "source_ids": [
+        "DeY6lNdTxTe"
+      ],
+      "related_skills": [
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-contextual-ui"
+      ]
+    },
+    {
+      "id": "gameplay-connection-transitions",
+      "title": "连接关系与挂脱轨迹",
+      "category": "recipes",
+      "path": "skills/gameplay-connection-transitions/SKILL.md",
+      "mechanisms": [
+        "connection-state-transition"
+      ],
+      "source_ids": [
+        "DKrymGwPEVi"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-contextual-ui"
+      ]
+    },
+    {
+      "id": "gameplay-dash-feedback",
+      "title": "冲刺路径与残像反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-dash-feedback/SKILL.md",
+      "mechanisms": [
+        "dash-composition"
+      ],
+      "source_ids": [
+        "DehPnhjxUvB",
+        "DX6_8HIo_GT"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-speed-camera",
+        "gameplay-movement-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-landing-feedback",
+      "title": "落地事件与强度分级反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-landing-feedback/SKILL.md",
+      "mechanisms": [
+        "landing-composition"
+      ],
+      "source_ids": [
+        "DerbjhXTzfy",
+        "DXZ35VuEx0e"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-hitstop"
+      ]
+    },
+    {
+      "id": "gameplay-cooldown-ui",
+      "title": "冷却时钟与就绪反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-cooldown-ui/SKILL.md",
+      "mechanisms": [
+        "cooldown-ui"
+      ],
+      "source_ids": [
+        "DeFICP0DMwZ"
+      ],
+      "related_skills": [
+        "gameplay-resource-ui",
+        "gameplay-contextual-ui"
+      ]
+    },
+    {
+      "id": "gameplay-blade-trails",
+      "title": "剑刃轨迹采样与网格拖尾",
+      "category": "shared",
+      "mechanisms": [
+        "blade-trail"
+      ],
+      "source_ids": [
+        "DemlZDhNoFi"
+      ],
+      "related_skills": [
+        "gameplay-melee-feedback"
+      ],
+      "path": "skills/gameplay-blade-trails/SKILL.md"
+    },
+    {
+      "id": "gameplay-parry-feedback",
+      "title": "弹反窗口、成功确认与反击反馈",
+      "category": "recipes",
+      "mechanisms": [
+        "parry-composition"
+      ],
+      "source_ids": [
+        "DenLEa4xApp"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-attack-readability",
+        "gameplay-melee-feedback"
+      ],
+      "path": "skills/gameplay-parry-feedback/SKILL.md"
+    },
+    {
+      "id": "gameplay-stomp-combos",
+      "title": "踩踏反弹与连续命中确认",
+      "category": "recipes",
+      "mechanisms": [
+        "stomp-combo"
+      ],
+      "source_ids": [
+        "Deuo1C7TfMW"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-motion-deformation",
+        "gameplay-floating-numbers",
+        "gameplay-melee-feedback"
+      ],
+      "path": "skills/gameplay-stomp-combos/SKILL.md"
+    },
+    {
+      "id": "gameplay-hit-recovery",
+      "title": "连续受击恢复与脱身策略边界",
+      "category": "recipes",
+      "mechanisms": [
+        "surround-escape-threshold"
+      ],
+      "source_ids": [
+        "DelJO3qusJE",
+        "DdAIJqcPzPn"
+      ],
+      "related_skills": [
+        "gameplay-melee-feedback",
+        "gameplay-attack-readability"
+      ],
+      "path": "skills/gameplay-hit-recovery/SKILL.md"
+    },
+    {
+      "id": "gameplay-shooting-feedback",
+      "title": "射击、持续喷射与来源对齐",
+      "category": "recipes",
+      "mechanisms": [
+        "muzzle-origin",
+        "projectile-lifecycle",
+        "shooting-composition"
+      ],
+      "source_ids": [
+        "Dehz2z9Nc7F",
+        "Dekh5vBzqhG",
+        "DUYNtcoiCGS",
+        "DVGe1E9iDdi",
+        "DX_mL0Wo3vx",
+        "DYOpA7zDmEU"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-hitstop",
+        "gameplay-attack-readability",
+        "gameplay-projectile-spells"
+      ],
+      "path": "skills/gameplay-shooting-feedback/SKILL.md"
+    },
+    {
+      "id": "gameplay-reward-reveal",
+      "title": "宝箱、卡牌与加工结果揭示",
+      "category": "recipes",
+      "mechanisms": [
+        "chest-reveal",
+        "reward-reveal",
+        "merge-result-reveal",
+        "upgrade-result-reveal"
+      ],
+      "source_ids": [
+        "DeglnOkRkuI",
+        "Deo9lu7tzCT",
+        "DemZuPozqeb",
+        "DdXfzEbJnsN",
+        "DdsDp8YRW_y"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-breakables-loot",
+        "gameplay-loot-pickup",
+        "gameplay-completion-sequences"
+      ],
+      "path": "skills/gameplay-reward-reveal/SKILL.md"
+    },
+    {
+      "id": "gameplay-loot-pickup",
+      "title": "掉落物吸附与拾取确认",
+      "category": "recipes",
+      "mechanisms": [
+        "loot-confirmation",
+        "loot-attraction-feedback"
+      ],
+      "source_ids": [
+        "DeikuCgOkof"
+      ],
+      "related_skills": [
+        "gameplay-breakables-loot",
+        "gameplay-reward-reveal",
+        "gameplay-impact-visuals",
+        "gameplay-floating-numbers"
+      ],
+      "path": "skills/gameplay-loot-pickup/SKILL.md"
+    },
+    {
+      "id": "gameplay-attack-direction",
+      "title": "攻击方向规则与输入判定一致性",
+      "category": "recipes",
+      "mechanisms": [
+        "attack-direction-consistency"
+      ],
+      "source_ids": [
+        "DXcMn-gCGaS"
+      ],
+      "related_skills": [
+        "gameplay-melee-feedback",
+        "gameplay-blade-trails",
+        "gameplay-attack-readability"
+      ],
+      "path": "skills/gameplay-attack-direction/SKILL.md"
+    },
+    {
+      "id": "gameplay-jump-forgiveness",
+      "category": "recipes",
+      "mechanisms": [
+        "coyote-time"
+      ],
+      "source_ids": [
+        "DeaF1wMgtg1"
+      ],
+      "path": "skills/gameplay-jump-forgiveness/SKILL.md",
+      "title": "离地跳跃宽限",
+      "related_skills": [
+        "gameplay-traversal-transitions",
+        "gameplay-dash-feedback",
+        "gameplay-landing-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-traversal-transitions",
+      "category": "recipes",
+      "mechanisms": [
+        "edge-stop-assistance",
+        "traversal-state-flow"
+      ],
+      "source_ids": [
+        "DcuTo4UNf25",
+        "DYq3pMtqVGw"
+      ],
+      "path": "skills/gameplay-traversal-transitions/SKILL.md",
+      "title": "移动交互的停留与接续",
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-jump-forgiveness",
+        "gameplay-movement-feedback",
+        "gameplay-landing-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-steering-assistance",
+      "category": "recipes",
+      "mechanisms": [
+        "steering-assistance"
+      ],
+      "source_ids": [
+        "DWsXLFEDVVf"
+      ],
+      "path": "skills/gameplay-steering-assistance/SKILL.md",
+      "title": "车辆转向辅助与直接控制",
+      "related_skills": [
+        "gameplay-locomotion-contacts",
+        "gameplay-speed-camera"
+      ]
+    },
+    {
+      "id": "gameplay-locomotion-contacts",
+      "category": "shared",
+      "mechanisms": [
+        "locomotion-contact-representation"
+      ],
+      "source_ids": [
+        "DWFm4_eDlCm"
+      ],
+      "path": "skills/gameplay-locomotion-contacts/SKILL.md",
+      "title": "移动部件的接触表示",
+      "related_skills": [
+        "gameplay-contact-response",
+        "gameplay-steering-assistance"
+      ]
+    },
+    {
+      "id": "gameplay-world-readability",
+      "category": "shared",
+      "mechanisms": [
+        "target-discoverability",
+        "occluded-character-indicator"
+      ],
+      "source_ids": [
+        "DemTrHmK44j",
+        "DPjC2p_jDK-",
+        "Dd7GYLGPlon"
+      ],
+      "path": "skills/gameplay-world-readability/SKILL.md",
+      "title": "世界目标发现与角色遮挡可读性",
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-worldspace-indicators",
+        "gameplay-impact-visuals"
+      ]
+    },
+    {
+      "id": "gameplay-surface-aftermath",
+      "category": "shared",
+      "mechanisms": [
+        "surface-conformity"
+      ],
+      "source_ids": [
+        "DaIdIURzME9"
+      ],
+      "path": "skills/gameplay-surface-aftermath/SKILL.md",
+      "title": "表面余效的贴地与边界适配",
+      "related_skills": [
+        "gameplay-impact-visuals",
+        "gameplay-attack-readability"
+      ]
+    },
+    {
+      "id": "gameplay-completion-sequences",
+      "category": "recipes",
+      "mechanisms": [
+        "completion-camera-handoff",
+        "completion-sequence"
+      ],
+      "source_ids": [
+        "DLAeZtVPER7",
+        "DNv1TB93uxh"
+      ],
+      "path": "skills/gameplay-completion-sequences/SKILL.md",
+      "title": "完成事件、结算与动作尾声",
+      "related_skills": [
+        "gameplay-result-counting",
+        "gameplay-reward-reveal",
+        "gameplay-camera-feedback"
       ]
     }
   ],
@@ -458,5 +967,916 @@
     "得分飘字": "floating-numbers",
     "coyote time": "coyote-time",
     "离地宽限": "coyote-time"
-  }
+  },
+  "task_routes": [
+    {
+      "id": "hitstop",
+      "request_examples": [
+        "每次刀命中都要停顿，但连击时不能一直冻住。"
+      ],
+      "primary_skill": "gameplay-hitstop",
+      "mechanisms": [
+        "hitstop",
+        "presentation-pause",
+        "local-slow-motion"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在命中缺少接触感、或发射/翻牌揭示缺少节奏时设计接触 hit-stop 与非接触表现停顿；不把冰冻状态或全局暂停混为一谈。",
+      "distinct_from": [
+        "impact-visuals",
+        "camera-feedback",
+        "speed-camera"
+      ]
+    },
+    {
+      "id": "impact-visuals",
+      "request_examples": [
+        "冲穿敌人时看不出命中点，请加方向性接触反馈。"
+      ],
+      "primary_skill": "gameplay-impact-visuals",
+      "mechanisms": [
+        "hit-flash",
+        "impact-frame",
+        "impact-particles",
+        "aftermath-vfx",
+        "impact-word-cue"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "改善接触闪光、冲击帧、粒子与碰撞文字的可读性；常驻特效遮挡时优先删减，贴地余效的地形生成使用独立工作流。",
+      "distinct_from": [
+        "hitstop",
+        "camera-feedback",
+        "speed-camera"
+      ]
+    },
+    {
+      "id": "camera-feedback",
+      "request_examples": [
+        "爆炸震动越来越偏，怎么保持相机基准？"
+      ],
+      "primary_skill": "gameplay-camera-feedback",
+      "mechanisms": [
+        "camera-shake",
+        "camera-impulse",
+        "punch-in"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在单次击打、落地、后坐或爆炸缺少重量，或现有震动漂移、影响瞄准时调整临时 shake、impulse 与 punch-in；持续速度视野及完成镜头交接使用独立入口。",
+      "distinct_from": [
+        "hitstop",
+        "impact-visuals",
+        "speed-camera"
+      ]
+    },
+    {
+      "id": "motion-deformation",
+      "request_examples": [
+        "落地压扁后角色缩放没有恢复，而且碰撞盒也变了。"
+      ],
+      "primary_skill": "gameplay-motion-deformation",
+      "mechanisms": [
+        "squash-stretch",
+        "overshoot-rebound",
+        "visual-recoil",
+        "motion-smear"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在接触、弹跳、按钮反馈或快速出招缺少受力和轮廓时设计 squash/stretch、回弹、视觉后坐与 smear；只管理事件形变，持续跟随、瞄准组合、动作时序和物理接触使用独立入口。",
+      "distinct_from": [
+        "secondary-motion",
+        "aim-pose",
+        "action-timing",
+        "contact-response"
+      ]
+    },
+    {
+      "id": "attack-readability",
+      "request_examples": [
+        "敌人招式方向看不懂，警示范围和判定也不一致。"
+      ],
+      "primary_skill": "gameplay-attack-readability",
+      "mechanisms": [
+        "attack-telegraph",
+        "vfx-hitbox-alignment",
+        "counterplay-window"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在敌人招式、Boss 区域攻击或危险路径难读时改善姿态、前摇、落点与窗口；将可读性修改与伤害、碰撞、难度修改分开验收。",
+      "distinct_from": [
+        "melee-feedback",
+        "blade-trails",
+        "parry-feedback",
+        "stomp-combos",
+        "hit-recovery",
+        "attack-direction"
+      ]
+    },
+    {
+      "id": "health-damage-ui",
+      "request_examples": [
+        "连续扣血时残影条要等一下再追上主血条。"
+      ],
+      "primary_skill": "gameplay-health-damage-ui",
+      "mechanisms": [
+        "healthbar-smoothing",
+        "damage-ghost",
+        "health-threshold-cues"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在 HP 变化突兀、损失量难读或低血量提示不清时设计血条平滑、延迟损失段和生命分级；此旧入口保留兼容路由，瞬时浮字与结果总分计数各有独立 owner。",
+      "distinct_from": [
+        "floating-numbers",
+        "result-counting",
+        "resource-ui",
+        "cooldown-ui"
+      ]
+    },
+    {
+      "id": "melee-feedback",
+      "request_examples": [
+        "剑击、普通受击和暴击缺少不同层次的命中确认。"
+      ],
+      "primary_skill": "gameplay-melee-feedback",
+      "mechanisms": [
+        "melee-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为普通近战命中、受击与暴击组合共享反馈；剑轨迹、弹反、踩踏、攻击方向规则和受击脱身使用独立入口，不凭视觉改变判定。",
+      "distinct_from": [
+        "blade-trails",
+        "parry-feedback",
+        "stomp-combos",
+        "hit-recovery",
+        "attack-direction",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "projectile-spells",
+      "request_examples": [
+        "法术从蓄力到持续到消散的反馈脱节，取消还留光束。"
+      ],
+      "primary_skill": "gameplay-projectile-spells",
+      "mechanisms": [
+        "spell-lifecycle",
+        "spell-shape-hierarchy"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在蓄力、释放、持续运动、接触和消散脱节时组织法术生命周期；用事件和主体形状区分阶段，枪械发射与枪口对齐改用独立射击入口。",
+      "distinct_from": [
+        "shooting-feedback"
+      ]
+    },
+    {
+      "id": "movement-feedback",
+      "request_examples": [
+        "斜向跑动还显示横向姿势，四向动画想改八向。"
+      ],
+      "primary_skill": "gameplay-movement-feedback",
+      "mechanisms": [
+        "directional-animation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当四向/八向移动动画或跑姿与真实运动朝向不一致时校对方向表现；冲刺、落地、跳跃许可和车辆物理使用独立入口，不宣称方向帧增加就降低输入延迟。",
+      "distinct_from": [
+        "dash-feedback",
+        "landing-feedback",
+        "jump-forgiveness",
+        "traversal-transitions",
+        "steering-assistance",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "breakables-loot",
+      "request_examples": [
+        "树挨最后一斧就消失，想让倒伏和产物有可读过程。"
+      ],
+      "primary_skill": "gameplay-breakables-loot",
+      "mechanisms": [
+        "breakable-lifecycle",
+        "death-aftermath"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为可破坏物、敌人死亡和资源采集组织受击到终态/产物的可见过程；奖励揭示与拾取另行处理，不把倒伏、碎片或图标当作结算证明。",
+      "distinct_from": [
+        "reward-reveal",
+        "loot-pickup",
+        "completion-sequences",
+        "surface-aftermath"
+      ]
+    },
+    {
+      "id": "boss-sequences",
+      "request_examples": [
+        "Boss 入场、转阶段、死亡时如何移交控制并避免重复？"
+      ],
+      "primary_skill": "gameplay-boss-sequences",
+      "mechanisms": [
+        "boss-entrance",
+        "boss-phase-transition",
+        "boss-finale"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为 Boss 入场、阶段转换和死亡高潮编排可中断的反馈序列；战斗预警复用共享技能，不凭 Final Hit 标题推断保命机制。",
+      "distinct_from": []
+    },
+    {
+      "id": "resource-ui",
+      "request_examples": [
+        "攀爬时成长徽章挡住体力，法力消耗恢复也不清楚。"
+      ],
+      "primary_skill": "gameplay-resource-ui",
+      "mechanisms": [
+        "resource-consumption-ui",
+        "stamina-ui"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当法力/体力消耗、恢复或耗尽难读时，将真实资源量与显示动画对齐；成长徽章与实时读数分层，冷却时钟和按住输入改走专用入口。",
+      "distinct_from": [
+        "health-damage-ui",
+        "floating-numbers",
+        "result-counting",
+        "cooldown-ui"
+      ]
+    },
+    {
+      "id": "contextual-ui",
+      "request_examples": [
+        "按住按钮取消后仍播放成功，拾取提示和实际结果不同步。"
+      ],
+      "primary_skill": "gameplay-contextual-ui",
+      "mechanisms": [
+        "in-game-interaction-state",
+        "charge-state-ui"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为游戏内按钮、按住操作、拾取提示和指令选择区分可用、焦点、执行中、成功/失败；卡牌布局、对话、机关、连接和切场使用独立入口。",
+      "distinct_from": [
+        "card-interaction",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "world-readability",
+        "scene-transitions",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "skill-ingestion",
+      "request_examples": [
+        "又找到相同 hitstop 的新例子，怎么更新而不重复建文件？"
+      ],
+      "primary_skill": "gameplay-skill-ingestion",
+      "mechanisms": [
+        "evidence-ingestion",
+        "mechanism-deduplication"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "把新的游戏效果优化案例归入此库，按帖子 ID 和机制双重去重，升级已有技能而非一帖一文件；仅在任务要求维护此库时使用。",
+      "distinct_from": []
+    },
+    {
+      "id": "speed-camera",
+      "request_examples": [
+        "高速跑酷想加速度 FOV 和径向模糊，但减速要恢复且可关闭。"
+      ],
+      "primary_skill": "gameplay-speed-camera",
+      "mechanisms": [
+        "speed-fov",
+        "radial-speed-blur",
+        "screen-speed-lines"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在钩爪、冲刺或跑酷已有高速运动，但速度线、动态 FOV 与径向模糊缺少协调或妨碍路径判断时设计持续速度表现；不把镜头变化当成角色实际加速。",
+      "distinct_from": [
+        "hitstop",
+        "impact-visuals",
+        "camera-feedback"
+      ]
+    },
+    {
+      "id": "secondary-motion",
+      "request_examples": [
+        "头发链跟随在瞬移后抖飞，怎么稳定锚点和重置？"
+      ],
+      "primary_skill": "gameplay-secondary-motion",
+      "mechanisms": [
+        "secondary-motion"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在头发、眼部或链状装饰跟随运动僵硬、翻面跳变或传送后残留速度时设计持续次级运动；区分父对象真实运动与装饰滞后，不延迟实际朝向。",
+      "distinct_from": [
+        "motion-deformation",
+        "aim-pose",
+        "action-timing",
+        "contact-response"
+      ]
+    },
+    {
+      "id": "aim-pose",
+      "request_examples": [
+        "上下瞄准时肩膀接缝，想用分件和方向帧组合持枪姿态。"
+      ],
+      "primary_skill": "gameplay-aim-pose",
+      "mechanisms": [
+        "aim-pose-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在持枪方向改变时角色像整张纸片旋转，或肩部、持握点、遮挡与真实瞄准不协调时组织分件 sprite、方向帧或 stack 表示；不新增自动瞄准或改变射击规则。",
+      "distinct_from": [
+        "motion-deformation",
+        "secondary-motion",
+        "action-timing",
+        "contact-response"
+      ]
+    },
+    {
+      "id": "action-timing",
+      "request_examples": [
+        "按下攻击迟迟不动，整段倍速却没重量，该先压哪段？"
+      ],
+      "primary_skill": "gameplay-action-timing",
+      "mechanisms": [
+        "action-phase-timing"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在输入后动作看起来迟迟不响应，或整体加速让动作失去重量时定位冗余准备段、主体和收势；独立核对可见响应、真实生效与恢复时刻，不一律删除前摇。",
+      "distinct_from": [
+        "motion-deformation",
+        "secondary-motion",
+        "aim-pose",
+        "contact-response"
+      ]
+    },
+    {
+      "id": "contact-response",
+      "request_examples": [
+        "车已经有凹陷但碰撞仍很硬，怎么隔离验证视觉与接触响应？"
+      ],
+      "primary_skill": "gameplay-contact-response",
+      "mechanisms": [
+        "contact-response-experiment"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在车体等已显示变形但碰撞仍过硬时分离视觉网格与真实接触问题，并仅在明确允许改变物理时做局部可回退实验；不是软体教程或通用穿透/容差建议。",
+      "distinct_from": [
+        "motion-deformation",
+        "secondary-motion",
+        "aim-pose",
+        "action-timing"
+      ]
+    },
+    {
+      "id": "floating-numbers",
+      "request_examples": [
+        "伤害、治疗和得分飘字挤在一起，归属和类型看不清。"
+      ],
+      "primary_skill": "gameplay-floating-numbers",
+      "mechanisms": [
+        "floating-numbers",
+        "critical-ui"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在瞬时伤害、治疗或得分数字缺少层次、遮挡对象或无法区分事件类型/暴击时设计浮字实例与密集事件布局；共享表现，不混同业务结算或结果总分计数。",
+      "distinct_from": [
+        "health-damage-ui",
+        "result-counting",
+        "resource-ui",
+        "cooldown-ui"
+      ]
+    },
+    {
+      "id": "result-counting",
+      "request_examples": [
+        "结算总分想从中间值数到终值，跳过不能重复加分。"
+      ],
+      "primary_skill": "gameplay-result-counting",
+      "mechanisms": [
+        "result-count-up"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在完成/结算界面需要把已确认总分递增显示时设计只读计数动画；验证终值、支持的跳过和重开，不把动画刷新当成逐次得分或奖励发放。",
+      "distinct_from": [
+        "health-damage-ui",
+        "floating-numbers",
+        "resource-ui",
+        "cooldown-ui"
+      ]
+    },
+    {
+      "id": "card-interaction",
+      "request_examples": [
+        "手牌扇形排列和翻面怎么不遮住当前选中的牌？"
+      ],
+      "primary_skill": "gameplay-card-interaction",
+      "mechanisms": [
+        "card-presentation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当手牌跟随、扇形布局、翻面或升级卡选择缺少清晰状态时，设计卡牌交互反馈；不把奖励揭示或实际卡牌战斗规则混为布局动画。",
+      "distinct_from": [
+        "contextual-ui",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "world-readability",
+        "scene-transitions",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "dialogue-presentation",
+      "request_examples": [
+        "对话逐字显示与句末提示不同步，强调抖动又挡字。"
+      ],
+      "primary_skill": "gameplay-dialogue-presentation",
+      "mechanisms": [
+        "dialogue-feedback"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当逐字对话、标点节奏、情绪强调或结束提示不清时组织文本显示；区分字形动画、句子进度和真正继续操作，不推断未证的跳过功能。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "worldspace-indicators",
+        "world-readability",
+        "scene-transitions",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "worldspace-indicators",
+      "request_examples": [
+        "鱼的目标圈俯视重合，侧看却对不准鱼的深度。"
+      ],
+      "primary_skill": "gameplay-worldspace-indicators",
+      "mechanisms": [
+        "worldspace-interaction-indicator"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当世界内目标圈、鱼钩或操作指示与真实目标深度/投影错位时校对空间反馈；不同于仅让资源更显眼，不从动画推断成功判定。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "dialogue-presentation",
+        "world-readability",
+        "scene-transitions",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "scene-transitions",
+      "request_examples": [
+        "切场出生点闪一下，用黑屏淡入后还要防永久黑屏。"
+      ],
+      "primary_skill": "gameplay-scene-transitions",
+      "mechanisms": [
+        "scene-transition-masking"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当场景切换突显出生点或相机跳变时，组织遮蔽到就绪再恢复显示的流程；视觉过渡不是加载/出生点修复，不把未证淡出写成事实。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "world-readability",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "mechanical-interactions",
+      "request_examples": [
+        "压板门运动中反向触发，门显示打开却仍挡路。"
+      ],
+      "primary_skill": "gameplay-mechanical-interactions",
+      "mechanisms": [
+        "mechanical-interaction-feedback"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当压板、开关与门体运动/通行状态不一致时，组织触发、机械位移和接地反馈；分段变化不等于已知错峰算法。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "world-readability",
+        "scene-transitions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "connection-transitions",
+      "request_examples": [
+        "挂钩抛出去但绳端与真实连接状态不同步。"
+      ],
+      "primary_skill": "gameplay-connection-transitions",
+      "mechanisms": [
+        "connection-state-transition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当挂钩、绳端连接/脱开的过程不可读或与真实关系不同步时，组织锚点和过渡状态；不由弯曲绳形推断牵引物理或抛物线算法。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "world-readability",
+        "scene-transitions",
+        "mechanical-interactions"
+      ]
+    },
+    {
+      "id": "dash-feedback",
+      "request_examples": [
+        "冲刺 Light、Heavy、Ghost 残像怎么比较而不改速度？"
+      ],
+      "primary_skill": "gameplay-dash-feedback",
+      "mechanisms": [
+        "dash-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当冲刺速度存在但路径、起止或角色轮廓难读时，组合方向形变、残像与速度线并做样式对照；不因幽灵外观新增无敌或改变实际移动规则。",
+      "distinct_from": [
+        "movement-feedback",
+        "landing-feedback",
+        "jump-forgiveness",
+        "traversal-transitions",
+        "steering-assistance",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "landing-feedback",
+      "request_examples": [
+        "角色站在地上每帧都冒落地尘，落差强度也不分。"
+      ],
+      "primary_skill": "gameplay-landing-feedback",
+      "mechanisms": [
+        "landing-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当落地缺少重量或每帧接地重复播反馈时，绑定真实着地边沿并按高度/接触速度分级；不改跳高、接触物理或落地伤害。",
+      "distinct_from": [
+        "movement-feedback",
+        "dash-feedback",
+        "jump-forgiveness",
+        "traversal-transitions",
+        "steering-assistance",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "cooldown-ui",
+      "request_examples": [
+        "技能倒计时归零却不能用，暂停后进度也对不上。"
+      ],
+      "primary_skill": "gameplay-cooldown-ui",
+      "mechanisms": [
+        "cooldown-ui"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当技能倒计时、填充和实际可用时刻不一致时，校对冷却时钟与就绪状态；不把恢复动画结束作为技能规则，也不处理资源量或按住蓄力。",
+      "distinct_from": [
+        "health-damage-ui",
+        "floating-numbers",
+        "result-counting",
+        "resource-ui"
+      ]
+    },
+    {
+      "id": "blade-trails",
+      "request_examples": [
+        "想从剑尖采样生成刀光网格，断招后不要连出长线。"
+      ],
+      "primary_skill": "gameplay-blade-trails",
+      "mechanisms": [
+        "blade-trail"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当挥剑方向不清或拖尾断裂、串段和残留时，组织剑尖采样、弧形网格、尾端渐隐与纹理遮罩；轨迹只表达动作，不替代攻击判定。",
+      "distinct_from": [
+        "melee-feedback",
+        "parry-feedback",
+        "stomp-combos",
+        "hit-recovery",
+        "attack-direction",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "parry-feedback",
+      "request_examples": [
+        "弹反失败、成功、攻击者硬直和反击机会如何区分？"
+      ],
+      "primary_skill": "gameplay-parry-feedback",
+      "mechanisms": [
+        "parry-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当弹反预备、成功和反击机会难以区分时，按真实判定窗口与结果组织反馈；不因特效示例自动新增宽容窗口、击退或反击加伤。",
+      "distinct_from": [
+        "melee-feedback",
+        "blade-trails",
+        "stomp-combos",
+        "hit-recovery",
+        "attack-direction",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "stomp-combos",
+      "request_examples": [
+        "踩敌人后想表达反弹和连续踩踏奖励，不重复结算。"
+      ],
+      "primary_skill": "gameplay-stomp-combos",
+      "mechanisms": [
+        "stomp-combo"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为踩头成功、主角反弹和连续踩踏组织反馈，区分接触确认、实际反弹与连击结算；不从拉伸或递增分数推断跳高和经济规则。",
+      "distinct_from": [
+        "melee-feedback",
+        "blade-trails",
+        "parry-feedback",
+        "hit-recovery",
+        "attack-direction",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "hit-recovery",
+      "request_examples": [
+        "被连续围殴无法脱身，想检查受击阈值触发、并发计数与重置。"
+      ],
+      "primary_skill": "gameplay-hit-recovery",
+      "mechanisms": [
+        "surround-escape-threshold"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当连续受击使角色难以恢复操作时，评估一段时间内受击阈值脱身及其状态提示；受击保护仅保留 Mercy Frames 标题证据，不提供完整无敌窗口实现。",
+      "distinct_from": [
+        "melee-feedback",
+        "blade-trails",
+        "parry-feedback",
+        "stomp-combos",
+        "attack-direction",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "shooting-feedback",
+      "request_examples": [
+        "连发枪口与喷火嘴部不对齐，射击反馈还误当命中。"
+      ],
+      "primary_skill": "gameplay-shooting-feedback",
+      "mechanisms": [
+        "muzzle-origin",
+        "projectile-lifecycle",
+        "shooting-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为重复射击组织枪口光、视觉后坐和弹壳，并核对弹丸或持续喷射与可见发射源对齐；发射不等于命中，视觉连接不证明碰撞正确。",
+      "distinct_from": [
+        "projectile-spells"
+      ]
+    },
+    {
+      "id": "reward-reveal",
+      "request_examples": [
+        "宝箱、卡牌合成和升级成功想有准备、揭示与结果确认。"
+      ],
+      "primary_skill": "gameplay-reward-reveal",
+      "mechanisms": [
+        "chest-reveal",
+        "reward-reveal",
+        "merge-result-reveal",
+        "upgrade-result-reveal"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当宝箱、稀有卡、合并或升级结果缺少清楚揭示时，绑定既有过程/成功事件组织预备、显现与结果确认；不把演出结束当结算或实际领取。",
+      "distinct_from": [
+        "breakables-loot",
+        "loot-pickup",
+        "completion-sequences",
+        "surface-aftermath"
+      ]
+    },
+    {
+      "id": "loot-pickup",
+      "request_examples": [
+        "金币吸附到角色但背包满时不能当作已经领取。"
+      ],
+      "primary_skill": "gameplay-loot-pickup",
+      "mechanisms": [
+        "loot-confirmation",
+        "loot-attraction-feedback"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当金币或掉落物的来源、引导和实际领取不清时，区分生成、可拾取、吸附与成功确认；吸附只在既有规则允许时使用，不猜半径、穿障或经济值。",
+      "distinct_from": [
+        "breakables-loot",
+        "reward-reveal",
+        "completion-sequences",
+        "surface-aftermath"
+      ]
+    },
+    {
+      "id": "attack-direction",
+      "request_examples": [
+        "四向攻击打斜向目标要绕正交，我想评估全方向规则。"
+      ],
+      "primary_skill": "gameplay-attack-direction",
+      "mechanisms": [
+        "attack-direction-consistency"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当四向限制妨碍斜向攻击或出招方向与输入意图不一致时，评估攻击方向规则及显示/判定对齐；只在明确需要时改玩法，不推断自动瞄准或任意角算法。",
+      "distinct_from": [
+        "melee-feedback",
+        "blade-trails",
+        "parry-feedback",
+        "stomp-combos",
+        "hit-recovery",
+        "attack-readability"
+      ]
+    },
+    {
+      "id": "jump-forgiveness",
+      "request_examples": [
+        "刚走出平台再按跳就失败，想评估短暂离地宽限。"
+      ],
+      "primary_skill": "gameplay-jump-forgiveness",
+      "mechanisms": [
+        "coyote-time"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当角色刚离开平台便无法起跳时，评估 coyote time 的窗口、消费与重置规则；不处理防止离台，不将输入缓冲的文字佐证包装成完整实现。",
+      "distinct_from": [
+        "movement-feedback",
+        "dash-feedback",
+        "landing-feedback",
+        "traversal-transitions",
+        "steering-assistance",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "traversal-transitions",
+      "request_examples": [
+        "边缘容易误落；另一路线抓杆停挂又打断连续移动。"
+      ],
+      "primary_skill": "gameplay-traversal-transitions",
+      "mechanisms": [
+        "edge-stop-assistance",
+        "traversal-state-flow"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当平台边缘或抓杆交互的停留、释放选择不符合目标移动节奏时，设计防误落或连续接续状态；保留自主控制取舍，不以动画快慢替代规则设计。",
+      "distinct_from": [
+        "movement-feedback",
+        "dash-feedback",
+        "landing-feedback",
+        "jump-forgiveness",
+        "steering-assistance",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "steering-assistance",
+      "request_examples": [
+        "车辆直接转向突兀，减慢输入又迟滞，怎么比较可关闭辅助？"
+      ],
+      "primary_skill": "gameplay-steering-assistance",
+      "mechanisms": [
+        "steering-assistance"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当车辆直接转向突兀、整体平滑输入又迟滞时，评估状态相关 self-steer 辅助及可关闭的直接控制对照；不负责轮胎碰撞或视觉后坐。",
+      "distinct_from": [
+        "movement-feedback",
+        "dash-feedback",
+        "landing-feedback",
+        "jump-forgiveness",
+        "traversal-transitions",
+        "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "locomotion-contacts",
+      "request_examples": [
+        "轮胎只能底部碰地，侧面在沟渠里漏接触。"
+      ],
+      "primary_skill": "gameplay-locomotion-contacts",
+      "mechanisms": [
+        "locomotion-contact-representation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当轮胎等移动部件漏掉路缘或侧面接触时，比较线采样与体积表示的覆盖、稳定性和成本；区分接触物理、网格外观与转向辅助。",
+      "distinct_from": [
+        "movement-feedback",
+        "dash-feedback",
+        "landing-feedback",
+        "jump-forgiveness",
+        "traversal-transitions",
+        "steering-assistance"
+      ]
+    },
+    {
+      "id": "world-readability",
+      "request_examples": [
+        "地面资源难发现、角色被建筑挡住，想比较允许的信息可见方案。"
+      ],
+      "primary_skill": "gameplay-world-readability",
+      "mechanisms": [
+        "target-discoverability",
+        "occluded-character-indicator"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "改善世界目标发现性与角色遮挡可读性；按既定允许信息比较目标尺寸/位置、临时识别模式、局部透视和轮廓，不扩大检测或交互范围，也不处理操作投影、卡牌或机关反馈。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "dialogue-presentation",
+        "worldspace-indicators",
+        "scene-transitions",
+        "mechanical-interactions",
+        "connection-transitions"
+      ]
+    },
+    {
+      "id": "surface-aftermath",
+      "request_examples": [
+        "瓶子倒出的水片悬空在阶梯外，还穿出窄槽边界。"
+      ],
+      "primary_skill": "gameplay-surface-aftermath",
+      "mechanisms": [
+        "surface-conformity"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "处理倾倒或碰撞后水洼等表面余效的贴地、阶梯高低与边界适配；区分承载面/阻挡约束、作者描述的生成管线与视觉证据，不把网格贴合当成真实流体或玩法碰撞。",
+      "distinct_from": [
+        "breakables-loot",
+        "reward-reveal",
+        "loot-pickup",
+        "completion-sequences"
+      ]
+    },
+    {
+      "id": "completion-sequences",
+      "request_examples": [
+        "到终点想继续驶离并显示结果，怎么安排镜头与控制出口？"
+      ],
+      "primary_skill": "gameplay-completion-sequences",
+      "mechanisms": [
+        "completion-camera-handoff",
+        "completion-sequence"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当完成界面、计数动画和终点镜头互相打断时，编排一次权威完成事件到可结束的收尾流程；引用数值与镜头机制，不复制它们或把演出当真实结算。",
+      "distinct_from": [
+        "breakables-loot",
+        "reward-reveal",
+        "loot-pickup",
+        "surface-aftermath"
+      ]
+    },
+    {
+      "id": "jump-buffer-evidence",
+      "request_examples": [
+        "落地前按住跳跃的输入缓冲，在本批有哪些已核证据和实现缺口？"
+      ],
+      "primary_skill": "gameplay-jump-forgiveness",
+      "mechanisms": [],
+      "evidence_status": "evidence_only",
+      "boundary": "冻结95来源只有第一方行为文字；未核原视频独立AB、缓冲实现或时窗，不提供完整输入缓冲能力。",
+      "distinct_from": []
+    },
+    {
+      "id": "boss-barrier-evidence",
+      "request_examples": [
+        "Boss 屏障煤灰边缘的帖子能证明完整 shader 和高度裁切已经修好了吗？"
+      ],
+      "primary_skill": "gameplay-boss-sequences",
+      "mechanisms": [],
+      "evidence_status": "evidence_only",
+      "boundary": "只有材质变化文字与部分画面，高度裁切仍待修；不提供通用shader/屏障实现工作流。",
+      "distinct_from": []
+    },
+    {
+      "id": "mercy-frames-evidence",
+      "request_examples": [
+        "Mercy Frames 标题能证明无敌时窗、免疫种类和叠加规则吗？"
+      ],
+      "primary_skill": "gameplay-hit-recovery",
+      "mechanisms": [],
+      "evidence_status": "evidence_only",
+      "boundary": "只有来源标题，未核具体保护规则或代码；不包装完整无敌窗口实现。",
+      "distinct_from": []
+    }
+  ]
 }

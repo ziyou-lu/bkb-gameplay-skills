@@ -32,6 +32,160 @@ class SourceIdentityTests(unittest.TestCase):
                 v.post_id_from_url(url)
 
 
+class TaskRouteTests(unittest.TestCase):
+    def setUp(self):
+        # Synthetic IDs keep these contract tests independent of the live skill
+        # inventory, its size, and the current classification decisions.
+        self.catalog = {
+            'skills': [
+                {'id': 'skill-first', 'mechanisms': ['first-mechanism']},
+                {'id': 'skill-second', 'mechanisms': ['second-mechanism']},
+            ],
+            'task_routes': [
+                {
+                    'id': 'first-task',
+                    'request_examples': ['请把第一类交互做成可复用的完整流程。'],
+                    'primary_skill': 'skill-first',
+                    'mechanisms': ['first-mechanism'],
+                    'evidence_status': 'workflow',
+                    'boundary': '只覆盖第一类交互；未运行引擎代码。',
+                    'distinct_from': ['second-task'],
+                },
+                {
+                    'id': 'second-task',
+                    'request_examples': ['我需要第二类交互的独立工作流。'],
+                    'primary_skill': 'skill-second',
+                    'mechanisms': ['second-mechanism'],
+                    'evidence_status': 'workflow',
+                    'boundary': '第二类交互有独立触发条件，不包含第一类交互。',
+                    'distinct_from': [],
+                },
+                {
+                    'id': 'first-evidence',
+                    'request_examples': ['现有第一类交互案例能证明什么？'],
+                    'primary_skill': 'skill-first',
+                    'mechanisms': [],
+                    'evidence_status': 'evidence_only',
+                    'boundary': '只提供已有案例证据，不声称完整实现能力。',
+                    'distinct_from': [],
+                },
+            ],
+        }
+
+    def assert_issue(self, prefix):
+        issues = v.validate_task_routes(self.catalog)
+        self.assertTrue(any(prefix in issue for issue in issues), issues)
+
+    def test_valid_routes_and_shared_targets_without_declared_distinction(self):
+        self.assertEqual(v.validate_task_routes(self.catalog), [])
+
+    def test_routes_must_be_present_and_nonempty(self):
+        for routes in (None, [], {}, 'first-task'):
+            with self.subTest(routes=routes):
+                self.catalog['task_routes'] = routes
+                self.assert_issue('task_routes must be a non-empty array')
+        del self.catalog['task_routes']
+        self.assert_issue('task_routes must be a non-empty array')
+
+    def test_route_must_be_an_object(self):
+        self.catalog['task_routes'].append('not-an-object')
+        self.assert_issue('Invalid task route object')
+
+    def test_unknown_primary_skill_fails(self):
+        self.catalog['task_routes'][0]['primary_skill'] = 'missing-skill'
+        self.assert_issue('Unknown task route primary_skill')
+
+    def test_workflow_requires_nonempty_mechanisms(self):
+        self.catalog['task_routes'][0]['mechanisms'] = []
+        self.assert_issue('Workflow task route needs owned mechanisms')
+
+    def test_workflow_missing_mechanism_owner_fails(self):
+        self.catalog['skills'][0]['mechanisms'] = []
+        self.assert_issue('Task route mechanism not uniquely owned by primary_skill')
+
+    def test_workflow_wrong_mechanism_owner_fails(self):
+        self.catalog['task_routes'][0]['mechanisms'] = ['second-mechanism']
+        self.assert_issue('Task route mechanism not uniquely owned by primary_skill')
+
+    def test_workflow_multiple_mechanism_owners_fail(self):
+        self.catalog['skills'][1]['mechanisms'].append('first-mechanism')
+        self.assert_issue('Task route mechanism not uniquely owned by primary_skill')
+
+    def test_independent_routes_cannot_be_merged_even_if_ownership_is_updated(self):
+        self.catalog['skills'][0]['mechanisms'].append('second-mechanism')
+        self.catalog['skills'][1]['mechanisms'] = []
+        self.catalog['task_routes'][1]['primary_skill'] = 'skill-first'
+        # Ownership is still unique after the merge; the explicit task boundary
+        # must catch the regression independently of the mechanism check.
+        self.assertEqual(v.validate_task_routes(self.catalog), [
+            'Distinct task routes share primary_skill: first-task -> second-task',
+            'Skill has no discovery route: skill-second'])
+
+    def test_skill_without_discovery_route_fails(self):
+        self.catalog['skills'].append({'id': 'unrouted-skill', 'mechanisms': ['unused-mechanism']})
+        self.assert_issue('Skill has no discovery route')
+
+    def test_evidence_only_cannot_claim_workflow_mechanisms(self):
+        self.catalog['task_routes'][2]['mechanisms'] = ['first-mechanism']
+        self.assert_issue('Evidence-only task route cannot claim mechanisms')
+
+    def test_duplicate_route_ids_fail(self):
+        self.catalog['task_routes'].append(self.catalog['task_routes'][0].copy())
+        self.assert_issue('Duplicate task route ID')
+
+    def test_unknown_distinct_route_fails(self):
+        self.catalog['task_routes'][0]['distinct_from'] = ['missing-route']
+        self.assert_issue('Unknown distinct task route')
+
+    def test_duplicate_distinct_route_fails(self):
+        self.catalog['task_routes'][0]['distinct_from'] = ['second-task', 'second-task']
+        self.assert_issue('Duplicate task route distinct_from')
+
+    def test_self_distinction_fails(self):
+        self.catalog['task_routes'][0]['distinct_from'] = ['first-task']
+        self.assert_issue('Task route cannot be distinct from itself')
+
+    def test_invalid_route_ids_fail(self):
+        for value in ('', ' ', 'Not a route', [], None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['id'] = value
+                self.assert_issue('Invalid task route ID')
+
+    def test_empty_or_invalid_examples_fail(self):
+        for value in ([], [''], ['  '], ['示例', None], '示例', None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['request_examples'] = value
+                self.assert_issue('Empty/invalid task route request_examples')
+
+    def test_empty_or_invalid_boundary_fails(self):
+        for value in ('', '  ', [], None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['boundary'] = value
+                self.assert_issue('Empty/invalid task route boundary')
+
+    def test_invalid_evidence_status_fails(self):
+        for value in ('', 'executed', [], None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['evidence_status'] = value
+                self.assert_issue('Invalid task route evidence_status')
+
+    def test_invalid_mechanism_list_fails(self):
+        for value in ('first-mechanism', [''], [None], None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['mechanisms'] = value
+                self.assert_issue('Invalid task route mechanisms')
+
+    def test_duplicate_mechanism_claims_fail(self):
+        self.catalog['task_routes'][0]['mechanisms'] *= 2
+        self.assert_issue('Duplicate task route mechanism')
+
+    def test_invalid_distinct_list_fails(self):
+        for value in ('second-task', [''], [None], None):
+            with self.subTest(value=value):
+                self.catalog['task_routes'][0]['distinct_from'] = value
+                self.assert_issue('Invalid task route distinct_from')
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -52,6 +206,10 @@ class RepositoryInvariantTests(unittest.TestCase):
 
     def test_valid_repository(self):
         self.assertEqual(v.validate(self.root), [])
+
+    def test_task_routes_are_required_by_repository_validation(self):
+        self.mutate_json('catalog.json', lambda d: d.pop('task_routes', None))
+        self.assert_issue('task_routes must be a non-empty array')
 
     def test_duplicate_source_fails(self):
         self.mutate_json('sources/posts.json', lambda d: d['posts'].append(d['posts'][0].copy()))

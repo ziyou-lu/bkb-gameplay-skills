@@ -36,11 +36,13 @@ description: "在敌人招式、Boss 区域攻击或危险路径难读时改善�
 - [ ] 实测特效边缘与判定一致，提示到生效延迟可记录。
 - [ ] 普通、连续、墙角情境均有预期反制；未改动机制的对照保持同样判定结果。
 
+受围困后的无敌许可或阈值脱身不是预警表现，转到[受击恢复规则](../gameplay-hit-recovery/SKILL.md)；弹反成功/失败的状态闭环转到[弹反反馈](../gameplay-parry-feedback/SKILL.md)。
+
 ## 组合而不复制
 
 只在需要相应机制时读取，沿用其事件与预算约束：
 
-- [生命血条与浮动数值](../gameplay-health-damage-ui/SKILL.md)
+- [生命血条与损失残影](../gameplay-health-damage-ui/SKILL.md)
 - [Boss 入场、转阶段与终结](../gameplay-boss-sequences/SKILL.md)
 
 ## 来源证据
@@ -55,4 +57,3 @@ description: "在敌人招式、Boss 区域攻击或危险路径难读时改善�
 - DM-5jXrNy1f（已知 ID，链接未核验）：Boss 招式专属手臂姿势。
 - [DeGQTpgNFfF](https://www.instagram.com/solarfall_studios/reel/DeGQTpgNFfF/)：Boss 火焰可读性。
 - [DenLEa4xApp](https://www.instagram.com/p/DenLEa4xApp/)：弹反反馈。
-- [DdAIJqcPzPn](https://www.instagram.com/p/DdAIJqcPzPn/)：受围困脱身机制。

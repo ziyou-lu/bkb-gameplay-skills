@@ -2,7 +2,7 @@
 
 - Keep public game-effect knowledge only. Do not add personal accounts, registration details, authentication data, private research notes or copied videos/audio.
 - Read catalog.json and sources/posts.json before adding a skill. Normalize Instagram source IDs across URL routes; merge existing mechanisms instead of one file per post.
-- Shared mechanisms have one owner. Scene skills compose them by links. A new parameter, creator or visual style is normally an update, not a new skill.
+- Shared mechanisms have one owner. Scene skills compose them by links. A new parameter, creator or visual style is normally an update, not a new skill. The same broad category does not imply the same workflow: compare trigger, inputs, state transitions and failure acceptance before merging. Register task_routes and reviewed distinct_from boundaries; keep compatibility navigation when moving an owner. Evidence-only notes must not be advertised as complete implementation capabilities.
 - Preserve provenance and uncertainty. Caption/author text is not audio verification, shown code is not executed code, visual shape is not damage logic. Never reconstruct missing steps from a different post.
 - Treat supplied parameters as source-specific examples. Do not invent universal defaults.
 - Changes to evidence must update both source and catalog references. Refresh the derived index with python scripts/update_index.py, then run python scripts/validate.py and python -m unittest discover -s tests -v, then inspect the diff.

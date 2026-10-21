@@ -29,7 +29,7 @@
       "limitations": "第 1、7 步及本记录未保存的各步名称未知，不补写成完整教程。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -46,7 +46,7 @@
       "limitations": "未运行源代码；未完整核听音频；未给出的参数不补全。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-dash-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -63,7 +63,7 @@
       "limitations": "第 4 步缺失；音效仅文字/字幕；不把后来的其他宝箱视频作为本帖缺失步骤。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-breakables-loot"
+        "gameplay-reward-reveal"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -122,7 +122,7 @@
       "limitations": "第 2、5 步缺失；不能推断吸取半径、轨迹或经济数值。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-breakables-loot"
+        "gameplay-loot-pickup"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -149,7 +149,8 @@
         "gameplay-hitstop",
         "gameplay-health-damage-ui",
         "gameplay-melee-feedback",
-        "gameplay-skill-ingestion"
+        "gameplay-skill-ingestion",
+        "gameplay-floating-numbers"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -211,7 +212,7 @@
       "limitations": "标题和对应画面已核验；未见引擎代码、采样密度或 UV/网格实现参数。渐隐字幕有起端 alpha 0，但实际材质坐标方向需要项目确认。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-melee-feedback"
+        "gameplay-blade-trails"
       ],
       "evidence_updates": [
         {
@@ -238,8 +239,8 @@
       "skill_ids": [
         "gameplay-hitstop",
         "gameplay-camera-feedback",
-        "gameplay-breakables-loot",
-        "gameplay-skill-ingestion"
+        "gameplay-skill-ingestion",
+        "gameplay-reward-reveal"
       ],
       "evidence_updates": [
         {
@@ -305,8 +306,8 @@
       "skill_ids": [
         "gameplay-hitstop",
         "gameplay-attack-readability",
-        "gameplay-melee-feedback",
-        "gameplay-skill-ingestion"
+        "gameplay-skill-ingestion",
+        "gameplay-parry-feedback"
       ],
       "evidence_updates": [
         {
@@ -348,7 +349,8 @@
       "limitations": "第 3、5、8 步缺失；没有通用缩放公式。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-health-damage-ui"
+        "gameplay-health-damage-ui",
+        "gameplay-floating-numbers"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -428,7 +430,8 @@
         "gameplay-hitstop",
         "gameplay-impact-visuals",
         "gameplay-health-damage-ui",
-        "gameplay-melee-feedback"
+        "gameplay-melee-feedback",
+        "gameplay-hit-recovery"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -446,7 +449,6 @@
       "parameters": [],
       "skill_ids": [
         "gameplay-motion-deformation",
-        "gameplay-resource-ui",
         "gameplay-contextual-ui"
       ],
       "observed_date": "2026-10-20",
@@ -482,7 +484,7 @@
       "limitations": "恢复动画参数未知，未验证真实冷却时钟。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-resource-ui"
+        "gameplay-cooldown-ui"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -570,7 +572,7 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-motion-deformation",
-        "gameplay-movement-feedback"
+        "gameplay-landing-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -692,7 +694,7 @@
       ],
       "skill_ids": [
         "gameplay-hitstop",
-        "gameplay-contextual-ui"
+        "gameplay-reward-reveal"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -710,7 +712,7 @@
       "parameters": [],
       "skill_ids": [
         "gameplay-camera-feedback",
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -727,8 +729,8 @@
       "limitations": "引擎标签不一致，不推断引擎选型；等待首击是案例行为，不推广为所有敌人规则。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation",
-        "gameplay-movement-feedback"
+        "gameplay-movement-feedback",
+        "gameplay-secondary-motion"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -747,7 +749,7 @@
       "skill_ids": [
         "gameplay-camera-feedback",
         "gameplay-motion-deformation",
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -764,8 +766,7 @@
       "limitations": "评论对位置的批评不等于作者采纳；参数未知。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-impact-visuals",
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -799,7 +800,7 @@
       "limitations": "未检查代码、墙边穿透与碰撞。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -816,7 +817,7 @@
       "limitations": "属于观察者对照，不是作者声明的逐步教程；shader 未证。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-card-interaction"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -833,7 +834,7 @@
       "limitations": "淡出字幕参数不完整；合并数字可能漏感命中属于评论权衡，不是作者确认的改动。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-health-damage-ui"
+        "gameplay-floating-numbers"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -850,8 +851,7 @@
       "limitations": "部分编号不全；代码未执行；不能当作独立波浪动画或物理正确性证明。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation",
-        "gameplay-movement-feedback"
+        "gameplay-secondary-motion"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -877,7 +877,7 @@
       "skill_ids": [
         "gameplay-hitstop",
         "gameplay-motion-deformation",
-        "gameplay-movement-feedback"
+        "gameplay-landing-feedback"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -918,7 +918,7 @@
       "limitations": "未看到完整游戏场景；跳过功能未证；pop 只在总功能列表出现。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-dialogue-presentation"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -935,7 +935,7 @@
       "limitations": "Love2D + Lua 有正文和可见代码支持，未执行；无完整卡牌对战演示。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-card-interaction"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -986,8 +986,7 @@
       "limitations": "精确阈值未知；这是机制对比，不是纯多层特效教程。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-attack-readability",
-        "gameplay-melee-feedback"
+        "gameplay-hit-recovery"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -1004,7 +1003,7 @@
       "limitations": "不是多步骤教程；拥挤是迁移时的风险分析而非作者实验结论。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-health-damage-ui"
+        "gameplay-floating-numbers"
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
@@ -1021,7 +1020,6 @@
       "limitations": "正文与部分对比画面；高度裁切仍待修；评论中的多层粒子建议不是已实现证据。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-impact-visuals",
         "gameplay-boss-sequences"
       ],
       "observed_date": "2026-10-20",
@@ -1179,7 +1177,7 @@
         "gameplay-hitstop",
         "gameplay-impact-visuals",
         "gameplay-motion-deformation",
-        "gameplay-melee-feedback"
+        "gameplay-stomp-combos"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1215,7 +1213,7 @@
       "limitations": "dynamic pull 来自正文，画面可见鱼线/目标位置变化，但输入规则、算法和数值未完整核验。未核听声音；不是泛水波动画，也不能由视觉推断具体捕鱼成功判定。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-worldspace-indicators"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1279,7 +1277,7 @@
       "limitations": "Ghost dash 快速瞬间细节未完整捕捉，不补残影数量、透明度或持续时间；无数值，音频未核听。评论中的起步灰尘应锚定世界起点、幽灵外观可能暗示无敌帧均是第三方建议，不是作者实现或已证机制。保持动作不变比较可读性是本库的分析，不代表作者已证明重拖尾最佳。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-dash-feedback"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1313,7 +1311,7 @@
       "limitations": "ripples 标签已确认，但独立涟漪形态和参数未核清；无具体大小/距离数值，音频未核听。前半新增螃蟹、鱼、矛、鲨鱼与烹饪是功能展示，不应拼成目标可读性优化链。优先检查目标屏幕尺寸/出现位置、再加环境提示是本库提炼；没有代码、玩家研究或难度指标验证。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-world-readability"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1330,7 +1328,7 @@
       "limitations": "未核实输入设备、鼠标或摇杆映射、任意角度算法、动画混合或碰撞形状，不推断自动瞄准。全方向是作者描述及画面方向变化，不证明连续角度实现。画面原有闪光和伤害数字不证明它们是本次新增层。减少斜向目标的正交对齐操作成本是本库机制分析，不是作者量化结果；音频未核听，代码未执行。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-melee-feedback"
+        "gameplay-attack-direction"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1347,7 +1345,7 @@
       "limitations": "完整运动轨迹、精确时长、单层开关对比和音频未核实，不补参数，也不宣称每一层独立改善了体验。素材消耗、成功判定、取消/失败分支及合成配方未由代码验证；对业务事件和结果确认的约束是本库迁移建议。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-breakables-loot"
+        "gameplay-reward-reveal"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1365,8 +1363,8 @@
       "parameters": [],
       "skill_ids": [
         "gameplay-impact-visuals",
-        "gameplay-motion-deformation",
-        "gameplay-camera-feedback"
+        "gameplay-camera-feedback",
+        "gameplay-motion-deformation"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1383,7 +1381,7 @@
       "limitations": "没有代码、动画时长、曲线和旋转参数，旋转是否随机未证，音频未核听。标签展示顺序不等于每次事件的运行时动画先后，例如不能解释成淡出之后才开始缩放入场。+100 与绿色是本例的显示选择，不是通用分数、配色或伤害规范；实际计分逻辑未运行验证。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-health-damage-ui"
+        "gameplay-floating-numbers"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1400,7 +1398,7 @@
       "limitations": "不能把转发账号写成原创作者，也没有取得或核验 Faxdocc 原帖。代码、角度阈值、位移幅度、绘制层级和音频未核实；未见独立“旋转枪”步骤标签，不把最终枪随准星的画面补成额外教程步骤。不推断骨骼工具、动画混合实现、自动瞄准或碰撞规则变化。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation"
+        "gameplay-aim-pose"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1417,7 +1415,7 @@
       "limitations": "武器中间独立标签未捕清，不补成已证制作步骤。堆叠层数、层间偏移、角度阈值、代码和动画时序未核验，音频未核听；8 格素材是本例观察，不证明通用必须八方向或固定角度切换。不能把最后枪口环/碎片当作独立逐层教学或反推碰撞、伤害规则，也不能把转载账号记为原创作者。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation"
+        "gameplay-aim-pose"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1434,7 +1432,7 @@
       "limitations": "代码、运动时长/曲线、各门段错峰算法与镜头幅度/频率没有验证；错落外观不证明随机延迟或某个具体调度算法。音频未核听，评论中的末端 clack 和更多 shake 仅为建议，不能写成作者已实现。未核验门碰撞、通行生效时刻、反向中断和遮挡处理；这些属于迁移时应检查的项目规则。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-mechanical-interactions"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1468,7 +1466,7 @@
       "limitations": "未获得实际帧数、时长、代码或输入到开火的延迟测量，不能把作者“帧数过多”的反思写成测得新版响应更快。删掉非必要表演、保留关键姿态是本库迁移提炼，不是作者完整制作步骤；多项差异没有单独消融验证。评论中的 gunspin 不是独立事实证据，音频未核听。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation"
+        "gameplay-action-timing"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1528,7 +1526,7 @@
         }
       ],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-jump-forgiveness"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1561,7 +1559,7 @@
       "limitations": "三阶段各约三分之一是教学图，不是普遍动画比例；1 FRAME 是作者展示标注，未独立测量游戏输入延迟，Mario 也仅是该来源示意。没有命中盒、伤害生效时点、冷却或引擎实现证据，音频未核听。优先检查输入后冗余准备而非整段加速是迁移原则，不能据此要求所有攻击零前摇；保留敌人预警、必要蓄力与真实规则，并单独核对时序变化，属于本库实施建议。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation"
+        "gameplay-action-timing"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1578,7 +1576,7 @@
       "limitations": "修改物理包及弹性近似是作者说明，未见代码、具体 API、穿入量或参数，也没有独立量化验证；不认定为完整软体仿真或已验证的稳定物理解法。视觉凹陷与接触响应不是同一层，不从画面推断实际碰撞体更新方式。不能将局部演示泛化成应放宽全局碰撞容差；音频未核听。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-motion-deformation"
+        "gameplay-contact-response"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1595,7 +1593,7 @@
       "limitations": "转向原理、改进效果与键盘受益属于作者说明和演示，未独立测量输入延迟、控制误差或漂移成绩。没有混合公式、增益、角度限制或代码，不称零延迟、自动驾驶或普遍汽车物理定律。状态相关辅助与一味放慢输入的取舍是本库提炼，不证明所有车辆都应加入此辅助；音频未核听。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-steering-assistance"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1612,7 +1610,7 @@
       "limitations": "没有核验射线数量、圆柱碰撞具体 API、摩擦或悬架参数、代码、性能成本及量化操控结果，音频未核听。三版本是替代方案迭代，不是必须叠加的三层，也不能推出形状越复杂越好。绿色线框和侧接触演示不能单独证明某种 sweep/刚体实现；不将已有吸震误写为新版新增，不把未来掉轮当已实现。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-locomotion-contacts"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1629,7 +1627,7 @@
       "limitations": "没有同速控制或独立量化的速度感/实际速度结果，不能从镜头变化宣称角色跑得更快，也不能给四项分配独立收益。FOV 范围、速度映射、模糊强度和震动参数未知，音频未核听。运动不适减弱/关闭选项及同轨迹逐项验收是本库实施建议，不是作者已证功能。thegamedevclub 的 DSPbCDyjfDD 为同素材转发，不另计来源。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-camera-feedback"
+        "gameplay-speed-camera"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1653,7 +1651,7 @@
       "limitations": "没有核验触发按键、持续时长、距离条件、遮挡/穿墙规则或 shader 实现；不据此声称自动收集、扩大检测范围或新增资源。模式退出清理、高亮集合与信息公平的验收是本库迁移建议，不是作者已证实现。没有数值或运行验证，音频未核听。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-world-readability"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1670,7 +1668,7 @@
       "limitations": "没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-world-readability"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1687,7 +1685,7 @@
       "limitations": "没有核验边缘检测方法、距离/角度阈值、退出/取消条件、长按操作或自动选择落点，音频未核听。SPACE 是此例提示，不是通用键位。防误落与移动连续性的取舍没有量化验证；不能从随后跳跃推断所有边缘都能跳或已经自动选定安全目标。它阻止离台，不等同离台后仍可跳的 coyote time。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-traversal-transitions"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1704,7 +1702,7 @@
       "limitations": "没有捕获完整淡出连续过程，不把 fade-out 当作已证步骤；没有时长、曲线、加载与场景切换顺序、输入锁定或恢复条件证据。视觉遮蔽不等于修复出生点问题，也不证明消除了加载停顿。场景真正就绪后解除遮挡、失败退出与输入恢复属于本库实施建议，不是原帖已核机制。未读或运行代码，音频未核听。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-scene-transitions"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1721,7 +1719,7 @@
       "limitations": "Case 1 未完整核验；Case 2 的边界贴合是视觉证据，不等于代码或所有碰撞情形验证，不把三种 case 都记成已通过。未核验 BFS 停止条件、采样间距/上限、射线配置、碰撞层、网格更新时间或性能；没有代码阅读、运行或定量测试，音频未核听。它支持表面余效与承载地形一致性的方向，不证明真实流体、体积守恒、任意地形稳定性或玩法碰撞随网格改变。不得把作者描述的管线当成所有项目通用最佳实现。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-impact-visuals"
+        "gameplay-surface-aftermath"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1738,7 +1736,7 @@
       "limitations": "没有核验碰撞、伤害、射程、预警时机或其他玩法规则改变；不能把旧画面未见主体扩写为旧系统完全没有发射实体。没有算法、socket/挂点实现、数值或代码证据，音频未核听。先修可见来源再考虑追加特效是本库迁移提炼，不是作者的量化收益或固定制作流程。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-projectile-spells"
+        "gameplay-shooting-feedback"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1755,7 +1753,7 @@
       "limitations": "不是全流程旧版/新版 A/B，也不是各层独立贡献测试；未完整核实机械环、蓄能球、光柱与电弧的实际播放顺序、持续时间或触发条件。没有伸缩幅度、时序、shader、随机/偏移算法、性能或代码执行证据，音频未核听。完成文字是画面信息，不证明升级结算、素材消耗或中断恢复逻辑。视觉光柱不证明攻击伤害或碰撞功能。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-breakables-loot"
+        "gameplay-reward-reveal"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1789,7 +1787,7 @@
       "limitations": "没有速度、操作响应或路线完成时间的独立测量，输入方式、状态切换条件、算法和参数未知，音频未核听。作者对控制器重写、更顺滑或更有趣的说法不作为已验证独立收益。减少停挂/择时状态会改变控制规则；可能降低自主择时空间是本库设计分析，不是作者的玩家测试结论。不能把 immediate 当作零延迟数值，也不推断完全自动移动。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-movement-feedback"
+        "gameplay-traversal-transitions"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1806,7 +1804,8 @@
       "limitations": "没有旧版视觉 A/B，未核验计数持续时间、速度曲线/easing、计分公式、跳过输入或完成与失败的结算规则；不完整字幕不补齐为规则说明。1520、3498、10000 仅本次画面分数，不是动画参数或通用奖励量。未读或运行代码，音频未核听。显示动画与真实总分分离、跳过仍显示正确终值和防重复奖励是本库实施建议，不是视频已证功能。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-health-damage-ui"
+        "gameplay-result-counting",
+        "gameplay-completion-sequences"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1823,7 +1822,7 @@
       "limitations": "spline 的具体编辑操作未核清，不补成确定跟随、插值或路径算法。没有镜头切换时长、插值曲线、完成界面延迟、输入可用性、跳过/恢复或真实奖励结算证据；不能把新镜头误称仍允许玩家驾驶，也不能从车辆继续运动推定自动驾驶实现。未读或运行代码，音频未核听。完成事件与尾声独立、重复触发安全及支持的跳过恢复属于本库实施建议。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-camera-feedback"
+        "gameplay-completion-sequences"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -1840,7 +1839,7 @@
       "limitations": "回收动作的完整字幕未核清，不补成确定回收轨迹或固定先后时序。弯曲路径不证明抛物线/弹道算法，挂钩、绳形显示与实际关节/碰撞物理的分工未知。补证帖中的参数名没有已核通用数值；未读或运行代码、未测时长/响应，音频未核听。连接成功、失败、取消与重复触发的状态约束是本库实施建议，不是视频代码验证。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-contextual-ui"
+        "gameplay-connection-transitions"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,

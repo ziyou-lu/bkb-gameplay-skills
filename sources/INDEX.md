@@ -20,7 +20,7 @@ https://www.instagram.com/reel/Dehz2z9Nc7F/
 - 观察：观察到第 2–6 步。
 - 限制：第 1、7 步及本记录未保存的各步名称未知，不补写成完整教程。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## DehPnhjxUvB · 冲刺反馈
 
@@ -30,7 +30,7 @@ https://www.instagram.com/reel/DehPnhjxUvB/
 - 观察：Wind-up、Stretch、Sound、Afterimages、Speed Lines。
 - 限制：未运行源代码；未完整核听音频；未给出的参数不补全。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-dash-feedback](../skills/gameplay-dash-feedback/SKILL.md)
 
 ## DeglnOkRkuI · 宝箱开启四项已知反馈
 
@@ -40,7 +40,7 @@ https://www.instagram.com/reel/DeglnOkRkuI/
 - 观察：Anticipation、Snap、Sound、Loot Pop。
 - 限制：第 4 步缺失；音效仅文字/字幕；不把后来的其他宝箱视频作为本帖缺失步骤。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+- 归入：[gameplay-reward-reveal](../skills/gameplay-reward-reveal/SKILL.md)
 
 ## DdhLtbTlTRG · 血条延迟扣血与残影
 
@@ -61,7 +61,7 @@ https://www.instagram.com/reel/DeikuCgOkof/
 - 观察：Magnet、Sound、Sparkle。
 - 限制：第 2、5 步缺失；不能推断吸取半径、轨迹或经济数值。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+- 归入：[gameplay-loot-pickup](../skills/gameplay-loot-pickup/SKILL.md)
 
 ## DejijtPzhYJ · 组合战斗反馈
 
@@ -72,7 +72,7 @@ https://www.instagram.com/reel/DejijtPzhYJ/
 - 限制：未运行源代码；未完整核听音频；未给出的参数不补全。
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "hitstop", "value": "3–5", "unit": "frames", "provenance": "caption_or_post_text"}]
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md), [gameplay-floating-numbers](../skills/gameplay-floating-numbers/SKILL.md)
 
 ## DeetsiYE94i · Left 4 Dead Director 节奏概述
 
@@ -110,7 +110,7 @@ https://www.instagram.com/p/DemlZDhNoFi/
 - 限制：标题和对应画面已核验；未见引擎代码、采样密度或 UV/网格实现参数。渐隐字幕有起端 alpha 0，但实际材质坐标方向需要项目确认。
 - 音频核听：False；代码运行：False
 - 补齐：补齐此前研究记录未保存的五个步骤名称与含义。
-- 归入：[gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+- 归入：[gameplay-blade-trails](../skills/gameplay-blade-trails/SKILL.md)
 
 ## Deo9lu7tzCT · 宝箱七步反馈
 
@@ -121,7 +121,7 @@ https://www.instagram.com/p/Deo9lu7tzCT/
 - 限制：第 4 步完整标题仍未留存，不猜其名称；金色向上光束可作为视觉证据。停顿、镜头、粒子参数未知；音效未核听，未见执行代码。
 - 音频核听：False；代码运行：False
 - 补齐：补齐 1/3/6/7 名称与机制，第 3 步明确含冻结和镜头震动；第 4 步保留已见光束与完整标题缺口。
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md), [gameplay-reward-reveal](../skills/gameplay-reward-reveal/SKILL.md)
 
 ## Deidw81hnmg · 动漫重击五层
 
@@ -152,7 +152,7 @@ https://www.instagram.com/p/DenLEa4xApp/
 - 限制：第 6 步标题与解释已补齐，但截图只捕获碰撞帧；击退距离和硬直时长未核实。声音未核听；窗口和加伤数值未知。
 - 音频核听：False；代码运行：False
 - 补齐：补齐第 6 步 STAGGER；补充第 5 步 ting + clang 和第 7 步 bonus damage 的字幕证据。
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-attack-readability](../skills/gameplay-attack-readability/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-attack-readability](../skills/gameplay-attack-readability/SKILL.md), [gameplay-skill-ingestion](../skills/gameplay-skill-ingestion/SKILL.md), [gameplay-parry-feedback](../skills/gameplay-parry-feedback/SKILL.md)
 
 ## Deh3qQ0RU4e · 爆炸桶反馈
 
@@ -172,7 +172,7 @@ https://www.instagram.com/p/DemP6LfRbug/
 - 观察：1 平滑；2 损失血量段；4 颜色；6 避免数字重叠；7 字号随伤害；9 暴击标题。
 - 限制：第 3、5、8 步缺失；没有通用缩放公式。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md), [gameplay-floating-numbers](../skills/gameplay-floating-numbers/SKILL.md)
 
 ## DeozoT-xXrP · Boss 入场
 
@@ -213,7 +213,7 @@ https://www.instagram.com/p/DelJO3qusJE/
 - 观察：Hitboxes、Freeze + Flash、Impact Frame、Pushback、Blood、Health Bar、Mercy Frames；击退与喷溅对齐攻击方向，地面痕迹淡出。
 - 限制：七步已观察；无敌帧、碰撞体和伤害逻辑没有代码/运行验证。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md), [gameplay-hit-recovery](../skills/gameplay-hit-recovery/SKILL.md)
 
 ## DejFnl2Ru9N · 实体按钮反馈
 
@@ -223,7 +223,7 @@ https://www.instagram.com/p/DejFnl2Ru9N/
 - 观察：Press Down、Overshoot、Sound、Ripple、Reward，另有 Hold to Charge。
 - 限制：音效未核听；持续按住的阈值未知。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-resource-ui](../skills/gameplay-resource-ui/SKILL.md), [gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
 
 ## DeXJvO9kg94 · 法力宝石 UI
 
@@ -243,7 +243,7 @@ https://www.instagram.com/reel/DeFICP0DMwZ/
 - 观察：扫过填充、变暗、倒计时、恢复。
 - 限制：恢复动画参数未知，未验证真实冷却时钟。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-resource-ui](../skills/gameplay-resource-ui/SKILL.md)
+- 归入：[gameplay-cooldown-ui](../skills/gameplay-cooldown-ui/SKILL.md)
 
 ## Ddy_-6wDMkn · 像素拳击五层
 
@@ -274,7 +274,7 @@ https://www.instagram.com/reel/DerbjhXTzfy/
 - 观察：压缩/回弹、脚边尘、向下镜头冲击、下落时纵向拉伸、音效，强度随落下高度。
 - 限制：部分画面加正文；具体高度映射、音效与落地伤害未知。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-landing-feedback](../skills/gameplay-landing-feedback/SKILL.md)
 
 ## DeqnlBQzbMY · 暴击反馈
 
@@ -328,7 +328,7 @@ https://www.instagram.com/reel/DemZuPozqeb/
 - 限制：未核实真实 3D 实现与音效；不能从画面断言 3D 模型或 shader 实现。
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "flip_pause", "value": 4, "unit": "frames", "provenance": "post_text"}]
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-reward-reveal](../skills/gameplay-reward-reveal/SKILL.md)
 
 ## Dekh5vBzqhG · 枪械射击
 
@@ -338,7 +338,7 @@ https://www.instagram.com/reel/Dekh5vBzqhG/
 - 观察：枪口光、后坐、弹壳、分层声音、镜头冲击和短暂命中停顿。
 - 限制：声音未核听；无武器参数与命中判定源码。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## DerYowOhdHs · NeonBlade 动作调整
 
@@ -348,7 +348,7 @@ https://www.instagram.com/p/DerYowOhdHs/
 - 观察：眼部次级运动、绑定跑姿、敌人等首次挥击、朝向修正。
 - 限制：引擎标签不一致，不推断引擎选型；等待首击是案例行为，不推广为所有敌人规则。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md), [gameplay-secondary-motion](../skills/gameplay-secondary-motion/SKILL.md)
 
 ## DVGe1E9iDdi · 炮塔后坐强度 A/B/C
 
@@ -358,7 +358,7 @@ https://www.instagram.com/p/DVGe1E9iDdi/
 - 观察：同场景对比三个后坐强度。
 - 限制：无数值，也未证明最大后坐最好。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## DX_mL0Wo3vx · 炮侧烟尘对照
 
@@ -368,7 +368,7 @@ https://www.instagram.com/rabaldusgames/reel/DX_mL0Wo3vx/
 - 观察：对比加烟尘与不加烟尘。
 - 限制：评论对位置的批评不等于作者采纳；参数未知。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## DYfFEpzIa-H · 爆炸镜头震动对照
 
@@ -388,7 +388,7 @@ https://www.instagram.com/rabaldusgames/reel/DUYNtcoiCGS/
 - 观察：EARLIER/NOW 对比将弹丸出生点从物体中心移到炮口。
 - 限制：未检查代码、墙边穿透与碰撞。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## Dd_3xtlvYef · 地牢升级卡选择
 
@@ -398,7 +398,7 @@ https://www.instagram.com/p/Dd_3xtlvYef/
 - 观察：实际游戏旧/新对照：多层描边、卡倾斜、橙色选中边框和烧蚀消失。
 - 限制：属于观察者对照，不是作者声明的逐步教程；shader 未证。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-card-interaction](../skills/gameplay-card-interaction/SKILL.md)
 
 ## DcDs7f9uaqo · 伤害数字十步
 
@@ -408,7 +408,7 @@ https://www.instagram.com/p/DcDs7f9uaqo/
 - 观察：字体、弹出、漂浮、淡出、重力弧线、伤害缩放、类型色、暴击、连击累加同一数字、左右散开。
 - 限制：淡出字幕参数不完整；合并数字可能漏感命中属于评论权衡，不是作者确认的改动。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+- 归入：[gameplay-floating-numbers](../skills/gameplay-floating-numbers/SKILL.md)
 
 ## DbS8p3VuhkL · 角色头发跟随运动
 
@@ -418,7 +418,7 @@ https://www.instagram.com/p/DbS8p3VuhkL/
 - 观察：行走/转身/跳跃/冲刺中有无头发对照；五点链、头后锚点、距离约束、弹簧/阻尼、逐级变小圆与描边。
 - 限制：部分编号不全；代码未执行；不能当作独立波浪动画或物理正确性证明。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-secondary-motion](../skills/gameplay-secondary-motion/SKILL.md)
 
 ## DXZ35VuEx0e · 方块落地同物理对照
 
@@ -429,7 +429,7 @@ https://www.instagram.com/mii_misan/reel/DXZ35VuEx0e/
 - 限制：部分编号缺失；示例伪代码未执行；暂停值不是最优值。
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "hitstop", "value": 0.07, "unit": "s", "provenance": "shown_pseudocode"}]
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-landing-feedback](../skills/gameplay-landing-feedback/SKILL.md)
 
 ## DamtFQYxYtn · 血条原型
 
@@ -450,7 +450,7 @@ https://www.instagram.com/mii_misan/reel/Dauh04XOYhl/
 - 观察：逐字显示与标点停顿、情绪文字抖动/波动、关键词/道具/危险色、结束箭头、头像。
 - 限制：未看到完整游戏场景；跳过功能未证；pop 只在总功能列表出现。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-dialogue-presentation](../skills/gameplay-dialogue-presentation/SKILL.md)
 
 ## DW_wiiPDmlU · 手牌交互
 
@@ -460,7 +460,7 @@ https://www.instagram.com/mii_misan/reel/DW_wiiPDmlU/
 - 观察：阴影、平滑跟随、缩窄换图翻面、全息箔交叉淡入、扇形手牌。
 - 限制：Love2D + Lua 有正文和可见代码支持，未执行；无完整卡牌对战演示。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-card-interaction](../skills/gameplay-card-interaction/SKILL.md)
 
 ## DYCKURdRJQn · RPG 战斗指令菜单
 
@@ -490,7 +490,7 @@ https://www.instagram.com/p/DdAIJqcPzPn/
 - 观察：旧版角落连续受击；新版一段时间内受击次数达到阈值，触发无伤害击退吼叫恢复间距。
 - 限制：精确阈值未知；这是机制对比，不是纯多层特效教程。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-attack-readability](../skills/gameplay-attack-readability/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+- 归入：[gameplay-hit-recovery](../skills/gameplay-hit-recovery/SKILL.md)
 
 ## Dcynt8ZoEoE · 战斗伤害数字 A/B
 
@@ -500,7 +500,7 @@ https://www.instagram.com/p/Dcynt8ZoEoE/
 - 观察：同一战斗上下对照有无伤害数字。
 - 限制：不是多步骤教程；拥挤是迁移时的风险分析而非作者实验结论。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+- 归入：[gameplay-floating-numbers](../skills/gameplay-floating-numbers/SKILL.md)
 
 ## Dd0GSn2xC62 · Boss 屏障材质
 
@@ -510,7 +510,7 @@ https://www.instagram.com/p/Dd0GSn2xC62/
 - 观察：占位体→黑面板→煤灰/噪声，中间不透明、边缘破碎。
 - 限制：正文与部分对比画面；高度裁切仍待修；评论中的多层粒子建议不是已实现证据。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-boss-sequences](../skills/gameplay-boss-sequences/SKILL.md)
+- 归入：[gameplay-boss-sequences](../skills/gameplay-boss-sequences/SKILL.md)
 
 ## DeGQTpgNFfF · Boss 火焰可读性
 
@@ -600,7 +600,7 @@ https://www.instagram.com/p/Deuo1C7TfMW/
 - 观察：实见 1 敌人压扁；2 FREEZE 接触瞬间停顿；3 烟团与旋转星星；4 BOUNCE 主角更高反弹并纵向拉伸。第 5 层挤压声/弹簧声来自正文。Bonus 连踩三只，见 +100/+200 递增和第三只。
 - 限制：具体停顿未知；音高递增、挤压/弹簧音仅正文，未核听；分数展示不证明真实经济规则。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+- 归入：[gameplay-hitstop](../skills/gameplay-hitstop/SKILL.md), [gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-stomp-combos](../skills/gameplay-stomp-combos/SKILL.md)
 
 ## DcCF3ZmBNl2 · 3D 击打灰盒增强
 
@@ -620,7 +620,7 @@ https://www.instagram.com/p/Dd9v8pMhc_t/
 - 观察：传统二维量表小游戏对照，改为鱼影与世界内涟漪目标；图解鱼和黄色目标环；侧视/俯视展示投影问题；正文明确目标涟漪需与鱼的深度对齐；编辑器时间轴可见鱼钩指示器动画；最终实机鱼影、鱼钩、目标圈与鱼线共同反馈。
 - 限制：dynamic pull 来自正文，画面可见鱼线/目标位置变化，但输入规则、算法和数值未完整核验。未核听声音；不是泛水波动画，也不能由视觉推断具体捕鱼成功判定。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-worldspace-indicators](../skills/gameplay-worldspace-indicators/SKILL.md)
 
 ## DdHNwnyjSPb · 攀爬体力 UI 的紧凑读数
 
@@ -651,7 +651,7 @@ https://www.instagram.com/p/DX6_8HIo_GT/
 - 观察：同一游戏场景、同一冲刺动作中，屏幕分别展示 1 Light trail、2 Heavy trail、3 Ghost dash，是三种样式 A/B/C 对照，不是累加升级。Heavy trail 的运动帧可见密集半透明角色拖影和水平速度线。
 - 限制：Ghost dash 快速瞬间细节未完整捕捉，不补残影数量、透明度或持续时间；无数值，音频未核听。评论中的起步灰尘应锚定世界起点、幽灵外观可能暗示无敌帧均是第三方建议，不是作者实现或已证机制。保持动作不变比较可读性是本库的分析，不代表作者已证明重拖尾最佳。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-dash-feedback](../skills/gameplay-dash-feedback/SKILL.md)
 
 ## DXNr6m4hSDk · Lunar Crypt 冲穿攻击的方向性命中粒子
 
@@ -671,7 +671,7 @@ https://www.instagram.com/p/DemTrHmK44j/
 - 观察：旧版标签 before: no fish in sight，浑浊水里小暗影难辨；新版标签 after: bigger, closer, ripples，浅水近岸可见更大的蓝鱼群。正文明确原来的鱼几乎不可见，调整为更大、更靠近岸边、更容易发现。
 - 限制：ripples 标签已确认，但独立涟漪形态和参数未核清；无具体大小/距离数值，音频未核听。前半新增螃蟹、鱼、矛、鲨鱼与烹饪是功能展示，不应拼成目标可读性优化链。优先检查目标屏幕尺寸/出现位置、再加环境提示是本库提炼；没有代码、玩家研究或难度指标验证。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
 
 ## DXcMn-gCGaS · 四向攻击到全方向攻击的操作对照
 
@@ -681,7 +681,7 @@ https://www.instagram.com/p/DXcMn-gCGaS/
 - 观察：旧版字幕 Before: limited to 4 direction attacks；新版字幕 Now you can attack in all directions!，正文也说明 all directions。同一俯视场景可见角色从目标周边不同方位攻击，末尾放大展示攻击石头。
 - 限制：未核实输入设备、鼠标或摇杆映射、任意角度算法、动画混合或碰撞形状，不推断自动瞄准。全方向是作者描述及画面方向变化，不证明连续角度实现。画面原有闪光和伤害数字不证明它们是本次新增层。减少斜向目标的正交对齐操作成本是本库机制分析，不是作者量化结果；音频未核听，代码未执行。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+- 归入：[gameplay-attack-direction](../skills/gameplay-attack-direction/SKILL.md)
 
 ## DdXfzEbJnsN · 游戏内物品合并奖励动画的前后对照
 
@@ -691,7 +691,7 @@ https://www.instagram.com/p/DdXfzEbJnsN/
 - 观察：标题 NEW MERGING ANIMATION。MERGE BEFORE 的旧版小图标出现在人物装备区附近；MERGE NOW 图标明显放大，并在人物区域周围移动，伴随紫绿光圈。合并瞬间可见橙色碎点与向外扩散的紫色闪光，之后呈现合成物。这是游戏内物品合并反馈的前后对照，不是逐层教程。
 - 限制：完整运动轨迹、精确时长、单层开关对比和音频未核实，不补参数，也不宣称每一层独立改善了体验。素材消耗、成功判定、取消/失败分支及合成配方未由代码验证；对业务事件和结果确认的约束是本库迁移建议。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+- 归入：[gameplay-reward-reveal](../skills/gameplay-reward-reveal/SKILL.md)
 
 ## DcXJwumOuBK · 弹球碰撞的粒子、缩放、镜头与文字反馈展示
 
@@ -701,7 +701,7 @@ https://www.instagram.com/p/DcXJwumOuBK/
 - 观察：GameDev Adding Juice To Collisions 展示青色球与红色碰撞体的同场景测试。No Juice 为普通反弹；Particles 标签对应碰撞后白色碎粒；Tween Scale 标签可读；Camera Shake 标签段可见棋盘格背景位移；Word Effects 段在撞击处出现 POW 并淡出；Audio 标签可读。
 - 限制：Tween Scale 的具体缩放对象、形变方式和幅度未捕清，不能推断球或碰撞体如何压缩拉伸。镜头具体方向、幅度和衰减未知；完整层间顺序及是否累加没有全部核实，不按上述观察列表复刻有序教程。Audio 仅为标签，音频未核听；代码和参数未验证，也不能仅从视觉推断物理参数保持不变。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
 
 ## DcwUHp0O85b · 弹球得分浮字的位移、旋转、淡出、缩放与颜色对照
 
@@ -711,7 +711,7 @@ https://www.instagram.com/p/DcwUHp0O85b/
 - 观察：同一弹球碰撞场景依次展示 Display Text、Tween Position、Add Rotation、Fade Out、Scale In、Set Color 标签，末尾有 No Effects 对照。碰撞体上方的固定白色 +100 变为上浮、轻微倾斜、透明淡出、缩放入场，最后呈绿色；全桌演示中多个碰撞点各自出现绿色 +100。这是得分文字，不是伤害或治疗数值。
 - 限制：没有代码、动画时长、曲线和旋转参数，旋转是否随机未证，音频未核听。标签展示顺序不等于每次事件的运行时动画先后，例如不能解释成淡出之后才开始缩放入场。+100 与绿色是本例的显示选择，不是通用分数、配色或伤害规范；实际计分逻辑未运行验证。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+- 归入：[gameplay-floating-numbers](../skills/gameplay-floating-numbers/SKILL.md)
 
 ## CW0Su7-sy5- · 转载署名 Faxdocc 的像素角色分件与瞄准姿态改进
 
@@ -721,7 +721,7 @@ https://www.instagram.com/p/CW0Su7-sy5-/
 - 观察：raycastly 转发内容的正文明确署名 Faxdocc（Twitter）；这里只核读了转载，未核验原发布。视频四项标签及画面分别展示：把头、衣服躯干、手臂、腿与枪拆成独立 sprite 再组合；上下移动部件表现呼吸；瞄准时让头和身体前后位移；按瞄准方向更换上衣 sprite。最终实机场景中持枪方向随准星变化，抬枪时上衣肩部外形也随方向改变。
 - 限制：不能把转发账号写成原创作者，也没有取得或核验 Faxdocc 原帖。代码、角度阈值、位移幅度、绘制层级和音频未核实；未见独立“旋转枪”步骤标签，不把最终枪随准星的画面补成额外教程步骤。不推断骨骼工具、动画混合实现、自动瞄准或碰撞规则变化。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+- 归入：[gameplay-aim-pose](../skills/gameplay-aim-pose/SKILL.md)
 
 ## CW8BHbmsy_r · 转载署名 Faxdocc 的俯视角色方向帧与堆叠躯干混合瞄准
 
@@ -731,7 +731,7 @@ https://www.instagram.com/p/CW8BHbmsy_r/
 - 观察：raycastly 转发内容正文署名 Faxdocc（Twitter），原发布未核验。俯视 360° 瞄准展示中，legs: normal sprite 与 head: normal sprite 可见各 8 格方向素材；eyes: normal sprite 展示多朝向眼睛；body: stack 展示单独躯干在多个角度旋转并与其余部件叠合。polish + done 后实机场景角色随方向瞄准开火，可见橙色枪口环和散落碎片。
 - 限制：武器中间独立标签未捕清，不补成已证制作步骤。堆叠层数、层间偏移、角度阈值、代码和动画时序未核验，音频未核听；8 格素材是本例观察，不证明通用必须八方向或固定角度切换。不能把最后枪口环/碎片当作独立逐层教学或反推碰撞、伤害规则，也不能把转载账号记为原创作者。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+- 归入：[gameplay-aim-pose](../skills/gameplay-aim-pose/SKILL.md)
 
 ## DeY6lNdTxTe · 压板机关门的机械运动、接地反馈与分段变化
 
@@ -741,7 +741,7 @@ https://www.instagram.com/p/DeY6lNdTxTe/
 - 观察：四项标签依次为 Animate open/close、Add sounds、Add particles and screenshake、Variation and final touches。角色踩压板后高门下降成矮横条，离开压板后门升起；声音只有标签证据。粒子/镜头阶段可见门底一排灰白尘团与场景视框位移。最后普通矩形门换成带纹饰的分栏门，各栏以高低错落的状态下降。
 - 限制：代码、运动时长/曲线、各门段错峰算法与镜头幅度/频率没有验证；错落外观不证明随机延迟或某个具体调度算法。音频未核听，评论中的末端 clack 和更多 shake 仅为建议，不能写成作者已实现。未核验门碰撞、通行生效时刻、反向中断和遮挡处理；这些属于迁移时应检查的项目规则。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-mechanical-interactions](../skills/gameplay-mechanical-interactions/SKILL.md)
 
 ## DP53MiuDIpH · 后向开枪动作的姿态轮廓与 smear 前后对照
 
@@ -761,7 +761,7 @@ https://www.instagram.com/p/DP3HI8yjFUS/
 - 观察：作者正文明确认为旧版帧数过多，并说明当时想向发行商展示丰富的动画。OLD / NEW 同屏对照正面枪击：旧版可见额外把枪举到头旁、烟线及手回胸前等持枪过程；新版可见大轮廓伸臂射击、黄色枪口闪光并回到立姿。
 - 限制：未获得实际帧数、时长、代码或输入到开火的延迟测量，不能把作者“帧数过多”的反思写成测得新版响应更快。删掉非必要表演、保留关键姿态是本库迁移提炼，不是作者完整制作步骤；多项差异没有单独消融验证。评论中的 gunspin 不是独立事实证据，音频未核听。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+- 归入：[gameplay-action-timing](../skills/gameplay-action-timing/SKILL.md)
 
 ## DMz5XT1M_4s · FIRE WHIRL 的旋转带与火芯层级可读性对照
 
@@ -794,7 +794,7 @@ https://www.instagram.com/p/DeaF1wMgtg1/
 - 示例参数：[{"name": "jump_grace_seconds", "value": 0.1, "unit": "seconds", "provenance": "visible_code", "source_url": "https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs#L48", "note": "视频明示值由固定公开代码常量佐证；未运行。"}]
 - 补齐：独立静态核读 [Player.cs 固定快照](https://github.com/NoelFB/Celeste/blob/7fd7ae760bc98bc1659c035d807cb47a3463e9b7/Source/Player/Player.cs)：L48、L714–720 确认 0.1 秒常量、接地刷新及离地剩余值按 DeltaTime 递减；L2970–2976 的普通状态分支要求跳跃按下且剩余值 > 0，L1660–1665 的 Jump 清零窗口。L25、L2927–2957：普通状态空中且纵向速度绝对值 < 40，并满足按住跳跃或 AutoJump，重力倍率为 0.5，否则为 1；InSpace 再乘 L2782 的 0.6。L2960–2967 另有可变跳跃速度处理，所以不能由半重力分支单独推导完整轨迹。
 - 补齐：独立读取 [Celeste & Forgiveness](https://www.mattmakesgames.com/articles/celeste_and_forgiveness/index.html) 第 2 节 Jump Buffering：开发者描述落地前短时间按下并保持跳跃，在落地当帧起跳；未提供缓冲时窗数值。第 1/3 节也描述离地宽限/持跳半重力，与此前证据相互佐证，不作为新的独立效果测试。落地前输入缓存与离地后宽限方向不同，不能把已知 0.1 秒宽限值当作输入缓冲参数。
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-jump-forgiveness](../skills/gameplay-jump-forgiveness/SKILL.md)
 
 ## DeuiO0UjRLM · 局部压缩准备段与整段加速的响应取舍
 
@@ -804,7 +804,7 @@ https://www.instagram.com/p/DeuiO0UjRLM/
 - 观察：视频把挥剑表示为 anticipation、action、follow-through 三阶段，展示 1× 与 2× 整段加速的上下对照，字幕评价加速会损失重量感；随后把蓝色准备段卡片从时间轴移出，保留红色动作与绿色收势。Diablo 3 双手挥砍实机逐帧条由作者标注 1 FRAME，展示从中立姿态进入动作起势；另有 Mario 按 A 后下一帧起跳的示意。作者正文明确排除准备/蓄力本身就是玩法组成的场景。
 - 限制：三阶段各约三分之一是教学图，不是普遍动画比例；1 FRAME 是作者展示标注，未独立测量游戏输入延迟，Mario 也仅是该来源示意。没有命中盒、伤害生效时点、冷却或引擎实现证据，音频未核听。优先检查输入后冗余准备而非整段加速是迁移原则，不能据此要求所有攻击零前摇；保留敌人预警、必要蓄力与真实规则，并单独核对时序变化，属于本库实施建议。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+- 归入：[gameplay-action-timing](../skills/gameplay-action-timing/SKILL.md)
 
 ## DcCFXGItxdJ · 车辆视觉损伤与接触响应的分离迭代
 
@@ -814,7 +814,7 @@ https://www.instagram.com/p/DcCFXGItxdJ/
 - 观察：视频先展示车辆碰撞过硬，随后说明已有 visual deformation，画面可见受损车体，但碰撞响应仍显生硬。在线框车辆画面中，作者字幕称修改 NVIDIA physics package，允许碰撞时少量穿入，以近似金属的部分弹性；后续撞围栏可见局部穿入。正文承认效果仍需完善。
 - 限制：修改物理包及弹性近似是作者说明，未见代码、具体 API、穿入量或参数，也没有独立量化验证；不认定为完整软体仿真或已验证的稳定物理解法。视觉凹陷与接触响应不是同一层，不从画面推断实际碰撞体更新方式。不能将局部演示泛化成应放宽全局碰撞容差；音频未核听。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+- 归入：[gameplay-contact-response](../skills/gameplay-contact-response/SKILL.md)
 
 ## DWsXLFEDVVf · 车辆转向从全局输入减速改为可关闭的辅助
 
@@ -824,7 +824,7 @@ https://www.instagram.com/p/DWsXLFEDVVf/
 - 观察：作者展示手柄直接转向输入难以细控且车辆突然转向，再以放慢转向输入补救，字幕称这样让操作显得延迟。随后以车轮趋向行进方向的现象作灵感，说明把 self-steer 与控制器输入叠加；手柄与游戏同屏展示驾驶/漂移，字幕称减少突兀转向并帮助维持漂移控制。正文说明可关闭辅助回到 direct input，WASD/方向键输入也可受益。
 - 限制：转向原理、改进效果与键盘受益属于作者说明和演示，未独立测量输入延迟、控制误差或漂移成绩。没有混合公式、增益、角度限制或代码，不称零延迟、自动驾驶或普遍汽车物理定律。状态相关辅助与一味放慢输入的取舍是本库提炼，不证明所有车辆都应加入此辅助；音频未核听。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-steering-assistance](../skills/gameplay-steering-assistance/SKILL.md)
 
 ## DWFm4_eDlCm · 轮胎碰撞从线采样到体积接触的版本对照
 
@@ -834,7 +834,7 @@ https://www.instagram.com/p/DWFm4_eDlCm/
 - 观察：作者展示三版轮胎碰撞：首版每轮单条红色线并驶过路缘；第二版沿轮周布置多条放射状红线；最新版以绿色立体线框表现圆柱轮胎，随后可见轮胎侧面在 V 形沟渠接触行驶。字幕称操控有所改善。正文说明所有版本都已吸收撞击，并把撞击掉轮列为未来可能，而非当前功能。
 - 限制：没有核验射线数量、圆柱碰撞具体 API、摩擦或悬架参数、代码、性能成本及量化操控结果，音频未核听。三版本是替代方案迭代，不是必须叠加的三层，也不能推出形状越复杂越好。绿色线框和侧接触演示不能单独证明某种 sweep/刚体实现；不将已有吸震误写为新版新增，不把未来掉轮当已实现。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-locomotion-contacts](../skills/gameplay-locomotion-contacts/SKILL.md)
 
 ## DRfuWODEvzF · 钩爪跑酷的速度线、动态视野与模糊组合对照
 
@@ -845,7 +845,7 @@ https://www.instagram.com/p/DRfuWODEvzF/
 - 限制：没有同速控制或独立量化的速度感/实际速度结果，不能从镜头变化宣称角色跑得更快，也不能给四项分配独立收益。FOV 范围、速度映射、模糊强度和震动参数未知，音频未核听。运动不适减弱/关闭选项及同轨迹逐项验收是本库实施建议，不是作者已证功能。thegamedevclub 的 DSPbCDyjfDD 为同素材转发，不另计来源。
 - 音频核听：False；代码运行：False
 - 补齐：采用 sirparsy 原帖登记；[thegamedevclub 转发](https://www.instagram.com/p/DSPbCDyjfDD/) 仅作同素材别名，不另建来源或技能。
-- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+- 归入：[gameplay-speed-camera](../skills/gameplay-speed-camera/SKILL.md)
 
 ## DPjC2p_jDK- · Bird Vision 临时识别模式改善地面资源发现性
 
@@ -855,7 +855,7 @@ https://www.instagram.com/p/DPjC2p_jDK-/
 - 观察：字幕说明鸟类游戏的资源过于融入地面，并介绍 Bird Vision。两轮可见普通地面枝条切换为整体蓝暗场景、枝条青绿色轮廓高亮，再恢复普通色枝条。增量是独立显示模式的前后对照，不是把资源放大或移近。
 - 限制：没有核验触发按键、持续时长、距离条件、遮挡/穿墙规则或 shader 实现；不据此声称自动收集、扩大检测范围或新增资源。模式退出清理、高亮集合与信息公平的验收是本库迁移建议，不是作者已证实现。没有数值或运行验证，音频未核听。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
 
 ## Dd7GYLGPlon · 遮挡角色的局部透视窗口与白色轮廓对照
 
@@ -865,7 +865,7 @@ https://www.instagram.com/p/Dd7GYLGPlon/
 - 观察：同一猫角色与城市场景展示两种遮挡显示方案：A 以轻微圆形区域让 Whiskers 可见，实见局部圆形透视窗口；B 用白色轮廓突出猫的外形。周围遮挡表面可见点阵透明表现。作者询问哪种更清晰，而不是宣布 B 为改进赢家。
 - 限制：没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
 
 ## DcuTo4UNf25 · 平台边缘防误落与坐姿操作提示
 
@@ -875,7 +875,7 @@ https://www.instagram.com/p/DcuTo4UNf25/
 - 观察：作者正文说明旧移动方式容易从物体边缘跌落，新版到达边缘时 Whiskers 会坐下而不是掉落。视频开头可见猫越过高处边缘下落；后段在遮阳篷边缘坐定，上方显示 SPACE 提示，随后跃往另一处。变化包含防误落规则以及解释停留状态的姿态/操作提示，而不只是新增动画。
 - 限制：没有核验边缘检测方法、距离/角度阈值、退出/取消条件、长按操作或自动选择落点，音频未核听。SPACE 是此例提示，不是通用键位。防误落与移动连续性的取舍没有量化验证；不能从随后跳跃推断所有边缘都能跳或已经自动选定安全目标。它阻止离台，不等同离台后仍可跳的 coyote time。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-traversal-transitions](../skills/gameplay-traversal-transitions/SKILL.md)
 
 ## DbqZZNQz95x · 场景切换的黑屏后淡入与出生位置跳变遮蔽
 
@@ -885,7 +885,7 @@ https://www.instagram.com/p/DbqZZNQz95x/
 - 观察：Devlog 2 Smoother Scene Transitions 展示卧室与走廊的 Before/After 切换。作者正文说明基础切场工作后加入 transition animations，并称其能掩盖偶发出生位置闪动。After 的连续画面可见游戏区域全黑、走廊近黑、再逐渐显现，外围字幕亮度不变，支持这是游戏内黑屏后淡入，而非视频剪辑。穿过字幕的白色竖线属于视频剪辑，不列入游戏实现。
 - 限制：没有捕获完整淡出连续过程，不把 fade-out 当作已证步骤；没有时长、曲线、加载与场景切换顺序、输入锁定或恢复条件证据。视觉遮蔽不等于修复出生点问题，也不证明消除了加载停顿。场景真正就绪后解除遮挡、失败退出与输入恢复属于本库实施建议，不是原帖已核机制。未读或运行代码，音频未核听。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-scene-transitions](../skills/gameplay-scene-transitions/SKILL.md)
 
 ## DaIdIURzME9 · 瓶子倾倒后的水洼表面适配阶梯地形
 
@@ -895,7 +895,7 @@ https://www.instagram.com/p/DaIdIURzME9/
 - 观察：游戏中鱼推倒瓶子后的水洼效果以 OLD/NEW 三个 case 对照。Case 3 近侧视确认旧固定平面水片从阶梯向外悬空伸出，新水面按阶梯高低铺开；Case 2 俯视可见旧圆水片伸出窄槽两侧白色边框，新水面沿狭长槽内延展，没有同样的圆形穿边。作者正文称旧固定圆形网格不感知边缘或阻挡，并描述四步实现：从中心用 BFS 生成扩散球；横向射线检查墙并删除与 collider 相交的球；向下射线寻找 floor 并定位球的高度；用 Marching Cubes 转为游戏网格。四步是作者文字说明，不是已核读的代码。
 - 限制：Case 1 未完整核验；Case 2 的边界贴合是视觉证据，不等于代码或所有碰撞情形验证，不把三种 case 都记成已通过。未核验 BFS 停止条件、采样间距/上限、射线配置、碰撞层、网格更新时间或性能；没有代码阅读、运行或定量测试，音频未核听。它支持表面余效与承载地形一致性的方向，不证明真实流体、体积守恒、任意地形稳定性或玩法碰撞随网格改变。不得把作者描述的管线当成所有项目通用最佳实现。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
+- 归入：[gameplay-surface-aftermath](../skills/gameplay-surface-aftermath/SKILL.md)
 
 ## DYOpA7zDmEU · 喷火效果的可见来源与辣椒张嘴动作对齐
 
@@ -905,7 +905,7 @@ https://www.instagram.com/p/DYOpA7zDmEU/
 - 观察：帖子以旧版 flame broken / looked weird 字幕展示孤立的黄色长条火焰，近端有蓝圈，所见游戏画面没有可辨认的喷火主体。so we fixed it 段展示红辣椒角色模型和张嘴动画；新版实机可清楚看见黄色火焰连接红辣椒张开的嘴部喷出。变化让攻击的可见来源与发射姿态形成联系，不只是增加粒子层。
 - 限制：没有核验碰撞、伤害、射程、预警时机或其他玩法规则改变；不能把旧画面未见主体扩写为旧系统完全没有发射实体。没有算法、socket/挂点实现、数值或代码证据，音频未核听。先修可见来源再考虑追加特效是本库迁移提炼，不是作者的量化收益或固定制作流程。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+- 归入：[gameplay-shooting-feedback](../skills/gameplay-shooting-feedback/SKILL.md)
 
 ## DdsDp8YRW_y · BABELBEAM 升级装置的机械、蓄能与能量柱分层
 
@@ -915,7 +915,7 @@ https://www.instagram.com/p/DdsDp8YRW_y/
 - 观察：Babelled 的 BABELBEAM 制作展示中，编辑器可见三层机械环盘分开，以及顶端小金球和青亮蓄能球。同位置长圆柱从无发光灰色形体（字幕 GROW OR SHRINK）变为青白高亮能量柱（AND YOU'RE DONE），构成局部明确对照。最终实机可见白蓝电弧及控制面板 UPGRADING COMPLETE；正文说明启动升级会向天空释放能量激光。另见电弧路径点和偏移箭头图，但未核完整算法。
 - 限制：不是全流程旧版/新版 A/B，也不是各层独立贡献测试；未完整核实机械环、蓄能球、光柱与电弧的实际播放顺序、持续时间或触发条件。没有伸缩幅度、时序、shader、随机/偏移算法、性能或代码执行证据，音频未核听。完成文字是画面信息，不证明升级结算、素材消耗或中断恢复逻辑。视觉光柱不证明攻击伤害或碰撞功能。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+- 归入：[gameplay-reward-reveal](../skills/gameplay-reward-reveal/SKILL.md)
 
 ## DNODANBoEL6 · 伐木采集从直接消失改为倒伏与分段木料结果
 
@@ -935,7 +935,7 @@ https://www.instagram.com/jankyanims/reel/DYq3pMtqVGw/
 - 观察：Tachyon Flow 作者正文称旧横杆最初追求 methodical/weighty，允许无限摆动、择时释放、换向与停挂，却拖慢希望连续高速通过的路段，因此改为 immediate swing off。新版灰盒实机可见角色在竖杆/横杆间串联，横杆翻摆离杆、落地后继续跑。旧规则及改版理由来自作者文字，视觉只核到新版动作接续，没有旧新视觉 A/B。
 - 限制：没有速度、操作响应或路线完成时间的独立测量，输入方式、状态切换条件、算法和参数未知，音频未核听。作者对控制器重写、更顺滑或更有趣的说法不作为已验证独立收益。减少停挂/择时状态会改变控制规则；可能降低自主择时空间是本库设计分析，不是作者的玩家测试结论。不能把 immediate 当作零延迟数值，也不推断完全自动移动。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+- 归入：[gameplay-traversal-transitions](../skills/gameplay-traversal-transitions/SKILL.md)
 
 ## DNv1TB93uxh · 结算界面的分数递增计数与完成文字显示
 
@@ -945,7 +945,7 @@ https://www.instagram.com/p/DNv1TB93uxh/
 - 观察：作者字幕说明给 completion screen 加入 point animation，并以 counts up 描述计数过程。实见结算显示经过 1520、3498 等中间值，最后为 10000，完成文字逐字出现。它是结果总分的连续展示过程，不是碰撞点瞬时 +100 浮字。more engaging 是作者的改动目标，没有对应玩家测量。
 - 限制：没有旧版视觉 A/B，未核验计数持续时间、速度曲线/easing、计分公式、跳过输入或完成与失败的结算规则；不完整字幕不补齐为规则说明。1520、3498、10000 仅本次画面分数，不是动画参数或通用奖励量。未读或运行代码，音频未核听。显示动画与真实总分分离、跳过仍显示正确终值和防重复奖励是本库实施建议，不是视频已证功能。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+- 归入：[gameplay-result-counting](../skills/gameplay-result-counting/SKILL.md), [gameplay-completion-sequences](../skills/gameplay-completion-sequences/SKILL.md)
 
 ## DLAeZtVPER7 · 终点镜头交接与结算文字后的车辆驶离尾声
 
@@ -955,7 +955,7 @@ https://www.instagram.com/p/DLAeZtVPER7/
 - 观察：towgame_dev 与 korion.interactive 合发。作者字幕称旧版拖车到终点硬停、完成界面立即出现；旧版只据作者说明，未完整核到旧新视觉 A/B。制作段展示独立终点摄像机，编辑器中可见路径和 camera，字幕提到 spline。新版实机从追车视角转到低位终点视角，结算文字出现后汽车继续驶离，在画面中变小。
 - 限制：spline 的具体编辑操作未核清，不补成确定跟随、插值或路径算法。没有镜头切换时长、插值曲线、完成界面延迟、输入可用性、跳过/恢复或真实奖励结算证据；不能把新镜头误称仍允许玩家驾驶，也不能从车辆继续运动推定自动驾驶实现。未读或运行代码，音频未核听。完成事件与尾声独立、重复触发安全及支持的跳过恢复属于本库实施建议。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+- 归入：[gameplay-completion-sequences](../skills/gameplay-completion-sequences/SKILL.md)
 
 ## DKrymGwPEVi · 挂钩连接与脱开状态的短动画及弯曲绳形
 
@@ -966,4 +966,4 @@ https://www.instagram.com/p/DKrymGwPEVi/
 - 限制：回收动作的完整字幕未核清，不补成确定回收轨迹或固定先后时序。弯曲路径不证明抛物线/弹道算法，挂钩、绳形显示与实际关节/碰撞物理的分工未知。补证帖中的参数名没有已核通用数值；未读或运行代码、未测时长/响应，音频未核听。连接成功、失败、取消与重复触发的状态约束是本库实施建议，不是视频代码验证。
 - 音频核听：False；代码运行：False
 - 补齐：[较早绳形制作帖 DJ9eQbOP30H](https://www.instagram.com/p/DJ9eQbOP30H/) 作为同一交互机制的补证，不单独增加主来源条目：字幕出现 LineRenderer，RopeRenderer 面板可见 SegmentCount、MaxSagAmount、SagDistanceThreshold；调节中绳从直线变为下垂弧形，另有较短第二根绳的字幕和脱钩短绳展示。只确认文字、面板和视觉变化，不证明物理解算、参数公式或主帖未核的回收步骤。
-- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+- 归入：[gameplay-connection-transitions](../skills/gameplay-connection-transitions/SKILL.md)
