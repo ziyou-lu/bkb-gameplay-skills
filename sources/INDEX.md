@@ -782,3 +782,14 @@ https://www.instagram.com/p/DMC2EddsCML/
 - 限制：只确认待机视觉删改，没有毒伤/状态机制的删除证据；不把去掉毒云等同免疫毒或取消伤害。没有数量、透明度、时间、代码或独立玩家测试，音频未核听；作者的轮廓判断不代表所有常驻 VFX 都应移除。是否承载真实状态信息需在目标项目另行确认。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
+
+## DeaF1wMgtg1 · Celeste 离地跳跃宽限的简化重建对照
+
+https://www.instagram.com/p/DeaF1wMgtg1/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：作者声明是 Celeste 机制的简化重建，并非原游戏实机。STRICT RULES 段标注晚 4 帧按跳，方块落坑；加入 0.1 秒离地宽限后，粉色计时条显示剩余窗口，方块可在边缘外起跳并沿粉色示意轨迹到达对岸，画面另有约 1 格空气的比例说明。正文描述 jumpGraceTimer 在地面维持 0.1 秒、离地后递减，仍有剩余时允许起跳。
+- 限制：作者声称参考 NoelFB/Celeste 的 Player.cs 与 Maddy 的 Celeste & Forgiveness，但本库未独立读取或运行这些原始来源。input buffering 与顶点持跳半重力只有正文提及，没有核验各自 A/B，不扩写成已证机制。0.1 秒是本来源明示示例，不是通用默认；晚 4 帧是该对照迟按示例，约 1 格空气是重建比例，不是普遍可跳距离。音频未核听；窗口消耗/重置和异常状态处理是目标项目的实施事项，未由该展示验证。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "jump_grace_seconds", "value": 0.1, "unit": "seconds", "provenance": "caption_or_post_text"}]
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)

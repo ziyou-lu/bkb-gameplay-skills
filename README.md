@@ -24,7 +24,7 @@
 
 - [近战、弹反与踩踏组合](skills/gameplay-melee-feedback/SKILL.md)：将共享反馈组合到剑击、受击、弹反、暴击和踩踏循环；不重复实现 hitstop、镜头、血条，不凭视觉改伤害规则。
 - [射击与法术生命周期](skills/gameplay-projectile-spells/SKILL.md)：按蓄力、发射、飞行、命中和余效组织枪械、光束、冰刺、旋转火焰与终极法术；先修空间和主体运动可读性，再组合共享反馈。
-- [移动、冲刺与落地反馈](skills/gameplay-movement-feedback/SKILL.md)：优化游戏角色冲刺、落地、转向与装饰跟随，用同物理 A/B 区分视觉改善和操控改变；不处理脱离游戏行为的泛动画。
+- [移动、冲刺与落地反馈](skills/gameplay-movement-feedback/SKILL.md)：优化角色冲刺、落地、转向与装饰跟随，并按需处理离地跳跃宽限；严格区分同物理视觉 A/B 与改变操作规则的容错，不处理泛动画。
 - [破坏、掉落与奖励揭示](skills/gameplay-breakables-loot/SKILL.md)：为木箱、爆炸桶、敌人死亡、金币、宝箱与物品合并设计事件到奖励的反馈闭环；保持破坏/奖励一次性结算，未展示步骤不补齐。
 - [Boss 入场、转阶段与终结](skills/gameplay-boss-sequences/SKILL.md)：为 Boss 入场、阶段转换和死亡高潮编排可中断的反馈序列；战斗预警复用共享技能，不凭 Final Hit 标题推断保命机制。
 - [法力、体力、冷却与蓄力状态](skills/gameplay-resource-ui/SKILL.md)：用法力/体力消耗、冷却、恢复和蓄力反馈说明游戏资源状态；区分真实可用时刻与弹性动画，不误导玩家。

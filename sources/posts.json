@@ -1507,6 +1507,30 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DeaF1wMgtg1",
+      "url": "https://www.instagram.com/p/DeaF1wMgtg1/",
+      "creator": "howitspawns",
+      "title": "Celeste 离地跳跃宽限的简化重建对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "作者声明是 Celeste 机制的简化重建，并非原游戏实机。STRICT RULES 段标注晚 4 帧按跳，方块落坑；加入 0.1 秒离地宽限后，粉色计时条显示剩余窗口，方块可在边缘外起跳并沿粉色示意轨迹到达对岸，画面另有约 1 格空气的比例说明。正文描述 jumpGraceTimer 在地面维持 0.1 秒、离地后递减，仍有剩余时允许起跳。",
+      "limitations": "作者声称参考 NoelFB/Celeste 的 Player.cs 与 Maddy 的 Celeste & Forgiveness，但本库未独立读取或运行这些原始来源。input buffering 与顶点持跳半重力只有正文提及，没有核验各自 A/B，不扩写成已证机制。0.1 秒是本来源明示示例，不是通用默认；晚 4 帧是该对照迟按示例，约 1 格空气是重建比例，不是普遍可跳距离。音频未核听；窗口消耗/重置和异常状态处理是目标项目的实施事项，未由该展示验证。",
+      "parameters": [
+        {
+          "name": "jump_grace_seconds",
+          "value": 0.1,
+          "unit": "seconds",
+          "provenance": "caption_or_post_text"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-movement-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

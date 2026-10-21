@@ -246,7 +246,8 @@
       "mechanisms": [
         "dash-composition",
         "landing-composition",
-        "directional-animation"
+        "directional-animation",
+        "coyote-time"
       ],
       "source_ids": [
         "DehPnhjxUvB",
@@ -255,7 +256,8 @@
         "DbS8p3VuhkL",
         "Ddb6gDmzmAE",
         "DerYowOhdHs",
-        "DX6_8HIo_GT"
+        "DX6_8HIo_GT",
+        "DeaF1wMgtg1"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
@@ -422,6 +424,8 @@
     "damage-numbers": "floating-numbers",
     "floating numbers": "floating-numbers",
     "score numbers": "floating-numbers",
-    "得分飘字": "floating-numbers"
+    "得分飘字": "floating-numbers",
+    "coyote time": "coyote-time",
+    "离地宽限": "coyote-time"
   }
 }
