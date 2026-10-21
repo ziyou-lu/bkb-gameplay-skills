@@ -47,6 +47,8 @@ description: "在接触、弹跳、按钮反馈或快速出招缺少受力和轮
 
 ## 组合而不复制
 
+- 车轮需要真正压弯/压缩且持续受支撑时，转到[可变形承载面](../gameplay-deformable-support/SKILL.md)，不是把本页视觉缩放套到物理根节点。
+
 只在需要相应机制时读取，沿用其事件与预算约束：
 
 - [装饰跟随与次级运动](../gameplay-secondary-motion/SKILL.md)

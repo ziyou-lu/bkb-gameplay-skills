@@ -1012,3 +1012,14 @@ https://www.instagram.com/p/DZybNWexMRB/
 - 示例参数：[{"name": "curvature_history_first", "value": 50, "unit": "milliseconds lookback", "provenance": "post_text", "source_url": "https://www.instagram.com/p/DZybNWexMRB/c/18110340923491267/r/18059836019502780/", "note": "作者回复中的历史参考间隔，不是滤波系数或实测响应延迟。"}, {"name": "curvature_history_second", "value": 100, "unit": "milliseconds lookback", "provenance": "post_text", "source_url": "https://www.instagram.com/p/DZybNWexMRB/c/18110340923491267/r/18059836019502780/", "note": "另一历史参考间隔；不与50ms相加推导延迟。"}]
 - 补齐：已展开并读取同帖作者回复：位置青→洋红→白的两次平滑，再由50/100ms历史位置估计曲率到转向。没有源码/公式/延迟测量，回复作为本主来源补证而不另计一条来源。
 - 归入：[gameplay-pointer-curvature-steering](../skills/gameplay-pointer-curvature-steering/SKILL.md)
+
+## DVOcLi2EVOK · 车轮受载下双层刚体承载面的弯曲与压缩
+
+https://www.instagram.com/p/DVOcLi2EVOK/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：正文称是4x4 in a Furniture Store的床垫物理。debug游戏画面中车轮在蓝色分段表面上行驶/停留，接触区向下弯折，相邻段角度不同，车轮在画面中仍处于表面上。持续字幕说明床垫由3×5刚体网格通过关节连接以弯曲，再叠加另一网格层，层间用弹簧允许压缩。结构和层数来自作者字幕，可见形变不等于已核场景拓扑。
+- 限制：没有旧新A/B或普通渲染对照，不能虚构旧刚体床垫或量化改进。未核引擎场景/代码、精确连接拓扑、关节类型/限位、质量、尺寸、刚度/阻尼、碰撞过滤、步长/解算设置、恢复时间或性能。车轮受支撑的画面不是独立模拟验收。3×5仅作者结构例，不是最优分辨率；不声称通用软体、准确物性、守恒或已知蒙皮/shader。评论者自己的轮胎方案不作为本作者实现证据。未运行代码/核听音频。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "grid_per_layer_label", "value": "3×5", "unit": "rigid-body grid dimensions", "provenance": "caption_or_post_text", "note": "作者字幕结构示例；未核场景或精确连接拓扑，不作为默认网格密度。"}, {"name": "layer_count_description", "value": 2, "unit": "layers", "provenance": "caption_or_post_text", "note": "作者称在一层之上再叠另一层并用弹簧连接；没有给出连接映射或物性系数。"}]
+- 归入：[gameplay-deformable-support](../skills/gameplay-deformable-support/SKILL.md)

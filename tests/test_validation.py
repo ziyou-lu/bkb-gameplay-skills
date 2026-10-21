@@ -232,6 +232,15 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
                 self.assertIn(other, route['distinct_from'])
 
+    def test_deformable_support_is_not_visual_scale_or_contact_coverage(self):
+        route = self.routes['deformable-support']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('motion-deformation', 'contact-response',
+                      'locomotion-contacts', 'surface-aftermath'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+
 
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):

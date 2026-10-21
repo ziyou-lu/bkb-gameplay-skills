@@ -38,6 +38,8 @@ description: "在车体等已显示变形但碰撞仍过硬时分离视觉网格
 
 ## 组合而不复制
 
+- 需要构建有连接与层间弹簧的可压缩表面时，使用[交互承载面](../gameplay-deformable-support/SKILL.md)，不把接触穿入实验当作承载结构。
+
 只在需要相应机制时读取，沿用其事件与预算约束：
 
 - [保持碰撞不变的视觉形变](../gameplay-motion-deformation/SKILL.md)

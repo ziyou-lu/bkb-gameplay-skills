@@ -39,6 +39,8 @@ description: "当轮胎等移动部件漏掉路缘或侧面接触时，比较线
 
 ## 组合而不复制
 
+- 轮胎接触形状明确但承载面本身需要弯曲/压缩时，转到[交互承载面](../gameplay-deformable-support/SKILL.md)；轮胎覆盖和表面结构分别验收。
+
 - [车辆转向辅助](../gameplay-steering-assistance/SKILL.md)：输入映射是另一工作流。
 - [形变与接触响应分离](../gameplay-contact-response/SKILL.md)：不由变形画面推断碰撞算法。
 

@@ -126,7 +126,8 @@
         "gameplay-landing-feedback",
         "gameplay-dash-feedback",
         "gameplay-shooting-feedback",
-        "gameplay-projectile-spells"
+        "gameplay-projectile-spells",
+        "gameplay-deformable-support"
       ],
       "path": "skills/gameplay-motion-deformation/SKILL.md"
     },
@@ -471,7 +472,8 @@
       ],
       "related_skills": [
         "gameplay-motion-deformation",
-        "gameplay-impact-visuals"
+        "gameplay-impact-visuals",
+        "gameplay-deformable-support"
       ],
       "path": "skills/gameplay-contact-response/SKILL.md"
     },
@@ -892,7 +894,8 @@
       "title": "移动部件的接触表示",
       "related_skills": [
         "gameplay-contact-response",
-        "gameplay-steering-assistance"
+        "gameplay-steering-assistance",
+        "gameplay-deformable-support"
       ]
     },
     {
@@ -1050,6 +1053,23 @@
         "gameplay-steering-assistance",
         "gameplay-locomotion-contacts"
       ]
+    },
+    {
+      "id": "gameplay-deformable-support",
+      "title": "可弯曲与压缩的交互承载面",
+      "category": "recipes",
+      "path": "skills/gameplay-deformable-support/SKILL.md",
+      "mechanisms": [
+        "jointed-layer-support"
+      ],
+      "source_ids": [
+        "DVOcLi2EVOK"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-locomotion-contacts",
+        "gameplay-contact-response"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1094,7 +1114,9 @@
     "mercy frames": "post-hit-invulnerability",
     "受击后保护": "post-hit-invulnerability",
     "mouse swirl steering": "pointer-curvature-steering",
-    "鼠标曲率转向": "pointer-curvature-steering"
+    "鼠标曲率转向": "pointer-curvature-steering",
+    "layered mattress support": "jointed-layer-support",
+    "可压缩承载面": "jointed-layer-support"
   },
   "task_routes": [
     {
@@ -1176,7 +1198,8 @@
         "secondary-motion",
         "aim-pose",
         "action-timing",
-        "contact-response"
+        "contact-response",
+        "deformable-support"
       ]
     },
     {
@@ -1460,7 +1483,8 @@
         "secondary-motion",
         "aim-pose",
         "action-timing",
-        "ceiling-corner-correction"
+        "ceiling-corner-correction",
+        "deformable-support"
       ]
     },
     {
@@ -1929,7 +1953,8 @@
         "traversal-transitions",
         "steering-assistance",
         "hurtbox-tolerance",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "deformable-support"
       ]
     },
     {
@@ -1969,7 +1994,8 @@
         "breakables-loot",
         "reward-reveal",
         "loot-pickup",
-        "completion-sequences"
+        "completion-sequences",
+        "deformable-support"
       ]
     },
     {
@@ -2141,6 +2167,25 @@
         "camera-feedback",
         "movement-feedback",
         "locomotion-contacts"
+      ]
+    },
+    {
+      "id": "deformable-support",
+      "request_examples": [
+        "车辆压上床垫状表面时，要局部弯曲并压缩，但轮子不能穿落。",
+        "分段承载面卸载后抖动或接缝分开，如何检查连接和支撑？"
+      ],
+      "primary_skill": "gameplay-deformable-support",
+      "mechanisms": [
+        "jointed-layer-support"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当车轮等载荷需要在可弯曲、可压缩的承载面上保持接触时，设计连接刚体层与层间弹簧的局部原型及稳定性验收；不是固定碰撞体的视觉压扁、通用软体算法或物性标定教程。",
+      "distinct_from": [
+        "motion-deformation",
+        "contact-response",
+        "locomotion-contacts",
+        "surface-aftermath"
       ]
     }
   ]
