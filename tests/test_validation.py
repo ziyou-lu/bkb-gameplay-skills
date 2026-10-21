@@ -252,6 +252,27 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
         self.assertEqual(discovery['mechanisms'], ['target-discoverability'])
 
 
+    def test_predictive_gait_is_not_sprite_facing_or_secondary_follow(self):
+        route = self.routes['gait-step-scheduling']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('movement-feedback', 'secondary-motion', 'action-timing',
+                      'locomotion-contacts', 'jump-input-buffer'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+    def test_surface_camera_up_is_not_occlusion_or_transient_feedback(self):
+        route = self.routes['surface-camera-up']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('camera-feedback', 'speed-camera', 'occlusion-reveal',
+                      'completion-sequences', 'locomotion-contacts'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

@@ -1058,3 +1058,35 @@ https://www.instagram.com/p/Db--r9yPbU3/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "occlusion_probe_count_description", "value": 3, "unit": "sample rays", "provenance": "caption_or_post_text", "note": "作者说明头/尾/身体，三个均被挡才开启；点位与实际查询实现未知，不是全轮廓或最佳采样数保证。"}]
 - 归入：[gameplay-occlusion-reveal](../skills/gameplay-occlusion-reveal/SKILL.md)
+
+## DZ0HGqjvGkz · 程序化步态：启动与转向的预测迈步
+
+https://www.instagram.com/p/DZ0HGqjvGkz/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：实见同蓝色场景上下 Before/After 骨架对照与不同脚腿位置，字幕 feet BEFORE hips 及 rebalances and leads steps；末段有游戏角色。作者正文说明旧腿部 IK 等根先移动产生间距后脚再追赶，虽有 overshoot 仍像跌倒；改为启动时朝意图方向先迈脚、再移动髋，髋顺时针转时选择右腿，反向另一腿。
+- 限制：先脚后髋因果与转向选腿来自作者说明，不是根据截图独立测量的时序；未核同步输入或精确领先帧数。无源码、IK 解算、触发阈值、步长/高度、步态仲裁、坐标符号约定、落点/支撑约束或性能。作者认为改善微妙且更好，不等于偏好测试、物理平衡或零滑步证明。不能推断新增了 overshoot 或移动速度/输入延迟改善；音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-gait-step-scheduling](../skills/gameplay-gait-step-scheduling/SKILL.md)
+
+## DZOzIQQPXXk · 贴壁角色相机：按地面法线证据混合上方向
+
+https://www.instagram.com/p/DZOzIQQPXXk/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：实见花瓶/底座处上下 Before/After：旧视角转低靠向地面/前景，新版较俯视仍能读出角色；debug 多条查询线与探测地面保持 upright 字幕，末段攀墙实机。作者解释原相机跟角色朝向，近地小凸缘会把视角扭向地面，旧时间阻尼不可靠；新锥形射线按法线与 world-up 的 30° 阈值识别地面，用命中数混合 world-upright 和 lizard-upright，5 个地面命中完全世界朝上，0 个按在墙上处理并允许角色方向。
+- 限制：锥形采样、阈值与混合端点仅作者说明，无源码或独立时间测量。5 个地面命中不是总射线数证明，不推 hits/5 线性中间权重、插值函数或无效查询行为；0 地面命中不普遍证明在墙上。总数、分布/长度、过滤、法线坐标实现、中间映射、阻尼/滞回、相机碰撞解决方案、性能和舒适度测试未知。A/B 未核同步输入或穷尽角度，不宣称零晕动、所有攀墙正确或最佳默认值；音频未核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "floor_normal_angle_threshold_description", "value": 30, "unit": "degrees", "provenance": "caption_or_post_text", "note": "作者相对 world-up 的示例阈值，比较符及实现未核，不是通用坡度默认值。"}, {"name": "full_world_up_ground_hit_endpoint", "value": 5, "unit": "ground hits", "provenance": "caption_or_post_text", "note": "作者完全 world-upright 端点；不证明射线总数或中间线性映射。"}, {"name": "character_up_ground_hit_endpoint", "value": 0, "unit": "ground hits", "provenance": "caption_or_post_text", "note": "作者允许 lizard-upright 的端点，非所有无命中都可靠代表在墙上。"}]
+- 补齐：较早 DYRtdAavZ5E 作为相机尝试背景补链，不新增主来源。作者描述换表面且射线检测到角色背后墙时启用转角相机 damping，意图减少内角移动时遮挡 dither 反复出现；实见 With/Without corner camera damping 分屏及不同取景/角色位置，但未独立隔离瞬时 dither 差异或核同步输入。无阻尼常数、查询几何、时长或代码，作者感受不是测量。此旧条件阻尼与主帖后续表面法线/up 混合不是同一算法，也不证明通用遮挡修复。
+- 归入：[gameplay-surface-camera-up](../skills/gameplay-surface-camera-up/SKILL.md)
+
+## DZXG7dZS_zz · 程序步态补证：多脚驱动的髋部起伏协调
+
+https://www.instagram.com/p/DZXG7dZS_zz/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Added hip movement 标题及上下 Before/After 可见祖母在同蓝色场景走动，姿态不同。作者正文称原先每只脚独立触发 hip bob，行走时各贡献互相抵消；新版另外检查双脚同时向前走的条件，另作处理以避免互相争用。
+- 限制：画面较暗、差异微妙，无法从截图独立隔离或量化髋幅度、相位、抵消量与明显改善；原因与处理机制是作者解释，不是已核代码。双脚同时前进的具体判断、合成公式、权重、幅度、共享振荡器和性能未公开；无同步输入回放或音频核听。它只补充共享髋输出协调，不证明预测迈步已实现此处理或角色物理平衡正确。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-gait-step-scheduling](../skills/gameplay-gait-step-scheduling/SKILL.md)

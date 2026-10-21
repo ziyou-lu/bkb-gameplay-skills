@@ -36,6 +36,8 @@ description: "当四向/八向移动动画或跑姿与真实运动朝向不一�
 
 原“移动、冲刺与落地反馈”仍通过此路径进入；现仅拥有方向动画，其他独立需求由下面的链接分流。新早按跳跃演示支持独立[输入缓冲设计与验收](../gameplay-jump-input-buffer/SKILL.md)；[顶角纠偏](../gameplay-ceiling-corner-correction/SKILL.md)另有空间碰撞入口。二者都不是已运行的引擎实现。
 
+程序化腿部在启动/转向时需要选腿和先脚后髋调度，转到[程序步态调度](../gameplay-gait-step-scheduling/SKILL.md)；本入口仍只处理方向姿态，不复制脚步状态机。
+
 ## 组合而不复制
 
 - [冲刺反馈](../gameplay-dash-feedback/SKILL.md)：路径/残像生命周期

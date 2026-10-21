@@ -92,7 +92,8 @@
         "gameplay-speed-camera",
         "gameplay-completion-sequences",
         "gameplay-hitstop",
-        "gameplay-attack-readability"
+        "gameplay-attack-readability",
+        "gameplay-surface-camera-up"
       ],
       "path": "skills/gameplay-camera-feedback/SKILL.md"
     },
@@ -264,7 +265,8 @@
         "gameplay-steering-assistance",
         "gameplay-locomotion-contacts",
         "gameplay-jump-input-buffer",
-        "gameplay-ceiling-corner-correction"
+        "gameplay-ceiling-corner-correction",
+        "gameplay-gait-step-scheduling"
       ]
     },
     {
@@ -1090,6 +1092,46 @@
         "gameplay-camera-feedback",
         "gameplay-impact-visuals"
       ]
+    },
+    {
+      "id": "gameplay-gait-step-scheduling",
+      "title": "程序步态的预测迈步与髋部协调",
+      "category": "shared",
+      "path": "skills/gameplay-gait-step-scheduling/SKILL.md",
+      "mechanisms": [
+        "predictive-gait-step",
+        "gait-hip-channel-coordination"
+      ],
+      "source_ids": [
+        "DZ0HGqjvGkz",
+        "DZXG7dZS_zz"
+      ],
+      "related_skills": [
+        "gameplay-movement-feedback",
+        "gameplay-secondary-motion",
+        "gameplay-action-timing",
+        "gameplay-locomotion-contacts",
+        "gameplay-jump-input-buffer"
+      ]
+    },
+    {
+      "id": "gameplay-surface-camera-up",
+      "title": "表面感知的相机上方向",
+      "category": "shared",
+      "path": "skills/gameplay-surface-camera-up/SKILL.md",
+      "mechanisms": [
+        "surface-camera-up"
+      ],
+      "source_ids": [
+        "DZOzIQQPXXk"
+      ],
+      "related_skills": [
+        "gameplay-camera-feedback",
+        "gameplay-speed-camera",
+        "gameplay-occlusion-reveal",
+        "gameplay-completion-sequences",
+        "gameplay-locomotion-contacts"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1138,7 +1180,12 @@
     "layered mattress support": "jointed-layer-support",
     "可压缩承载面": "jointed-layer-support",
     "occlusion reveal": "occlusion-reveal-gating",
-    "遮挡显露触发": "occlusion-reveal-gating"
+    "遮挡显露触发": "occlusion-reveal-gating",
+    "predictive stepping": "predictive-gait-step",
+    "程序步态启动": "predictive-gait-step",
+    "camera up blending": "surface-camera-up",
+    "表面相机上方向": "surface-camera-up",
+    "gait hip bob": "gait-hip-channel-coordination"
   },
   "task_routes": [
     {
@@ -1201,7 +1248,8 @@
         "impact-visuals",
         "speed-camera",
         "pointer-curvature-steering",
-        "occlusion-reveal"
+        "occlusion-reveal",
+        "surface-camera-up"
       ]
     },
     {
@@ -1327,7 +1375,8 @@
         "traversal-transitions",
         "steering-assistance",
         "locomotion-contacts",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "gait-step-scheduling"
       ]
     },
     {
@@ -1435,7 +1484,8 @@
       "distinct_from": [
         "hitstop",
         "impact-visuals",
-        "camera-feedback"
+        "camera-feedback",
+        "surface-camera-up"
       ]
     },
     {
@@ -1453,7 +1503,8 @@
         "motion-deformation",
         "aim-pose",
         "action-timing",
-        "contact-response"
+        "contact-response",
+        "gait-step-scheduling"
       ]
     },
     {
@@ -1490,7 +1541,8 @@
         "secondary-motion",
         "aim-pose",
         "contact-response",
-        "jump-input-buffer"
+        "jump-input-buffer",
+        "gait-step-scheduling"
       ]
     },
     {
@@ -1981,7 +2033,9 @@
         "steering-assistance",
         "hurtbox-tolerance",
         "pointer-curvature-steering",
-        "deformable-support"
+        "deformable-support",
+        "gait-step-scheduling",
+        "surface-camera-up"
       ]
     },
     {
@@ -2042,7 +2096,8 @@
         "breakables-loot",
         "reward-reveal",
         "loot-pickup",
-        "surface-aftermath"
+        "surface-aftermath",
+        "surface-camera-up"
       ]
     },
     {
@@ -2095,7 +2150,8 @@
         "ceiling-corner-correction",
         "action-timing",
         "traversal-transitions",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "gait-step-scheduling"
       ]
     },
     {
@@ -2234,7 +2290,50 @@
         "worldspace-indicators",
         "camera-feedback",
         "impact-visuals",
-        "attack-readability"
+        "attack-readability",
+        "surface-camera-up"
+      ]
+    },
+    {
+      "id": "gait-step-scheduling",
+      "request_examples": [
+        "程序化角色启动时像先倒下再迈脚，想调整脚和髋的先后。",
+        "转向时应该先迈哪只脚，怎样避免预测步与已有步态抢调度？",
+        "每只脚各自驱动髋部起伏时会互相抵消，想检查并发步态与共享输出。"
+      ],
+      "primary_skill": "gameplay-gait-step-scheduling",
+      "mechanisms": [
+        "predictive-gait-step",
+        "gait-hip-channel-coordination"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当程序化步态在启动/转向时脚追赶身体，或多脚各自驱动髋部造成冲突时，协调预测迈步、选腿与共享髋运动；两分支按问题选用，不是方向换图、装饰跟随或物理平衡求解器。",
+      "distinct_from": [
+        "movement-feedback",
+        "secondary-motion",
+        "action-timing",
+        "locomotion-contacts",
+        "jump-input-buffer"
+      ]
+    },
+    {
+      "id": "surface-camera-up",
+      "request_examples": [
+        "贴壁角色经过地面小凸缘就把镜头扭向地面，想保持地面附近的上方向。",
+        "希望相机根据表面法线区分近地和真正上墙，而不是一直锁世界朝上。"
+      ],
+      "primary_skill": "gameplay-surface-camera-up",
+      "mechanisms": [
+        "surface-camera-up"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当贴壁角色经过地面小凸缘就把视角扭向地面时，以局部表面法线证据协调 world-up 与角色 up，保留真正攀墙时的视角旋转；不替代遮挡显露、相机碰撞、短促震动或速度 FOV。",
+      "distinct_from": [
+        "camera-feedback",
+        "speed-camera",
+        "occlusion-reveal",
+        "completion-sequences",
+        "locomotion-contacts"
       ]
     }
   ]

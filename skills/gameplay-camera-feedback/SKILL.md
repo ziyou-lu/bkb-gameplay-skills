@@ -9,6 +9,8 @@ description: "在单次击打、落地、后坐或爆炸缺少重量，或现有
 
 本入口只拥有事件驱动的临时镜头偏移。持续高速表现转到[速度镜头](../gameplay-speed-camera/SKILL.md)；完成后交接给另一活动镜头转到[完成事件组合](../gameplay-completion-sequences/SKILL.md)，不强制把完成镜头复位成已结束的追随状态。
 
+贴壁角色的基础上方向被近地几何带偏，转到[表面感知相机上方向](../gameplay-surface-camera-up/SKILL.md)；它不是本页的临时 shake，也不等于遮挡窗口。
+
 ## 触发条件
 
 - 事件有特效但重量感弱，需要一次短促镜头确认。
