@@ -1122,3 +1122,23 @@ https://www.instagram.com/p/DUQ_dBmExfH/
 - 限制：旧规则和作者觉得更好来自正文，无完整旧新受控 A/B或独立可用性测量。手部视频不能当精确按键记录或输入帧计时；摇杆类比不证明测试过手柄。camera-independent 只说明移除强制相机前向锁定，不能确定 world-relative、camera-relative 或 surface-relative 坐标基。无向量/投影公式、法线处理、转向平滑、死区、缓冲、控制器支持、代码或延迟/性能验证；不推自动转向、寻路或瞄准，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-movement-look-decoupling](../skills/gameplay-movement-look-decoupling/SKILL.md)
+
+## DQChm_aD__T · 小凸缘攀附：hook rays 与支撑位姿估计
+
+https://www.instagram.com/p/DQChm_aD__T/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者报告之前相机更新影响攀爬，新增 hook rays 帮角色抓住微小凸缘，所有射线贡献平均命中位置与法线，驱动角色位置/朝向随时间插值。实见角色周围多条绿色虚线 debug、几个表面/边缘旁的贴附姿态、竖直浅色表面旁附着结果，以及水平线接竖线的直角探测示意和 perpendicular 字样。
+- 限制：旧失败与修复目标是作者说明，无受控同输入旧新 A/B；采样姿态和 debug 不等于完整连续过渡、所有表面或物理关节已验证。平均和插值算法仅正文，未核源码、射线总数/顺序/起点/方向/长度、命中层、权重、离群剔除、法线归一化、插值类型/速率、支撑偏移、失效回退或性能。直角示意不公开确切探测分支；贴附视觉不证明碰撞主体分工或真实物理稳定，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-surface-adhesion](../skills/gameplay-surface-adhesion/SKILL.md)
+
+## DP9AmTCj389 · 腾空角色的软圆地面空间参照
+
+https://www.instagram.com/p/DP9AmTCj389/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明添加 blob shadow 以帮助跳跃/落地、让角色在空间中有地面参照。实见腾空蜥蜴下方房间地面软黑圆/椭圆斑，落地样本中斑在脚下，编辑器也有圆斑；后段作者实机可见窄浅色板上腾空角色下方的黑椭圆。
+- 限制：这是新效果展示，没有旧新 A/B；开头 makes zero sense 属修辞，不是已证坏旧版。另插入的其他平台游戏参考镜头不算作者实现。有限姿态支持当前角色到接收面的空间关系，未测连续水平跟踪误差、着陆命中率或感知改善，不证明未来弹道落点。raycast/decal/projector/mesh、投影方向/范围、过滤/遮挡/多层选择、大小透明度随高度、墙/顶面/重力变化及性能未知；不要求或证明物理灯光准确，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-worldspace-indicators](../skills/gameplay-worldspace-indicators/SKILL.md)

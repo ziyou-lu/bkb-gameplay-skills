@@ -296,6 +296,30 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_adhesion_support_is_not_contact_shape_or_visibility_query(self):
+        route = self.routes['surface-adhesion']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('locomotion-contacts', 'contact-response',
+                      'ceiling-corner-correction', 'occlusion-reveal',
+                      'surface-camera-up', 'gait-step-scheduling',
+                      'deformable-support', 'traversal-transitions'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
+    def test_current_ground_reference_is_a_spatial_indicator_not_a_landing_event(self):
+        route = self.routes['worldspace-indicators']
+        self.assertIn('worldspace-interaction-indicator', route['mechanisms'])
+        self.assertIn('ground-position-reference', route['mechanisms'])
+        for other in ('gravity-orientation-cues', 'landing-feedback', 'surface-adhesion'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

@@ -44,6 +44,8 @@ description: "当轮胎等移动部件漏掉路缘或侧面接触时，比较线
 - [车辆转向辅助](../gameplay-steering-assistance/SKILL.md)：输入映射是另一工作流。
 - [形变与接触响应分离](../gameplay-contact-response/SKILL.md)：不由变形画面推断碰撞算法。
 
+攀爬角色需要汇总多表面命中位置/法线以保持附着时，转到[窄边缘支撑估计](../gameplay-surface-adhesion/SKILL.md)。它与本页共享覆盖检查原则，但不由轮胎接触表示代替角色支撑状态。
+
 ## 来源证据
 
 完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../sources/posts.json)。来源不证明本文件工程建议已在原帖实现。

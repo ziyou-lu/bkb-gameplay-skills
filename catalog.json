@@ -553,18 +553,23 @@
     },
     {
       "id": "gameplay-worldspace-indicators",
-      "title": "世界内操作指示与深度对齐",
+      "title": "世界内位置参照与操作指示",
       "category": "recipes",
       "path": "skills/gameplay-worldspace-indicators/SKILL.md",
       "mechanisms": [
-        "worldspace-interaction-indicator"
+        "worldspace-interaction-indicator",
+        "ground-position-reference"
       ],
       "source_ids": [
-        "Dd9v8pMhc_t"
+        "Dd9v8pMhc_t",
+        "DP9AmTCj389"
       ],
       "related_skills": [
         "gameplay-world-readability",
-        "gameplay-contextual-ui"
+        "gameplay-contextual-ui",
+        "gameplay-gravity-orientation-cues",
+        "gameplay-landing-feedback",
+        "gameplay-surface-adhesion"
       ]
     },
     {
@@ -899,7 +904,8 @@
       "related_skills": [
         "gameplay-contact-response",
         "gameplay-steering-assistance",
-        "gameplay-deformable-support"
+        "gameplay-deformable-support",
+        "gameplay-surface-adhesion"
       ]
     },
     {
@@ -1177,6 +1183,28 @@
         "gameplay-pointer-curvature-steering",
         "gameplay-surface-camera-up"
       ]
+    },
+    {
+      "id": "gameplay-surface-adhesion",
+      "title": "窄边缘攀附的支撑估计",
+      "category": "shared",
+      "path": "skills/gameplay-surface-adhesion/SKILL.md",
+      "mechanisms": [
+        "surface-adhesion-estimation"
+      ],
+      "source_ids": [
+        "DQChm_aD__T"
+      ],
+      "related_skills": [
+        "gameplay-locomotion-contacts",
+        "gameplay-contact-response",
+        "gameplay-ceiling-corner-correction",
+        "gameplay-occlusion-reveal",
+        "gameplay-surface-camera-up",
+        "gameplay-gait-step-scheduling",
+        "gameplay-deformable-support",
+        "gameplay-traversal-transitions"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1234,7 +1262,11 @@
     "gravity direction cue": "gravity-direction-cues",
     "重力方向参照": "gravity-direction-cues",
     "camera-independent movement": "movement-look-decoupling",
-    "移动观察解耦": "movement-look-decoupling"
+    "移动观察解耦": "movement-look-decoupling",
+    "hook rays adhesion": "surface-adhesion-estimation",
+    "窄边攀附": "surface-adhesion-estimation",
+    "blob ground reference": "ground-position-reference",
+    "当前地面参照": "ground-position-reference"
   },
   "task_routes": [
     {
@@ -1614,7 +1646,8 @@
         "aim-pose",
         "action-timing",
         "ceiling-corner-correction",
-        "deformable-support"
+        "deformable-support",
+        "surface-adhesion"
       ]
     },
     {
@@ -1699,14 +1732,16 @@
     {
       "id": "worldspace-indicators",
       "request_examples": [
-        "鱼的目标圈俯视重合，侧看却对不准鱼的深度。"
+        "鱼的目标圈俯视重合，侧看却对不准鱼的深度。",
+        "角色跳起时难判断当前位于地面哪里，想加准确的地面参照而非未来落点预测。"
       ],
       "primary_skill": "gameplay-worldspace-indicators",
       "mechanisms": [
-        "worldspace-interaction-indicator"
+        "worldspace-interaction-indicator",
+        "ground-position-reference"
       ],
       "evidence_status": "workflow",
-      "boundary": "当世界内目标圈、鱼钩或操作指示与真实目标深度/投影错位时校对空间反馈；不同于仅让资源更显眼，不从动画推断成功判定。",
+      "boundary": "当世界内操作指示与目标深度错位，或腾空角色缺少当前地面位置参照时，明确标记的空间含义并校对锚点、投影与表面；不把当前投影当未来落点，不改操作判定或攀附物理。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -1716,7 +1751,9 @@
         "mechanical-interactions",
         "connection-transitions",
         "occlusion-reveal",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "landing-feedback",
+        "surface-adhesion"
       ]
     },
     {
@@ -1820,7 +1857,8 @@
         "traversal-transitions",
         "steering-assistance",
         "locomotion-contacts",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "worldspace-indicators"
       ]
     },
     {
@@ -2044,7 +2082,8 @@
         "steering-assistance",
         "locomotion-contacts",
         "jump-input-buffer",
-        "ceiling-corner-correction"
+        "ceiling-corner-correction",
+        "surface-adhesion"
       ]
     },
     {
@@ -2091,7 +2130,8 @@
         "pointer-curvature-steering",
         "deformable-support",
         "gait-step-scheduling",
-        "surface-camera-up"
+        "surface-camera-up",
+        "surface-adhesion"
       ]
     },
     {
@@ -2228,7 +2268,8 @@
         "jump-input-buffer",
         "contact-response",
         "traversal-transitions",
-        "hurtbox-tolerance"
+        "hurtbox-tolerance",
+        "surface-adhesion"
       ]
     },
     {
@@ -2328,7 +2369,8 @@
         "motion-deformation",
         "contact-response",
         "locomotion-contacts",
-        "surface-aftermath"
+        "surface-aftermath",
+        "surface-adhesion"
       ]
     },
     {
@@ -2350,7 +2392,8 @@
         "camera-feedback",
         "impact-visuals",
         "attack-readability",
-        "surface-camera-up"
+        "surface-camera-up",
+        "surface-adhesion"
       ]
     },
     {
@@ -2374,7 +2417,8 @@
         "locomotion-contacts",
         "jump-input-buffer",
         "gravity-orientation-cues",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "surface-adhesion"
       ]
     },
     {
@@ -2396,7 +2440,8 @@
         "completion-sequences",
         "locomotion-contacts",
         "gravity-orientation-cues",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "surface-adhesion"
       ]
     },
     {
@@ -2440,6 +2485,30 @@
         "steering-assistance",
         "pointer-curvature-steering",
         "surface-camera-up"
+      ]
+    },
+    {
+      "id": "surface-adhesion",
+      "request_examples": [
+        "攀爬小凸缘时容易丢失支撑，想检查补充探测和附着位置/法线。",
+        "多条射线击中不同表面后角色贴附姿态跳变，怎样查汇总与失去支撑状态？"
+      ],
+      "primary_skill": "gameplay-surface-adhesion",
+      "mechanisms": [
+        "surface-adhesion-estimation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当攀爬角色在窄凸缘或表面转折处找不到可靠支撑时，检查补充探测、命中位置/法线汇总与附着位姿更新；不把它当遮挡查询、轮胎碰撞形状、2D 顶角纠偏或完整攀爬控制器。",
+      "distinct_from": [
+        "locomotion-contacts",
+        "contact-response",
+        "ceiling-corner-correction",
+        "occlusion-reveal",
+        "surface-camera-up",
+        "gait-step-scheduling",
+        "deformable-support",
+        "traversal-transitions",
+        "worldspace-indicators"
       ]
     }
   ]
