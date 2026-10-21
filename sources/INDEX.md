@@ -956,3 +956,14 @@ https://www.instagram.com/p/DLAeZtVPER7/
 - 限制：spline 的具体编辑操作未核清，不补成确定跟随、插值或路径算法。没有镜头切换时长、插值曲线、完成界面延迟、输入可用性、跳过/恢复或真实奖励结算证据；不能把新镜头误称仍允许玩家驾驶，也不能从车辆继续运动推定自动驾驶实现。未读或运行代码，音频未核听。完成事件与尾声独立、重复触发安全及支持的跳过恢复属于本库实施建议。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+
+## DKrymGwPEVi · 挂钩连接与脱开状态的短动画及弯曲绳形
+
+https://www.instagram.com/p/DKrymGwPEVi/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：towgame_dev 与 korion.interactive 合发。作者说明原本已有挂钩连接/脱开功能，再追加短动画；完整字幕确认抛出时 hook follows curved path。实见链条成弧连接车辆，以及脱开挂钩的中间态。新增的是连接状态转换的可见过程，不据此推定新增牵引物理。
+- 限制：回收动作的完整字幕未核清，不补成确定回收轨迹或固定先后时序。弯曲路径不证明抛物线/弹道算法，挂钩、绳形显示与实际关节/碰撞物理的分工未知。补证帖中的参数名没有已核通用数值；未读或运行代码、未测时长/响应，音频未核听。连接成功、失败、取消与重复触发的状态约束是本库实施建议，不是视频代码验证。
+- 音频核听：False；代码运行：False
+- 补齐：[较早绳形制作帖 DJ9eQbOP30H](https://www.instagram.com/p/DJ9eQbOP30H/) 作为同一交互机制的补证，不单独增加主来源条目：字幕出现 LineRenderer，RopeRenderer 面板可见 SegmentCount、MaxSagAmount、SagDistanceThreshold；调节中绳从直线变为下垂弧形，另有较短第二根绳的字幕和脱钩短绳展示。只确认文字、面板和视觉变化，不证明物理解算、参数公式或主帖未核的回收步骤。
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)

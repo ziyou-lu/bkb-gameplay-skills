@@ -1828,6 +1828,31 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DKrymGwPEVi",
+      "url": "https://www.instagram.com/p/DKrymGwPEVi/",
+      "creator": "towgame_dev",
+      "title": "挂钩连接与脱开状态的短动画及弯曲绳形",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "towgame_dev 与 korion.interactive 合发。作者说明原本已有挂钩连接/脱开功能，再追加短动画；完整字幕确认抛出时 hook follows curved path。实见链条成弧连接车辆，以及脱开挂钩的中间态。新增的是连接状态转换的可见过程，不据此推定新增牵引物理。",
+      "limitations": "回收动作的完整字幕未核清，不补成确定回收轨迹或固定先后时序。弯曲路径不证明抛物线/弹道算法，挂钩、绳形显示与实际关节/碰撞物理的分工未知。补证帖中的参数名没有已核通用数值；未读或运行代码、未测时长/响应，音频未核听。连接成功、失败、取消与重复触发的状态约束是本库实施建议，不是视频代码验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-contextual-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-21",
+          "basis": "caption_and_partial_visual",
+          "source_url": "https://www.instagram.com/p/DJ9eQbOP30H/",
+          "change": "[较早绳形制作帖 DJ9eQbOP30H](https://www.instagram.com/p/DJ9eQbOP30H/) 作为同一交互机制的补证，不单独增加主来源条目：字幕出现 LineRenderer，RopeRenderer 面板可见 SegmentCount、MaxSagAmount、SagDistanceThreshold；调节中绳从直线变为下垂弧形，另有较短第二根绳的字幕和脱钩短绳展示。只确认文字、面板和视觉变化，不证明物理解算、参数公式或主帖未核的回收步骤。"
+        }
+      ]
     }
   ]
 }
