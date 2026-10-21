@@ -936,3 +936,13 @@ https://www.instagram.com/jankyanims/reel/DYq3pMtqVGw/
 - 限制：没有速度、操作响应或路线完成时间的独立测量，输入方式、状态切换条件、算法和参数未知，音频未核听。作者对控制器重写、更顺滑或更有趣的说法不作为已验证独立收益。减少停挂/择时状态会改变控制规则；可能降低自主择时空间是本库设计分析，不是作者的玩家测试结论。不能把 immediate 当作零延迟数值，也不推断完全自动移动。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+
+## DNv1TB93uxh · 结算界面的分数递增计数与完成文字显示
+
+https://www.instagram.com/p/DNv1TB93uxh/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者字幕说明给 completion screen 加入 point animation，并以 counts up 描述计数过程。实见结算显示经过 1520、3498 等中间值，最后为 10000，完成文字逐字出现。它是结果总分的连续展示过程，不是碰撞点瞬时 +100 浮字。more engaging 是作者的改动目标，没有对应玩家测量。
+- 限制：没有旧版视觉 A/B，未核验计数持续时间、速度曲线/easing、计分公式、跳过输入或完成与失败的结算规则；不完整字幕不补齐为规则说明。1520、3498、10000 仅本次画面分数，不是动画参数或通用奖励量。未读或运行代码，音频未核听。显示动画与真实总分分离、跳过仍显示正确终值和防重复奖励是本库实施建议，不是视频已证功能。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)

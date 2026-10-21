@@ -18,7 +18,7 @@
 - [镜头冲击与短促聚焦](skills/gameplay-camera-feedback/SKILL.md)：用方向性震动、短促推近及速度相关视野/屏幕效果强调接触或高速移动；先保证操作可读性与可减弱性，不把更多镜头运动当作更好或实际加速。
 - [压缩拉伸与次级运动](skills/gameplay-motion-deformation/SKILL.md)：改善游戏动作的形变、回弹、跟随、瞄准姿态、快速过渡 smear 与相位节奏；区分视觉形变和物理响应、冗余表演和必要前后摇，不处理泛动画。
 - [攻击预警与反制可读性](skills/gameplay-attack-readability/SKILL.md)：在敌人招式、Boss 区域攻击或危险路径难读时改善姿态、前摇、落点与窗口；将可读性修改与伤害、碰撞、难度修改分开验收。
-- [生命血条与浮动数值](skills/gameplay-health-damage-ui/SKILL.md)：优化生命血条及伤害、治疗、得分浮字的可读性；共享数字动画但区分事件语义，统一平滑、残影条与去拥挤，不另建每个作者版本。
+- [生命血条与浮动数值](skills/gameplay-health-damage-ui/SKILL.md)：优化生命血条、伤害/治疗/得分浮字与结算计数的可读性；共享数值表现但区分事件语义，把显示动画与真实状态及结算分开。
 
 ### 场景组合
 

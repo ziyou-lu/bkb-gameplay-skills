@@ -169,7 +169,8 @@
         "healthbar-smoothing",
         "damage-ghost",
         "floating-numbers",
-        "critical-ui"
+        "critical-ui",
+        "result-count-up"
       ],
       "source_ids": [
         "DdhLtbTlTRG",
@@ -180,7 +181,8 @@
         "DelJO3qusJE",
         "DejijtPzhYJ",
         "DcZxryBoCFw",
-        "DcwUHp0O85b"
+        "DcwUHp0O85b",
+        "DNv1TB93uxh"
       ],
       "related_skills": [
         "gameplay-impact-visuals"

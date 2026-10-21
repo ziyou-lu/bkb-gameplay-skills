@@ -1794,6 +1794,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DNv1TB93uxh",
+      "url": "https://www.instagram.com/p/DNv1TB93uxh/",
+      "creator": "towgame_dev",
+      "title": "结算界面的分数递增计数与完成文字显示",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者字幕说明给 completion screen 加入 point animation，并以 counts up 描述计数过程。实见结算显示经过 1520、3498 等中间值，最后为 10000，完成文字逐字出现。它是结果总分的连续展示过程，不是碰撞点瞬时 +100 浮字。more engaging 是作者的改动目标，没有对应玩家测量。",
+      "limitations": "没有旧版视觉 A/B，未核验计数持续时间、速度曲线/easing、计分公式、跳过输入或完成与失败的结算规则；不完整字幕不补齐为规则说明。1520、3498、10000 仅本次画面分数，不是动画参数或通用奖励量。未读或运行代码，音频未核听。显示动画与真实总分分离、跳过仍显示正确终值和防重复奖励是本库实施建议，不是视频已证功能。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-health-damage-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
