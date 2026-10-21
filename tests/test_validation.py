@@ -284,6 +284,18 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_movement_look_contract_is_not_visual_facing_or_attack_direction(self):
+        route = self.routes['movement-look-decoupling']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('movement-feedback', 'attack-direction', 'aim-pose',
+                      'gait-step-scheduling', 'steering-assistance',
+                      'pointer-curvature-steering', 'surface-camera-up'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

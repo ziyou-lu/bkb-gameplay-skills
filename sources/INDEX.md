@@ -1112,3 +1112,13 @@ https://www.instagram.com/p/DUdJFcvDywX/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "footstep_emission_probability_description", "value": 50, "unit": "percent per footstep", "provenance": "caption_or_post_text", "note": "作者示例概率，未统计验证；不保证短时间覆盖，不是通用默认密度。"}]
 - 归入：[gameplay-gravity-orientation-cues](../skills/gameplay-gravity-orientation-cues/SKILL.md)
+
+## DUQ_dBmExfH · 控制调整：移动朝向不再强制跟相机 aim
+
+https://www.instagram.com/p/DUQ_dBmExfH/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者正文说明根据控制反馈，把原蜥蜴朝 camera aim 运动改为朝向/移动跟 movement input、与 look input 分开，并用左摇杆移动和右摇杆观察作类比。实见键盘手部与游戏上下同屏，字幕 camera-independent movement 及 movement input not camera aim；角色在相近取景中有侧向和朝镜头姿态，支持新版不再总锁相机前向。
+- 限制：旧规则和作者觉得更好来自正文，无完整旧新受控 A/B或独立可用性测量。手部视频不能当精确按键记录或输入帧计时；摇杆类比不证明测试过手柄。camera-independent 只说明移除强制相机前向锁定，不能确定 world-relative、camera-relative 或 surface-relative 坐标基。无向量/投影公式、法线处理、转向平滑、死区、缓冲、控制器支持、代码或延迟/性能验证；不推自动转向、寻路或瞄准，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-movement-look-decoupling](../skills/gameplay-movement-look-decoupling/SKILL.md)

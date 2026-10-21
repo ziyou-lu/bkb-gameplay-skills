@@ -38,6 +38,8 @@ description: "当四向/八向移动动画或跑姿与真实运动朝向不一�
 
 程序化腿部在启动/转向时需要选腿和先脚后髋调度，转到[程序步态调度](../gameplay-gait-step-scheduling/SKILL.md)；本入口仍只处理方向姿态，不复制脚步状态机。
 
+若问题是观察输入强制覆盖移动朝向，而非显示姿态，转到[移动与观察解耦](../gameplay-movement-look-decoupling/SKILL.md)。它改变控制契约，不是增加方向动画帧。
+
 ## 组合而不复制
 
 - [冲刺反馈](../gameplay-dash-feedback/SKILL.md)：路径/残像生命周期

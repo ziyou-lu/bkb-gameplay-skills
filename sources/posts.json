@@ -2290,6 +2290,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DUQ_dBmExfH",
+      "url": "https://www.instagram.com/p/DUQ_dBmExfH/",
+      "creator": "kennethchanny",
+      "title": "控制调整：移动朝向不再强制跟相机 aim",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者正文说明根据控制反馈，把原蜥蜴朝 camera aim 运动改为朝向/移动跟 movement input、与 look input 分开，并用左摇杆移动和右摇杆观察作类比。实见键盘手部与游戏上下同屏，字幕 camera-independent movement 及 movement input not camera aim；角色在相近取景中有侧向和朝镜头姿态，支持新版不再总锁相机前向。",
+      "limitations": "旧规则和作者觉得更好来自正文，无完整旧新受控 A/B或独立可用性测量。手部视频不能当精确按键记录或输入帧计时；摇杆类比不证明测试过手柄。camera-independent 只说明移除强制相机前向锁定，不能确定 world-relative、camera-relative 或 surface-relative 坐标基。无向量/投影公式、法线处理、转向平滑、死区、缓冲、控制器支持、代码或延迟/性能验证；不推自动转向、寻路或瞄准，音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-movement-look-decoupling"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

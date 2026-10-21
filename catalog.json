@@ -266,7 +266,8 @@
         "gameplay-locomotion-contacts",
         "gameplay-jump-input-buffer",
         "gameplay-ceiling-corner-correction",
-        "gameplay-gait-step-scheduling"
+        "gameplay-gait-step-scheduling",
+        "gameplay-movement-look-decoupling"
       ]
     },
     {
@@ -1155,6 +1156,27 @@
         "gameplay-impact-visuals",
         "gameplay-gait-step-scheduling"
       ]
+    },
+    {
+      "id": "gameplay-movement-look-decoupling",
+      "title": "移动朝向与观察输入解耦",
+      "category": "shared",
+      "path": "skills/gameplay-movement-look-decoupling/SKILL.md",
+      "mechanisms": [
+        "movement-look-decoupling"
+      ],
+      "source_ids": [
+        "DUQ_dBmExfH"
+      ],
+      "related_skills": [
+        "gameplay-movement-feedback",
+        "gameplay-attack-direction",
+        "gameplay-aim-pose",
+        "gameplay-gait-step-scheduling",
+        "gameplay-steering-assistance",
+        "gameplay-pointer-curvature-steering",
+        "gameplay-surface-camera-up"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1210,7 +1232,9 @@
     "表面相机上方向": "surface-camera-up",
     "gait hip bob": "gait-hip-channel-coordination",
     "gravity direction cue": "gravity-direction-cues",
-    "重力方向参照": "gravity-direction-cues"
+    "重力方向参照": "gravity-direction-cues",
+    "camera-independent movement": "movement-look-decoupling",
+    "移动观察解耦": "movement-look-decoupling"
   },
   "task_routes": [
     {
@@ -1402,7 +1426,8 @@
         "steering-assistance",
         "locomotion-contacts",
         "pointer-curvature-steering",
-        "gait-step-scheduling"
+        "gait-step-scheduling",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -1548,7 +1573,8 @@
         "motion-deformation",
         "secondary-motion",
         "action-timing",
-        "contact-response"
+        "contact-response",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -1972,7 +1998,8 @@
         "stomp-combos",
         "hit-recovery",
         "attack-readability",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -2038,7 +2065,8 @@
         "jump-forgiveness",
         "traversal-transitions",
         "locomotion-contacts",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -2280,7 +2308,8 @@
         "attack-direction",
         "camera-feedback",
         "movement-feedback",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -2344,7 +2373,8 @@
         "action-timing",
         "locomotion-contacts",
         "jump-input-buffer",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -2365,7 +2395,8 @@
         "occlusion-reveal",
         "completion-sequences",
         "locomotion-contacts",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "movement-look-decoupling"
       ]
     },
     {
@@ -2387,6 +2418,28 @@
         "worldspace-indicators",
         "impact-visuals",
         "gait-step-scheduling"
+      ]
+    },
+    {
+      "id": "movement-look-decoupling",
+      "request_examples": [
+        "一转观察镜头角色就被强制转向，想分开移动和看环境。",
+        "角色移动跟输入但静止转镜头时朝向混乱，想定义两路控制的优先级。"
+      ],
+      "primary_skill": "gameplay-movement-look-decoupling",
+      "mechanisms": [
+        "movement-look-decoupling"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当观察镜头强制决定角色移动/朝向、妨碍边走边看时，分离移动意图与观察输入，定义移动中及静止时的朝向契约；不是方向帧增加、攻击瞄准、自动转向或相机 up 稳定。",
+      "distinct_from": [
+        "movement-feedback",
+        "attack-direction",
+        "aim-pose",
+        "gait-step-scheduling",
+        "steering-assistance",
+        "pointer-curvature-steering",
+        "surface-camera-up"
       ]
     }
   ]
