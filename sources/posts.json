@@ -1675,6 +1675,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DcuTo4UNf25",
+      "url": "https://www.instagram.com/p/DcuTo4UNf25/",
+      "creator": "whiskerstale_game",
+      "title": "平台边缘防误落与坐姿操作提示",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "作者正文说明旧移动方式容易从物体边缘跌落，新版到达边缘时 Whiskers 会坐下而不是掉落。视频开头可见猫越过高处边缘下落；后段在遮阳篷边缘坐定，上方显示 SPACE 提示，随后跃往另一处。变化包含防误落规则以及解释停留状态的姿态/操作提示，而不只是新增动画。",
+      "limitations": "没有核验边缘检测方法、距离/角度阈值、退出/取消条件、长按操作或自动选择落点，音频未核听。SPACE 是此例提示，不是通用键位。防误落与移动连续性的取舍没有量化验证；不能从随后跳跃推断所有边缘都能跳或已经自动选定安全目标。它阻止离台，不等同离台后仍可跳的 coyote time。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-movement-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

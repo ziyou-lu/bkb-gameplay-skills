@@ -866,3 +866,13 @@ https://www.instagram.com/p/Dd7GYLGPlon/
 - 限制：没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DcuTo4UNf25 · 平台边缘防误落与坐姿操作提示
+
+https://www.instagram.com/p/DcuTo4UNf25/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：作者正文说明旧移动方式容易从物体边缘跌落，新版到达边缘时 Whiskers 会坐下而不是掉落。视频开头可见猫越过高处边缘下落；后段在遮阳篷边缘坐定，上方显示 SPACE 提示，随后跃往另一处。变化包含防误落规则以及解释停留状态的姿态/操作提示，而不只是新增动画。
+- 限制：没有核验边缘检测方法、距离/角度阈值、退出/取消条件、长按操作或自动选择落点，音频未核听。SPACE 是此例提示，不是通用键位。防误落与移动连续性的取舍没有量化验证；不能从随后跳跃推断所有边缘都能跳或已经自动选定安全目标。它阻止离台，不等同离台后仍可跳的 coyote time。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)

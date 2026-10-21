@@ -257,7 +257,8 @@
         "directional-animation",
         "coyote-time",
         "steering-assistance",
-        "locomotion-contact-representation"
+        "locomotion-contact-representation",
+        "edge-stop-assistance"
       ],
       "source_ids": [
         "DehPnhjxUvB",
@@ -269,13 +270,15 @@
         "DX6_8HIo_GT",
         "DeaF1wMgtg1",
         "DWsXLFEDVVf",
-        "DWFm4_eDlCm"
+        "DWFm4_eDlCm",
+        "DcuTo4UNf25"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-camera-feedback",
         "gameplay-impact-visuals",
-        "gameplay-hitstop"
+        "gameplay-hitstop",
+        "gameplay-contextual-ui"
       ]
     },
     {
