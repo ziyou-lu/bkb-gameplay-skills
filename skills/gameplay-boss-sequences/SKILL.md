@@ -44,7 +44,7 @@ Boss 状态机、入场触发、阶段阈值、玩家控制/镜头归属、死�
 - [命中停顿与表现节奏](../gameplay-hitstop/SKILL.md)
 - [接触闪光、冲击帧与粒子](../gameplay-impact-visuals/SKILL.md)
 - [镜头冲击与短促聚焦](../gameplay-camera-feedback/SKILL.md)
-- [生命血条与伤害数字](../gameplay-health-damage-ui/SKILL.md)
+- [生命血条与浮动数值](../gameplay-health-damage-ui/SKILL.md)
 
 ## 来源证据
 

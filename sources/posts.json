@@ -1371,6 +1371,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DcwUHp0O85b",
+      "url": "https://www.instagram.com/p/DcwUHp0O85b/",
+      "creator": "roadside_games",
+      "title": "弹球得分浮字的位移、旋转、淡出、缩放与颜色对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison",
+      "observations": "同一弹球碰撞场景依次展示 Display Text、Tween Position、Add Rotation、Fade Out、Scale In、Set Color 标签，末尾有 No Effects 对照。碰撞体上方的固定白色 +100 变为上浮、轻微倾斜、透明淡出、缩放入场，最后呈绿色；全桌演示中多个碰撞点各自出现绿色 +100。这是得分文字，不是伤害或治疗数值。",
+      "limitations": "没有代码、动画时长、曲线和旋转参数，旋转是否随机未证，音频未核听。标签展示顺序不等于每次事件的运行时动画先后，例如不能解释成淡出之后才开始缩放入场。+100 与绿色是本例的显示选择，不是通用分数、配色或伤害规范；实际计分逻辑未运行验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-health-damage-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -145,13 +145,13 @@
     },
     {
       "id": "gameplay-health-damage-ui",
-      "title": "生命血条与伤害数字",
+      "title": "生命血条与浮动数值",
       "category": "shared",
       "path": "skills/gameplay-health-damage-ui/SKILL.md",
       "mechanisms": [
         "healthbar-smoothing",
         "damage-ghost",
-        "damage-numbers",
+        "floating-numbers",
         "critical-ui"
       ],
       "source_ids": [
@@ -162,7 +162,8 @@
         "Dcynt8ZoEoE",
         "DelJO3qusJE",
         "DejijtPzhYJ",
-        "DcZxryBoCFw"
+        "DcZxryBoCFw",
+        "DcwUHp0O85b"
       ],
       "related_skills": [
         "gameplay-impact-visuals"
@@ -400,12 +401,16 @@
     "血条": "healthbar-smoothing",
     "ghost bar": "damage-ghost",
     "残影血条": "damage-ghost",
-    "damage numbers": "damage-numbers",
+    "damage numbers": "floating-numbers",
     "squash": "squash-stretch",
     "stretch": "squash-stretch",
     "squash and stretch": "squash-stretch",
     "后坐": "visual-recoil",
     "recoil": "visual-recoil",
-    "telegraph": "attack-telegraph"
+    "telegraph": "attack-telegraph",
+    "damage-numbers": "floating-numbers",
+    "floating numbers": "floating-numbers",
+    "score numbers": "floating-numbers",
+    "得分飘字": "floating-numbers"
   }
 }

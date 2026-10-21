@@ -40,7 +40,7 @@ description: "在敌人招式、Boss 区域攻击或危险路径难读时改善�
 
 只在需要相应机制时读取，沿用其事件与预算约束：
 
-- [生命血条与伤害数字](../gameplay-health-damage-ui/SKILL.md)
+- [生命血条与浮动数值](../gameplay-health-damage-ui/SKILL.md)
 - [Boss 入场、转阶段与终结](../gameplay-boss-sequences/SKILL.md)
 
 ## 来源证据

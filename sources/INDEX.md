@@ -702,3 +702,13 @@ https://www.instagram.com/p/DcXJwumOuBK/
 - 限制：Tween Scale 的具体缩放对象、形变方式和幅度未捕清，不能推断球或碰撞体如何压缩拉伸。镜头具体方向、幅度和衰减未知；完整层间顺序及是否累加没有全部核实，不按上述观察列表复刻有序教程。Audio 仅为标签，音频未核听；代码和参数未验证，也不能仅从视觉推断物理参数保持不变。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+
+## DcwUHp0O85b · 弹球得分浮字的位移、旋转、淡出、缩放与颜色对照
+
+https://www.instagram.com/p/DcwUHp0O85b/
+
+- 分类：included；证据：visual_comparison
+- 观察：同一弹球碰撞场景依次展示 Display Text、Tween Position、Add Rotation、Fade Out、Scale In、Set Color 标签，末尾有 No Effects 对照。碰撞体上方的固定白色 +100 变为上浮、轻微倾斜、透明淡出、缩放入场，最后呈绿色；全桌演示中多个碰撞点各自出现绿色 +100。这是得分文字，不是伤害或治疗数值。
+- 限制：没有代码、动画时长、曲线和旋转参数，旋转是否随机未证，音频未核听。标签展示顺序不等于每次事件的运行时动画先后，例如不能解释成淡出之后才开始缩放入场。+100 与绿色是本例的显示选择，不是通用分数、配色或伤害规范；实际计分逻辑未运行验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)

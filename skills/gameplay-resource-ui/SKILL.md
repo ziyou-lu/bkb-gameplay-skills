@@ -46,7 +46,7 @@ description: "用法力/体力消耗、冷却、恢复和蓄力反馈说明游�
 
 - [压缩拉伸与次级运动](../gameplay-motion-deformation/SKILL.md)
 - [接触闪光、冲击帧与粒子](../gameplay-impact-visuals/SKILL.md)
-- [生命血条与伤害数字](../gameplay-health-damage-ui/SKILL.md)
+- [生命血条与浮动数值](../gameplay-health-damage-ui/SKILL.md)
 
 ## 来源证据
 

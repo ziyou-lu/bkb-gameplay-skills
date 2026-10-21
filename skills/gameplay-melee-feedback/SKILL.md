@@ -48,7 +48,7 @@ description: "将共享反馈组合到剑击、受击、弹反、暴击和踩踏
 - [接触闪光、冲击帧与粒子](../gameplay-impact-visuals/SKILL.md)
 - [镜头冲击与短促聚焦](../gameplay-camera-feedback/SKILL.md)
 - [压缩拉伸与次级运动](../gameplay-motion-deformation/SKILL.md)
-- [生命血条与伤害数字](../gameplay-health-damage-ui/SKILL.md)
+- [生命血条与浮动数值](../gameplay-health-damage-ui/SKILL.md)
 - [攻击预警与反制可读性](../gameplay-attack-readability/SKILL.md)
 
 ## 来源证据
