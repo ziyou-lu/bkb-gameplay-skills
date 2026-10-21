@@ -662,3 +662,13 @@ https://www.instagram.com/p/DXNr6m4hSDk/
 - 限制：中段字幕没有完整留存，不能认定已实现的 hitstop 时长、减速值或镜头震动；No Friction 是问题描述，不证明物理摩擦参数或减速机制。闪白与方向性屏震仅为评论者建议，不是作者已实现事实。音频未核听。仅叠加反馈、保持基础行动不变是本库迁移建议，不是完整代码验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
+
+## DemTrHmK44j · 水下捕猎目标的尺寸与近岸可读性
+
+https://www.instagram.com/p/DemTrHmK44j/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：旧版标签 before: no fish in sight，浑浊水里小暗影难辨；新版标签 after: bigger, closer, ripples，浅水近岸可见更大的蓝鱼群。正文明确原来的鱼几乎不可见，调整为更大、更靠近岸边、更容易发现。
+- 限制：ripples 标签已确认，但独立涟漪形态和参数未核清；无具体大小/距离数值，音频未核听。前半新增螃蟹、鱼、矛、鲨鱼与烹饪是功能展示，不应拼成目标可读性优化链。优先检查目标屏幕尺寸/出现位置、再加环境提示是本库提炼；没有代码、玩家研究或难度指标验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)

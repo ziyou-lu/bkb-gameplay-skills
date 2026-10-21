@@ -1301,6 +1301,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DemTrHmK44j",
+      "url": "https://www.instagram.com/p/DemTrHmK44j/",
+      "creator": "abroad.the.game",
+      "title": "水下捕猎目标的尺寸与近岸可读性",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "旧版标签 before: no fish in sight，浑浊水里小暗影难辨；新版标签 after: bigger, closer, ripples，浅水近岸可见更大的蓝鱼群。正文明确原来的鱼几乎不可见，调整为更大、更靠近岸边、更容易发现。",
+      "limitations": "ripples 标签已确认，但独立涟漪形态和参数未核清；无具体大小/距离数值，音频未核听。前半新增螃蟹、鱼、矛、鲨鱼与烹饪是功能展示，不应拼成目标可读性优化链。优先检查目标屏幕尺寸/出现位置、再加环境提示是本库提炼；没有代码、玩家研究或难度指标验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-contextual-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
