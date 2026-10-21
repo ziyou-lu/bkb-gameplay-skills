@@ -252,7 +252,8 @@
         "landing-composition",
         "directional-animation",
         "coyote-time",
-        "steering-assistance"
+        "steering-assistance",
+        "locomotion-contact-representation"
       ],
       "source_ids": [
         "DehPnhjxUvB",
@@ -263,7 +264,8 @@
         "DerYowOhdHs",
         "DX6_8HIo_GT",
         "DeaF1wMgtg1",
-        "DWsXLFEDVVf"
+        "DWsXLFEDVVf",
+        "DWFm4_eDlCm"
       ],
       "related_skills": [
         "gameplay-motion-deformation",

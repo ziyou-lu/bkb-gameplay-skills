@@ -1593,6 +1593,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DWFm4_eDlCm",
+      "url": "https://www.instagram.com/p/DWFm4_eDlCm/",
+      "creator": "osoi.dev",
+      "title": "轮胎碰撞从线采样到体积接触的版本对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "作者展示三版轮胎碰撞：首版每轮单条红色线并驶过路缘；第二版沿轮周布置多条放射状红线；最新版以绿色立体线框表现圆柱轮胎，随后可见轮胎侧面在 V 形沟渠接触行驶。字幕称操控有所改善。正文说明所有版本都已吸收撞击，并把撞击掉轮列为未来可能，而非当前功能。",
+      "limitations": "没有核验射线数量、圆柱碰撞具体 API、摩擦或悬架参数、代码、性能成本及量化操控结果，音频未核听。三版本是替代方案迭代，不是必须叠加的三层，也不能推出形状越复杂越好。绿色线框和侧接触演示不能单独证明某种 sweep/刚体实现；不将已有吸震误写为新版新增，不把未来掉轮当已实现。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-movement-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

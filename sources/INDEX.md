@@ -824,3 +824,13 @@ https://www.instagram.com/p/DWsXLFEDVVf/
 - 限制：转向原理、改进效果与键盘受益属于作者说明和演示，未独立测量输入延迟、控制误差或漂移成绩。没有混合公式、增益、角度限制或代码，不称零延迟、自动驾驶或普遍汽车物理定律。状态相关辅助与一味放慢输入的取舍是本库提炼，不证明所有车辆都应加入此辅助；音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+
+## DWFm4_eDlCm · 轮胎碰撞从线采样到体积接触的版本对照
+
+https://www.instagram.com/p/DWFm4_eDlCm/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：作者展示三版轮胎碰撞：首版每轮单条红色线并驶过路缘；第二版沿轮周布置多条放射状红线；最新版以绿色立体线框表现圆柱轮胎，随后可见轮胎侧面在 V 形沟渠接触行驶。字幕称操控有所改善。正文说明所有版本都已吸收撞击，并把撞击掉轮列为未来可能，而非当前功能。
+- 限制：没有核验射线数量、圆柱碰撞具体 API、摩擦或悬架参数、代码、性能成本及量化操控结果，音频未核听。三版本是替代方案迭代，不是必须叠加的三层，也不能推出形状越复杂越好。绿色线框和侧接触演示不能单独证明某种 sweep/刚体实现；不将已有吸震误写为新版新增，不把未来掉轮当已实现。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
