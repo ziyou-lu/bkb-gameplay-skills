@@ -273,6 +273,17 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_gravity_cue_is_not_camera_control_or_target_discovery(self):
+        route = self.routes['gravity-orientation-cues']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('surface-camera-up', 'landing-feedback', 'world-readability',
+                      'worldspace-indicators', 'impact-visuals', 'gait-step-scheduling'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

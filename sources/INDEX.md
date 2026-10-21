@@ -1090,3 +1090,25 @@ https://www.instagram.com/p/DZXG7dZS_zz/
 - 限制：画面较暗、差异微妙，无法从截图独立隔离或量化髋幅度、相位、抵消量与明显改善；原因与处理机制是作者解释，不是已核代码。双脚同时前进的具体判断、合成公式、权重、幅度、共享振荡器和性能未公开；无同步输入回放或音频核听。它只补充共享髋输出协调，不证明预测迈步已实现此处理或角色物理平衡正确。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-gait-step-scheduling](../skills/gameplay-gait-step-scheduling/SKILL.md)
+
+## DWRiqb-j-Tw · 可携物发现提示：气味式方向线索
+
+https://www.instagram.com/p/DWRiqb-j-Tw/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明玩家找不到 pickupables，把旧 sixth-sense pulse 换为 scent trails。实机可见蜥蜴附近淡色弯曲/波动线段，字幕标明嗅闻追踪可拾物；暗处目标端点不全清楚。作者评论说明范围内 carryableObjects 用 LineRenderers 连到蜥蜴，添加 sin 波及 wind/smoke 材质；线被挡时截断而不绕几何。
+- 限制：旧 pulse 未作视觉 A/B，作者提出的可发现性问题不是新方案改善率测量。目标选择/范围、物体到玩家连接及被挡截断是作者评论说明，没有源码或独立控制遮挡验证；暗处完整端点、目标身份和准确线条数量未确认。输入、时长/冷却、范围数值、目标上限/优先级、端点附着、遮挡算法、振幅/频率、shader 和性能未知。第三方 E 按键建议不是已实现输入；不把线当可走路径或把避免绕几何的成本担忧当性能基准。音频未核听。
+- 音频核听：False；代码运行：False
+- 补齐：作者评论提供 LineRenderers、范围内 carryableObjects、sin、风/烟材质与遇挡截断说明，作为同一主来源补证，不另计来源；它不是代码阅读或运行测试。
+- 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
+
+## DUdJFcvDywX · 翻转视角的脚步重力方向微粒
+
+https://www.instagram.com/p/DUdJFcvDywX/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：实见弯曲通道中的蜥蜴、倒挂姿态、Floor 标注与向下解释箭头；上下两个不同朝向游戏视图中，后脚附近/下方有微小白滴或细屑。作者称每次脚步有 50% 概率产生极小粒子并随重力下落，意图细微提示实际方向。
+- 限制：大箭头是视频解释层，未证明游戏 UI；上下视图没有旧新标注，不是 A/B。稀疏画面不独立证明完整加速轨迹、逐脚生成时点、概率统计或方向辨认收益。50% 与重力耦合来自作者说明；寿命、速度、大小、仿真空间、重力值、附着与碰撞、平台/性能及输入未知。无源码、感知或舒适度测试，不宣称解决迷向或减少晕动；实际向下不等于安全地面/可走路线；音频未核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "footstep_emission_probability_description", "value": 50, "unit": "percent per footstep", "provenance": "caption_or_post_text", "note": "作者示例概率，未统计验证；不保证短时间覆盖，不是通用默认密度。"}]
+- 归入：[gameplay-gravity-orientation-cues](../skills/gameplay-gravity-orientation-cues/SKILL.md)

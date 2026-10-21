@@ -910,7 +910,8 @@
       "source_ids": [
         "DemTrHmK44j",
         "DPjC2p_jDK-",
-        "Dc8t7XtvnyF"
+        "Dc8t7XtvnyF",
+        "DWRiqb-j-Tw"
       ],
       "path": "skills/gameplay-world-readability/SKILL.md",
       "title": "世界目标发现性与局部提示",
@@ -918,7 +919,8 @@
         "gameplay-contextual-ui",
         "gameplay-worldspace-indicators",
         "gameplay-impact-visuals",
-        "gameplay-occlusion-reveal"
+        "gameplay-occlusion-reveal",
+        "gameplay-gravity-orientation-cues"
       ]
     },
     {
@@ -1130,7 +1132,28 @@
         "gameplay-speed-camera",
         "gameplay-occlusion-reveal",
         "gameplay-completion-sequences",
-        "gameplay-locomotion-contacts"
+        "gameplay-locomotion-contacts",
+        "gameplay-gravity-orientation-cues"
+      ]
+    },
+    {
+      "id": "gameplay-gravity-orientation-cues",
+      "title": "翻转视角下的重力方向线索",
+      "category": "shared",
+      "path": "skills/gameplay-gravity-orientation-cues/SKILL.md",
+      "mechanisms": [
+        "gravity-direction-cues"
+      ],
+      "source_ids": [
+        "DUdJFcvDywX"
+      ],
+      "related_skills": [
+        "gameplay-surface-camera-up",
+        "gameplay-landing-feedback",
+        "gameplay-world-readability",
+        "gameplay-worldspace-indicators",
+        "gameplay-impact-visuals",
+        "gameplay-gait-step-scheduling"
       ]
     }
   ],
@@ -1185,7 +1208,9 @@
     "程序步态启动": "predictive-gait-step",
     "camera up blending": "surface-camera-up",
     "表面相机上方向": "surface-camera-up",
-    "gait hip bob": "gait-hip-channel-coordination"
+    "gait hip bob": "gait-hip-channel-coordination",
+    "gravity direction cue": "gravity-direction-cues",
+    "重力方向参照": "gravity-direction-cues"
   },
   "task_routes": [
     {
@@ -1227,7 +1252,8 @@
         "hitstop",
         "camera-feedback",
         "speed-camera",
-        "occlusion-reveal"
+        "occlusion-reveal",
+        "gravity-orientation-cues"
       ]
     },
     {
@@ -1663,7 +1689,8 @@
         "scene-transitions",
         "mechanical-interactions",
         "connection-transitions",
-        "occlusion-reveal"
+        "occlusion-reveal",
+        "gravity-orientation-cues"
       ]
     },
     {
@@ -1766,7 +1793,8 @@
         "jump-forgiveness",
         "traversal-transitions",
         "steering-assistance",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "gravity-orientation-cues"
       ]
     },
     {
@@ -2042,14 +2070,15 @@
       "id": "world-readability",
       "request_examples": [
         "地面资源混入背景难发现，想比较尺寸/位置或临时识别模式。",
-        "交互点的大箭头挡住场景，想换成局部粒子但仍保留F操作提示，并检查是否更容易漏看。"
+        "交互点的大箭头挡住场景，想换成局部粒子但仍保留F操作提示，并检查是否更容易漏看。",
+        "想用附近关键物指向玩家的气味线帮发现方向，但不要误导成寻路。"
       ],
       "primary_skill": "gameplay-world-readability",
       "mechanisms": [
         "target-discoverability"
       ],
       "evidence_status": "workflow",
-      "boundary": "改善世界资源与交互目标发现性；按既定允许信息比较尺寸/位置、局部提示和临时识别模式，不扩大检测或交互范围；角色遮挡检测与显露使用独立入口。",
+      "boundary": "改善世界资源与交互目标发现性；按既定允许信息比较尺寸/位置、局部提示、方向线索和临时识别模式，不扩大检测或交互范围；角色遮挡检测与显露使用独立入口。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -2058,7 +2087,8 @@
         "scene-transitions",
         "mechanical-interactions",
         "connection-transitions",
-        "occlusion-reveal"
+        "occlusion-reveal",
+        "gravity-orientation-cues"
       ]
     },
     {
@@ -2313,7 +2343,8 @@
         "secondary-motion",
         "action-timing",
         "locomotion-contacts",
-        "jump-input-buffer"
+        "jump-input-buffer",
+        "gravity-orientation-cues"
       ]
     },
     {
@@ -2333,7 +2364,29 @@
         "speed-camera",
         "occlusion-reveal",
         "completion-sequences",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "gravity-orientation-cues"
+      ]
+    },
+    {
+      "id": "gravity-orientation-cues",
+      "request_examples": [
+        "角色倒挂时想让玩家知道实际重力向哪，而不改镜头朝向。",
+        "脚步下落微粒能否在墙面、天花板和稀疏步频下可靠提示世界向下？"
+      ],
+      "primary_skill": "gameplay-gravity-orientation-cues",
+      "mechanisms": [
+        "gravity-direction-cues"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当墙面/天花板攀爬或旋转视角让世界向下方向难辨时，设计与真实重力一致的轻量运动线索及覆盖验收；不旋转相机、不改变角色重力，也不把普通落地尘或目标提示当同一任务。",
+      "distinct_from": [
+        "surface-camera-up",
+        "landing-feedback",
+        "world-readability",
+        "worldspace-indicators",
+        "impact-visuals",
+        "gait-step-scheduling"
       ]
     }
   ]

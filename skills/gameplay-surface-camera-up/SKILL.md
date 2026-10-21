@@ -48,6 +48,8 @@ description: "当贴壁角色经过地面小凸缘就把视角扭向地面时，
 - [速度镜头](../gameplay-speed-camera/SKILL.md)映射速度到 FOV/边缘效果，不把高速信号当地面证据。
 - [完成镜头交接](../gameplay-completion-sequences/SKILL.md)负责结束事件的镜头控制权，不复制基础朝向算法。
 
+- [重力方向线索](../gameplay-gravity-orientation-cues/SKILL.md)只提供实际向下的视觉参照，不旋转基础相机，也不把本页地面证据当重力求解器。
+
 ## 来源证据
 
 - [DZOzIQQPXXk · @kennethchanny](https://www.instagram.com/p/DZOzIQQPXXk/)：近地视角对照与表面法线/命中数混合的作者说明；完整观察和缺口见[来源登记](../../sources/posts.json)。
