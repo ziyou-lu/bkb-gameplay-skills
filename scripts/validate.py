@@ -11,7 +11,8 @@ SKILL_RE = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 EVIDENCE = {'caption_and_partial_visual', 'visual_comparison', 'post_text',
             'visual_comparison_and_post_text', 'visible_subtitle', 'visible_code',
             'shown_pseudocode', 'executed_test', 'audio_listening'}
-PROVENANCE = {'caption_or_post_text', 'post_text', 'visible_code', 'shown_pseudocode', 'executed_test'}
+PROVENANCE = {'caption_or_post_text', 'post_text', 'visible_code', 'shown_pseudocode',
+              'visible_editor_setting', 'executed_test'}
 PRIVATE_MARKERS = ('-----BEGIN PRIVATE KEY-----', '-----BEGIN OPENSSH PRIVATE KEY-----')
 
 

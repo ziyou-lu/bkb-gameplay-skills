@@ -1023,3 +1023,17 @@ https://www.instagram.com/p/DVOcLi2EVOK/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "grid_per_layer_label", "value": "3×5", "unit": "rigid-body grid dimensions", "provenance": "caption_or_post_text", "note": "作者字幕结构示例；未核场景或精确连接拓扑，不作为默认网格密度。"}, {"name": "layer_count_description", "value": 2, "unit": "layers", "provenance": "caption_or_post_text", "note": "作者称在一层之上再叠另一层并用弹簧连接；没有给出连接映射或物性系数。"}]
 - 归入：[gameplay-deformable-support](../skills/gameplay-deformable-support/SKILL.md)
+
+## DP9HDK-EVX1 · 喇叭按压 blend shape 的阻尼弹簧驱动
+
+https://www.instagram.com/p/DP9HDK-EVX1/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：游戏内灰色车辆内饰、方向盘中心及持手柄演示者可见，连续抽帧中中心按钮有不同凸起/按压形态；视频提出用模拟弹簧而非固定tween/动画。作者三条展开回复分别确认喇叭按压blend shape由弹簧驱动、算法类型为阻尼弹簧，以及选择它以响应变化和调整细节的理由。编辑器可见Honk Spring Frequency 30.0及Honk Spring Damping字段，后者值遮挡/不清。
+- 限制：无旧新A/B、完整连续按放/快速重按或中断测试；可见形态不等于时序已测。未核源码、blend shape精确权重、弹簧公式/积分、参数单位、是否最终设置、响应时间/过冲/性能。30.0不作推荐值，不用邻近方向盘转向设置补喇叭参数。作者理由不证明所有tween都不能中断/重定向，也不证明弹簧普遍更优或帧率无关。没有声音核听或音画同步证据，未证明喇叭按压改变驾驶碰撞/转向。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "honk_spring_frequency_panel", "value": 30.0, "unit": "unspecified", "provenance": "visible_editor_setting", "note": "可见编辑器字段值，非源码或测量；单位、公式与是否最终采用未知，不直接移植。"}]
+- 补齐：作者明确模型具有按喇叭的blend shapes，由简单弹簧模拟驱动其值；没有提供源码或精确权重。
+- 补齐：作者进一步明确是damped spring；没有状态方程、积分方法或参数单位。
+- 补齐：作者比较其考虑的固定tween动画，认为弹簧能响应变化且可细调；这是选择理由，不证明所有tween不可重定向或弹簧更快/更省。
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)

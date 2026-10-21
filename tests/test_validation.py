@@ -279,6 +279,23 @@ class RepositoryInvariantTests(unittest.TestCase):
         self.mutate_json('sources/posts.json', lambda d: d['posts'][0].update(url='https://www.instagram.com/p/OtherID/'))
         self.assert_issue('URL/source ID mismatch')
 
+    def test_visible_editor_setting_is_not_code_execution(self):
+        self.mutate_json('sources/posts.json', lambda d: d['posts'][0].update(parameters=[{
+            'name': 'editor_example', 'value': 30.0, 'unit': 'unspecified',
+            'provenance': 'visible_editor_setting',
+        }]))
+        posts = json.loads((self.root / 'sources/posts.json').read_text())['posts']
+        (self.root / 'sources/INDEX.md').write_text(v.render_source_index(posts))
+        self.assertFalse(posts[0]['code_executed'])
+        self.assertEqual(v.validate(self.root), [])
+
+    def test_unknown_parameter_provenance_fails(self):
+        self.mutate_json('sources/posts.json', lambda d: d['posts'][0].update(parameters=[{
+            'name': 'unverified', 'value': 30.0, 'unit': 'unspecified',
+            'provenance': 'assumed_verified',
+        }]))
+        self.assert_issue('Invalid example parameter')
+
     def test_missing_reverse_reference_fails(self):
         self.mutate_json('sources/posts.json', lambda d: d['posts'][0].update(skill_ids=[]))
         self.assert_issue('Missing reverse source link')

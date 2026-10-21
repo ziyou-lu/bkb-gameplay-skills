@@ -116,7 +116,8 @@
         "DcCF3ZmBNl2",
         "DcXJwumOuBK",
         "DP53MiuDIpH",
-        "Ddvr0NYNkNF"
+        "Ddvr0NYNkNF",
+        "DP9HDK-EVX1"
       ],
       "related_skills": [
         "gameplay-secondary-motion",
@@ -1183,7 +1184,8 @@
     {
       "id": "motion-deformation",
       "request_examples": [
-        "落地压扁后角色缩放没有恢复，而且碰撞盒也变了。"
+        "落地压扁后角色缩放没有恢复，而且碰撞盒也变了。",
+        "喇叭按钮用blend shape按压，想比较阻尼弹簧驱动和固定动画，回弹途中重按不能跳姿。"
       ],
       "primary_skill": "gameplay-motion-deformation",
       "mechanisms": [
