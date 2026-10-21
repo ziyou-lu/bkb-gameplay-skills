@@ -762,3 +762,23 @@ https://www.instagram.com/p/DP3HI8yjFUS/
 - 限制：未获得实际帧数、时长、代码或输入到开火的延迟测量，不能把作者“帧数过多”的反思写成测得新版响应更快。删掉非必要表演、保留关键姿态是本库迁移提炼，不是作者完整制作步骤；多项差异没有单独消融验证。评论中的 gunspin 不是独立事实证据，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## DMz5XT1M_4s · FIRE WHIRL 的旋转带与火芯层级可读性对照
+
+https://www.instagram.com/p/DMz5XT1M_4s/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：Toads of the Bayou 的 FIRE WHIRL 明确 OLD / NEW 对照。旧版黄亮细火舌和线条交错；新版呈较完整的橙色螺旋带，与黄色火芯形成分区，几层环绕走势在两个循环阶段都可辨认。作者正文偏好右侧新版，理由是更容易理解运动。
+- 限制：这是总体 A/B，不是编号制作步骤或独立消融。作者的偏好与可读性理由不是玩家测试或量化结果；没有算法、旋转速度、伤害范围、动画参数或代码验证，音频未核听。不推断关闭 Bloom、shader 实现或真实 AOE 改变，也不把画面中的色块分区当作伤害判定边界。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)
+
+## DMC2EddsCML · 待机毒云删减与角色轮廓保留的前后对照
+
+https://www.instagram.com/p/DMC2EddsCML/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：Toads of the Bayou 的 Billy the Kill IDLES 对照左侧 NEW、右侧 OLD。旧版持续紫色毒云与颗粒包围脚边并遮住部分下半身；新版去掉毒云，仍保留帽、披风、锁链及身体待机运动。作者正文明确说明删除毒云，因为占据空间且损害角色 silhouette，主张减少此类效果。
+- 限制：只确认待机视觉删改，没有毒伤/状态机制的删除证据；不把去掉毒云等同免疫毒或取消伤害。没有数量、透明度、时间、代码或独立玩家测试，音频未核听；作者的轮廓判断不代表所有常驻 VFX 都应移除。是否承载真实状态信息需在目标项目另行确认。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)

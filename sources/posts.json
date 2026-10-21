@@ -1473,6 +1473,40 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DMz5XT1M_4s",
+      "url": "https://www.instagram.com/p/DMz5XT1M_4s/",
+      "creator": "pilou.nicolas",
+      "title": "FIRE WHIRL 的旋转带与火芯层级可读性对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "Toads of the Bayou 的 FIRE WHIRL 明确 OLD / NEW 对照。旧版黄亮细火舌和线条交错；新版呈较完整的橙色螺旋带，与黄色火芯形成分区，几层环绕走势在两个循环阶段都可辨认。作者正文偏好右侧新版，理由是更容易理解运动。",
+      "limitations": "这是总体 A/B，不是编号制作步骤或独立消融。作者的偏好与可读性理由不是玩家测试或量化结果；没有算法、旋转速度、伤害范围、动画参数或代码验证，音频未核听。不推断关闭 Bloom、shader 实现或真实 AOE 改变，也不把画面中的色块分区当作伤害判定边界。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-projectile-spells"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DMC2EddsCML",
+      "url": "https://www.instagram.com/p/DMC2EddsCML/",
+      "creator": "pilou.nicolas",
+      "title": "待机毒云删减与角色轮廓保留的前后对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "Toads of the Bayou 的 Billy the Kill IDLES 对照左侧 NEW、右侧 OLD。旧版持续紫色毒云与颗粒包围脚边并遮住部分下半身；新版去掉毒云，仍保留帽、披风、锁链及身体待机运动。作者正文明确说明删除毒云，因为占据空间且损害角色 silhouette，主张减少此类效果。",
+      "limitations": "只确认待机视觉删改，没有毒伤/状态机制的删除证据；不把去掉毒云等同免疫毒或取消伤害。没有数量、透明度、时间、代码或独立玩家测试，音频未核听；作者的轮廓判断不代表所有常驻 VFX 都应移除。是否承载真实状态信息需在目标项目另行确认。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-impact-visuals"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

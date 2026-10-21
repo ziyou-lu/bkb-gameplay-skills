@@ -14,7 +14,7 @@
 ### 共享机制
 
 - [命中停顿与表现节奏](skills/gameplay-hitstop/SKILL.md)：在命中缺少接触感、或发射/翻牌揭示缺少节奏时设计接触 hit-stop 与非接触表现停顿；不把冰冻状态或全局暂停混为一谈。
-- [接触闪光、冲击帧与粒子](skills/gameplay-impact-visuals/SKILL.md)：在击打、弹球碰撞、爆炸、着地或消耗反馈难辨时编排 flash、impact frame、冲击线、局部粒子和接触文字；不凭特效推断伤害范围或 shader 实现。
+- [接触闪光、冲击帧与粒子](skills/gameplay-impact-visuals/SKILL.md)：在接触反馈难辨或常驻特效遮挡角色时编排 flash、impact frame、冲击线、局部粒子和接触文字，必要时删减而非叠加；不凭特效推断伤害范围或 shader 实现。
 - [镜头冲击与短促聚焦](skills/gameplay-camera-feedback/SKILL.md)：用方向性震动、镜头冲击或短促推近强调射击、弹球碰撞、落地和重击；先保证操作可读性，不把更大震动等同更好。
 - [压缩拉伸与次级运动](skills/gameplay-motion-deformation/SKILL.md)：在受击、落地、弹跳、后坐或角色运动/瞄准中增加 squash/stretch、回弹、跟随、分件姿态与快速过渡 smear；以既有运动和判定为基线，不套用于无游戏语境的泛动画。
 - [攻击预警与反制可读性](skills/gameplay-attack-readability/SKILL.md)：在敌人招式、Boss 区域攻击或危险路径难读时改善姿态、前摇、落点与窗口；将可读性修改与伤害、碰撞、难度修改分开验收。
@@ -23,7 +23,7 @@
 ### 场景组合
 
 - [近战、弹反与踩踏组合](skills/gameplay-melee-feedback/SKILL.md)：将共享反馈组合到剑击、受击、弹反、暴击和踩踏循环；不重复实现 hitstop、镜头、血条，不凭视觉改伤害规则。
-- [射击与法术生命周期](skills/gameplay-projectile-spells/SKILL.md)：按蓄力、发射、飞行、命中和余效组织枪械、光束、冰刺与终极法术；先修空间一致性，再组合共享反馈。
+- [射击与法术生命周期](skills/gameplay-projectile-spells/SKILL.md)：按蓄力、发射、飞行、命中和余效组织枪械、光束、冰刺、旋转火焰与终极法术；先修空间和主体运动可读性，再组合共享反馈。
 - [移动、冲刺与落地反馈](skills/gameplay-movement-feedback/SKILL.md)：优化游戏角色冲刺、落地、转向与装饰跟随，用同物理 A/B 区分视觉改善和操控改变；不处理脱离游戏行为的泛动画。
 - [破坏、掉落与奖励揭示](skills/gameplay-breakables-loot/SKILL.md)：为木箱、爆炸桶、敌人死亡、金币、宝箱与物品合并设计事件到奖励的反馈闭环；保持破坏/奖励一次性结算，未展示步骤不补齐。
 - [Boss 入场、转阶段与终结](skills/gameplay-boss-sequences/SKILL.md)：为 Boss 入场、阶段转换和死亡高潮编排可中断的反馈序列；战斗预警复用共享技能，不凭 Final Hit 标题推断保命机制。
