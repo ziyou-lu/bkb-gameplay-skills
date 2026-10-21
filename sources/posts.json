@@ -1335,6 +1335,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DdXfzEbJnsN",
+      "url": "https://www.instagram.com/p/DdXfzEbJnsN/",
+      "creator": "shroomanoid_indiedev",
+      "title": "游戏内物品合并奖励动画的前后对照",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "标题 NEW MERGING ANIMATION。MERGE BEFORE 的旧版小图标出现在人物装备区附近；MERGE NOW 图标明显放大，并在人物区域周围移动，伴随紫绿光圈。合并瞬间可见橙色碎点与向外扩散的紫色闪光，之后呈现合成物。这是游戏内物品合并反馈的前后对照，不是逐层教程。",
+      "limitations": "完整运动轨迹、精确时长、单层开关对比和音频未核实，不补参数，也不宣称每一层独立改善了体验。素材消耗、成功判定、取消/失败分支及合成配方未由代码验证；对业务事件和结果确认的约束是本库迁移建议。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-breakables-loot"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -682,3 +682,13 @@ https://www.instagram.com/p/DXcMn-gCGaS/
 - 限制：未核实输入设备、鼠标或摇杆映射、任意角度算法、动画混合或碰撞形状，不推断自动瞄准。全方向是作者描述及画面方向变化，不证明连续角度实现。画面原有闪光和伤害数字不证明它们是本次新增层。减少斜向目标的正交对齐操作成本是本库机制分析，不是作者量化结果；音频未核听，代码未执行。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md)
+
+## DdXfzEbJnsN · 游戏内物品合并奖励动画的前后对照
+
+https://www.instagram.com/p/DdXfzEbJnsN/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：标题 NEW MERGING ANIMATION。MERGE BEFORE 的旧版小图标出现在人物装备区附近；MERGE NOW 图标明显放大，并在人物区域周围移动，伴随紫绿光圈。合并瞬间可见橙色碎点与向外扩散的紫色闪光，之后呈现合成物。这是游戏内物品合并反馈的前后对照，不是逐层教程。
+- 限制：完整运动轨迹、精确时长、单层开关对比和音频未核实，不补参数，也不宣称每一层独立改善了体验。素材消耗、成功判定、取消/失败分支及合成配方未由代码验证；对业务事件和结果确认的约束是本库迁移建议。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
