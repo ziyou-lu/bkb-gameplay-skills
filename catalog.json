@@ -363,7 +363,8 @@
         "in-game-interaction-state",
         "worldspace-interaction-indicator",
         "card-presentation",
-        "dialogue-feedback"
+        "dialogue-feedback",
+        "occluded-character-indicator"
       ],
       "source_ids": [
         "DejFnl2Ru9N",
@@ -376,7 +377,8 @@
         "Dd9v8pMhc_t",
         "DemTrHmK44j",
         "DeY6lNdTxTe",
-        "DPjC2p_jDK-"
+        "DPjC2p_jDK-",
+        "Dd7GYLGPlon"
       ],
       "related_skills": [
         "gameplay-motion-deformation",

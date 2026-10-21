@@ -856,3 +856,13 @@ https://www.instagram.com/p/DPjC2p_jDK-/
 - 限制：没有核验触发按键、持续时长、距离条件、遮挡/穿墙规则或 shader 实现；不据此声称自动收集、扩大检测范围或新增资源。模式退出清理、高亮集合与信息公平的验收是本库迁移建议，不是作者已证实现。没有数值或运行验证，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## Dd7GYLGPlon · 遮挡角色的局部透视窗口与白色轮廓对照
+
+https://www.instagram.com/p/Dd7GYLGPlon/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：同一猫角色与城市场景展示两种遮挡显示方案：A 以轻微圆形区域让 Whiskers 可见，实见局部圆形透视窗口；B 用白色轮廓突出猫的外形。周围遮挡表面可见点阵透明表现。作者询问哪种更清晰，而不是宣布 B 为改进赢家。
+- 限制：没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)

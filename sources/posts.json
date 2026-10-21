@@ -1658,6 +1658,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "Dd7GYLGPlon",
+      "url": "https://www.instagram.com/p/Dd7GYLGPlon/",
+      "creator": "whiskerstale_game",
+      "title": "遮挡角色的局部透视窗口与白色轮廓对照",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "同一猫角色与城市场景展示两种遮挡显示方案：A 以轻微圆形区域让 Whiskers 可见，实见局部圆形透视窗口；B 用白色轮廓突出猫的外形。周围遮挡表面可见点阵透明表现。作者询问哪种更清晰，而不是宣布 B 为改进赢家。",
+      "limitations": "没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-contextual-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
