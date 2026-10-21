@@ -28,7 +28,7 @@
 - [破坏、掉落与奖励揭示](skills/gameplay-breakables-loot/SKILL.md)：为木箱、爆炸桶、敌人死亡、金币、宝箱与物品合并设计事件到奖励的反馈闭环；保持破坏/奖励一次性结算，未展示步骤不补齐。
 - [Boss 入场、转阶段与终结](skills/gameplay-boss-sequences/SKILL.md)：为 Boss 入场、阶段转换和死亡高潮编排可中断的反馈序列；战斗预警复用共享技能，不凭 Final Hit 标题推断保命机制。
 - [法力、体力、冷却与蓄力状态](skills/gameplay-resource-ui/SKILL.md)：用法力/体力消耗、冷却、恢复和蓄力反馈说明游戏资源状态；区分真实可用时刻与弹性动画，不误导玩家。
-- [游戏内交互、卡牌与对话](skills/gameplay-contextual-ui/SKILL.md)：改善游戏内交互、机关、目标发现与角色遮挡显示，以及卡牌、战斗菜单和对话反馈；校对状态、屏幕投影和信息范围，不处理泛网站 UI 或泛动画。
+- [游戏内交互、卡牌与对话](skills/gameplay-contextual-ui/SKILL.md)：改善游戏内交互、机关、目标/角色可读性与切场过渡，以及卡牌、战斗菜单和对话反馈；校对真实状态、信息范围和就绪条件，不处理泛网站 UI 或泛动画。
 
 ### 持续入库
 

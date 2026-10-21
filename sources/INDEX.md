@@ -876,3 +876,13 @@ https://www.instagram.com/p/DcuTo4UNf25/
 - 限制：没有核验边缘检测方法、距离/角度阈值、退出/取消条件、长按操作或自动选择落点，音频未核听。SPACE 是此例提示，不是通用键位。防误落与移动连续性的取舍没有量化验证；不能从随后跳跃推断所有边缘都能跳或已经自动选定安全目标。它阻止离台，不等同离台后仍可跳的 coyote time。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+
+## DbqZZNQz95x · 场景切换的黑屏后淡入与出生位置跳变遮蔽
+
+https://www.instagram.com/p/DbqZZNQz95x/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：Devlog 2 Smoother Scene Transitions 展示卧室与走廊的 Before/After 切换。作者正文说明基础切场工作后加入 transition animations，并称其能掩盖偶发出生位置闪动。After 的连续画面可见游戏区域全黑、走廊近黑、再逐渐显现，外围字幕亮度不变，支持这是游戏内黑屏后淡入，而非视频剪辑。穿过字幕的白色竖线属于视频剪辑，不列入游戏实现。
+- 限制：没有捕获完整淡出连续过程，不把 fade-out 当作已证步骤；没有时长、曲线、加载与场景切换顺序、输入锁定或恢复条件证据。视觉遮蔽不等于修复出生点问题，也不证明消除了加载停顿。场景真正就绪后解除遮挡、失败退出与输入恢复属于本库实施建议，不是原帖已核机制。未读或运行代码，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)

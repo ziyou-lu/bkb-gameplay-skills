@@ -1692,6 +1692,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DbqZZNQz95x",
+      "url": "https://www.instagram.com/p/DbqZZNQz95x/",
+      "creator": "cheese_eyes_games",
+      "title": "场景切换的黑屏后淡入与出生位置跳变遮蔽",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "Devlog 2 Smoother Scene Transitions 展示卧室与走廊的 Before/After 切换。作者正文说明基础切场工作后加入 transition animations，并称其能掩盖偶发出生位置闪动。After 的连续画面可见游戏区域全黑、走廊近黑、再逐渐显现，外围字幕亮度不变，支持这是游戏内黑屏后淡入，而非视频剪辑。穿过字幕的白色竖线属于视频剪辑，不列入游戏实现。",
+      "limitations": "没有捕获完整淡出连续过程，不把 fade-out 当作已证步骤；没有时长、曲线、加载与场景切换顺序、输入锁定或恢复条件证据。视觉遮蔽不等于修复出生点问题，也不证明消除了加载停顿。场景真正就绪后解除遮挡、失败退出与输入恢复属于本库实施建议，不是原帖已核机制。未读或运行代码，音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-contextual-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

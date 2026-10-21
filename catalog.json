@@ -367,7 +367,8 @@
         "worldspace-interaction-indicator",
         "card-presentation",
         "dialogue-feedback",
-        "occluded-character-indicator"
+        "occluded-character-indicator",
+        "scene-transition-masking"
       ],
       "source_ids": [
         "DejFnl2Ru9N",
@@ -381,7 +382,8 @@
         "DemTrHmK44j",
         "DeY6lNdTxTe",
         "DPjC2p_jDK-",
-        "Dd7GYLGPlon"
+        "Dd7GYLGPlon",
+        "DbqZZNQz95x"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
