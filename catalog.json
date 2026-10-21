@@ -440,7 +440,8 @@
       ],
       "related_skills": [
         "gameplay-motion-deformation",
-        "gameplay-shooting-feedback"
+        "gameplay-shooting-feedback",
+        "gameplay-tool-body-coordination"
       ],
       "path": "skills/gameplay-aim-pose/SKILL.md"
     },
@@ -601,7 +602,9 @@
       "related_skills": [
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
-        "gameplay-contextual-ui"
+        "gameplay-contextual-ui",
+        "gameplay-geometric-event-alignment",
+        "gameplay-state-driven-surface-motion"
       ]
     },
     {
@@ -1205,6 +1208,63 @@
         "gameplay-deformable-support",
         "gameplay-traversal-transitions"
       ]
+    },
+    {
+      "id": "gameplay-geometric-event-alignment",
+      "title": "几何边界与离散事件触发对齐",
+      "category": "shared",
+      "path": "skills/gameplay-geometric-event-alignment/SKILL.md",
+      "mechanisms": [
+        "geometric-event-alignment"
+      ],
+      "source_ids": [
+        "DX1yDNMN4-C"
+      ],
+      "related_skills": [
+        "gameplay-action-timing",
+        "gameplay-mechanical-interactions",
+        "gameplay-breakables-loot",
+        "gameplay-contact-response",
+        "gameplay-surface-adhesion"
+      ]
+    },
+    {
+      "id": "gameplay-state-driven-surface-motion",
+      "title": "运行状态驱动的局部表面动画",
+      "category": "shared",
+      "path": "skills/gameplay-state-driven-surface-motion/SKILL.md",
+      "mechanisms": [
+        "state-driven-surface-motion"
+      ],
+      "source_ids": [
+        "DXuFvaKjRl_"
+      ],
+      "related_skills": [
+        "gameplay-mechanical-interactions",
+        "gameplay-motion-deformation",
+        "gameplay-secondary-motion",
+        "gameplay-geometric-event-alignment"
+      ]
+    },
+    {
+      "id": "gameplay-tool-body-coordination",
+      "title": "工具动作与身体持握协调",
+      "category": "shared",
+      "path": "skills/gameplay-tool-body-coordination/SKILL.md",
+      "mechanisms": [
+        "constrained-tool-body-coordination"
+      ],
+      "source_ids": [
+        "DW1b54bDW3M"
+      ],
+      "related_skills": [
+        "gameplay-aim-pose",
+        "gameplay-action-timing",
+        "gameplay-gait-step-scheduling",
+        "gameplay-secondary-motion",
+        "gameplay-motion-deformation",
+        "gameplay-geometric-event-alignment"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1266,7 +1326,13 @@
     "hook rays adhesion": "surface-adhesion-estimation",
     "窄边攀附": "surface-adhesion-estimation",
     "blob ground reference": "ground-position-reference",
-    "当前地面参照": "ground-position-reference"
+    "当前地面参照": "ground-position-reference",
+    "geometric event timing": "geometric-event-alignment",
+    "几何触发时机": "geometric-event-alignment",
+    "RPM belt visual": "state-driven-surface-motion",
+    "运行状态材质动画": "state-driven-surface-motion",
+    "tool grip body coordination": "constrained-tool-body-coordination",
+    "工具持握协调": "constrained-tool-body-coordination"
   },
   "task_routes": [
     {
@@ -1354,7 +1420,9 @@
         "aim-pose",
         "action-timing",
         "contact-response",
-        "deformable-support"
+        "deformable-support",
+        "state-driven-surface-motion",
+        "tool-body-coordination"
       ]
     },
     {
@@ -1478,7 +1546,8 @@
         "reward-reveal",
         "loot-pickup",
         "completion-sequences",
-        "surface-aftermath"
+        "surface-aftermath",
+        "geometric-event-alignment"
       ]
     },
     {
@@ -1587,7 +1656,9 @@
         "aim-pose",
         "action-timing",
         "contact-response",
-        "gait-step-scheduling"
+        "gait-step-scheduling",
+        "state-driven-surface-motion",
+        "tool-body-coordination"
       ]
     },
     {
@@ -1606,7 +1677,8 @@
         "secondary-motion",
         "action-timing",
         "contact-response",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "tool-body-coordination"
       ]
     },
     {
@@ -1626,7 +1698,9 @@
         "aim-pose",
         "contact-response",
         "jump-input-buffer",
-        "gait-step-scheduling"
+        "gait-step-scheduling",
+        "geometric-event-alignment",
+        "tool-body-coordination"
       ]
     },
     {
@@ -1647,7 +1721,8 @@
         "action-timing",
         "ceiling-corner-correction",
         "deformable-support",
-        "surface-adhesion"
+        "surface-adhesion",
+        "geometric-event-alignment"
       ]
     },
     {
@@ -1795,7 +1870,9 @@
         "worldspace-indicators",
         "world-readability",
         "scene-transitions",
-        "connection-transitions"
+        "connection-transitions",
+        "geometric-event-alignment",
+        "state-driven-surface-motion"
       ]
     },
     {
@@ -2418,7 +2495,8 @@
         "jump-input-buffer",
         "gravity-orientation-cues",
         "movement-look-decoupling",
-        "surface-adhesion"
+        "surface-adhesion",
+        "tool-body-coordination"
       ]
     },
     {
@@ -2508,7 +2586,70 @@
         "gait-step-scheduling",
         "deformable-support",
         "traversal-transitions",
-        "worldspace-indicators"
+        "worldspace-indicators",
+        "geometric-event-alignment"
+      ]
+    },
+    {
+      "id": "geometric-event-alignment",
+      "request_examples": [
+        "木材经过锯片后才切开，想核对触发几何而不是加快动画。",
+        "物体一停在操作边界就反复触发，想区分条件成立与一次性事件。"
+      ],
+      "primary_skill": "gameplay-geometric-event-alignment",
+      "mechanisms": [
+        "geometric-event-alignment"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当切断等离散事件早于或晚于可见物体经过操作边界时，明确几何参照、触发条件与一次性状态，再核对实际事件位置；不是动画加速、切割网格算法或已验证的点积公式。",
+      "distinct_from": [
+        "action-timing",
+        "mechanical-interactions",
+        "breakables-loot",
+        "contact-response",
+        "surface-adhesion",
+        "state-driven-surface-motion",
+        "tool-body-coordination"
+      ]
+    },
+    {
+      "id": "state-driven-surface-motion",
+      "request_examples": [
+        "发动机在转但皮带纹理静止，想让指定表面跟运行状态一致。",
+        "一改皮带UV所有机器都动了，想查材质作用范围及各实例状态。"
+      ],
+      "primary_skill": "gameplay-state-driven-surface-motion",
+      "mechanisms": [
+        "state-driven-surface-motion"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当机器已运行但皮带等表面仍静止，或材质滚动与实际运行状态矛盾时，限定目标表面并将权威状态映射到可读的表面动画；不是实体皮带模拟、机关通行或任意背景 UV 装饰。",
+      "distinct_from": [
+        "mechanical-interactions",
+        "motion-deformation",
+        "secondary-motion",
+        "geometric-event-alignment"
+      ]
+    },
+    {
+      "id": "tool-body-coordination",
+      "request_examples": [
+        "第一人称挥斧只见手在动，想协调双手握持和身体参与。",
+        "工具轨迹、手和躯干各自驱动时会滑握，怎样检查动作约束而不改伤害规则？"
+      ],
+      "primary_skill": "gameplay-tool-body-coordination",
+      "mechanisms": [
+        "constrained-tool-body-coordination"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当第一人称挥动工具只见手在动、双手持握与身体参与脱节时，组织工具动作、持握约束与多部位姿态的协调及视角验收；不提供完整 IK 求解器、人体物理或伤害规则。",
+      "distinct_from": [
+        "aim-pose",
+        "action-timing",
+        "gait-step-scheduling",
+        "secondary-motion",
+        "motion-deformation",
+        "geometric-event-alignment"
       ]
     }
   ]

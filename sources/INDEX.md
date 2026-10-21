@@ -1142,3 +1142,34 @@ https://www.instagram.com/p/DP9AmTCj389/
 - 限制：这是新效果展示，没有旧新 A/B；开头 makes zero sense 属修辞，不是已证坏旧版。另插入的其他平台游戏参考镜头不算作者实现。有限姿态支持当前角色到接收面的空间关系，未测连续水平跟踪误差、着陆命中率或感知改善，不证明未来弹道落点。raycast/decal/projector/mesh、投影方向/范围、过滤/遮挡/多层选择、大小透明度随高度、墙/顶面/重力变化及性能未知；不要求或证明物理灯光准确，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-worldspace-indicators](../skills/gameplay-worldspace-indicators/SKILL.md)
+
+## DX1yDNMN4-C · 锯切事件的几何边界时机对齐
+
+https://www.instagram.com/p/DX1yDNMN4-C/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者 Devlog 27 说明木材原先切断过迟，以涉及锯片中心/木材末端的 dot-product check 替换宽泛 trigger，并称新时机正确。实见送木穿圆锯、粉尘和分离木段，以及编辑器彩色参照点、连线与触发区域；WRONG CUT 标注画面中木段已越过锯片才分开。
+- 限制：WRONG CUT 是错误示例，不能当修正版；稀疏截图没有独立核准新版精确切断瞬间，作者正确性陈述不等于受控 A/B或测量。无源码、向量构造/参考轴/坐标、符号/阈值、范围约束、穿越处理或数值精度验证，不能以两点名补点积公式。0.52 m/s、2155 RPM 是附带 HUD 值，不是推荐配置或配方参数；切割网格、碎片物理、性能和音频未核。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-geometric-event-alignment](../skills/gameplay-geometric-event-alignment/SKILL.md)
+
+## DXuFvaKjRl_ · 皮带表面隔离与发动机状态驱动的 UV 动画
+
+https://www.instagram.com/bezdiga.dev/reel/DXuFvaKjRl_/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者 Devlog 26 说明玩家发现锯木厂皮带不动，采用子网格隔离、UV-scroll shader 并同步 engine RPM。实见第一层 Submesh Isolation 标签，网格编辑器单独选择皮带面，后续 Unity inspector 有 belt renderer/material index 配置和动画/代码面板；影片有运行机械语境及编辑加入的投诉文字。
+- 限制：UV 滚动与 RPM 关联来自作者正文，稀疏画面未独立核最终纹理速度/RPM对应、数值比例或零转速停止。第二层完整标签未核，不补全部有序标题；代码面板不等于源码审计或执行。映射公式/曲线/方向、UV参数、实例生命周期、接缝/反转、传动比、性能和沉浸改善均未验证；不推实体皮带/网格真实移动或物理模拟，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-state-driven-surface-motion](../skills/gameplay-state-driven-surface-motion/SKILL.md)
+
+## DW1b54bDW3M · 第一人称挥斧的持握与多部位协调
+
+https://www.instagram.com/bezdiga.dev/reel/DW1b54bDW3M/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：影片明确标注原 ONLY THE HANDS MOVED，作者正文描述 dynamic axe swing、IK、脊柱旋转、头 roll 与膝弯。实见双手握斧、编辑器彩色点与轨迹/引导线、斧刃靠近木材，后段第一人称斧头姿态抬起/倾斜；字幕提身体各部分参与和脊柱/膝，出现未完整核读的代码面板。
+- 限制：脊柱、头、膝的贡献仅由作者文字说明，第一人称画面没有独立逐关节幅度或全身同输入 A/B验证。IK/biomechanics/physically 不是完整求解器、真实物理、动作捕捉或解剖正确性证据；OH I FIXED THAT 所指 bug 不明，不补端点/朝向修复。输入、目标选择、IK类型/权重、骨骼和曲线、伤害/接触时机未知；代码未完整审计或执行，无数值参数、性能/舒适度测试，音频未核听。
+- 音频核听：False；代码运行：False
+- 补齐：较早 Devlog 23 只作方案背景，不另计来源：作者正文比较 Animation Blend 与 Full IK 并征询选择，称鼠标控手及速度决定伤害；实见鼠标上箭头与抬斧解释、BlendTree 和 IK 手臂编辑视图。未测速度/伤害响应，不证明哪种方案客观更好，也不证明较晚 DW1b54bDW3M 保留这些输入或伤害映射。
+- 归入：[gameplay-tool-body-coordination](../skills/gameplay-tool-body-coordination/SKILL.md)

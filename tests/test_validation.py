@@ -320,6 +320,39 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_geometric_event_boundary_is_not_animation_or_result_lifecycle(self):
+        route = self.routes['geometric-event-alignment']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('action-timing', 'mechanical-interactions',
+                      'breakables-loot', 'contact-response', 'surface-adhesion'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
+    def test_state_driven_surface_motion_is_not_geometry_or_event_authority(self):
+        route = self.routes['state-driven-surface-motion']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('mechanical-interactions', 'motion-deformation',
+                      'secondary-motion', 'geometric-event-alignment'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
+    def test_tool_constraints_are_not_sprite_representation_or_secondary_follow(self):
+        route = self.routes['tool-body-coordination']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('aim-pose', 'action-timing', 'gait-step-scheduling',
+                      'secondary-motion', 'motion-deformation', 'geometric-event-alignment'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

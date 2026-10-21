@@ -39,6 +39,10 @@ description: "当压板、开关与门体运动/通行状态不一致时，组�
 - [镜头反馈](../gameplay-camera-feedback/SKILL.md)：事件镜头冲击不复制算法
 - [交互状态](../gameplay-contextual-ui/SKILL.md)：按下成功不等于门已可通过
 
+若移动物体经过工具后事件才迟到，先查[几何边界触发对齐](../gameplay-geometric-event-alignment/SKILL.md)，不把门体动画或尘团时序当判定修复。
+
+仅皮带/材质显示与 RPM 等运行状态矛盾，转到[状态驱动表面动画](../gameplay-state-driven-surface-motion/SKILL.md)；那不改变门体几何或通行规则。
+
 ## 来源证据
 
 完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../sources/posts.json)。来源不证明本文件工程建议已在原帖实现。

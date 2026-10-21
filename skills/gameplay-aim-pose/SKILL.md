@@ -44,6 +44,8 @@ description: "在持枪方向改变时角色像整张纸片旋转，或肩部、
 - [视觉后坐与形变](../gameplay-motion-deformation/SKILL.md)
 - [枪口与射击生命周期](../gameplay-shooting-feedback/SKILL.md)
 
+第一人称工具挥动中的双手持握与身体参与另见[工具动作协调](../gameplay-tool-body-coordination/SKILL.md)，不把本页方向 sprite/stack 组合当骨骼 IK 实现。
+
 ## 来源证据
 
 完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../sources/posts.json)。来源只支持下列案例内容，不证明本文件新增工程建议已在原帖实现。
