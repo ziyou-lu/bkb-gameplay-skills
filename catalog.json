@@ -909,7 +909,8 @@
       "source_ids": [
         "DemTrHmK44j",
         "DPjC2p_jDK-",
-        "Dd7GYLGPlon"
+        "Dd7GYLGPlon",
+        "Dc8t7XtvnyF"
       ],
       "path": "skills/gameplay-world-readability/SKILL.md",
       "title": "世界目标发现与角色遮挡可读性",
@@ -1962,7 +1963,8 @@
     {
       "id": "world-readability",
       "request_examples": [
-        "地面资源难发现、角色被建筑挡住，想比较允许的信息可见方案。"
+        "地面资源难发现、角色被建筑挡住，想比较允许的信息可见方案。",
+        "交互点的大箭头挡住场景，想换成局部粒子但仍保留F操作提示，并检查是否更容易漏看。"
       ],
       "primary_skill": "gameplay-world-readability",
       "mechanisms": [
@@ -1970,7 +1972,7 @@
         "occluded-character-indicator"
       ],
       "evidence_status": "workflow",
-      "boundary": "改善世界目标发现性与角色遮挡可读性；按既定允许信息比较目标尺寸/位置、临时识别模式、局部透视和轮廓，不扩大检测或交互范围，也不处理操作投影、卡牌或机关反馈。",
+      "boundary": "改善世界目标发现性与角色遮挡可读性；按既定允许信息比较目标尺寸/位置、局部提示、临时识别模式、局部透视和轮廓，不扩大检测或交互范围，也不处理操作投影、卡牌或机关反馈。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",

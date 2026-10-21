@@ -2117,6 +2117,23 @@
           "change": "作者比较其考虑的固定tween动画，认为弹簧能响应变化且可细调；这是选择理由，不证明所有tween不可重定向或弹簧更快/更省。"
         }
       ]
+    },
+    {
+      "id": "Dc8t7XtvnyF",
+      "url": "https://www.instagram.com/p/Dc8t7XtvnyF/",
+      "creator": "kennethchanny",
+      "title": "交互点的大箭头替换为局部粒子并保留操作提示",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "同一蜥蜴角色、柜状/条板场景和地面附近交互点对照：原版巨大深色向下箭头占据目标上方大幅空间，附近有小圆形F提示；后段箭头移除，目标上方出现局部白亮粒子，F提示仍保留。文字分别询问用什么替换箭头和回答Particles。作者正文称朋友试玩时漏掉多数交互物，原想作为惊喜但玩家关注任务时容易忽略。",
+      "limitations": "同场景视觉替换已见，但作者试玩描述仅为问题动机，未独立观察研究或新方案A/B试玩；没有发现率、可读性、无障碍或性能实测，不能宣称粒子优于箭头。触发状态、距离/遮挡规则、粒子数量/时长/配置、shader和可访问性开关未知。评论建议开关不是已实现；F提示保留不证明交互范围、成功判定或行为改变。无代码运行或音频核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-world-readability"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
