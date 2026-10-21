@@ -552,7 +552,8 @@
         "dialogue-feedback"
       ],
       "source_ids": [
-        "Dauh04XOYhl"
+        "Dauh04XOYhl",
+        "DY0v7Ssthtb"
       ],
       "related_skills": [
         "gameplay-contextual-ui"
@@ -1861,14 +1862,15 @@
     {
       "id": "dialogue-presentation",
       "request_examples": [
-        "对话逐字显示与句末提示不同步，强调抖动又挡字。"
+        "对话逐字显示与句末提示不同步，强调抖动又挡字。",
+        "NPC文字逐字显示时离开再进入，想检查面板显隐和旧Tween的生命周期，不先假定已存在竞争bug。"
       ],
       "primary_skill": "gameplay-dialogue-presentation",
       "mechanisms": [
         "dialogue-feedback"
       ],
       "evidence_status": "workflow",
-      "boundary": "当逐字对话、标点节奏、情绪强调或结束提示不清时组织文本显示；区分字形动画、句子进度和真正继续操作，不推断未证的跳过功能。",
+      "boundary": "当逐字对话、标点节奏、情绪强调或重显后的文字进度不清时组织文本显示与动画生命周期；区分显隐、句子进度和真正继续操作，不把代码示例当已运行的对话系统。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",

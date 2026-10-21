@@ -1204,3 +1204,14 @@ https://www.instagram.com/bezdiga.dev/reel/DUbEXCrDTID/
 - 限制：基部重量分布是作者意图，不是质量分布或正确树木力学测量；另一个 COM 标记较高镜头不足以反推旧/新顺序、提高重心或精确坐标。COM、总质量、施力点与接触材质不是同一参数。无可靠质量/重心数值、施力API/方式/幅度/时长、惯量、摩擦/恢复系数或组合规则；代码面板未完整读验/执行。无单变量 A/B、倒伏时间/回弹高度/重量感/性能实测，最终 BETTER? 不是验证结论。粉尘/木屑特效和更好声音是作者后续计划，非本帖已完成；音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-prop-toppling-dynamics](../skills/gameplay-prop-toppling-dynamics/SKILL.md), [gameplay-contact-response](../skills/gameplay-contact-response/SKILL.md)
+
+## DY0v7Ssthtb · NPC 文字逐字显示与显隐生命周期的代码示例
+
+https://www.instagram.com/p/DY0v7Ssthtb/
+
+- 分类：included；证据：visible_code
+- 观察：实见像素 NPC 与紫色头像/文本面板的完整两行问候、Godot 节点树及可读 GDScript。树中有 Area2D、CanvasLayer/npcMessage 和 bg/face/Label。所见代码在 body_entered 检查 player 组后显示面板并调用逐字函数；函数将 visible_ratio 置 0，duration = text.length() * 0.05，create_tween 后 tween_property 将 visible_ratio 变到 1。body_exited 的 player 分支仅设置 visible=false。
+- 限制：这是视频代码转录而非源码仓库审计或执行；未独立捕捉逐字中间态、实际进入/退出或快速重入。所见退出代码没有显示 Tween 取消/保留句柄/冲突防止，不证明完整项目一定缺失清理；重入竞争只是待测风险，不是已证 bug 或修复。0.05 非推荐阅读字速，text.length() 计数与完整字形/多语言的对应和时长语义未独立验证。未见标点停顿、跳过、换句/选项或本地化完整流程；正文缩放/锚点主张没有由可见代码验证。没有旧新 A/B、运行/阅读体验/性能测量，音频未核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "text_length_duration_multiplier", "value": 0.05, "unit": "显示代码的时长乘数 / text.length() 计数单位", "provenance": "visible_code", "note": "来源显示 duration = text.length() * 0.05；不是跨语言逐字时长默认值，未运行计时或核验完整字形计数。"}]
+- 归入：[gameplay-dialogue-presentation](../skills/gameplay-dialogue-presentation/SKILL.md)
