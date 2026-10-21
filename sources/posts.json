@@ -1422,6 +1422,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DeY6lNdTxTe",
+      "url": "https://www.instagram.com/p/DeY6lNdTxTe/",
+      "creator": "cloudcat.dev",
+      "title": "压板机关门的机械运动、接地反馈与分段变化",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "四项标签依次为 Animate open/close、Add sounds、Add particles and screenshake、Variation and final touches。角色踩压板后高门下降成矮横条，离开压板后门升起；声音只有标签证据。粒子/镜头阶段可见门底一排灰白尘团与场景视框位移。最后普通矩形门换成带纹饰的分栏门，各栏以高低错落的状态下降。",
+      "limitations": "代码、运动时长/曲线、各门段错峰算法与镜头幅度/频率没有验证；错落外观不证明随机延迟或某个具体调度算法。音频未核听，评论中的末端 clack 和更多 shake 仅为建议，不能写成作者已实现。未核验门碰撞、通行生效时刻、反向中断和遮挡处理；这些属于迁移时应检查的项目规则。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-contextual-ui"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

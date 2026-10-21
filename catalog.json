@@ -354,13 +354,15 @@
         "Dauh04XOYhl",
         "DemZuPozqeb",
         "Dd9v8pMhc_t",
-        "DemTrHmK44j"
+        "DemTrHmK44j",
+        "DeY6lNdTxTe"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-resource-ui",
         "gameplay-hitstop",
-        "gameplay-impact-visuals"
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback"
       ]
     },
     {

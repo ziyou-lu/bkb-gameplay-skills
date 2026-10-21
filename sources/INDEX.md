@@ -732,3 +732,13 @@ https://www.instagram.com/p/CW8BHbmsy_r/
 - 限制：武器中间独立标签未捕清，不补成已证制作步骤。堆叠层数、层间偏移、角度阈值、代码和动画时序未核验，音频未核听；8 格素材是本例观察，不证明通用必须八方向或固定角度切换。不能把最后枪口环/碎片当作独立逐层教学或反推碰撞、伤害规则，也不能把转载账号记为原创作者。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## DeY6lNdTxTe · 压板机关门的机械运动、接地反馈与分段变化
+
+https://www.instagram.com/p/DeY6lNdTxTe/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：四项标签依次为 Animate open/close、Add sounds、Add particles and screenshake、Variation and final touches。角色踩压板后高门下降成矮横条，离开压板后门升起；声音只有标签证据。粒子/镜头阶段可见门底一排灰白尘团与场景视框位移。最后普通矩形门换成带纹饰的分栏门，各栏以高低错落的状态下降。
+- 限制：代码、运动时长/曲线、各门段错峰算法与镜头幅度/频率没有验证；错落外观不证明随机延迟或某个具体调度算法。音频未核听，评论中的末端 clack 和更多 shake 仅为建议，不能写成作者已实现。未核验门碰撞、通行生效时刻、反向中断和遮挡处理；这些属于迁移时应检查的项目规则。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
