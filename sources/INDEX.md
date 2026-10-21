@@ -722,3 +722,13 @@ https://www.instagram.com/p/CW0Su7-sy5-/
 - 限制：不能把转发账号写成原创作者，也没有取得或核验 Faxdocc 原帖。代码、角度阈值、位移幅度、绘制层级和音频未核实；未见独立“旋转枪”步骤标签，不把最终枪随准星的画面补成额外教程步骤。不推断骨骼工具、动画混合实现、自动瞄准或碰撞规则变化。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## CW8BHbmsy_r · 转载署名 Faxdocc 的俯视角色方向帧与堆叠躯干混合瞄准
+
+https://www.instagram.com/p/CW8BHbmsy_r/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：raycastly 转发内容正文署名 Faxdocc（Twitter），原发布未核验。俯视 360° 瞄准展示中，legs: normal sprite 与 head: normal sprite 可见各 8 格方向素材；eyes: normal sprite 展示多朝向眼睛；body: stack 展示单独躯干在多个角度旋转并与其余部件叠合。polish + done 后实机场景角色随方向瞄准开火，可见橙色枪口环和散落碎片。
+- 限制：武器中间独立标签未捕清，不补成已证制作步骤。堆叠层数、层间偏移、角度阈值、代码和动画时序未核验，音频未核听；8 格素材是本例观察，不证明通用必须八方向或固定角度切换。不能把最后枪口环/碎片当作独立逐层教学或反推碰撞、伤害规则，也不能把转载账号记为原创作者。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
