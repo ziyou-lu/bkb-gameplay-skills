@@ -875,7 +875,8 @@
       "title": "车辆转向辅助与直接控制",
       "related_skills": [
         "gameplay-locomotion-contacts",
-        "gameplay-speed-camera"
+        "gameplay-speed-camera",
+        "gameplay-pointer-curvature-steering"
       ]
     },
     {
@@ -1033,6 +1034,22 @@
         "gameplay-low-health-damage-reduction",
         "gameplay-hurtbox-tolerance"
       ]
+    },
+    {
+      "id": "gameplay-pointer-curvature-steering",
+      "title": "鼠标轨迹曲率到转向输入",
+      "category": "recipes",
+      "path": "skills/gameplay-pointer-curvature-steering/SKILL.md",
+      "mechanisms": [
+        "pointer-curvature-steering"
+      ],
+      "source_ids": [
+        "DZybNWexMRB"
+      ],
+      "related_skills": [
+        "gameplay-steering-assistance",
+        "gameplay-locomotion-contacts"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1075,7 +1092,9 @@
     "hurtbox": "hurtbox-tolerance",
     "受伤区域": "hurtbox-tolerance",
     "mercy frames": "post-hit-invulnerability",
-    "受击后保护": "post-hit-invulnerability"
+    "受击后保护": "post-hit-invulnerability",
+    "mouse swirl steering": "pointer-curvature-steering",
+    "鼠标曲率转向": "pointer-curvature-steering"
   },
   "task_routes": [
     {
@@ -1135,7 +1154,8 @@
       "distinct_from": [
         "hitstop",
         "impact-visuals",
-        "speed-camera"
+        "speed-camera",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -1257,7 +1277,8 @@
         "jump-forgiveness",
         "traversal-transitions",
         "steering-assistance",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -1819,7 +1840,8 @@
         "parry-feedback",
         "stomp-combos",
         "hit-recovery",
-        "attack-readability"
+        "attack-readability",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -1884,7 +1906,8 @@
         "landing-feedback",
         "jump-forgiveness",
         "traversal-transitions",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -1905,7 +1928,8 @@
         "jump-forgiveness",
         "traversal-transitions",
         "steering-assistance",
-        "hurtbox-tolerance"
+        "hurtbox-tolerance",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -2016,7 +2040,8 @@
         "jump-forgiveness",
         "ceiling-corner-correction",
         "action-timing",
-        "traversal-transitions"
+        "traversal-transitions",
+        "pointer-curvature-steering"
       ]
     },
     {
@@ -2095,6 +2120,27 @@
         "hurtbox-tolerance",
         "health-damage-ui",
         "hitstop"
+      ]
+    },
+    {
+      "id": "pointer-curvature-steering",
+      "request_examples": [
+        "游戏用鼠标画圈控制车辆转向，想诊断两级路径平滑与历史曲率映射。",
+        "停止或反转鼠标轨迹后还在转向，怎样定位采样与滤波问题？"
+      ],
+      "primary_skill": "gameplay-pointer-curvature-steering",
+      "mechanisms": [
+        "pointer-curvature-steering"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当项目用鼠标画圈的轨迹曲率控制车辆转向时，设计位置流平滑、历史取样与转向映射的诊断和验收；不是光标位置直接瞄准、跳跃命令缓冲或基于车辆行进方向的 self-steer。",
+      "distinct_from": [
+        "steering-assistance",
+        "jump-input-buffer",
+        "attack-direction",
+        "camera-feedback",
+        "movement-feedback",
+        "locomotion-contacts"
       ]
     }
   ]

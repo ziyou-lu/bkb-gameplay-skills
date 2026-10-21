@@ -186,7 +186,7 @@ class TaskRouteTests(unittest.TestCase):
                 self.assert_issue('Invalid task route distinct_from')
 
 
-class ReviewedToleranceBoundaryTests(unittest.TestCase):
+class ReviewedWorkflowBoundaryTests(unittest.TestCase):
     """Protect reviewed real-task boundaries, beyond synthetic schema tests."""
 
     @classmethod
@@ -222,6 +222,15 @@ class ReviewedToleranceBoundaryTests(unittest.TestCase):
                 self.assertEqual(self.routes[old]['mechanisms'], [])
                 self.assertEqual(self.routes[old]['primary_skill'],
                                  self.routes[current]['primary_skill'])
+
+    def test_pointer_curve_mapping_is_not_self_steering_or_command_buffering(self):
+        route = self.routes['pointer-curvature-steering']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('steering-assistance', 'jump-input-buffer', 'attack-direction',
+                      'camera-feedback', 'movement-feedback', 'locomotion-contacts'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
 
 
 class RepositoryInvariantTests(unittest.TestCase):

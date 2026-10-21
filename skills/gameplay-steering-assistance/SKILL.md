@@ -39,6 +39,8 @@ description: "当车辆直接转向突兀、整体平滑输入又迟滞时，评
 
 ## 组合而不复制
 
+- [鼠标轨迹曲率转向](../gameplay-pointer-curvature-steering/SKILL.md)：从鼠标位置历史推导玩家命令，与本页利用车辆行进状态叠加辅助不同；不能只因都称转向而共用流程。
+
 - [移动接触表示](../gameplay-locomotion-contacts/SKILL.md)：只有接触覆盖不够时才修改采样/形状。
 - [速度镜头](../gameplay-speed-camera/SKILL.md)：持续速度表现，不代替控制映射。
 

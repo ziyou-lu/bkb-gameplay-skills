@@ -1000,3 +1000,15 @@ https://www.instagram.com/p/Dd34wEnt_Ki/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "low_hp_damage_label", "value": 0.33, "unit": "multiplier", "provenance": "caption_or_post_text", "note": "作者示例，阈值/取整/致死规则未知。"}, {"name": "player_hitbox_label", "value": 38, "unit": "percent with unspecified dimensional meaning", "provenance": "caption_or_post_text", "note": "未定义宽/高/面积，不据此推算几何。"}, {"name": "mercy_time_label", "value": 1.0, "unit": "seconds", "provenance": "caption_or_post_text", "note": "作者示例；约60帧取决帧率，未实际测量。"}]
 - 归入：[gameplay-low-health-damage-reduction](../skills/gameplay-low-health-damage-reduction/SKILL.md), [gameplay-hurtbox-tolerance](../skills/gameplay-hurtbox-tolerance/SKILL.md), [gameplay-post-hit-protection](../skills/gameplay-post-hit-protection/SKILL.md)
+
+## DZybNWexMRB · 鼠标轨迹的两级平滑与历史曲率转向
+
+https://www.instagram.com/p/DZybNWexMRB/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：实机画面有可驾驶3D卡车、车轮/驾驶位放大视图、转向表和变化的彩色轨迹，后段车辆在家具周围驾驶，标题明确鼠标画圈转向输入平滑主题。已展开作者回复：鼠标位置平滑两次，颜色依次青→洋红→白，再取50和100ms以前的位置估算运动曲率并应用到转向。颜色到阶段的对应与管线细节来自作者回复，不是从画面测得的算法。
+- 限制：未核旧新A/B、相同输入回放、输入日志或源码。旧问题的噪声/抖动量没有独立展示；滤波函数/系数、曲率公式/符号、死区、饱和、历史样本插值、灵敏度均未知。50/100ms是作者参考历史间隔，不是实测端到端延迟，不相加成150ms，不保证两级平滑更优、零延迟或帧率无关。调试路径是可视化，未核碰撞/牵引改动或量化操控收益。未运行代码，音频未核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "curvature_history_first", "value": 50, "unit": "milliseconds lookback", "provenance": "post_text", "source_url": "https://www.instagram.com/p/DZybNWexMRB/c/18110340923491267/r/18059836019502780/", "note": "作者回复中的历史参考间隔，不是滤波系数或实测响应延迟。"}, {"name": "curvature_history_second", "value": 100, "unit": "milliseconds lookback", "provenance": "post_text", "source_url": "https://www.instagram.com/p/DZybNWexMRB/c/18110340923491267/r/18059836019502780/", "note": "另一历史参考间隔；不与50ms相加推导延迟。"}]
+- 补齐：已展开并读取同帖作者回复：位置青→洋红→白的两次平滑，再由50/100ms历史位置估计曲率到转向。没有源码/公式/延迟测量，回复作为本主来源补证而不另计一条来源。
+- 归入：[gameplay-pointer-curvature-steering](../skills/gameplay-pointer-curvature-steering/SKILL.md)
