@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-10-21",
+  "language": "zh-CN",
+  "evidence_policy": "操作步骤是基于公开视频研究的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码和实测必须区分。",
+  "skills": [
+    {
+      "id": "gameplay-hitstop",
+      "title": "命中停顿与表现节奏",
+      "category": "shared",
+      "path": "skills/gameplay-hitstop/SKILL.md",
+      "mechanisms": [
+        "hitstop",
+        "presentation-pause",
+        "local-slow-motion"
+      ],
+      "source_ids": [
+        "DejijtPzhYJ",
+        "Deidw81hnmg",
+        "DecdQ9ltnjf",
+        "DenLEa4xApp",
+        "DelJO3qusJE",
+        "Ddy_-6wDMkn",
+        "DXZ35VuEx0e",
+        "Depb7BiTAuG",
+        "Deuo1C7TfMW",
+        "DemZuPozqeb",
+        "Deo9lu7tzCT"
+      ],
+      "related_skills": [
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-impact-visuals",
+      "title": "接触闪光、冲击帧与粒子",
+      "category": "shared",
+      "path": "skills/gameplay-impact-visuals/SKILL.md",
+      "mechanisms": [
+        "hit-flash",
+        "impact-frame",
+        "impact-particles",
+        "aftermath-vfx"
+      ],
+      "source_ids": [
+        "Deidw81hnmg",
+        "DelJO3qusJE",
+        "DecdQ9ltnjf",
+        "DeqnlBQzbMY",
+        "DetftcbzGnS",
+        "DerbjhXTzfy",
+        "DX_mL0Wo3vx",
+        "Deuo1C7TfMW",
+        "Dd0GSn2xC62",
+        "DcCF3ZmBNl2",
+        "DXNr6m4hSDk"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-attack-readability"
+      ]
+    },
+    {
+      "id": "gameplay-camera-feedback",
+      "title": "镜头冲击与短促聚焦",
+      "category": "shared",
+      "path": "skills/gameplay-camera-feedback/SKILL.md",
+      "mechanisms": [
+        "camera-shake",
+        "camera-impulse",
+        "punch-in"
+      ],
+      "source_ids": [
+        "DYfFEpzIa-H",
+        "Ddy_-6wDMkn",
+        "Deidw81hnmg",
+        "DerbjhXTzfy",
+        "Dekh5vBzqhG",
+        "DecdQ9ltnjf",
+        "DVGe1E9iDdi",
+        "Deo9lu7tzCT"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-attack-readability"
+      ]
+    },
+    {
+      "id": "gameplay-motion-deformation",
+      "title": "压缩拉伸与次级运动",
+      "category": "shared",
+      "path": "skills/gameplay-motion-deformation/SKILL.md",
+      "mechanisms": [
+        "squash-stretch",
+        "overshoot-rebound",
+        "visual-recoil",
+        "secondary-motion"
+      ],
+      "source_ids": [
+        "Deuo1C7TfMW",
+        "DerbjhXTzfy",
+        "DXZ35VuEx0e",
+        "DbS8p3VuhkL",
+        "DVGe1E9iDdi",
+        "DejFnl2Ru9N",
+        "DeXJvO9kg94",
+        "DerYowOhdHs",
+        "DcCF3ZmBNl2"
+      ],
+      "related_skills": [
+        "gameplay-movement-feedback",
+        "gameplay-camera-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-attack-readability",
+      "title": "攻击预警与反制可读性",
+      "category": "shared",
+      "path": "skills/gameplay-attack-readability/SKILL.md",
+      "mechanisms": [
+        "attack-telegraph",
+        "vfx-hitbox-alignment",
+        "counterplay-window"
+      ],
+      "source_ids": [
+        "DeqcYnUOte-",
+        "Dc9h6SqNtPK",
+        "DbJe6rANpf-",
+        "DalHoK1t--K",
+        "DWFNHDmjT-H",
+        "DM-5jXrNy1f",
+        "DeGQTpgNFfF",
+        "DenLEa4xApp",
+        "DdAIJqcPzPn"
+      ],
+      "related_skills": [
+        "gameplay-health-damage-ui",
+        "gameplay-boss-sequences"
+      ]
+    },
+    {
+      "id": "gameplay-health-damage-ui",
+      "title": "生命血条与伤害数字",
+      "category": "shared",
+      "path": "skills/gameplay-health-damage-ui/SKILL.md",
+      "mechanisms": [
+        "healthbar-smoothing",
+        "damage-ghost",
+        "damage-numbers",
+        "critical-ui"
+      ],
+      "source_ids": [
+        "DdhLtbTlTRG",
+        "DemP6LfRbug",
+        "DamtFQYxYtn",
+        "DcDs7f9uaqo",
+        "Dcynt8ZoEoE",
+        "DelJO3qusJE",
+        "DejijtPzhYJ",
+        "DcZxryBoCFw"
+      ],
+      "related_skills": [
+        "gameplay-impact-visuals"
+      ]
+    },
+    {
+      "id": "gameplay-melee-feedback",
+      "title": "近战、弹反与踩踏组合",
+      "category": "recipes",
+      "path": "skills/gameplay-melee-feedback/SKILL.md",
+      "mechanisms": [
+        "melee-composition",
+        "blade-trail",
+        "parry-composition",
+        "stomp-combo"
+      ],
+      "source_ids": [
+        "DemlZDhNoFi",
+        "DecdQ9ltnjf",
+        "DenLEa4xApp",
+        "DelJO3qusJE",
+        "DeqnlBQzbMY",
+        "Deuo1C7TfMW",
+        "DdAIJqcPzPn",
+        "DejijtPzhYJ",
+        "DcCF3ZmBNl2"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-motion-deformation",
+        "gameplay-health-damage-ui",
+        "gameplay-attack-readability"
+      ]
+    },
+    {
+      "id": "gameplay-projectile-spells",
+      "title": "射击与法术生命周期",
+      "category": "recipes",
+      "path": "skills/gameplay-projectile-spells/SKILL.md",
+      "mechanisms": [
+        "muzzle-origin",
+        "projectile-lifecycle",
+        "spell-lifecycle"
+      ],
+      "source_ids": [
+        "Deff1_AtlFi",
+        "Dehz2z9Nc7F",
+        "Dekh5vBzqhG",
+        "DUYNtcoiCGS",
+        "DVGe1E9iDdi",
+        "DX_mL0Wo3vx",
+        "DetoueoNkIr",
+        "Depb7BiTAuG"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals",
+        "gameplay-hitstop",
+        "gameplay-camera-feedback",
+        "gameplay-attack-readability"
+      ]
+    },
+    {
+      "id": "gameplay-movement-feedback",
+      "title": "移动、冲刺与落地反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-movement-feedback/SKILL.md",
+      "mechanisms": [
+        "dash-composition",
+        "landing-composition",
+        "directional-animation"
+      ],
+      "source_ids": [
+        "DehPnhjxUvB",
+        "DerbjhXTzfy",
+        "DXZ35VuEx0e",
+        "DbS8p3VuhkL",
+        "Ddb6gDmzmAE",
+        "DerYowOhdHs",
+        "DX6_8HIo_GT"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-camera-feedback",
+        "gameplay-impact-visuals",
+        "gameplay-hitstop"
+      ]
+    },
+    {
+      "id": "gameplay-breakables-loot",
+      "title": "破坏、掉落与奖励揭示",
+      "category": "recipes",
+      "path": "skills/gameplay-breakables-loot/SKILL.md",
+      "mechanisms": [
+        "breakable-lifecycle",
+        "death-aftermath",
+        "loot-confirmation",
+        "chest-reveal"
+      ],
+      "source_ids": [
+        "DetftcbzGnS",
+        "Deh3qQ0RU4e",
+        "DenfMc-zPPJ",
+        "DeglnOkRkuI",
+        "Deo9lu7tzCT",
+        "DeikuCgOkof"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback"
+      ]
+    },
+    {
+      "id": "gameplay-boss-sequences",
+      "title": "Boss 入场、转阶段与终结",
+      "category": "recipes",
+      "path": "skills/gameplay-boss-sequences/SKILL.md",
+      "mechanisms": [
+        "boss-entrance",
+        "boss-phase-transition",
+        "boss-finale"
+      ],
+      "source_ids": [
+        "DeozoT-xXrP",
+        "DeohbEHTa7k",
+        "DesK-ImRqfA",
+        "DeqcYnUOte-",
+        "Dd0GSn2xC62",
+        "DeGQTpgNFfF"
+      ],
+      "related_skills": [
+        "gameplay-attack-readability",
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-health-damage-ui"
+      ]
+    },
+    {
+      "id": "gameplay-resource-ui",
+      "title": "法力、体力、冷却与蓄力状态",
+      "category": "recipes",
+      "path": "skills/gameplay-resource-ui/SKILL.md",
+      "mechanisms": [
+        "resource-consumption-ui",
+        "cooldown-ui",
+        "charge-state-ui",
+        "stamina-ui"
+      ],
+      "source_ids": [
+        "DeXJvO9kg94",
+        "DeFICP0DMwZ",
+        "DejFnl2Ru9N",
+        "DdHNwnyjSPb"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals",
+        "gameplay-health-damage-ui"
+      ]
+    },
+    {
+      "id": "gameplay-contextual-ui",
+      "title": "游戏内交互、卡牌与对话",
+      "category": "recipes",
+      "path": "skills/gameplay-contextual-ui/SKILL.md",
+      "mechanisms": [
+        "in-game-interaction-state",
+        "worldspace-interaction-indicator",
+        "card-presentation",
+        "dialogue-feedback"
+      ],
+      "source_ids": [
+        "DejFnl2Ru9N",
+        "Dej1DUjzTrh",
+        "Dd_3xtlvYef",
+        "DW_wiiPDmlU",
+        "DYCKURdRJQn",
+        "Dauh04XOYhl",
+        "DemZuPozqeb",
+        "Dd9v8pMhc_t"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-resource-ui",
+        "gameplay-hitstop",
+        "gameplay-impact-visuals"
+      ]
+    },
+    {
+      "id": "gameplay-skill-ingestion",
+      "title": "新案例去重与技能升级",
+      "category": "maintenance",
+      "path": "skills/gameplay-skill-ingestion/SKILL.md",
+      "mechanisms": [
+        "evidence-ingestion",
+        "mechanism-deduplication"
+      ],
+      "source_ids": [
+        "DejijtPzhYJ",
+        "Ddy_-6wDMkn",
+        "Deo9lu7tzCT",
+        "DenLEa4xApp",
+        "DesK-ImRqfA"
+      ],
+      "related_skills": [
+        "gameplay-hitstop",
+        "gameplay-impact-visuals",
+        "gameplay-camera-feedback",
+        "gameplay-health-damage-ui"
+      ]
+    }
+  ],
+  "mechanism_aliases": {
+    "hit-stop": "hitstop",
+    "hit stop": "hitstop",
+    "contact freeze": "hitstop",
+    "命中停顿": "hitstop",
+    "reveal pause": "presentation-pause",
+    "flash": "hit-flash",
+    "闪白": "hit-flash",
+    "冲击帧": "impact-frame",
+    "shake": "camera-shake",
+    "screen shake": "camera-shake",
+    "镜头震动": "camera-shake",
+    "healthbar": "healthbar-smoothing",
+    "health bar": "healthbar-smoothing",
+    "血条": "healthbar-smoothing",
+    "ghost bar": "damage-ghost",
+    "残影血条": "damage-ghost",
+    "damage numbers": "damage-numbers",
+    "squash": "squash-stretch",
+    "stretch": "squash-stretch",
+    "squash and stretch": "squash-stretch",
+    "后坐": "visual-recoil",
+    "recoil": "visual-recoil",
+    "telegraph": "attack-telegraph"
+  }
+}
