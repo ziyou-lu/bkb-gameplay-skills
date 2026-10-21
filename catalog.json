@@ -293,7 +293,8 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-prop-appendage-contacts",
-        "gameplay-cut-surface-rendering"
+        "gameplay-cut-surface-rendering",
+        "gameplay-prop-toppling-dynamics"
       ],
       "path": "skills/gameplay-breakables-loot/SKILL.md"
     },
@@ -469,19 +470,21 @@
     },
     {
       "id": "gameplay-contact-response",
-      "title": "视觉损伤与接触响应诊断",
+      "title": "视觉材质感与接触响应诊断",
       "category": "shared",
       "mechanisms": [
         "contact-response-experiment"
       ],
       "source_ids": [
-        "DcCFXGItxdJ"
+        "DcCFXGItxdJ",
+        "DUbEXCrDTID"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-impact-visuals",
         "gameplay-deformable-support",
-        "gameplay-prop-appendage-contacts"
+        "gameplay-prop-appendage-contacts",
+        "gameplay-prop-toppling-dynamics"
       ],
       "path": "skills/gameplay-contact-response/SKILL.md"
     },
@@ -1306,6 +1309,25 @@
         "gameplay-surface-aftermath",
         "gameplay-state-driven-surface-motion"
       ]
+    },
+    {
+      "id": "gameplay-prop-toppling-dynamics",
+      "title": "道具倒伏的重心与施力诊断",
+      "category": "shared",
+      "path": "skills/gameplay-prop-toppling-dynamics/SKILL.md",
+      "mechanisms": [
+        "prop-toppling-dynamics"
+      ],
+      "source_ids": [
+        "DUbEXCrDTID"
+      ],
+      "related_skills": [
+        "gameplay-contact-response",
+        "gameplay-breakables-loot",
+        "gameplay-prop-appendage-contacts",
+        "gameplay-motion-deformation",
+        "gameplay-action-timing"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1375,7 +1397,8 @@
     "tool grip body coordination": "constrained-tool-body-coordination",
     "工具持握协调": "constrained-tool-body-coordination",
     "branch-collision-response": "prop-appendage-contact",
-    "cut-cap": "cut-surface-rendering"
+    "cut-cap": "cut-surface-rendering",
+    "center-of-mass-toppling": "prop-toppling-dynamics"
   },
   "task_routes": [
     {
@@ -1465,7 +1488,8 @@
         "contact-response",
         "deformable-support",
         "state-driven-surface-motion",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "prop-toppling-dynamics"
       ]
     },
     {
@@ -1592,7 +1616,8 @@
         "surface-aftermath",
         "geometric-event-alignment",
         "prop-appendage-contacts",
-        "cut-surface-rendering"
+        "cut-surface-rendering",
+        "prop-toppling-dynamics"
       ]
     },
     {
@@ -1746,20 +1771,22 @@
         "jump-input-buffer",
         "gait-step-scheduling",
         "geometric-event-alignment",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "prop-toppling-dynamics"
       ]
     },
     {
       "id": "contact-response",
       "request_examples": [
-        "车已经有凹陷但碰撞仍很硬，怎么隔离验证视觉与接触响应？"
+        "车已经有凹陷但碰撞仍很硬，怎么隔离验证视觉与接触响应？",
+        "树倒伏姿态已经正常，但落地弹得过高，只想隔离材质回弹问题。"
       ],
       "primary_skill": "gameplay-contact-response",
       "mechanisms": [
         "contact-response-experiment"
       ],
       "evidence_status": "workflow",
-      "boundary": "在车体等已显示变形但碰撞仍过硬时分离视觉网格与真实接触问题，并仅在明确允许改变物理时做局部可回退实验；不是软体教程或通用穿透/容差建议。",
+      "boundary": "在网格损伤与碰撞硬度不符、或落地回弹不合材质目标时，隔离视觉表现与接触发生后的响应，做局部可回退实验；不接管倒伏前的重心/施力控制，也不是软体或通用容差教程。",
       "distinct_from": [
         "motion-deformation",
         "secondary-motion",
@@ -1769,7 +1796,8 @@
         "deformable-support",
         "surface-adhesion",
         "geometric-event-alignment",
-        "prop-appendage-contacts"
+        "prop-appendage-contacts",
+        "prop-toppling-dynamics"
       ]
     },
     {
@@ -2721,7 +2749,8 @@
         "contact-response",
         "deformable-support",
         "locomotion-contacts",
-        "secondary-motion"
+        "secondary-motion",
+        "prop-toppling-dynamics"
       ]
     },
     {
@@ -2741,6 +2770,26 @@
         "geometric-event-alignment",
         "surface-aftermath",
         "state-driven-surface-motion"
+      ]
+    },
+    {
+      "id": "prop-toppling-dynamics",
+      "request_examples": [
+        "树已经会倒，但首次碰地前像从中段被拎着转，想查重心和施力点。",
+        "想分别对照倒树的重心位置与推力作用点，不要把落地回弹或总质量混成一个参数。"
+      ],
+      "primary_skill": "gameplay-prop-toppling-dynamics",
+      "mechanisms": [
+        "prop-toppling-dynamics"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当道具已有物理倒伏，但首次触地前的转动和重量感不合目标时，分开诊断重心参照与施力位置；不负责触地后的材质回弹、整套采集过程或通用刚体求解器。",
+      "distinct_from": [
+        "contact-response",
+        "breakables-loot",
+        "prop-appendage-contacts",
+        "motion-deformation",
+        "action-timing"
       ]
     }
   ]

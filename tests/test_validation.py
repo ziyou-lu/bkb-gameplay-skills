@@ -374,6 +374,17 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_precontact_toppling_is_not_contact_or_breakable_lifecycle(self):
+        route = self.routes['prop-toppling-dynamics']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('contact-response', 'breakables-loot', 'prop-appendage-contacts',
+                      'motion-deformation', 'action-timing'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

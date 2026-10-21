@@ -1194,3 +1194,13 @@ https://www.instagram.com/bezdiga.dev/reel/DV1QmLcjaf5/
 - 音频核听：False；代码运行：False
 - 补齐：前期 Devlog 19 仅为封口支持链接，不另计主来源：作者说明切割后缺面，生成新网格、区分 submesh 并分配树皮/木材材质。实见开放端的绿色边点、红色中心/连线，后续填面与 Mesh Renderer 的 Material Element 0 / 1。显示的中心公式分母未读清，不提供精确计算、轮廓排序或一般三角化证明；材质槽存在不证明每次切割绑定正确，也不补全主帖顶点色算法。
 - 归入：[gameplay-cut-surface-rendering](../skills/gameplay-cut-surface-rendering/SKILL.md)
+
+## DUbEXCrDTID · 倒树重量感的重心、施力点与接触材质分层
+
+https://www.instagram.com/bezdiga.dev/reel/DUbEXCrDTID/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明重点改善倒树重量/撞击感，字幕强调 PHYSICS ≠ WEIGHT。实见 COM Offset 字段被圈出、低树干 COM 标记与 HEAVIER AT THE BASE；上部水平红力箭头配 MAIN FORCE STARTS AT THE TOP；Physics Material 面板配 ADD A SUBTLE BOUNCE。最终第一人称砍树后树体倾倒，后续近地面/倒地镜头标 BETTER?。这三类控制分别有编辑示意和作者文字，结果画面未隔离各自贡献。
+- 限制：基部重量分布是作者意图，不是质量分布或正确树木力学测量；另一个 COM 标记较高镜头不足以反推旧/新顺序、提高重心或精确坐标。COM、总质量、施力点与接触材质不是同一参数。无可靠质量/重心数值、施力API/方式/幅度/时长、惯量、摩擦/恢复系数或组合规则；代码面板未完整读验/执行。无单变量 A/B、倒伏时间/回弹高度/重量感/性能实测，最终 BETTER? 不是验证结论。粉尘/木屑特效和更好声音是作者后续计划，非本帖已完成；音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-prop-toppling-dynamics](../skills/gameplay-prop-toppling-dynamics/SKILL.md), [gameplay-contact-response](../skills/gameplay-contact-response/SKILL.md)

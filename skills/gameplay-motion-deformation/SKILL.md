@@ -67,7 +67,7 @@ DP9HDK-EVX1 的作者回复说明按喇叭模型有按压 blend shape，由阻�
 - [装饰跟随与次级运动](../gameplay-secondary-motion/SKILL.md)
 - [方向瞄准与分件姿态](../gameplay-aim-pose/SKILL.md)
 - [输入响应与动作相位](../gameplay-action-timing/SKILL.md)
-- [视觉损伤与接触响应诊断](../gameplay-contact-response/SKILL.md)
+- [视觉材质感与接触响应诊断](../gameplay-contact-response/SKILL.md)
 - [落地反馈](../gameplay-landing-feedback/SKILL.md)与[冲刺反馈](../gameplay-dash-feedback/SKILL.md)
 - [射击反馈](../gameplay-shooting-feedback/SKILL.md)与[法术生命周期](../gameplay-projectile-spells/SKILL.md)
 
