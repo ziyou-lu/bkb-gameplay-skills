@@ -742,3 +742,23 @@ https://www.instagram.com/p/DeY6lNdTxTe/
 - 限制：代码、运动时长/曲线、各门段错峰算法与镜头幅度/频率没有验证；错落外观不证明随机延迟或某个具体调度算法。音频未核听，评论中的末端 clack 和更多 shake 仅为建议，不能写成作者已实现。未核验门碰撞、通行生效时刻、反向中断和遮挡处理；这些属于迁移时应检查的项目规则。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DP53MiuDIpH · 后向开枪动作的姿态轮廓与 smear 前后对照
+
+https://www.instagram.com/p/DP53MiuDIpH/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：正文为 Old vs New back gun attack，并标注 Toads of the Bayou。并排 OLD / NEW 对比同一后向开枪动作：旧版小幅抬枪射击；新版有反身、双臂大幅展开的姿态，快速过渡中橙黄色躯干与紫色武器呈横向拉伸 smear，随后回收到立姿，枪口可见细灰烟线。
+- 限制：不是作者逐层制作教学，也不是单变量实验；两版美术外形/体型也有变化，不能把总体差异归因于单个动作层。无时长、帧数、幅度或代码验证，音频未核听；画面 DISTANCE 字样不是量化参数。细灰线是枪口烟，不是动作轨迹弧。评论中的更快/snappier 不能当作作者结论或实测结果，不宣称新版必然更快或更好。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)
+
+## DP3HI8yjFUS · 正面开枪动作的删减与关键姿态取舍
+
+https://www.instagram.com/p/DP3HI8yjFUS/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：作者正文明确认为旧版帧数过多，并说明当时想向发行商展示丰富的动画。OLD / NEW 同屏对照正面枪击：旧版可见额外把枪举到头旁、烟线及手回胸前等持枪过程；新版可见大轮廓伸臂射击、黄色枪口闪光并回到立姿。
+- 限制：未获得实际帧数、时长、代码或输入到开火的延迟测量，不能把作者“帧数过多”的反思写成测得新版响应更快。删掉非必要表演、保留关键姿态是本库迁移提炼，不是作者完整制作步骤；多项差异没有单独消融验证。评论中的 gunspin 不是独立事实证据，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)

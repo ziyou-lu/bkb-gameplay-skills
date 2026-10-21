@@ -99,7 +99,8 @@
         "overshoot-rebound",
         "visual-recoil",
         "secondary-motion",
-        "aim-pose-composition"
+        "aim-pose-composition",
+        "motion-smear"
       ],
       "source_ids": [
         "Deuo1C7TfMW",
@@ -113,11 +114,14 @@
         "DcCF3ZmBNl2",
         "DcXJwumOuBK",
         "CW0Su7-sy5-",
-        "CW8BHbmsy_r"
+        "CW8BHbmsy_r",
+        "DP53MiuDIpH",
+        "DP3HI8yjFUS"
       ],
       "related_skills": [
         "gameplay-movement-feedback",
-        "gameplay-camera-feedback"
+        "gameplay-camera-feedback",
+        "gameplay-projectile-spells"
       ]
     },
     {
