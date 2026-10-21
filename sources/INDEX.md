@@ -712,3 +712,13 @@ https://www.instagram.com/p/DcwUHp0O85b/
 - 限制：没有代码、动画时长、曲线和旋转参数，旋转是否随机未证，音频未核听。标签展示顺序不等于每次事件的运行时动画先后，例如不能解释成淡出之后才开始缩放入场。+100 与绿色是本例的显示选择，不是通用分数、配色或伤害规范；实际计分逻辑未运行验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
+
+## CW0Su7-sy5- · 转载署名 Faxdocc 的像素角色分件与瞄准姿态改进
+
+https://www.instagram.com/p/CW0Su7-sy5-/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：raycastly 转发内容的正文明确署名 Faxdocc（Twitter）；这里只核读了转载，未核验原发布。视频四项标签及画面分别展示：把头、衣服躯干、手臂、腿与枪拆成独立 sprite 再组合；上下移动部件表现呼吸；瞄准时让头和身体前后位移；按瞄准方向更换上衣 sprite。最终实机场景中持枪方向随准星变化，抬枪时上衣肩部外形也随方向改变。
+- 限制：不能把转发账号写成原创作者，也没有取得或核验 Faxdocc 原帖。代码、角度阈值、位移幅度、绘制层级和音频未核实；未见独立“旋转枪”步骤标签，不把最终枪随准星的画面补成额外教程步骤。不推断骨骼工具、动画混合实现、自动瞄准或碰撞规则变化。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md)

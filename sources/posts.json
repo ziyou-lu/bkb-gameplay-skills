@@ -1388,6 +1388,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "CW0Su7-sy5-",
+      "url": "https://www.instagram.com/p/CW0Su7-sy5-/",
+      "creator": "raycastly",
+      "title": "转载署名 Faxdocc 的像素角色分件与瞄准姿态改进",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "raycastly 转发内容的正文明确署名 Faxdocc（Twitter）；这里只核读了转载，未核验原发布。视频四项标签及画面分别展示：把头、衣服躯干、手臂、腿与枪拆成独立 sprite 再组合；上下移动部件表现呼吸；瞄准时让头和身体前后位移；按瞄准方向更换上衣 sprite。最终实机场景中持枪方向随准星变化，抬枪时上衣肩部外形也随方向改变。",
+      "limitations": "不能把转发账号写成原创作者，也没有取得或核验 Faxdocc 原帖。代码、角度阈值、位移幅度、绘制层级和音频未核实；未见独立“旋转枪”步骤标签，不把最终枪随准星的画面补成额外教程步骤。不推断骨骼工具、动画混合实现、自动瞄准或碰撞规则变化。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-motion-deformation"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

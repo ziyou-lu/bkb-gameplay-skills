@@ -98,7 +98,8 @@
         "squash-stretch",
         "overshoot-rebound",
         "visual-recoil",
-        "secondary-motion"
+        "secondary-motion",
+        "aim-pose-composition"
       ],
       "source_ids": [
         "Deuo1C7TfMW",
@@ -110,7 +111,8 @@
         "DeXJvO9kg94",
         "DerYowOhdHs",
         "DcCF3ZmBNl2",
-        "DcXJwumOuBK"
+        "DcXJwumOuBK",
+        "CW0Su7-sy5-"
       ],
       "related_skills": [
         "gameplay-movement-feedback",
