@@ -42,6 +42,8 @@ description: "当切断等离散事件早于或晚于可见物体经过操作边
 
 ## 组合而不复制
 
+- 事件时机已经正确、但新截面开放或材质不贴边时，转到[切割新表面的封口与材质边界](../gameplay-cut-surface-rendering/SKILL.md)，不再调整触发时机来掩盖显示缺陷。
+
 - [动作响应相位](../gameplay-action-timing/SKILL.md)处理输入后冗余准备段，不决定本页空间边界。
 - [机关驱动](../gameplay-mechanical-interactions/SKILL.md)绑定已确定触发状态到机械运动，本页先诊断事件条件何时成立。
 - [破坏与采集过程](../gameplay-breakables-loot/SKILL.md)接收权威终态事件再组织结果，不以表现反推判定时机。

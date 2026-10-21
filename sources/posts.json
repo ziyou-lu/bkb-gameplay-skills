@@ -2400,6 +2400,48 @@
           "change": "较早 Devlog 23 只作方案背景，不另计来源：作者正文比较 Animation Blend 与 Full IK 并征询选择，称鼠标控手及速度决定伤害；实见鼠标上箭头与抬斧解释、BlendTree 和 IK 手臂编辑视图。未测速度/伤害响应，不证明哪种方案客观更好，也不证明较晚 DW1b54bDW3M 保留这些输入或伤害映射。"
         }
       ]
+    },
+    {
+      "id": "DUgWWMLja62",
+      "url": "https://www.instagram.com/p/DUgWWMLja62/",
+      "creator": "bezdiga.dev",
+      "title": "枝条突出部的碰撞覆盖与局部响应",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者 Devlog 11 表示旧枝条在树倒地时直接穿入地形，改为参与物理响应。实见倒树枝条处红圈/箭头和 BRANCHES GO STRAIGHT 字幕，编辑器长胶囊状线框沿一根枝条放置并标 GIVE THEM MASS，随后 SCALE IT UP 下多枝条有对应轮廓。某选中树对象的 inspector 显示 Rigidbody；灰测试块移到树体附近接触，后段 OR BREAK ON IMPACT 下枝叶件散在树干旁。",
+      "limitations": "线框外形不证明具体 Collider 类型，选中树的 Rigidbody 不等于逐枝组件审计。未核关节类型/连接拓扑、质量或比例、破断条件/阈值、连续碰撞、解算或公式；密叶使细枝轨迹不清，未独立分离弯曲与脱落的贡献。有限测试块/散落结果不证明所有地形零穿透或每枝都可断；没有源码执行、性能/稳定性测量，音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-prop-appendage-contacts"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DV1QmLcjaf5",
+      "url": "https://www.instagram.com/bezdiga.dev/reel/DV1QmLcjaf5/",
+      "creator": "bezdiga.dev",
+      "title": "切割截面的内部材质与树皮边界适配",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者 Devlog 20 说在切割和 UV 修复后断面太干净，增加树皮边缘衔接外皮。实见带分叉凸出的不规则截面上中间木芯仍是圆斑、外侧树皮很宽；Vertex Colors 阶段显示红色中心向黑色外部过渡及绿色标记点。随后木芯覆盖不规则截面，外圈保留沿轮廓的窄树皮边，包括顶部凸出部分。",
+      "limitations": "Vertex Colors 可视化不等于源码/混合算法验证；通道语义、逐顶点计算、距离/噪声、宽度和 shader 公式未知。无通用三角化、凹形/多环封口、法线/UV 修复实现或碰撞体更新证据；作者 natural 评价不是用户研究。前篇只作为独立归因的封口背景，不拼成已验证的完整切割系统。没有代码执行、几何回归、性能测量，音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-cut-surface-rendering"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-21",
+          "basis": "caption_and_partial_visual",
+          "source_url": "https://www.instagram.com/bezdiga.dev/reel/DVwEG5BDTKl/",
+          "change": "前期 Devlog 19 仅为封口支持链接，不另计主来源：作者说明切割后缺面，生成新网格、区分 submesh 并分配树皮/木材材质。实见开放端的绿色边点、红色中心/连线，后续填面与 Mesh Renderer 的 Material Element 0 / 1。显示的中心公式分母未读清，不提供精确计算、轮廓排序或一般三角化证明；材质槽存在不证明每次切割绑定正确，也不补全主帖顶点色算法。"
+        }
+      ]
     }
   ]
 }

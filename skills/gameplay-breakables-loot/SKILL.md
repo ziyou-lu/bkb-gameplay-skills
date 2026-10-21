@@ -46,6 +46,8 @@ description: "为可破坏物、敌人死亡和资源采集组织受击到终态
 
 ## 组合而不复制
 
+- 倒伏后突出部穿地使用[突出部接触](../gameplay-prop-appendage-contacts/SKILL.md)；切开后缺面或内外材质错位使用[切割新表面](../gameplay-cut-surface-rendering/SKILL.md)。两者不改变本页的终态/产物职责。
+
 - [压缩拉伸](../gameplay-motion-deformation/SKILL.md)、[命中停顿](../gameplay-hitstop/SKILL.md)、[冲击粒子](../gameplay-impact-visuals/SKILL.md)、[镜头反馈](../gameplay-camera-feedback/SKILL.md)负责表现组件。
 - 本页只拥有对象从受击到终态/产物的过程，持久痕迹、结果揭示和实际领取分别由独立 owner 处理。
 

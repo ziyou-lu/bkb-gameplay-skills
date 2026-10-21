@@ -291,7 +291,9 @@
         "gameplay-motion-deformation",
         "gameplay-hitstop",
         "gameplay-impact-visuals",
-        "gameplay-camera-feedback"
+        "gameplay-camera-feedback",
+        "gameplay-prop-appendage-contacts",
+        "gameplay-cut-surface-rendering"
       ],
       "path": "skills/gameplay-breakables-loot/SKILL.md"
     },
@@ -478,7 +480,8 @@
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-impact-visuals",
-        "gameplay-deformable-support"
+        "gameplay-deformable-support",
+        "gameplay-prop-appendage-contacts"
       ],
       "path": "skills/gameplay-contact-response/SKILL.md"
     },
@@ -1225,7 +1228,8 @@
         "gameplay-mechanical-interactions",
         "gameplay-breakables-loot",
         "gameplay-contact-response",
-        "gameplay-surface-adhesion"
+        "gameplay-surface-adhesion",
+        "gameplay-cut-surface-rendering"
       ]
     },
     {
@@ -1264,6 +1268,43 @@
         "gameplay-secondary-motion",
         "gameplay-motion-deformation",
         "gameplay-geometric-event-alignment"
+      ]
+    },
+    {
+      "id": "gameplay-prop-appendage-contacts",
+      "title": "道具突出部的接触覆盖与响应",
+      "category": "shared",
+      "path": "skills/gameplay-prop-appendage-contacts/SKILL.md",
+      "mechanisms": [
+        "prop-appendage-contact"
+      ],
+      "source_ids": [
+        "DUgWWMLja62"
+      ],
+      "related_skills": [
+        "gameplay-breakables-loot",
+        "gameplay-contact-response",
+        "gameplay-deformable-support",
+        "gameplay-locomotion-contacts",
+        "gameplay-secondary-motion"
+      ]
+    },
+    {
+      "id": "gameplay-cut-surface-rendering",
+      "title": "切割新表面的封口与材质边界",
+      "category": "shared",
+      "path": "skills/gameplay-cut-surface-rendering/SKILL.md",
+      "mechanisms": [
+        "cut-surface-rendering"
+      ],
+      "source_ids": [
+        "DV1QmLcjaf5"
+      ],
+      "related_skills": [
+        "gameplay-breakables-loot",
+        "gameplay-geometric-event-alignment",
+        "gameplay-surface-aftermath",
+        "gameplay-state-driven-surface-motion"
       ]
     }
   ],
@@ -1332,7 +1373,9 @@
     "RPM belt visual": "state-driven-surface-motion",
     "运行状态材质动画": "state-driven-surface-motion",
     "tool grip body coordination": "constrained-tool-body-coordination",
-    "工具持握协调": "constrained-tool-body-coordination"
+    "工具持握协调": "constrained-tool-body-coordination",
+    "branch-collision-response": "prop-appendage-contact",
+    "cut-cap": "cut-surface-rendering"
   },
   "task_routes": [
     {
@@ -1547,7 +1590,9 @@
         "loot-pickup",
         "completion-sequences",
         "surface-aftermath",
-        "geometric-event-alignment"
+        "geometric-event-alignment",
+        "prop-appendage-contacts",
+        "cut-surface-rendering"
       ]
     },
     {
@@ -1658,7 +1703,8 @@
         "contact-response",
         "gait-step-scheduling",
         "state-driven-surface-motion",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "prop-appendage-contacts"
       ]
     },
     {
@@ -1722,7 +1768,8 @@
         "ceiling-corner-correction",
         "deformable-support",
         "surface-adhesion",
-        "geometric-event-alignment"
+        "geometric-event-alignment",
+        "prop-appendage-contacts"
       ]
     },
     {
@@ -2208,7 +2255,8 @@
         "deformable-support",
         "gait-step-scheduling",
         "surface-camera-up",
-        "surface-adhesion"
+        "surface-adhesion",
+        "prop-appendage-contacts"
       ]
     },
     {
@@ -2252,7 +2300,8 @@
         "reward-reveal",
         "loot-pickup",
         "completion-sequences",
-        "deformable-support"
+        "deformable-support",
+        "cut-surface-rendering"
       ]
     },
     {
@@ -2447,7 +2496,8 @@
         "contact-response",
         "locomotion-contacts",
         "surface-aftermath",
-        "surface-adhesion"
+        "surface-adhesion",
+        "prop-appendage-contacts"
       ]
     },
     {
@@ -2609,7 +2659,8 @@
         "contact-response",
         "surface-adhesion",
         "state-driven-surface-motion",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "cut-surface-rendering"
       ]
     },
     {
@@ -2628,7 +2679,8 @@
         "mechanical-interactions",
         "motion-deformation",
         "secondary-motion",
-        "geometric-event-alignment"
+        "geometric-event-alignment",
+        "cut-surface-rendering"
       ]
     },
     {
@@ -2650,6 +2702,45 @@
         "secondary-motion",
         "motion-deformation",
         "geometric-event-alignment"
+      ]
+    },
+    {
+      "id": "prop-appendage-contacts",
+      "request_examples": [
+        "倒树的树干落地了，枝条却穿进地面，怎样给突出部合理的接触响应？",
+        "枝条碰撞后允许分离，但不要把所有细枝的碰撞范围连成一面墙。"
+      ],
+      "primary_skill": "gameplay-prop-appendage-contacts",
+      "mechanisms": [
+        "prop-appendage-contact"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当树枝等道具突出部随主体撞地却穿过表面时，检查局部碰撞覆盖、主体与部件的接触响应及分离边界；不负责整物倒伏演出、可断关节算法或通用软体模拟。",
+      "distinct_from": [
+        "breakables-loot",
+        "contact-response",
+        "deformable-support",
+        "locomotion-contacts",
+        "secondary-motion"
+      ]
+    },
+    {
+      "id": "cut-surface-rendering",
+      "request_examples": [
+        "木头切开后像空管，补面以后断面又全是树皮，怎样分开检查？",
+        "分叉截面不圆，木芯却是圆斑，想让内外材质边界贴合新表面。"
+      ],
+      "primary_skill": "gameplay-cut-surface-rendering",
+      "mechanisms": [
+        "cut-surface-rendering"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当游戏切割产生开放截面、错误外皮材质或圆形木芯不贴合不规则轮廓时，组织新暴露面的封口与材质边界校对；不提供切割触发、通用三角化或物理断裂算法。",
+      "distinct_from": [
+        "breakables-loot",
+        "geometric-event-alignment",
+        "surface-aftermath",
+        "state-driven-surface-motion"
       ]
     }
   ]

@@ -353,6 +353,27 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(route['id'], self.routes[other]['distinct_from'])
 
 
+    def test_appendage_contacts_are_not_whole_object_lifecycle_or_support(self):
+        route = self.routes['prop-appendage-contacts']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('breakables-loot', 'contact-response', 'deformable-support',
+                      'locomotion-contacts', 'secondary-motion'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+    def test_cut_surface_result_is_not_trigger_or_surface_animation(self):
+        route = self.routes['cut-surface-rendering']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('breakables-loot', 'geometric-event-alignment',
+                      'surface-aftermath', 'state-driven-surface-motion'):
+            with self.subTest(other=other):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(route['id'], self.routes[other]['distinct_from'])
+
+
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
