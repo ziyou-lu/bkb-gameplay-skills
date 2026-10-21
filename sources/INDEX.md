@@ -865,7 +865,7 @@ https://www.instagram.com/p/Dd7GYLGPlon/
 - 观察：同一猫角色与城市场景展示两种遮挡显示方案：A 以轻微圆形区域让 Whiskers 可见，实见局部圆形透视窗口；B 用白色轮廓突出猫的外形。周围遮挡表面可见点阵透明表现。作者询问哪种更清晰，而不是宣布 B 为改进赢家。
 - 限制：没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。
 - 音频核听：False；代码运行：False
-- 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
+- 归入：[gameplay-occlusion-reveal](../skills/gameplay-occlusion-reveal/SKILL.md)
 
 ## DcuTo4UNf25 · 平台边缘防误落与坐姿操作提示
 
@@ -1047,3 +1047,14 @@ https://www.instagram.com/p/Dc8t7XtvnyF/
 - 限制：同场景视觉替换已见，但作者试玩描述仅为问题动机，未独立观察研究或新方案A/B试玩；没有发现率、可读性、无障碍或性能实测，不能宣称粒子优于箭头。触发状态、距离/遮挡规则、粒子数量/时长/配置、shader和可访问性开关未知。评论建议开关不是已实现；F提示保留不证明交互范围、成功判定或行为改变。无代码运行或音频核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-world-readability](../skills/gameplay-world-readability/SKILL.md)
+
+## Db--r9yPbU3 · 角色透视误触发：单射线改为三采样全部遮挡
+
+https://www.instagram.com/p/Db--r9yPbU3/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：初始演示有大点阵透视窗口与蜥蜴描边。旧问题段标注小边角也触发：角色经过局部几何时仍有身体部分可见，大窗口却出现；作者解释原相机到蜥蜴的单射线遇障即开启。后续debug可见多条查询线，字幕说明改查Head、tail、body三处，并在三者全部被挡时启用mask。末段字幕与实机显示部分蜥蜴未被挡时效果保持关闭，前景方块仍实心，未出现同样大点阵窗口。
+- 限制：只核有限游戏片段、debug图和作者解释，无源码/运行或同步输入回放。三点ALL遮挡是启发式，不证明每个像素/整个轮廓被挡，不保证零误判或最优射线数；全遮显示存在于初始演示，但修复后完全遮挡的开启未单独穷尽验证。具体点位/附着、射线方向实现、碰撞层/透明物策略、更新频率、淡化时长、滞回/防抖、阈值比例、CPU和闪变/错误率未知。点阵外观不证明shader算法，不证明相机移动、敌人视线AI或物理碰撞变更。作者减少视觉噪声的目标不是量化收益；音频未核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "occlusion_probe_count_description", "value": 3, "unit": "sample rays", "provenance": "caption_or_post_text", "note": "作者说明头/尾/身体，三个均被挡才开启；点位与实际查询实现未知，不是全轮廓或最佳采样数保证。"}]
+- 归入：[gameplay-occlusion-reveal](../skills/gameplay-occlusion-reveal/SKILL.md)

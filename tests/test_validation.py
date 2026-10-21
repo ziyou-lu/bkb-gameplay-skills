@@ -241,6 +241,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
                 self.assertIn(other, route['distinct_from'])
 
+    def test_occlusion_reveal_moves_out_of_target_discoverability(self):
+        reveal = self.routes['occlusion-reveal']
+        discovery = self.routes['world-readability']
+        self.assertNotEqual(reveal['primary_skill'], discovery['primary_skill'])
+        self.assertIn('world-readability', reveal['distinct_from'])
+        self.assertIn('occlusion-reveal', discovery['distinct_from'])
+        self.assertIn('occluded-character-indicator', reveal['mechanisms'])
+        self.assertNotIn('occluded-character-indicator', discovery['mechanisms'])
+        self.assertEqual(discovery['mechanisms'], ['target-discoverability'])
+
 
 class RepositoryInvariantTests(unittest.TestCase):
     def setUp(self):

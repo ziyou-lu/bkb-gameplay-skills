@@ -1669,7 +1669,7 @@
       "limitations": "没有核验圆形半径、轮廓线宽、触发条件、遮挡检测或 shader 实现，音频未核听；评论偏好不是玩家测试或量化结果。角色遮挡可读性不同于主动资源识别模式，不推断按键开启、透视范围或所有隐藏对象都会显示。是否泄露隐藏敌人/资源等信息需按目标项目规则验收，不是来源已证行为。",
       "parameters": [],
       "skill_ids": [
-        "gameplay-world-readability"
+        "gameplay-occlusion-reveal"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,
@@ -2130,6 +2130,31 @@
       "parameters": [],
       "skill_ids": [
         "gameplay-world-readability"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Db--r9yPbU3",
+      "url": "https://www.instagram.com/p/Db--r9yPbU3/",
+      "creator": "kennethchanny",
+      "title": "角色透视误触发：单射线改为三采样全部遮挡",
+      "status": "included",
+      "evidence_basis": "visual_comparison_and_post_text",
+      "observations": "初始演示有大点阵透视窗口与蜥蜴描边。旧问题段标注小边角也触发：角色经过局部几何时仍有身体部分可见，大窗口却出现；作者解释原相机到蜥蜴的单射线遇障即开启。后续debug可见多条查询线，字幕说明改查Head、tail、body三处，并在三者全部被挡时启用mask。末段字幕与实机显示部分蜥蜴未被挡时效果保持关闭，前景方块仍实心，未出现同样大点阵窗口。",
+      "limitations": "只核有限游戏片段、debug图和作者解释，无源码/运行或同步输入回放。三点ALL遮挡是启发式，不证明每个像素/整个轮廓被挡，不保证零误判或最优射线数；全遮显示存在于初始演示，但修复后完全遮挡的开启未单独穷尽验证。具体点位/附着、射线方向实现、碰撞层/透明物策略、更新频率、淡化时长、滞回/防抖、阈值比例、CPU和闪变/错误率未知。点阵外观不证明shader算法，不证明相机移动、敌人视线AI或物理碰撞变更。作者减少视觉噪声的目标不是量化收益；音频未核听。",
+      "parameters": [
+        {
+          "name": "occlusion_probe_count_description",
+          "value": 3,
+          "unit": "sample rays",
+          "provenance": "caption_or_post_text",
+          "note": "作者说明头/尾/身体，三个均被挡才开启；点位与实际查询实现未知，不是全轮廓或最佳采样数保证。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-occlusion-reveal"
       ],
       "observed_date": "2026-10-21",
       "code_executed": false,

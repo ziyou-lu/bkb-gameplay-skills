@@ -903,21 +903,20 @@
       "id": "gameplay-world-readability",
       "category": "shared",
       "mechanisms": [
-        "target-discoverability",
-        "occluded-character-indicator"
+        "target-discoverability"
       ],
       "source_ids": [
         "DemTrHmK44j",
         "DPjC2p_jDK-",
-        "Dd7GYLGPlon",
         "Dc8t7XtvnyF"
       ],
       "path": "skills/gameplay-world-readability/SKILL.md",
-      "title": "世界目标发现与角色遮挡可读性",
+      "title": "世界目标发现性与局部提示",
       "related_skills": [
         "gameplay-contextual-ui",
         "gameplay-worldspace-indicators",
-        "gameplay-impact-visuals"
+        "gameplay-impact-visuals",
+        "gameplay-occlusion-reveal"
       ]
     },
     {
@@ -1072,6 +1071,25 @@
         "gameplay-locomotion-contacts",
         "gameplay-contact-response"
       ]
+    },
+    {
+      "id": "gameplay-occlusion-reveal",
+      "title": "角色遮挡检测与局部显露",
+      "category": "shared",
+      "path": "skills/gameplay-occlusion-reveal/SKILL.md",
+      "mechanisms": [
+        "occluded-character-indicator",
+        "occlusion-reveal-gating"
+      ],
+      "source_ids": [
+        "Dd7GYLGPlon",
+        "Db--r9yPbU3"
+      ],
+      "related_skills": [
+        "gameplay-world-readability",
+        "gameplay-camera-feedback",
+        "gameplay-impact-visuals"
+      ]
     }
   ],
   "mechanism_aliases": {
@@ -1118,7 +1136,9 @@
     "mouse swirl steering": "pointer-curvature-steering",
     "鼠标曲率转向": "pointer-curvature-steering",
     "layered mattress support": "jointed-layer-support",
-    "可压缩承载面": "jointed-layer-support"
+    "可压缩承载面": "jointed-layer-support",
+    "occlusion reveal": "occlusion-reveal-gating",
+    "遮挡显露触发": "occlusion-reveal-gating"
   },
   "task_routes": [
     {
@@ -1159,7 +1179,8 @@
       "distinct_from": [
         "hitstop",
         "camera-feedback",
-        "speed-camera"
+        "speed-camera",
+        "occlusion-reveal"
       ]
     },
     {
@@ -1179,7 +1200,8 @@
         "hitstop",
         "impact-visuals",
         "speed-camera",
-        "pointer-curvature-steering"
+        "pointer-curvature-steering",
+        "occlusion-reveal"
       ]
     },
     {
@@ -1224,7 +1246,8 @@
         "parry-feedback",
         "stomp-combos",
         "hit-recovery",
-        "attack-direction"
+        "attack-direction",
+        "occlusion-reveal"
       ]
     },
     {
@@ -1587,7 +1610,8 @@
         "world-readability",
         "scene-transitions",
         "mechanical-interactions",
-        "connection-transitions"
+        "connection-transitions",
+        "occlusion-reveal"
       ]
     },
     {
@@ -1963,16 +1987,15 @@
     {
       "id": "world-readability",
       "request_examples": [
-        "地面资源难发现、角色被建筑挡住，想比较允许的信息可见方案。",
+        "地面资源混入背景难发现，想比较尺寸/位置或临时识别模式。",
         "交互点的大箭头挡住场景，想换成局部粒子但仍保留F操作提示，并检查是否更容易漏看。"
       ],
       "primary_skill": "gameplay-world-readability",
       "mechanisms": [
-        "target-discoverability",
-        "occluded-character-indicator"
+        "target-discoverability"
       ],
       "evidence_status": "workflow",
-      "boundary": "改善世界目标发现性与角色遮挡可读性；按既定允许信息比较目标尺寸/位置、局部提示、临时识别模式、局部透视和轮廓，不扩大检测或交互范围，也不处理操作投影、卡牌或机关反馈。",
+      "boundary": "改善世界资源与交互目标发现性；按既定允许信息比较尺寸/位置、局部提示和临时识别模式，不扩大检测或交互范围；角色遮挡检测与显露使用独立入口。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -1980,7 +2003,8 @@
         "worldspace-indicators",
         "scene-transitions",
         "mechanical-interactions",
-        "connection-transitions"
+        "connection-transitions",
+        "occlusion-reveal"
       ]
     },
     {
@@ -2190,6 +2214,27 @@
         "contact-response",
         "locomotion-contacts",
         "surface-aftermath"
+      ]
+    },
+    {
+      "id": "occlusion-reveal",
+      "request_examples": [
+        "角色只被墙角挡了一点就开很大透视窗口，想检查遮挡采样和触发。",
+        "想比较玩家被前景遮挡时的圆形窗口和轮廓提示，并避免退出后残留。"
+      ],
+      "primary_skill": "gameplay-occlusion-reveal",
+      "mechanisms": [
+        "occluded-character-indicator",
+        "occlusion-reveal-gating"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当玩家角色被前景遮住难以跟踪，或轻微遮挡便误开大面积透视时，组织角色采样、遮挡聚合、局部显露与退出检查；不负责目标发现、相机改位、敌人视线 AI 或透视 shader 实现。",
+      "distinct_from": [
+        "world-readability",
+        "worldspace-indicators",
+        "camera-feedback",
+        "impact-visuals",
+        "attack-readability"
       ]
     }
   ]
