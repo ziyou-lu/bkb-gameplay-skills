@@ -834,3 +834,14 @@ https://www.instagram.com/p/DWFm4_eDlCm/
 - 限制：没有核验射线数量、圆柱碰撞具体 API、摩擦或悬架参数、代码、性能成本及量化操控结果，音频未核听。三版本是替代方案迭代，不是必须叠加的三层，也不能推出形状越复杂越好。绿色线框和侧接触演示不能单独证明某种 sweep/刚体实现；不将已有吸震误写为新版新增，不把未来掉轮当已实现。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)
+
+## DRfuWODEvzF · 钩爪跑酷的速度线、动态视野与模糊组合对照
+
+https://www.instagram.com/p/DRfuWODEvzF/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：原帖在粉色墙面、蓝色通道的高速钩爪跑酷场景中，对照 no effects 与增强版本。列出的四项为 Anime speedlines、Dynamic FOV、Radial blur、Camera shake；增强段可见边缘放射线、径向模糊和镜头变化。四项作为组合出现，不是每项独立开关的消融。两段 HUD 显示的速度不同。
+- 限制：没有同速控制或独立量化的速度感/实际速度结果，不能从镜头变化宣称角色跑得更快，也不能给四项分配独立收益。FOV 范围、速度映射、模糊强度和震动参数未知，音频未核听。运动不适减弱/关闭选项及同轨迹逐项验收是本库实施建议，不是作者已证功能。thegamedevclub 的 DSPbCDyjfDD 为同素材转发，不另计来源。
+- 音频核听：False；代码运行：False
+- 补齐：采用 sirparsy 原帖登记；[thegamedevclub 转发](https://www.instagram.com/p/DSPbCDyjfDD/) 仅作同素材别名，不另建来源或技能。
+- 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)

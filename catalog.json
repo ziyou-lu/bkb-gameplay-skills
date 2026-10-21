@@ -72,7 +72,10 @@
       "mechanisms": [
         "camera-shake",
         "camera-impulse",
-        "punch-in"
+        "punch-in",
+        "speed-fov",
+        "radial-speed-blur",
+        "screen-speed-lines"
       ],
       "source_ids": [
         "DYfFEpzIa-H",
@@ -83,7 +86,8 @@
         "DecdQ9ltnjf",
         "DVGe1E9iDdi",
         "Deo9lu7tzCT",
-        "DcXJwumOuBK"
+        "DcXJwumOuBK",
+        "DRfuWODEvzF"
       ],
       "related_skills": [
         "gameplay-hitstop",
