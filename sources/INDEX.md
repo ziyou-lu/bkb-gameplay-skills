@@ -896,3 +896,13 @@ https://www.instagram.com/p/DaIdIURzME9/
 - 限制：Case 1 未完整核验；Case 2 的边界贴合是视觉证据，不等于代码或所有碰撞情形验证，不把三种 case 都记成已通过。未核验 BFS 停止条件、采样间距/上限、射线配置、碰撞层、网格更新时间或性能；没有代码阅读、运行或定量测试，音频未核听。它支持表面余效与承载地形一致性的方向，不证明真实流体、体积守恒、任意地形稳定性或玩法碰撞随网格改变。不得把作者描述的管线当成所有项目通用最佳实现。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
+
+## DYOpA7zDmEU · 喷火效果的可见来源与辣椒张嘴动作对齐
+
+https://www.instagram.com/p/DYOpA7zDmEU/
+
+- 分类：included；证据：visual_comparison
+- 观察：帖子以旧版 flame broken / looked weird 字幕展示孤立的黄色长条火焰，近端有蓝圈，所见游戏画面没有可辨认的喷火主体。so we fixed it 段展示红辣椒角色模型和张嘴动画；新版实机可清楚看见黄色火焰连接红辣椒张开的嘴部喷出。变化让攻击的可见来源与发射姿态形成联系，不只是增加粒子层。
+- 限制：没有核验碰撞、伤害、射程、预警时机或其他玩法规则改变；不能把旧画面未见主体扩写为旧系统完全没有发射实体。没有算法、socket/挂点实现、数值或代码证据，音频未核听。先修可见来源再考虑追加特效是本库迁移提炼，不是作者的量化收益或固定制作流程。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-projectile-spells](../skills/gameplay-projectile-spells/SKILL.md)

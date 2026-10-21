@@ -1726,6 +1726,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DYOpA7zDmEU",
+      "url": "https://www.instagram.com/p/DYOpA7zDmEU/",
+      "creator": "suchagoodhorse",
+      "title": "喷火效果的可见来源与辣椒张嘴动作对齐",
+      "status": "included",
+      "evidence_basis": "visual_comparison",
+      "observations": "帖子以旧版 flame broken / looked weird 字幕展示孤立的黄色长条火焰，近端有蓝圈，所见游戏画面没有可辨认的喷火主体。so we fixed it 段展示红辣椒角色模型和张嘴动画；新版实机可清楚看见黄色火焰连接红辣椒张开的嘴部喷出。变化让攻击的可见来源与发射姿态形成联系，不只是增加粒子层。",
+      "limitations": "没有核验碰撞、伤害、射程、预警时机或其他玩法规则改变；不能把旧画面未见主体扩写为旧系统完全没有发射实体。没有算法、socket/挂点实现、数值或代码证据，音频未核听。先修可见来源再考虑追加特效是本库迁移提炼，不是作者的量化收益或固定制作流程。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-projectile-spells"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
