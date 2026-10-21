@@ -845,3 +845,13 @@ https://www.instagram.com/p/DRfuWODEvzF/
 - 音频核听：False；代码运行：False
 - 补齐：采用 sirparsy 原帖登记；[thegamedevclub 转发](https://www.instagram.com/p/DSPbCDyjfDD/) 仅作同素材别名，不另建来源或技能。
 - 归入：[gameplay-camera-feedback](../skills/gameplay-camera-feedback/SKILL.md)
+
+## DPjC2p_jDK- · Bird Vision 临时识别模式改善地面资源发现性
+
+https://www.instagram.com/p/DPjC2p_jDK-/
+
+- 分类：included；证据：visual_comparison_and_post_text
+- 观察：字幕说明鸟类游戏的资源过于融入地面，并介绍 Bird Vision。两轮可见普通地面枝条切换为整体蓝暗场景、枝条青绿色轮廓高亮，再恢复普通色枝条。增量是独立显示模式的前后对照，不是把资源放大或移近。
+- 限制：没有核验触发按键、持续时长、距离条件、遮挡/穿墙规则或 shader 实现；不据此声称自动收集、扩大检测范围或新增资源。模式退出清理、高亮集合与信息公平的验收是本库迁移建议，不是作者已证实现。没有数值或运行验证，音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
