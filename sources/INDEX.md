@@ -926,3 +926,13 @@ https://www.instagram.com/playnomadgame/reel/DNODANBoEL6/
 - 限制：这是总体前后对照，不是完整分层教程；没有核验图标含义、木料是否可拾取、逐次砍痕、倒伏的真实物理/动画算法、切割方式或数值参数。未读或运行代码，音频未核听。画面出现木料不证明库存入账或资源数量，倒伏不证明新增碰撞/砸伤规则；采集一次性结算与倒伏占用风险验收是本库实施建议。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+
+## DYq3pMtqVGw · 横杆由停挂择时改为立即摆出的动作接续取舍
+
+https://www.instagram.com/jankyanims/reel/DYq3pMtqVGw/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Tachyon Flow 作者正文称旧横杆最初追求 methodical/weighty，允许无限摆动、择时释放、换向与停挂，却拖慢希望连续高速通过的路段，因此改为 immediate swing off。新版灰盒实机可见角色在竖杆/横杆间串联，横杆翻摆离杆、落地后继续跑。旧规则及改版理由来自作者文字，视觉只核到新版动作接续，没有旧新视觉 A/B。
+- 限制：没有速度、操作响应或路线完成时间的独立测量，输入方式、状态切换条件、算法和参数未知，音频未核听。作者对控制器重写、更顺滑或更有趣的说法不作为已验证独立收益。减少停挂/择时状态会改变控制规则；可能降低自主择时空间是本库设计分析，不是作者的玩家测试结论。不能把 immediate 当作零延迟数值，也不推断完全自动移动。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-movement-feedback](../skills/gameplay-movement-feedback/SKILL.md)

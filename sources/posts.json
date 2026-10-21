@@ -1777,6 +1777,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DYq3pMtqVGw",
+      "url": "https://www.instagram.com/jankyanims/reel/DYq3pMtqVGw/",
+      "creator": "jankyanims",
+      "title": "横杆由停挂择时改为立即摆出的动作接续取舍",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Tachyon Flow 作者正文称旧横杆最初追求 methodical/weighty，允许无限摆动、择时释放、换向与停挂，却拖慢希望连续高速通过的路段，因此改为 immediate swing off。新版灰盒实机可见角色在竖杆/横杆间串联，横杆翻摆离杆、落地后继续跑。旧规则及改版理由来自作者文字，视觉只核到新版动作接续，没有旧新视觉 A/B。",
+      "limitations": "没有速度、操作响应或路线完成时间的独立测量，输入方式、状态切换条件、算法和参数未知，音频未核听。作者对控制器重写、更顺滑或更有趣的说法不作为已验证独立收益。减少停挂/择时状态会改变控制规则；可能降低自主择时空间是本库设计分析，不是作者的玩家测试结论。不能把 immediate 当作零延迟数值，也不推断完全自动移动。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-movement-feedback"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
