@@ -1760,6 +1760,23 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DNODANBoEL6",
+      "url": "https://www.instagram.com/playnomadgame/reel/DNODANBoEL6/",
+      "creator": "playnomadgame",
+      "title": "伐木采集从直接消失改为倒伏与分段木料结果",
+      "status": "included",
+      "evidence_basis": "visual_comparison",
+      "observations": "上下 Before/After 对照中，旧灰盒棕色树干受到斧击后直接消失；新版树干有清晰的倾斜倒伏中间态，之后地面出现多段木料和亮黄白图标。增量是资源采集场景的可见破坏过程与产物结果，不能把同时变化的环境或人物美术当作此机制的独立收益。",
+      "limitations": "这是总体前后对照，不是完整分层教程；没有核验图标含义、木料是否可拾取、逐次砍痕、倒伏的真实物理/动画算法、切割方式或数值参数。未读或运行代码，音频未核听。画面出现木料不证明库存入账或资源数量，倒伏不证明新增碰撞/砸伤规则；采集一次性结算与倒伏占用风险验收是本库实施建议。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-breakables-loot"
+      ],
+      "observed_date": "2026-10-21",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

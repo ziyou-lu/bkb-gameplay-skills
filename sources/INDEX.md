@@ -916,3 +916,13 @@ https://www.instagram.com/p/DdsDp8YRW_y/
 - 限制：不是全流程旧版/新版 A/B，也不是各层独立贡献测试；未完整核实机械环、蓄能球、光柱与电弧的实际播放顺序、持续时间或触发条件。没有伸缩幅度、时序、shader、随机/偏移算法、性能或代码执行证据，音频未核听。完成文字是画面信息，不证明升级结算、素材消耗或中断恢复逻辑。视觉光柱不证明攻击伤害或碰撞功能。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+
+## DNODANBoEL6 · 伐木采集从直接消失改为倒伏与分段木料结果
+
+https://www.instagram.com/playnomadgame/reel/DNODANBoEL6/
+
+- 分类：included；证据：visual_comparison
+- 观察：上下 Before/After 对照中，旧灰盒棕色树干受到斧击后直接消失；新版树干有清晰的倾斜倒伏中间态，之后地面出现多段木料和亮黄白图标。增量是资源采集场景的可见破坏过程与产物结果，不能把同时变化的环境或人物美术当作此机制的独立收益。
+- 限制：这是总体前后对照，不是完整分层教程；没有核验图标含义、木料是否可拾取、逐次砍痕、倒伏的真实物理/动画算法、切割方式或数值参数。未读或运行代码，音频未核听。画面出现木料不证明库存入账或资源数量，倒伏不证明新增碰撞/砸伤规则；采集一次性结算与倒伏占用风险验收是本库实施建议。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
