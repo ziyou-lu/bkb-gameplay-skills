@@ -406,6 +406,48 @@ class RepositoryInvariantTests(unittest.TestCase):
     def test_valid_repository(self):
         self.assertEqual(v.validate(self.root), [])
 
+    def first_skill(self):
+        return json.loads((self.root / 'catalog.json').read_text())['skills'][0]
+
+    def test_provenance_not_required_in_execution_prose(self):
+        skill = self.first_skill()
+        text = (self.root / skill['path']).read_text()
+        self.assertTrue(all(pid not in text for pid in skill['source_ids']))
+        self.assertEqual(v.validate(self.root), [])
+
+    def test_source_id_leaking_into_execution_is_rejected(self):
+        skill = self.first_skill()
+        with (self.root / skill['path']).open('a') as f:
+            f.write('\n参考 ' + skill['source_ids'][0] + ' 的演示。\n')
+        self.assert_issue('Source ID in execution entrypoint')
+
+    def test_platform_link_leaking_into_execution_is_rejected(self):
+        skill = self.first_skill()
+        with (self.root / skill['path']).open('a') as f:
+            f.write('\n[材料](https://www.instagram.com/p/UnregisteredID/)\n')
+        self.assert_issue('Source platform link in execution entrypoint')
+
+    def test_missing_evidence_file_is_rejected(self):
+        skill = self.first_skill()
+        (self.root / skill['evidence_path']).unlink()
+        self.assert_issue('Missing evidence reference')
+
+    def test_missing_evidence_source_mapping_is_rejected(self):
+        skill = self.first_skill()
+        path = self.root / skill['evidence_path']
+        path.write_text(path.read_text().replace(skill['source_ids'][0], 'removed-source'))
+        self.assert_issue('Source absent from evidence reference')
+
+    def test_evidence_path_cannot_escape_skill_folder(self):
+        self.mutate_json('catalog.json', lambda d: d['skills'][0].update(evidence_path='../outside.md'))
+        self.assert_issue('Invalid evidence path')
+
+    def test_evidence_link_must_be_discoverable_from_entrypoint(self):
+        skill = self.first_skill()
+        path = self.root / skill['path']
+        path.write_text(path.read_text().replace('(references/sources.md)', '(../gameplay-impact-visuals/SKILL.md)'))
+        self.assert_issue('Execution entrypoint does not link evidence reference')
+
     def test_task_routes_are_required_by_repository_validation(self):
         self.mutate_json('catalog.json', lambda d: d.pop('task_routes', None))
         self.assert_issue('task_routes must be a non-empty array')

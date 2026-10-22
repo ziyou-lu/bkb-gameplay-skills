@@ -7,3 +7,7 @@
 - Treat supplied parameters as source-specific examples. Do not invent universal defaults.
 - Changes to evidence must update both source and catalog references. Refresh the derived index with python scripts/update_index.py, then run python scripts/validate.py and python -m unittest discover -s tests -v, then inspect the diff.
 - Respect existing history and unrelated content during integration. Never force-push this preparation package. Report local preparation, commit, push and remote verification separately.
+
+- The primary consumer is a game-creation Agent. SKILL.md must provide task triggers, required inputs/preconditions, concrete implementation decisions and sequence, mechanism-specific tuning, observable acceptance and relevant failure recovery. Do not replace executable guidance with research narration or a generic template.
+- Keep creator attribution, repost chains, source IDs, observations, unknowns and source-specific parameter claims in references/sources.md and sources/posts.json. Every catalog skill has evidence_path. Entry points link that reference only when provenance is needed; do not embed source IDs, platform links or repeated evidence disclaimers in runtime instructions.
+- Distinguish source-supported mechanisms from generalized implementation choices in the reference layer. Keep engineering constraints in the execution flow. Never claim candidate algorithms, project parameters or proposed acceptance checks were source-verified or already tested.

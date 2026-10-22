@@ -5,59 +5,30 @@ description: "在 HP 变化突兀、损失量难读或低血量提示不清时�
 
 # 生命血条与损失残影
 
-本文件是从来源案例提炼的迁移流程，不是作者源码复刻，也未在目标游戏中执行。下面的验收项是实施后要做的检查，不是已经通过的测试。
+## 触发与输入
 
-这是旧 gameplay-health-damage-ui 的兼容入口，现只拥有 HP 与残影状态。要做[伤害/治疗/得分浮字](../gameplay-floating-numbers/SKILL.md)或[结果总分递增](../gameplay-result-counting/SKILL.md)，直接读取对应入口，不再接入血条流程。
+用于 HP 变化难读、残影排空混乱或复活后读数错误。取得真实 HP/最大 HP、事件顺序、显示值、残影值、等待/排空时长及 UI 动画归属。此入口只管理血条；浮字与结果总分见下方分流。
 
-## 触发条件
+## 实施流程
 
-- 生命值变化突兀、刚损失的血量不易理解，或残影等待/排空混乱。
-- 治疗、最大生命变化、致死复活后，血条或生命分级提示与真实 HP 不一致。
+1. 权威扣血立即提交；前景条只追随真实 HP，残影条暂留损失前值再追赶。显示更新不得再次扣血。
+2. 将受击后的等待与开始排空后的持续时间分开。声明连续伤害是否重置等待、排空中是否从当前值重启；同一属性只保留一个有效驱动。
+3. 治疗时按项目选择同步抬升两层或重新对齐，避免残影像再次损血；最大 HP 改变时重算范围并夹紧显示，死亡/复活清理旧延迟。
+4. 使用双层进度条时统一范围、锚点和遮挡关系。在 Godot 可用主 TextureProgressBar 配置边框/进度纹理，并在其后放置第二层表示损失段；绑定同一生命状态。
+5. 按需增加受击/治疗确认和低生命分级，颜色之外保留轮廓、图标或文字线索。关闭/重开直接从当前生命重建，不继续过时 tween。
 
-## 先确认的输入
+## 调参
 
-真实 HP/最大 HP 与变更事件、当前显示值/残影值、损失段等待时间与排空时长、治疗和死亡复活规则、UI 生命周期及并发 tween 归属。暴击文字是数值事件提示，不等于低血量分级。
+分别调前景追随、残影等待和排空时长；连续受击下检查残影是否积压。生命分级阈值按项目危险程度设定，不与暴击提示混同。若读数太慢，先缩短残影而不是延迟真实 HP 更新。
 
-## 分步机制
+## 验收与失败处理
 
-1. 将真实值与显示动画分离。真实扣血立即生效，前景条可平滑追随；残影条保留刚损失部分再追赶。
-2. 将“受击后等待多久”与“开始追赶后花多久”设为两个独立参数，明确连续伤害分别如何重置等待和排空，避免混成一个时长。
-3. 单独处理治疗、最大血量变化、死亡与复活；不要让损失残影错演成又受一次伤或显示超上限。
-4. 按项目需要用局部受击/治疗确认和生命值分级提示帮助读数，保留低特效及非单一色相的识别方式；来源阈值不作为默认标准。
-5. 若使用 Godot 且需要双层延迟血条，可参考 DcZxryBoCFw 的实见搭建顺序：准备边框/血量/暗底纹理，配置主 TextureProgressBar 的 over/progress，再以第二层 TextureProgressBar 显示延迟损失段，最后绑定真实生命变更。两层范围、值和布局须符合项目规则。
-6. 检查现有 tween 归属、取消和重复扣血时的重启；不要把视频里的 tween.kill / create_tween 片段当作已验证的完整实现。
+- 连续扣血、等待中再受伤、排空中治疗、同帧治疗/伤害、死亡复活和上限变化后准确收敛。
+- 单独调整等待/排空只改变对应阶段，无超上限、残留 tween 或重复损失表现。
+- 低对比背景和减少动效时真实生命仍可读；显示与权威不符时检查事件顺序和驱动所有权，不改伤害公式补偿。
 
-## 适用限制
+## 分流与组合
 
-- 0.75 秒 drain、0.4 秒 ghost/delay、50%/25% 颜色阈值来自特定例子，不是通用默认。Godot 的 ghost_delay=0.25 秒与 ghost_time=0.45 秒分别是等待和排空时长，不用新值覆盖其他来源参数。
-- Godot 演示脚本未运行、未完整审计；正文 GitHub 项目未读取或测试，不能把界面截图或部分 API 名称当作实现正确性证明。
-- DamtFQYxYtn 的自研 C++ 引擎/Lua 编排是作者声称，不是源码验证；没有据其“数字”一词推断浮动数值工作流。
-- 不要补写 DemP6LfRbug 缺失的第 3/5/8 步。来源未验证完整伤害、无敌帧或资源规则，音频未核听。
+[浮字](../gameplay-floating-numbers/SKILL.md)、[结果计数](../gameplay-result-counting/SKILL.md)各有独立入口。[低血减伤](../gameplay-low-health-damage-reduction/SKILL.md)、[受击保护](../gameplay-post-hit-protection/SKILL.md)是伤害规则；[冲击视觉](../gameplay-impact-visuals/SKILL.md)只作确认。
 
-## 验收
-
-- [ ] 连续扣血、同帧治疗与受伤、致死/复活、最大生命改变后，两层血量正确收敛，不超上限或重复表现损失。
-- [ ] 分别调等待时间和排空时长时只有对应阶段改变；等待中与排空中再次受伤、治疗及 tween 取消后仍能正确收敛。
-- [ ] 低对比背景、低特效和色觉差异条件下仍能读出真实生命状态；动画不负责实际扣血或治疗结算。
-- [ ] 关闭/重开和场景切换后没有旧 tween 或残影状态，当前显示重新对应真实 HP。
-
-## 组合而不复制
-
-- [低血量伤害缩放](../gameplay-low-health-damage-reduction/SKILL.md)与[受击后保护](../gameplay-post-hit-protection/SKILL.md)是独立伤害规则，不从血条长度或闪烁推导。
-
-只在需要相应机制时读取，沿用其事件与预算约束：
-
-- [伤害、治疗与得分浮字](../gameplay-floating-numbers/SKILL.md)
-- [结果总分递增计数](../gameplay-result-counting/SKILL.md)
-- [接触闪光与粒子](../gameplay-impact-visuals/SKILL.md)
-
-## 来源证据
-
-完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../sources/posts.json)。来源只支持下列案例内容，不证明本文件新增工程建议已在原帖实现。
-
-- [DdhLtbTlTRG](https://www.instagram.com/reel/DdhLtbTlTRG/)：血条延迟扣血与残影。
-- [DemP6LfRbug](https://www.instagram.com/p/DemP6LfRbug/)：血条与伤害数字。
-- [DamtFQYxYtn](https://www.instagram.com/mii_misan/reel/DamtFQYxYtn/)：血条原型。
-- [DelJO3qusJE](https://www.instagram.com/p/DelJO3qusJE/)：受击七步。
-- [DejijtPzhYJ](https://www.instagram.com/reel/DejijtPzhYJ/)：组合战斗反馈。
-- [DcZxryBoCFw](https://www.instagram.com/p/DcZxryBoCFw/)：Godot 双层延迟血条。
+需要核对机制出处、示例参数或证据边界时，读取[来源参考](references/sources.md)。

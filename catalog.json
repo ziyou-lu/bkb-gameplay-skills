@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_date": "2026-10-21",
+  "updated_date": "2026-10-22",
   "language": "zh-CN",
   "evidence_policy": "操作步骤是基于公开视频研究与公开代码静态阅读的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码、静态核读和实测必须区分。",
   "skills": [
@@ -31,7 +31,8 @@
       "related_skills": [
         "gameplay-impact-visuals",
         "gameplay-camera-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-hitstop/references/sources.md"
     },
     {
       "id": "gameplay-impact-visuals",
@@ -66,7 +67,8 @@
         "gameplay-boss-sequences",
         "gameplay-hitstop",
         "gameplay-attack-readability"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-impact-visuals/references/sources.md"
     },
     {
       "id": "gameplay-camera-feedback",
@@ -96,7 +98,8 @@
         "gameplay-attack-readability",
         "gameplay-surface-camera-up"
       ],
-      "path": "skills/gameplay-camera-feedback/SKILL.md"
+      "path": "skills/gameplay-camera-feedback/SKILL.md",
+      "evidence_path": "skills/gameplay-camera-feedback/references/sources.md"
     },
     {
       "id": "gameplay-motion-deformation",
@@ -132,7 +135,8 @@
         "gameplay-projectile-spells",
         "gameplay-deformable-support"
       ],
-      "path": "skills/gameplay-motion-deformation/SKILL.md"
+      "path": "skills/gameplay-motion-deformation/SKILL.md",
+      "evidence_path": "skills/gameplay-motion-deformation/references/sources.md"
     },
     {
       "id": "gameplay-attack-readability",
@@ -160,7 +164,8 @@
         "gameplay-health-damage-ui",
         "gameplay-boss-sequences",
         "gameplay-post-hit-protection"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-attack-readability/references/sources.md"
     },
     {
       "id": "gameplay-health-damage-ui",
@@ -186,7 +191,8 @@
         "gameplay-low-health-damage-reduction",
         "gameplay-post-hit-protection"
       ],
-      "path": "skills/gameplay-health-damage-ui/SKILL.md"
+      "path": "skills/gameplay-health-damage-ui/SKILL.md",
+      "evidence_path": "skills/gameplay-health-damage-ui/references/sources.md"
     },
     {
       "id": "gameplay-melee-feedback",
@@ -218,7 +224,8 @@
         "gameplay-attack-readability",
         "gameplay-post-hit-protection"
       ],
-      "path": "skills/gameplay-melee-feedback/SKILL.md"
+      "path": "skills/gameplay-melee-feedback/SKILL.md",
+      "evidence_path": "skills/gameplay-melee-feedback/references/sources.md"
     },
     {
       "id": "gameplay-projectile-spells",
@@ -243,7 +250,8 @@
         "gameplay-camera-feedback",
         "gameplay-attack-readability"
       ],
-      "path": "skills/gameplay-projectile-spells/SKILL.md"
+      "path": "skills/gameplay-projectile-spells/SKILL.md",
+      "evidence_path": "skills/gameplay-projectile-spells/references/sources.md"
     },
     {
       "id": "gameplay-movement-feedback",
@@ -269,7 +277,8 @@
         "gameplay-ceiling-corner-correction",
         "gameplay-gait-step-scheduling",
         "gameplay-movement-look-decoupling"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-movement-feedback/references/sources.md"
     },
     {
       "id": "gameplay-breakables-loot",
@@ -297,7 +306,8 @@
         "gameplay-cut-surface-rendering",
         "gameplay-prop-toppling-dynamics"
       ],
-      "path": "skills/gameplay-breakables-loot/SKILL.md"
+      "path": "skills/gameplay-breakables-loot/SKILL.md",
+      "evidence_path": "skills/gameplay-breakables-loot/references/sources.md"
     },
     {
       "id": "gameplay-boss-sequences",
@@ -324,7 +334,8 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-health-damage-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-boss-sequences/references/sources.md"
     },
     {
       "id": "gameplay-resource-ui",
@@ -345,7 +356,8 @@
         "gameplay-health-damage-ui",
         "gameplay-cooldown-ui",
         "gameplay-contextual-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-resource-ui/references/sources.md"
     },
     {
       "id": "gameplay-contextual-ui",
@@ -371,11 +383,12 @@
         "gameplay-mechanical-interactions",
         "gameplay-connection-transitions",
         "gameplay-scene-transitions"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-contextual-ui/references/sources.md"
     },
     {
       "id": "gameplay-skill-ingestion",
-      "title": "新案例去重与技能升级",
+      "title": "把案例转成可执行的游戏制作技能",
       "category": "maintenance",
       "path": "skills/gameplay-skill-ingestion/SKILL.md",
       "mechanisms": [
@@ -394,7 +407,8 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-health-damage-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-skill-ingestion/references/sources.md"
     },
     {
       "id": "gameplay-speed-camera",
@@ -412,11 +426,12 @@
         "gameplay-camera-feedback",
         "gameplay-dash-feedback"
       ],
-      "path": "skills/gameplay-speed-camera/SKILL.md"
+      "path": "skills/gameplay-speed-camera/SKILL.md",
+      "evidence_path": "skills/gameplay-speed-camera/references/sources.md"
     },
     {
       "id": "gameplay-secondary-motion",
-      "title": "装饰跟随与次级运动",
+      "title": "角色装饰的次级运动",
       "category": "shared",
       "mechanisms": [
         "secondary-motion"
@@ -429,7 +444,8 @@
         "gameplay-motion-deformation",
         "gameplay-movement-feedback"
       ],
-      "path": "skills/gameplay-secondary-motion/SKILL.md"
+      "path": "skills/gameplay-secondary-motion/SKILL.md",
+      "evidence_path": "skills/gameplay-secondary-motion/references/sources.md"
     },
     {
       "id": "gameplay-aim-pose",
@@ -447,7 +463,8 @@
         "gameplay-shooting-feedback",
         "gameplay-tool-body-coordination"
       ],
-      "path": "skills/gameplay-aim-pose/SKILL.md"
+      "path": "skills/gameplay-aim-pose/SKILL.md",
+      "evidence_path": "skills/gameplay-aim-pose/references/sources.md"
     },
     {
       "id": "gameplay-action-timing",
@@ -467,7 +484,8 @@
         "gameplay-shooting-feedback",
         "gameplay-projectile-spells"
       ],
-      "path": "skills/gameplay-action-timing/SKILL.md"
+      "path": "skills/gameplay-action-timing/SKILL.md",
+      "evidence_path": "skills/gameplay-action-timing/references/sources.md"
     },
     {
       "id": "gameplay-contact-response",
@@ -487,7 +505,8 @@
         "gameplay-prop-appendage-contacts",
         "gameplay-prop-toppling-dynamics"
       ],
-      "path": "skills/gameplay-contact-response/SKILL.md"
+      "path": "skills/gameplay-contact-response/SKILL.md",
+      "evidence_path": "skills/gameplay-contact-response/references/sources.md"
     },
     {
       "id": "gameplay-floating-numbers",
@@ -509,7 +528,8 @@
         "gameplay-result-counting",
         "gameplay-impact-visuals"
       ],
-      "path": "skills/gameplay-floating-numbers/SKILL.md"
+      "path": "skills/gameplay-floating-numbers/SKILL.md",
+      "evidence_path": "skills/gameplay-floating-numbers/references/sources.md"
     },
     {
       "id": "gameplay-result-counting",
@@ -525,7 +545,8 @@
         "gameplay-completion-sequences",
         "gameplay-floating-numbers"
       ],
-      "path": "skills/gameplay-result-counting/SKILL.md"
+      "path": "skills/gameplay-result-counting/SKILL.md",
+      "evidence_path": "skills/gameplay-result-counting/references/sources.md"
     },
     {
       "id": "gameplay-card-interaction",
@@ -542,7 +563,8 @@
       "related_skills": [
         "gameplay-contextual-ui",
         "gameplay-reward-reveal"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-card-interaction/references/sources.md"
     },
     {
       "id": "gameplay-dialogue-presentation",
@@ -558,7 +580,8 @@
       ],
       "related_skills": [
         "gameplay-contextual-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-dialogue-presentation/references/sources.md"
     },
     {
       "id": "gameplay-worldspace-indicators",
@@ -579,7 +602,8 @@
         "gameplay-gravity-orientation-cues",
         "gameplay-landing-feedback",
         "gameplay-surface-adhesion"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-worldspace-indicators/references/sources.md"
     },
     {
       "id": "gameplay-scene-transitions",
@@ -594,7 +618,8 @@
       ],
       "related_skills": [
         "gameplay-camera-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-scene-transitions/references/sources.md"
     },
     {
       "id": "gameplay-mechanical-interactions",
@@ -613,7 +638,8 @@
         "gameplay-contextual-ui",
         "gameplay-geometric-event-alignment",
         "gameplay-state-driven-surface-motion"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-mechanical-interactions/references/sources.md"
     },
     {
       "id": "gameplay-connection-transitions",
@@ -629,7 +655,8 @@
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-contextual-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-connection-transitions/references/sources.md"
     },
     {
       "id": "gameplay-dash-feedback",
@@ -647,7 +674,8 @@
         "gameplay-motion-deformation",
         "gameplay-speed-camera",
         "gameplay-movement-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-dash-feedback/references/sources.md"
     },
     {
       "id": "gameplay-landing-feedback",
@@ -666,7 +694,8 @@
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
         "gameplay-hitstop"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-landing-feedback/references/sources.md"
     },
     {
       "id": "gameplay-cooldown-ui",
@@ -682,7 +711,8 @@
       "related_skills": [
         "gameplay-resource-ui",
         "gameplay-contextual-ui"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-cooldown-ui/references/sources.md"
     },
     {
       "id": "gameplay-blade-trails",
@@ -697,7 +727,8 @@
       "related_skills": [
         "gameplay-melee-feedback"
       ],
-      "path": "skills/gameplay-blade-trails/SKILL.md"
+      "path": "skills/gameplay-blade-trails/SKILL.md",
+      "evidence_path": "skills/gameplay-blade-trails/references/sources.md"
     },
     {
       "id": "gameplay-parry-feedback",
@@ -715,7 +746,8 @@
         "gameplay-attack-readability",
         "gameplay-melee-feedback"
       ],
-      "path": "skills/gameplay-parry-feedback/SKILL.md"
+      "path": "skills/gameplay-parry-feedback/SKILL.md",
+      "evidence_path": "skills/gameplay-parry-feedback/references/sources.md"
     },
     {
       "id": "gameplay-stomp-combos",
@@ -734,7 +766,8 @@
         "gameplay-floating-numbers",
         "gameplay-melee-feedback"
       ],
-      "path": "skills/gameplay-stomp-combos/SKILL.md"
+      "path": "skills/gameplay-stomp-combos/SKILL.md",
+      "evidence_path": "skills/gameplay-stomp-combos/references/sources.md"
     },
     {
       "id": "gameplay-hit-recovery",
@@ -751,11 +784,12 @@
         "gameplay-attack-readability",
         "gameplay-post-hit-protection"
       ],
-      "path": "skills/gameplay-hit-recovery/SKILL.md"
+      "path": "skills/gameplay-hit-recovery/SKILL.md",
+      "evidence_path": "skills/gameplay-hit-recovery/references/sources.md"
     },
     {
       "id": "gameplay-shooting-feedback",
-      "title": "射击、持续喷射与来源对齐",
+      "title": "射击、持续喷射与发射源对齐",
       "category": "recipes",
       "mechanisms": [
         "muzzle-origin",
@@ -778,7 +812,8 @@
         "gameplay-attack-readability",
         "gameplay-projectile-spells"
       ],
-      "path": "skills/gameplay-shooting-feedback/SKILL.md"
+      "path": "skills/gameplay-shooting-feedback/SKILL.md",
+      "evidence_path": "skills/gameplay-shooting-feedback/references/sources.md"
     },
     {
       "id": "gameplay-reward-reveal",
@@ -806,7 +841,8 @@
         "gameplay-loot-pickup",
         "gameplay-completion-sequences"
       ],
-      "path": "skills/gameplay-reward-reveal/SKILL.md"
+      "path": "skills/gameplay-reward-reveal/SKILL.md",
+      "evidence_path": "skills/gameplay-reward-reveal/references/sources.md"
     },
     {
       "id": "gameplay-loot-pickup",
@@ -825,7 +861,8 @@
         "gameplay-impact-visuals",
         "gameplay-floating-numbers"
       ],
-      "path": "skills/gameplay-loot-pickup/SKILL.md"
+      "path": "skills/gameplay-loot-pickup/SKILL.md",
+      "evidence_path": "skills/gameplay-loot-pickup/references/sources.md"
     },
     {
       "id": "gameplay-attack-direction",
@@ -842,7 +879,8 @@
         "gameplay-blade-trails",
         "gameplay-attack-readability"
       ],
-      "path": "skills/gameplay-attack-direction/SKILL.md"
+      "path": "skills/gameplay-attack-direction/SKILL.md",
+      "evidence_path": "skills/gameplay-attack-direction/references/sources.md"
     },
     {
       "id": "gameplay-jump-forgiveness",
@@ -862,7 +900,8 @@
         "gameplay-landing-feedback",
         "gameplay-jump-input-buffer",
         "gameplay-ceiling-corner-correction"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-jump-forgiveness/references/sources.md"
     },
     {
       "id": "gameplay-traversal-transitions",
@@ -882,7 +921,8 @@
         "gameplay-jump-forgiveness",
         "gameplay-movement-feedback",
         "gameplay-landing-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-traversal-transitions/references/sources.md"
     },
     {
       "id": "gameplay-steering-assistance",
@@ -899,7 +939,8 @@
         "gameplay-locomotion-contacts",
         "gameplay-speed-camera",
         "gameplay-pointer-curvature-steering"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-steering-assistance/references/sources.md"
     },
     {
       "id": "gameplay-locomotion-contacts",
@@ -917,7 +958,8 @@
         "gameplay-steering-assistance",
         "gameplay-deformable-support",
         "gameplay-surface-adhesion"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-locomotion-contacts/references/sources.md"
     },
     {
       "id": "gameplay-world-readability",
@@ -939,7 +981,8 @@
         "gameplay-impact-visuals",
         "gameplay-occlusion-reveal",
         "gameplay-gravity-orientation-cues"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-world-readability/references/sources.md"
     },
     {
       "id": "gameplay-surface-aftermath",
@@ -955,7 +998,8 @@
       "related_skills": [
         "gameplay-impact-visuals",
         "gameplay-attack-readability"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-surface-aftermath/references/sources.md"
     },
     {
       "id": "gameplay-completion-sequences",
@@ -974,7 +1018,8 @@
         "gameplay-result-counting",
         "gameplay-reward-reveal",
         "gameplay-camera-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-completion-sequences/references/sources.md"
     },
     {
       "id": "gameplay-jump-input-buffer",
@@ -992,7 +1037,8 @@
         "gameplay-jump-forgiveness",
         "gameplay-ceiling-corner-correction",
         "gameplay-landing-feedback"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-jump-input-buffer/references/sources.md"
     },
     {
       "id": "gameplay-ceiling-corner-correction",
@@ -1009,7 +1055,8 @@
         "gameplay-jump-forgiveness",
         "gameplay-jump-input-buffer",
         "gameplay-motion-deformation"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-ceiling-corner-correction/references/sources.md"
     },
     {
       "id": "gameplay-low-health-damage-reduction",
@@ -1025,7 +1072,8 @@
       "related_skills": [
         "gameplay-health-damage-ui",
         "gameplay-post-hit-protection"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-low-health-damage-reduction/references/sources.md"
     },
     {
       "id": "gameplay-hurtbox-tolerance",
@@ -1041,7 +1089,8 @@
       "related_skills": [
         "gameplay-post-hit-protection",
         "gameplay-low-health-damage-reduction"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-hurtbox-tolerance/references/sources.md"
     },
     {
       "id": "gameplay-post-hit-protection",
@@ -1059,7 +1108,8 @@
         "gameplay-hit-recovery",
         "gameplay-low-health-damage-reduction",
         "gameplay-hurtbox-tolerance"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-post-hit-protection/references/sources.md"
     },
     {
       "id": "gameplay-pointer-curvature-steering",
@@ -1075,7 +1125,8 @@
       "related_skills": [
         "gameplay-steering-assistance",
         "gameplay-locomotion-contacts"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-pointer-curvature-steering/references/sources.md"
     },
     {
       "id": "gameplay-deformable-support",
@@ -1092,7 +1143,8 @@
         "gameplay-motion-deformation",
         "gameplay-locomotion-contacts",
         "gameplay-contact-response"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-deformable-support/references/sources.md"
     },
     {
       "id": "gameplay-occlusion-reveal",
@@ -1111,7 +1163,8 @@
         "gameplay-world-readability",
         "gameplay-camera-feedback",
         "gameplay-impact-visuals"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-occlusion-reveal/references/sources.md"
     },
     {
       "id": "gameplay-gait-step-scheduling",
@@ -1132,7 +1185,8 @@
         "gameplay-action-timing",
         "gameplay-locomotion-contacts",
         "gameplay-jump-input-buffer"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-gait-step-scheduling/references/sources.md"
     },
     {
       "id": "gameplay-surface-camera-up",
@@ -1152,7 +1206,8 @@
         "gameplay-completion-sequences",
         "gameplay-locomotion-contacts",
         "gameplay-gravity-orientation-cues"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-surface-camera-up/references/sources.md"
     },
     {
       "id": "gameplay-gravity-orientation-cues",
@@ -1172,7 +1227,8 @@
         "gameplay-worldspace-indicators",
         "gameplay-impact-visuals",
         "gameplay-gait-step-scheduling"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-gravity-orientation-cues/references/sources.md"
     },
     {
       "id": "gameplay-movement-look-decoupling",
@@ -1193,7 +1249,8 @@
         "gameplay-steering-assistance",
         "gameplay-pointer-curvature-steering",
         "gameplay-surface-camera-up"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-movement-look-decoupling/references/sources.md"
     },
     {
       "id": "gameplay-surface-adhesion",
@@ -1215,7 +1272,8 @@
         "gameplay-gait-step-scheduling",
         "gameplay-deformable-support",
         "gameplay-traversal-transitions"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-surface-adhesion/references/sources.md"
     },
     {
       "id": "gameplay-geometric-event-alignment",
@@ -1235,7 +1293,8 @@
         "gameplay-contact-response",
         "gameplay-surface-adhesion",
         "gameplay-cut-surface-rendering"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-geometric-event-alignment/references/sources.md"
     },
     {
       "id": "gameplay-state-driven-surface-motion",
@@ -1253,7 +1312,8 @@
         "gameplay-motion-deformation",
         "gameplay-secondary-motion",
         "gameplay-geometric-event-alignment"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-state-driven-surface-motion/references/sources.md"
     },
     {
       "id": "gameplay-tool-body-coordination",
@@ -1273,7 +1333,8 @@
         "gameplay-secondary-motion",
         "gameplay-motion-deformation",
         "gameplay-geometric-event-alignment"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-tool-body-coordination/references/sources.md"
     },
     {
       "id": "gameplay-prop-appendage-contacts",
@@ -1292,7 +1353,8 @@
         "gameplay-deformable-support",
         "gameplay-locomotion-contacts",
         "gameplay-secondary-motion"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-prop-appendage-contacts/references/sources.md"
     },
     {
       "id": "gameplay-cut-surface-rendering",
@@ -1310,7 +1372,8 @@
         "gameplay-geometric-event-alignment",
         "gameplay-surface-aftermath",
         "gameplay-state-driven-surface-motion"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-cut-surface-rendering/references/sources.md"
     },
     {
       "id": "gameplay-prop-toppling-dynamics",
@@ -1329,7 +1392,8 @@
         "gameplay-prop-appendage-contacts",
         "gameplay-motion-deformation",
         "gameplay-action-timing"
-      ]
+      ],
+      "evidence_path": "skills/gameplay-prop-toppling-dynamics/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1690,7 +1754,7 @@
         "mechanism-deduplication"
       ],
       "evidence_status": "workflow",
-      "boundary": "把新的游戏效果优化案例归入此库，按帖子 ID 和机制双重去重，升级已有技能而非一帖一文件；仅在任务要求维护此库时使用。",
+      "boundary": "维护游戏创建 Agent 的技能库：把已研究案例转换为可实施的机制工作流，去重来源与机制，更新证据引用和验收；仅用于维护此库。",
       "distinct_from": []
     },
     {
@@ -1872,7 +1936,7 @@
         "dialogue-feedback"
       ],
       "evidence_status": "workflow",
-      "boundary": "当逐字对话、标点节奏、情绪强调或重显后的文字进度不清时组织文本显示与动画生命周期；区分显隐、句子进度和真正继续操作，不把代码示例当已运行的对话系统。",
+      "boundary": "当逐字对话、标点节奏、情绪强调或重显后的文字进度不清时组织文本显示与动画生命周期；区分显隐、句子进度和真正继续操作，不接管剧情分支与 NPC 交互规则。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -1920,7 +1984,7 @@
         "scene-transition-masking"
       ],
       "evidence_status": "workflow",
-      "boundary": "当场景切换突显出生点或相机跳变时，组织遮蔽到就绪再恢复显示的流程；视觉过渡不是加载/出生点修复，不把未证淡出写成事实。",
+      "boundary": "当场景切换突显出生点或相机跳变时，组织遮蔽到就绪再恢复显示的流程；以真实加载/出生点/相机就绪条件控制恢复，保留失败与取消出口。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -1941,7 +2005,7 @@
         "mechanical-interaction-feedback"
       ],
       "evidence_status": "workflow",
-      "boundary": "当压板、开关与门体运动/通行状态不一致时，组织触发、机械位移和接地反馈；分段变化不等于已知错峰算法。",
+      "boundary": "当压板、开关与门体运动/通行状态不一致时，组织触发、机械位移和接地反馈；分段运动、占用和中途反向按明确状态规则处理。",
       "distinct_from": [
         "contextual-ui",
         "card-interaction",
@@ -2065,7 +2129,7 @@
         "parry-composition"
       ],
       "evidence_status": "workflow",
-      "boundary": "当弹反预备、成功和反击机会难以区分时，按真实判定窗口与结果组织反馈；不因特效示例自动新增宽容窗口、击退或反击加伤。",
+      "boundary": "当弹反预备、成功和反击机会难以区分时，按真实判定窗口与结果组织反馈；纯表现调整不新增宽容窗口、击退或反击加伤。",
       "distinct_from": [
         "melee-feedback",
         "blade-trails",
@@ -2326,7 +2390,7 @@
         "surface-conformity"
       ],
       "evidence_status": "workflow",
-      "boundary": "处理倾倒或碰撞后水洼等表面余效的贴地、阶梯高低与边界适配；区分承载面/阻挡约束、作者描述的生成管线与视觉证据，不把网格贴合当成真实流体或玩法碰撞。",
+      "boundary": "为倾倒或碰撞后的水洼等表面余效实现承载面采样、边界截断与受控网格生成，修复悬空和穿边；不负责真实流体或玩法碰撞。",
       "distinct_from": [
         "breakables-loot",
         "reward-reveal",
@@ -2683,7 +2747,7 @@
         "geometric-event-alignment"
       ],
       "evidence_status": "workflow",
-      "boundary": "当切断等离散事件早于或晚于可见物体经过操作边界时，明确几何参照、触发条件与一次性状态，再核对实际事件位置；不是动画加速、切割网格算法或已验证的点积公式。",
+      "boundary": "当切断等离散事件早于或晚于可见物体经过操作边界时，明确几何参照、触发条件与一次性状态，再核对实际事件位置；不负责动画加速或切割网格算法。",
       "distinct_from": [
         "action-timing",
         "mechanical-interactions",
@@ -2796,5 +2860,12 @@
         "action-timing"
       ]
     }
-  ]
+  ],
+  "purpose": "供游戏创建 Agent 实施、调参和验收的小型玩法与表现工作流；研究来源按需读取，不作为执行正文。",
+  "execution_contract": {
+    "entrypoint": "SKILL.md",
+    "evidence_reference": "references/sources.md",
+    "implementation_status": "工作流指导目标项目实施；没有声明已在目标引擎运行或复刻原作者源码。",
+    "parameter_policy": "来源示例不是通用默认值；项目调参需独立验证。"
+  }
 }

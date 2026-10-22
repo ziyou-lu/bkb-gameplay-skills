@@ -198,6 +198,25 @@ def validate(root):
             if mechanism in owners:
                 errors.append(f'Duplicate mechanism owner: {mechanism}')
             owners[mechanism] = sid
+        # Execution and provenance are separate payloads. Check the linkage and
+        # actual source identity, not mandatory prose headings or word counts.
+        evidence_rel = s.get('evidence_path')
+        expected_evidence = path.parent / 'references' / 'sources.md'
+        evidence_path = (root / evidence_rel).resolve() if isinstance(evidence_rel, str) else None
+        evidence_text = ''
+        if evidence_path != expected_evidence:
+            errors.append(f'Invalid evidence path: {sid}')
+        elif not evidence_path.is_file():
+            errors.append(f'Missing evidence reference: {sid}')
+        else:
+            evidence_text = evidence_path.read_text()
+        if '](' + 'references/sources.md' + ')' not in text:
+            errors.append(f'Execution entrypoint does not link evidence reference: {sid}')
+        if re.search(r'https?://(?:www\.)?instagram\.com/', text):
+            errors.append(f'Source platform link in execution entrypoint: {sid}')
+        for known_id in source_ids:
+            if known_id in text:
+                errors.append(f'Source ID in execution entrypoint: {sid} -> {known_id}')
         refs = s.get('source_ids', [])
         if not refs or len(refs) != len(set(refs)):
             errors.append(f'Empty/duplicate source references: {sid}')
@@ -210,8 +229,8 @@ def validate(root):
                     errors.append(f'Excluded source used by skill: {source_id}')
                 if sid not in p.get('skill_ids', []):
                     errors.append(f'Missing reverse source link: {source_id} -> {sid}')
-                if source_id not in text:
-                    errors.append(f'Source absent from skill prose: {source_id} in {sid}')
+                if source_id not in evidence_text:
+                    errors.append(f'Source absent from evidence reference: {source_id} in {sid}')
         for related in s.get('related_skills', []):
             if related not in skill_map or related == sid:
                 errors.append(f'Invalid related skill: {sid} -> {related}')
