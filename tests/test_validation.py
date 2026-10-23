@@ -203,6 +203,14 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 if left is not right:
                     self.assertIn(right['id'], left['distinct_from'])
 
+    def test_bag_selection_does_not_own_reward_display_or_pickup(self):
+        route = self.routes['bag-randomizer']
+        self.assertEqual(route['mechanisms'], ['shuffle-bag-selection'])
+        for other in ('reward-reveal', 'loot-pickup', 'result-counting'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('bag-randomizer', self.routes[other]['distinct_from'])
+
     def test_sheet_curl_is_not_transform_uv_or_physical_support(self):
         route = self.routes['sheet-curl']
         self.assertEqual(route['mechanisms'], ['sheet-curl-deformation'])

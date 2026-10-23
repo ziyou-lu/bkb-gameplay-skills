@@ -1316,3 +1316,25 @@ https://www.instagram.com/p/Db2yk8FPyNs/
 - 限制：并未逐帧抽样全部中间锁销阶段，完整顺序依据正文。无钥匙验证/消耗、保存状态、通行生效、时间、角度、行程或代码；音频未核听，代码未运行。编排器幂等、资格检查和通行门控属于工程迁移，不把动画当实际钥匙规则。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-mechanical-interactions](../skills/gameplay-mechanical-interactions/SKILL.md)
+
+## DeyZy-2xzJH · 洗牌七袋与随机出场的有限缺席
+
+https://www.instagram.com/p/DeyZy-2xzJH/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者以全部七种方块组成洗牌袋解释相比独立随机更有限的缺席，并称最长不会等待超过12个。直接画面可见袋子、不同形状和颜色方块、编号、大号12及 SO YOU NEVER WAIT MORE THAN 12 字幕，支持示意机制与上界说明。
+- 限制：没有作者代码、PRNG、种子、存档、重放或游戏引擎实现验证；示意图不是具体商业游戏源码证明。完整无放回消费再补袋是命名机制的工程解释；两目标间最多2(N−1)个非目标项是本库数学推导，不是来源实测。其他平台的历史/概率说法不作为事实。未核音频或玩家感知实验；加权、多份或中途改集合不沿用此保证。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "example_bag_types", "value": 7, "unit": "distinct types per bag", "provenance": "caption_or_post_text", "note": "作者七种方块示例，不是所有项目必须七种。"}, {"name": "author_max_wait_claim", "value": 12, "unit": "pieces (author wording)", "provenance": "caption_or_post_text", "note": "作者示意标签；本库另按固定单份完整袋定义为两次目标之间的非目标项数，输出索引距离上界为13。"}]
+- 归入：[gameplay-bag-randomizer](../skills/gameplay-bag-randomizer/SKILL.md)
+
+## DetMMkyx48K · 用局部复合区域替代过粗的伤害外框
+
+https://www.instagram.com/p/DetMMkyx48K/
+
+- 分类：included；证据：visible_subtitle
+- 观察：游戏设计说明动画中实见 STEP1 THE HITBOX 与 REPLAY，大矩形包围角色和障碍边界对照局部矩形；字幕称不看一个大框而看六个小框，近失误回放显示仙人掌未触及局部区域并标 SAFE。另见 FAIR GAPS、THE BIRDS、NIGHT MODE 标题，但相关机制说明未完整捕获。
+- 限制：属于作者绘制的说明案例，不是浏览器游戏引擎或源码核验。六为作者例子，未核区域具体坐标、随姿态变化、碰撞查询或结算实现；不能因此断言真实Chrome游戏当前代码。间距段不完整，画面速度数字缺单位与关系，不构成速度/间距公式；鸟和夜间段不补机制。没有代码运行、音频核听或玩家公平感验证。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "local_region_count_example", "value": 6, "unit": "regions", "provenance": "post_text", "note": "IT SEES SIX SMALL ONES画面字幕，作者说明例子，不是本库默认区域数或已核商业游戏源码。"}]
+- 归入：[gameplay-hurtbox-tolerance](../skills/gameplay-hurtbox-tolerance/SKILL.md)

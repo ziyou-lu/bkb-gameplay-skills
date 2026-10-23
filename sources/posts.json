@@ -2702,6 +2702,63 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DeyZy-2xzJH",
+      "url": "https://www.instagram.com/p/DeyZy-2xzJH/",
+      "creator": "motionbykrit",
+      "title": "洗牌七袋与随机出场的有限缺席",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者以全部七种方块组成洗牌袋解释相比独立随机更有限的缺席，并称最长不会等待超过12个。直接画面可见袋子、不同形状和颜色方块、编号、大号12及 SO YOU NEVER WAIT MORE THAN 12 字幕，支持示意机制与上界说明。",
+      "limitations": "没有作者代码、PRNG、种子、存档、重放或游戏引擎实现验证；示意图不是具体商业游戏源码证明。完整无放回消费再补袋是命名机制的工程解释；两目标间最多2(N−1)个非目标项是本库数学推导，不是来源实测。其他平台的历史/概率说法不作为事实。未核音频或玩家感知实验；加权、多份或中途改集合不沿用此保证。",
+      "parameters": [
+        {
+          "name": "example_bag_types",
+          "value": 7,
+          "unit": "distinct types per bag",
+          "provenance": "caption_or_post_text",
+          "note": "作者七种方块示例，不是所有项目必须七种。"
+        },
+        {
+          "name": "author_max_wait_claim",
+          "value": 12,
+          "unit": "pieces (author wording)",
+          "provenance": "caption_or_post_text",
+          "note": "作者示意标签；本库另按固定单份完整袋定义为两次目标之间的非目标项数，输出索引距离上界为13。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-bag-randomizer"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DetMMkyx48K",
+      "url": "https://www.instagram.com/p/DetMMkyx48K/",
+      "creator": "motionbykrit",
+      "title": "用局部复合区域替代过粗的伤害外框",
+      "status": "included",
+      "evidence_basis": "visible_subtitle",
+      "observations": "游戏设计说明动画中实见 STEP1 THE HITBOX 与 REPLAY，大矩形包围角色和障碍边界对照局部矩形；字幕称不看一个大框而看六个小框，近失误回放显示仙人掌未触及局部区域并标 SAFE。另见 FAIR GAPS、THE BIRDS、NIGHT MODE 标题，但相关机制说明未完整捕获。",
+      "limitations": "属于作者绘制的说明案例，不是浏览器游戏引擎或源码核验。六为作者例子，未核区域具体坐标、随姿态变化、碰撞查询或结算实现；不能因此断言真实Chrome游戏当前代码。间距段不完整，画面速度数字缺单位与关系，不构成速度/间距公式；鸟和夜间段不补机制。没有代码运行、音频核听或玩家公平感验证。",
+      "parameters": [
+        {
+          "name": "local_region_count_example",
+          "value": 6,
+          "unit": "regions",
+          "provenance": "post_text",
+          "note": "IT SEES SIX SMALL ONES画面字幕，作者说明例子，不是本库默认区域数或已核商业游戏源码。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-hurtbox-tolerance"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

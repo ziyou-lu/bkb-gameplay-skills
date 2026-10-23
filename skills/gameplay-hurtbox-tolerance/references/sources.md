@@ -44,3 +44,9 @@
 ## 来源证据
 
 - [Dd34wEnt_Ki · @vorgraphy](https://www.instagram.com/p/Dd34wEnt_Ki/)：TINY HITBOX 的中心轮廓、作者比例标签及 OFF/ON 扣血差异。上述几何口径、变换管理和测试流程是实施建议。完整登记见[来源登记](../../../sources/posts.json)。
+
+## 复合局部区域补充：DetMMkyx48K
+
+来源：[motionbykrit 的恐龙游戏设计说明](https://www.instagram.com/p/DetMMkyx48K/)，2026-10-23。画面字幕与图示明确一个大框对六个局部小框、障碍未接触任何局部区域的 SAFE 近失误示意；这是作者说明，不是Chrome源码验证。六为例子，不要求项目固定六区。FAIR GAPS、鸟、夜间段缺完整机制，不据速度读数编公式。
+
+执行入口的局部坐标表示、并集查询、一次事件去重与动画/移动碰撞分离是工程实现指导，不是已见代码。来源限制和参数出处见 [登记](../../../sources/posts.json)。

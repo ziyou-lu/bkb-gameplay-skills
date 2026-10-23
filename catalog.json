@@ -1087,14 +1087,15 @@
     },
     {
       "id": "gameplay-hurtbox-tolerance",
-      "title": "小于视觉轮廓的受伤区域",
+      "title": "贴合轮廓的受伤区域与擦边容差",
       "category": "shared",
       "path": "skills/gameplay-hurtbox-tolerance/SKILL.md",
       "mechanisms": [
         "hurtbox-tolerance"
       ],
       "source_ids": [
-        "Dd34wEnt_Ki"
+        "Dd34wEnt_Ki",
+        "DetMMkyx48K"
       ],
       "related_skills": [
         "gameplay-post-hit-protection",
@@ -1511,6 +1512,24 @@
         "gameplay-contact-response"
       ],
       "evidence_path": "skills/gameplay-landing-tumble-recovery/references/sources.md"
+    },
+    {
+      "id": "gameplay-bag-randomizer",
+      "title": "不放回洗牌袋与有界出场间隔",
+      "category": "shared",
+      "path": "skills/gameplay-bag-randomizer/SKILL.md",
+      "mechanisms": [
+        "shuffle-bag-selection"
+      ],
+      "source_ids": [
+        "DeyZy-2xzJH"
+      ],
+      "related_skills": [
+        "gameplay-reward-reveal",
+        "gameplay-loot-pickup",
+        "gameplay-result-counting"
+      ],
+      "evidence_path": "skills/gameplay-bag-randomizer/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2026,7 +2045,8 @@
         "health-damage-ui",
         "floating-numbers",
         "resource-ui",
-        "cooldown-ui"
+        "cooldown-ui",
+        "bag-randomizer"
       ]
     },
     {
@@ -2347,7 +2367,8 @@
         "breakables-loot",
         "loot-pickup",
         "completion-sequences",
-        "surface-aftermath"
+        "surface-aftermath",
+        "bag-randomizer"
       ]
     },
     {
@@ -2367,7 +2388,8 @@
         "reward-reveal",
         "completion-sequences",
         "surface-aftermath",
-        "landing-tumble-recovery"
+        "landing-tumble-recovery",
+        "bag-randomizer"
       ]
     },
     {
@@ -2659,14 +2681,15 @@
       "id": "hurtbox-tolerance",
       "request_examples": [
         "弹体擦过角色边缘也扣血，想缩小真正接收伤害的区域。",
-        "缩小受伤区域后贴墙和落地也变了，怎么隔离？"
+        "缩小受伤区域后贴墙和落地也变了，怎么隔离？",
+        "角色外接大框把空白也算命中，想用局部小框贴轮廓，多个框重叠不能重复扣血。"
       ],
       "primary_skill": "gameplay-hurtbox-tolerance",
       "mechanisms": [
         "hurtbox-tolerance"
       ],
       "evidence_status": "workflow",
-      "boundary": "当擦过角色边缘的攻击仍造成伤害、项目希望增加空间闪避余量时，设计小于可见形象的受伤区域并验证命中边界；不把受伤区域等同于世界移动碰撞体，也不提供时间无敌。",
+      "boundary": "当攻击或危险障碍擦过角色边缘却命中、项目希望增加空间容差时，设计较小或贴合轮廓的受伤区域并验证命中边界；不把受伤区域等同于世界移动碰撞体，也不提供时间无敌。",
       "distinct_from": [
         "post-hit-protection",
         "low-health-damage-reduction",
@@ -3115,6 +3138,24 @@
         "loot-pickup",
         "launch-pad-feedback",
         "contact-response"
+      ]
+    },
+    {
+      "id": "bag-randomizer",
+      "request_examples": [
+        "七种方块独立随机会很久不出某种，想改成每袋各一份洗牌取完再补。",
+        "预览下一件却消耗了随机序列，想确认袋间最长缺席与预览不消费的规则。"
+      ],
+      "primary_skill": "gameplay-bag-randomizer",
+      "mechanisms": [
+        "shuffle-bag-selection"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当有限种类的随机出场会产生过长缺席或玩家难以接受的连串时，用每袋各一份、洗牌后不放回取完再补的流程限制间隔；不是独立等概率抽样、加权掉落、保底计数或密码学随机。",
+      "distinct_from": [
+        "reward-reveal",
+        "loot-pickup",
+        "result-counting"
       ]
     }
   ],
