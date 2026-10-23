@@ -1389,3 +1389,13 @@ https://www.instagram.com/bezdiga.dev/reel/DUoENY8jebi/
 - 限制：视频显示数值不是本库基准；硬件、对照配置、物理耗时、同时活动数量未核，不宣称性能增益或容量承诺。具体API和状态图未知，不推断对象池、LOD、自动休眠/恢复。无源码、音频或运行验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-physics-activation](../skills/gameplay-impact-physics-activation/SKILL.md)
+
+## DdATuwMSQe0 · 围攻中的选择性攻击者轮廓
+
+https://www.instagram.com/p/DdATuwMSQe0/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Ruins of Aloryith作者说明测试红色攻击轮廓，使围攻中威胁可辨，并询问是否够快或太强。实见暗色敌群中部分对象有红色身体外缘，其他未亮；后段多个对象选择性描边。
+- 限制：预警含义有作者正文支持，但准确生命周期时序、穿墙策略与渲染实现未示。没有线宽/颜色/持续时间数值、源码、目标运行、音频核听或玩家反应测试，不主张红色普遍可访问或效果已证改善。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-attack-readability](../skills/gameplay-attack-readability/SKILL.md)

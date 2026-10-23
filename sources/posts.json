@@ -2873,6 +2873,23 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DdATuwMSQe0",
+      "url": "https://www.instagram.com/p/DdATuwMSQe0/",
+      "creator": "solarfall_studios",
+      "title": "围攻中的选择性攻击者轮廓",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Ruins of Aloryith作者说明测试红色攻击轮廓，使围攻中威胁可辨，并询问是否够快或太强。实见暗色敌群中部分对象有红色身体外缘，其他未亮；后段多个对象选择性描边。",
+      "limitations": "预警含义有作者正文支持，但准确生命周期时序、穿墙策略与渲染实现未示。没有线宽/颜色/持续时间数值、源码、目标运行、音频核听或玩家反应测试，不主张红色普遍可访问或效果已证改善。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-attack-readability"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

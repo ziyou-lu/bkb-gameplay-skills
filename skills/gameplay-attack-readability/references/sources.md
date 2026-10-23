@@ -56,3 +56,10 @@
 - DM-5jXrNy1f（已知 ID，链接未核验）：Boss 招式专属手臂姿势。
 - [DeGQTpgNFfF](https://www.instagram.com/solarfall_studios/reel/DeGQTpgNFfF/)：Boss 火焰可读性。
 - [DenLEa4xApp](https://www.instagram.com/p/DenLEa4xApp/)：弹反反馈。
+
+## 新增：人群中选择性攻击者轮廓
+
+- [DdATuwMSQe0 · solarfall_studios](https://www.instagram.com/p/DdATuwMSQe0/)，Ruins of Aloryith，2026-10-23 核看。作者说明在测试红色攻击轮廓以让围攻中的威胁可辨，并询问是否够快/过强，不能表述为已验证的玩家反应改善。
+- 画面为第三人称角色被暗色敌人包围，部分敌人身体有明亮红色外缘，其他仍暗；后段多个对象选择性亮起。字幕只捕获 actually about to 等片段，准确起止时刻未转录。没有数值线宽、颜色/持续时间、渲染 API、代码或反应时实验。
+- 正文将此补为现有攻击预警的状态选择性轮廓分支，不另立通用描边 owner。攻击实例门控、取消/池复用清理、多部件绑定、可访问冗余编码、遮挡约束和高拥挤验收为本库工程选择，不是已核作者实现。未核听音频或运行目标游戏。
+- 相关 Ddl38IMNXy0 仅有相机/攻击旋转片段与泛称反馈改善，完整规则未知，不据此补转向算法或另计主来源。

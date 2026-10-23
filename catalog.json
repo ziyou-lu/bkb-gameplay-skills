@@ -158,7 +158,8 @@
         "DWFNHDmjT-H",
         "DM-5jXrNy1f",
         "DeGQTpgNFfF",
-        "DenLEa4xApp"
+        "DenLEa4xApp",
+        "DdATuwMSQe0"
       ],
       "related_skills": [
         "gameplay-hit-recovery",
@@ -1790,7 +1791,8 @@
     {
       "id": "attack-readability",
       "request_examples": [
-        "敌人招式方向看不懂，警示范围和判定也不一致。"
+        "敌人招式方向看不懂，警示范围和判定也不一致。",
+        "敌群围攻时看不出谁即将出招，希望只给预警中的攻击者显示身体轮廓。"
       ],
       "primary_skill": "gameplay-attack-readability",
       "mechanisms": [
