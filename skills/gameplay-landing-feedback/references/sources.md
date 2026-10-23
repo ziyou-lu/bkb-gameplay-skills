@@ -45,3 +45,7 @@
 
 - [DerbjhXTzfy](https://www.instagram.com/reel/DerbjhXTzfy/)：落地反馈。
 - [DXZ35VuEx0e](https://www.instagram.com/mii_misan/reel/DXZ35VuEx0e/)：方块落地同物理对照。
+
+## 跳跃阶段补充：DezkivHxPgc
+
+来源：[motionbykrit 跳跃分层](https://www.instagram.com/p/DezkivHxPgc/)，2026-10-23 观察。形变、按住高度、峰顶停留、双跳、落地、离地宽限六段标题及局部画面已抽样，末段有 BEFORE/AFTER。宽限段明确6帧对照，但无帧率；缓冲仅正文说明，不补时窗。顶点 x0.2 的所乘量未知，不能写成重力倍率；双跳标题不支持消费/重置流程。这里补案例依据，不复制新轨迹控制 owner 或声称代码/音频已核。完整限制与示例标签见 [来源登记](../../../sources/posts.json)。

@@ -48,3 +48,11 @@
 
 - [Dd1oVudtQj8](https://www.instagram.com/p/Dd1oVudtQj8/)：早按忽略/保存与再次起跳的简化演示；0.12 秒仅展示参数。
 - [DeaF1wMgtg1](https://www.instagram.com/p/DeaF1wMgtg1/)：相关第一方文章行为补证；旧视频与缓冲源码缺口不变。
+
+## 跳跃五步补充：DepixufCmyS
+
+来源：[跳跃五步示例](https://www.instagram.com/reels/DepixufCmyS/)，发布账号 make.money.with.ai.nowwwww，原创署名未核；2026-10-23 观察。实见 COYOTE TIME、JUMP BUFFER 与 SQUASH + STRETCH 标题及局部平台跳跃/形变画面，补充既有机制的案例依据，不提供时窗、缩放量或源码。HOLD = HIGHER 与 FALL FASTER 各归独立轨迹控制入口，不能用它们的参数补本机制。完整观察、x2 下落示例的范围及未知项见 [来源登记](../../../sources/posts.json)。
+
+## 跳跃阶段补充：DezkivHxPgc
+
+来源：[motionbykrit 跳跃分层](https://www.instagram.com/p/DezkivHxPgc/)，2026-10-23 观察。形变、按住高度、峰顶停留、双跳、落地、离地宽限六段标题及局部画面已抽样，末段有 BEFORE/AFTER。宽限段明确6帧对照，但无帧率；缓冲仅正文说明，不补时窗。顶点 x0.2 的所乘量未知，不能写成重力倍率；双跳标题不支持消费/重置流程。这里补案例依据，不复制新轨迹控制 owner 或声称代码/音频已核。完整限制与示例标签见 [来源登记](../../../sources/posts.json)。

@@ -203,6 +203,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 if left is not right:
                     self.assertIn(right['id'], left['distinct_from'])
 
+    def test_jump_height_and_gravity_are_separate_from_permission(self):
+        self.assert_independent_workflows(['variable-jump-height', 'asymmetric-jump-gravity'])
+        for rid in ('variable-jump-height', 'asymmetric-jump-gravity'):
+            route = self.routes[rid]
+            for other in ('jump-forgiveness', 'jump-input-buffer', 'ceiling-corner-correction',
+                          'motion-deformation', 'launch-pad-feedback'):
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_environment_launch_lifecycle_has_its_own_owner(self):
         route = self.routes['launch-pad-feedback']
         self.assertEqual(route['primary_skill'], 'gameplay-launch-pad-feedback')

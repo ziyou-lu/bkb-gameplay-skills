@@ -38,4 +38,6 @@ description: "当环境跳板弹射缺少弹簧感、起飞与镜头脱节或接
 - [落地反馈](../gameplay-landing-feedback/SKILL.md)：真实落地后的表现；普通落地请求不需要跳板状态。
 - [踩踏连击](../gameplay-stomp-combos/SKILL.md)处理敌人命中反弹，[移动接续](../gameplay-traversal-transitions/SKILL.md)处理停留/释放选择；它们不是环境弹射流程。
 
+[按住高度](../gameplay-variable-jump-height/SKILL.md)控制已合法起跳后的顶点；[分段重力](../gameplay-asymmetric-jump-gravity/SKILL.md)控制项目声明支持的腾空阶段，也可包括走落平台。不要用它们新增或延长起跳许可。
+
 需要核对案例、参数出处或证据范围时，读取[来源参考](references/sources.md)。

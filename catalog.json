@@ -122,7 +122,9 @@
         "DcXJwumOuBK",
         "DP53MiuDIpH",
         "Ddvr0NYNkNF",
-        "DP9HDK-EVX1"
+        "DP9HDK-EVX1",
+        "DepixufCmyS",
+        "DezkivHxPgc"
       ],
       "related_skills": [
         "gameplay-secondary-motion",
@@ -689,7 +691,8 @@
       ],
       "source_ids": [
         "DerbjhXTzfy",
-        "DXZ35VuEx0e"
+        "DXZ35VuEx0e",
+        "DezkivHxPgc"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
@@ -892,7 +895,9 @@
       ],
       "source_ids": [
         "DeaF1wMgtg1",
-        "Dd1oVudtQj8"
+        "Dd1oVudtQj8",
+        "DepixufCmyS",
+        "DezkivHxPgc"
       ],
       "path": "skills/gameplay-jump-forgiveness/SKILL.md",
       "title": "离地跳跃宽限",
@@ -1033,7 +1038,9 @@
       ],
       "source_ids": [
         "DeaF1wMgtg1",
-        "Dd1oVudtQj8"
+        "Dd1oVudtQj8",
+        "DepixufCmyS",
+        "DezkivHxPgc"
       ],
       "related_skills": [
         "gameplay-jump-forgiveness",
@@ -1417,6 +1424,50 @@
         "gameplay-traversal-transitions"
       ],
       "evidence_path": "skills/gameplay-launch-pad-feedback/references/sources.md"
+    },
+    {
+      "id": "gameplay-variable-jump-height",
+      "title": "按住与松开控制跳跃高度",
+      "category": "shared",
+      "path": "skills/gameplay-variable-jump-height/SKILL.md",
+      "mechanisms": [
+        "variable-jump-height"
+      ],
+      "source_ids": [
+        "DepixufCmyS",
+        "DezkivHxPgc"
+      ],
+      "related_skills": [
+        "gameplay-asymmetric-jump-gravity",
+        "gameplay-jump-forgiveness",
+        "gameplay-jump-input-buffer",
+        "gameplay-ceiling-corner-correction",
+        "gameplay-motion-deformation",
+        "gameplay-launch-pad-feedback"
+      ],
+      "evidence_path": "skills/gameplay-variable-jump-height/references/sources.md"
+    },
+    {
+      "id": "gameplay-asymmetric-jump-gravity",
+      "title": "升降非对称重力与有界顶点缓降",
+      "category": "shared",
+      "path": "skills/gameplay-asymmetric-jump-gravity/SKILL.md",
+      "mechanisms": [
+        "asymmetric-jump-gravity"
+      ],
+      "source_ids": [
+        "DepixufCmyS",
+        "DezkivHxPgc"
+      ],
+      "related_skills": [
+        "gameplay-variable-jump-height",
+        "gameplay-jump-forgiveness",
+        "gameplay-jump-input-buffer",
+        "gameplay-ceiling-corner-correction",
+        "gameplay-motion-deformation",
+        "gameplay-launch-pad-feedback"
+      ],
+      "evidence_path": "skills/gameplay-asymmetric-jump-gravity/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1580,7 +1631,9 @@
         "state-driven-surface-motion",
         "tool-body-coordination",
         "prop-toppling-dynamics",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "variable-jump-height",
+        "asymmetric-jump-gravity"
       ]
     },
     {
@@ -2309,7 +2362,9 @@
         "locomotion-contacts",
         "jump-input-buffer",
         "ceiling-corner-correction",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "variable-jump-height",
+        "asymmetric-jump-gravity"
       ]
     },
     {
@@ -2503,7 +2558,9 @@
         "traversal-transitions",
         "pointer-curvature-steering",
         "gait-step-scheduling",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "variable-jump-height",
+        "asymmetric-jump-gravity"
       ]
     },
     {
@@ -2523,7 +2580,9 @@
         "contact-response",
         "traversal-transitions",
         "hurtbox-tolerance",
-        "surface-adhesion"
+        "surface-adhesion",
+        "variable-jump-height",
+        "asymmetric-jump-gravity"
       ]
     },
     {
@@ -2914,7 +2973,51 @@
         "jump-input-buffer",
         "dash-feedback",
         "mechanical-interactions",
-        "deformable-support"
+        "deformable-support",
+        "variable-jump-height",
+        "asymmetric-jump-gravity"
+      ]
+    },
+    {
+      "id": "variable-jump-height",
+      "request_examples": [
+        "轻点和长按跳跃高度一样，想控制顶点但不要增加空中跳次数。",
+        "落地前缓冲了跳跃，松键后还跳到最高，想明确按住状态如何参与实际起跳。"
+      ],
+      "primary_skill": "gameplay-variable-jump-height",
+      "mechanisms": [
+        "variable-jump-height"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当轻点和长按跳跃需要不同顶点高度时，实现起跳后的松开截速或有限保持助力；只塑造一次合法跳跃的高度，不增加起跳许可、输入缓冲或下落重力规则。",
+      "distinct_from": [
+        "asymmetric-jump-gravity",
+        "jump-forgiveness",
+        "jump-input-buffer",
+        "ceiling-corner-correction",
+        "motion-deformation",
+        "launch-pad-feedback"
+      ]
+    },
+    {
+      "id": "asymmetric-jump-gravity",
+      "request_examples": [
+        "跳跃上升正常但下落漂浮，想只加快下降，不动起跳许可。",
+        "加快下落后低帧率穿地或顶点抖动，要分开检查重力相位和碰撞。"
+      ],
+      "primary_skill": "gameplay-asymmetric-jump-gravity",
+      "mechanisms": [
+        "asymmetric-jump-gravity"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当角色需要上升与下降不同重力、下落更快或有界的顶点缓降时，按运动相位配置加速度并处理相位边界；不按保持输入改变高度，不全程加重力，也不新增起跳许可。",
+      "distinct_from": [
+        "variable-jump-height",
+        "jump-forgiveness",
+        "jump-input-buffer",
+        "ceiling-corner-correction",
+        "motion-deformation",
+        "launch-pad-feedback"
       ]
     }
   ],

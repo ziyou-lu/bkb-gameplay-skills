@@ -39,4 +39,6 @@ grounded 定义、离地与跳跃事件、按下/消费、计时时钟、空中�
 - [跳跃输入缓冲](../gameplay-jump-input-buffer/SKILL.md)
 - [顶角纠偏](../gameplay-ceiling-corner-correction/SKILL.md)
 
+[按住高度](../gameplay-variable-jump-height/SKILL.md)控制已合法起跳后的顶点；[分段重力](../gameplay-asymmetric-jump-gravity/SKILL.md)控制项目声明支持的腾空阶段，也可包括走落平台。不要用它们新增或延长起跳许可。
+
 需要核查出处、示例参数或证据限制时，读取[来源参考](references/sources.md)。

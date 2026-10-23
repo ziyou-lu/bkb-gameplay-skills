@@ -1245,3 +1245,43 @@ https://www.instagram.com/porsukgames/reel/Dew0wkLDTqs/
 - 限制：部分画面抽样未建立完整阶段时序或持续时间；音频未核听，声音仅为正文说明。没有代码、弹射速度/高度、压缩量、时长/缓动、相机阻尼或接触/复位实现证据。双翻转不证明额外跳跃次数；悬浮造型不证明物理实现。激活去重、资格/中断处理和状态恢复属于本库工程迁移要求，不是作者代码事实。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-launch-pad-feedback](../skills/gameplay-launch-pad-feedback/SKILL.md)
+
+## DepixufCmyS · 跳跃许可、按住高度、下落重力与形变五步
+
+https://www.instagram.com/reels/DepixufCmyS/
+
+- 分类：included；证据：visible_subtitle
+- 观察：顺序实见 COYOTE TIME、JUMP BUFFER、HOLD = HIGHER、FALL FASTER、SQUASH + STRETCH 五段标题。橙色角色跨白色平台，离地宽限段有 WITH COYOTE 与 SPACE/OK 提示；按住高度段显示 SPACE 与较高目的平台；下落段有橙/灰虚线轨迹及 x2 GRAVITY、ON THE WAY/DOWN 文字；末段显示角色形变，抽样可见腾空细长外形与落地白色尘。
+- 限制：显示账号为发布者，未核原创署名。未见离地宽限/缓冲时窗、按住时长、跳高/速度、松键截速或持续施力实现；下落二倍是画面示例，不含基础重力、相位切换容差、终端速度或时间单位，不应施加到整个上升段。局部画面不提供完整时序测量；没有代码、音频核听或物理性能验证。项目选择的松键截速/按住支撑、阶段重力及验收为工程迁移，不能写成作者源码。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "falling_gravity_multiplier", "value": 2, "unit": "dimensionless relative multiplier", "provenance": "post_text", "note": "视频画面 x2 GRAVITY 文字示例，结合 ON THE WAY / DOWN；不是代码、实测结果或通用默认值，基础重力未知。"}]
+- 归入：[gameplay-jump-forgiveness](../skills/gameplay-jump-forgiveness/SKILL.md), [gameplay-jump-input-buffer](../skills/gameplay-jump-input-buffer/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-variable-jump-height](../skills/gameplay-variable-jump-height/SKILL.md), [gameplay-asymmetric-jump-gravity](../skills/gameplay-asymmetric-jump-gravity/SKILL.md)
+
+## DeoPTdvh2H5 · 高速公路飞行跑车实机展示（缺少机制教程）
+
+https://www.instagram.com/reels/DeoPTdvh2H5/
+
+- 分类：excluded；证据：caption_and_partial_visual
+- 观察：第三人称白色跑车在霓虹高速公路与卡车间行驶；可见侧向喷口、升起与加速控件、尾部发光/烟雾，以及距离、速度和高度 HUD。正文只显示游戏域名，未访问该网站。
+- 限制：只有游戏展示，未见作者制作步骤、机制解释、前后对照、参数说明或代码。HUD 数值是游戏读数，不是效果调参；不能从控件或外观推断推力、飞行物理、碰撞、相机算法。未核音频。按作者方案提炼技能的入库标准排除，保留已审记录。
+- 音频核听：False；代码运行：False
+
+## DexAQsQh1WS · Highway Roadster 翻转与得分展示（缺少实现方案）
+
+https://www.instagram.com/reels/DexAQsQh1WS/
+
+- 分类：excluded；证据：caption_and_partial_visual
+- 观察：正文称制作了跑车游戏；视频拍摄笔记本上的第三人称白车高速公路玩法，可见空中翻转/滚转、烟迹、分数和动作奖励提示，包括 Front flip、Barrel roll 和 PERFECT LANDING。
+- 限制：未见作者构建顺序、可调设置、前后对照或代码，不能从翻转/得分显示反推检测、奖励、碰撞或物理实现。屏幕奖励数字是玩法读数，不是本库实现常数。音频未核听；作为展示保留已审排除记录，不制造教程技能。
+- 音频核听：False；代码运行：False
+
+## DezkivHxPgc · 跳跃高度、顶点停留与落地/宽限分层
+
+https://www.instagram.com/p/DezkivHxPgc/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：正文列形变、轻点/按住高度、顶点停留、双跳、落地重量与离地宽限，并提及额外输入缓冲。画面依次抽样见 TIP 1 SQUASH AND STRETCH、TIP 2 HOLD TO JUMP HIGHER（按住进度条和虚影轨迹）、TIP 3 HANG TIME（峰顶放慢字幕及向下箭头 x0.2）、TIP 4 DOUBLE JUMP、TIP 5 LAND（落地压缩字幕片段）、TIP 6 COYOTE TIME。宽限段对照 NO WINDOW / TOO LATE 与 6 FRAMES / JUMP，启用例角色在空中；末段可见 BEFORE/AFTER 分屏。
+- 限制：各阶段是局部视觉抽样，不是完整轨迹或持续时间测量。x0.2 关联的量不明，不能指定为重力、速度或时间倍率；6帧没有帧率，不能换算固定毫秒或作通用窗口。输入缓冲仅正文，双跳缺消费/重置代码，落地字幕后段未完整捕获。无按住实现、峰顶公式、重力基础值、代码运行、音频核听或独立性能验证。项目相位选择/顶点加速度选项为工程指导，不是作者已核实现。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "coyote_window_example", "value": 6, "unit": "frames", "provenance": "post_text", "note": "画面文字6 FRAMES，与无窗口对照；帧率未知，不转换秒数或默认值。"}, {"name": "apex_arrow_annotation", "value": 0.2, "unit": "unspecified multiplier annotation", "provenance": "post_text", "note": "向下箭头的x0.2标签，所乘量未确定，不命名为重力/速度/时间倍率。"}]
+- 归入：[gameplay-variable-jump-height](../skills/gameplay-variable-jump-height/SKILL.md), [gameplay-asymmetric-jump-gravity](../skills/gameplay-asymmetric-jump-gravity/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-landing-feedback](../skills/gameplay-landing-feedback/SKILL.md), [gameplay-jump-forgiveness](../skills/gameplay-jump-forgiveness/SKILL.md), [gameplay-jump-input-buffer](../skills/gameplay-jump-input-buffer/SKILL.md)
