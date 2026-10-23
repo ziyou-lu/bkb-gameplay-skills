@@ -3286,6 +3286,57 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DcA9WMui4NW",
+      "url": "https://www.instagram.com/100stonesinteractive/reel/DcA9WMui4NW/",
+      "creator": "100stonesinteractive",
+      "title": "暂停地图的截图背景合成",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者项目加入DLSS后相机堆叠失效，改在开地图时截图，贴到地图后方平面；作者回复确认所有菜单暂停且背景平面随相机比例缩放。实见独立地图编辑视图与游戏背景上的地图。",
+      "limitations": "平面几何位置未直接采样，机制来自正文；截图API、UI/后处理时序、格式/HDR、回收及缩放恢复未知。超宽屏可用为作者说法，非本库设备测试；不推导通用DLSS限制。 无代码执行、音频或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-paused-map-backdrop"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Dda7r1YC8D9",
+      "url": "https://www.instagram.com/100stonesinteractive/reel/Dda7r1YC8D9/",
+      "creator": "100stonesinteractive",
+      "title": "固定观景区域的远景代理",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者把塔楼可见区域复制入塔楼场景，移除看不见内容并以低细节版本替换许多远物。实见塔楼全景和1–6/Tower区域俯视示意。",
+      "limitations": "六区域为案例计数，不是默认。多视点范围、动态同步、碰撞/阴影及切换规则未知；没有面数/内存/绘制调用或性能测量，逼真为作者评价。 无代码执行、音频或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-viewpoint-vista-proxies"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DbP7cp_CLvm",
+      "url": "https://www.instagram.com/100stonesinteractive/reel/DbP7cp_CLvm/",
+      "creator": "100stonesinteractive",
+      "title": "能力状态驱动的音频混音切换",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者称Phase Visualizer配合Unity Mixer Snapshots在正常环境声与用低通等混音效果过滤的环境声之间混合，署名Zander/@supertonicaudio建议；实见紫色遮蔽世界和谜题符号。",
+      "limitations": "未核听声音，未见混音编辑参数。无Hz/dB、滤波阶数、时长、总线拓扑、保留声音列表或优先级/打断规则；多环境适用为作者说法，不作测试结果。 无代码执行、音频或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-ability-audio-mix"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

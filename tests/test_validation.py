@@ -229,6 +229,17 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_backdrop_vista_and_ability_mix_have_distinct_owners(self):
+        for rid, adjacent in [('paused-map-backdrop', ('room-map-navigation', 'contextual-ui', 'fixed-camera-art-projection')),
+                              ('viewpoint-vista-proxies', ('fixed-camera-art-projection', 'impact-physics-activation')),
+                              ('ability-audio-mix', ('physics-stage-audio', 'foliage-rustle-response'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_pitch_limits_and_room_map_are_not_camera_impulses(self):
         for rid, adjacent in [('gamepad-pitch-limits', ('camera-feedback', 'speed-camera', 'surface-camera-up')),
                               ('room-map-navigation', ('camera-feedback', 'completion-sequences', 'contextual-ui'))]:

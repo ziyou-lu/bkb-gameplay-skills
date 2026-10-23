@@ -1850,6 +1850,58 @@
         "gameplay-contextual-ui"
       ],
       "evidence_path": "skills/gameplay-room-map-navigation/references/sources.md"
+    },
+    {
+      "id": "gameplay-paused-map-backdrop",
+      "title": "暂停地图的截图背景合成",
+      "category": "shared",
+      "path": "skills/gameplay-paused-map-backdrop/SKILL.md",
+      "mechanisms": [
+        "paused-map-backdrop"
+      ],
+      "source_ids": [
+        "DcA9WMui4NW"
+      ],
+      "related_skills": [
+        "gameplay-room-map-navigation",
+        "gameplay-contextual-ui",
+        "gameplay-fixed-camera-art-projection"
+      ],
+      "evidence_path": "skills/gameplay-paused-map-backdrop/references/sources.md"
+    },
+    {
+      "id": "gameplay-viewpoint-vista-proxies",
+      "title": "固定观景区域的远景代理",
+      "category": "shared",
+      "path": "skills/gameplay-viewpoint-vista-proxies/SKILL.md",
+      "mechanisms": [
+        "viewpoint-vista-proxies"
+      ],
+      "source_ids": [
+        "Dda7r1YC8D9"
+      ],
+      "related_skills": [
+        "gameplay-fixed-camera-art-projection",
+        "gameplay-impact-physics-activation"
+      ],
+      "evidence_path": "skills/gameplay-viewpoint-vista-proxies/references/sources.md"
+    },
+    {
+      "id": "gameplay-ability-audio-mix",
+      "title": "能力状态驱动的音频混音切换",
+      "category": "shared",
+      "path": "skills/gameplay-ability-audio-mix/SKILL.md",
+      "mechanisms": [
+        "ability-audio-mix"
+      ],
+      "source_ids": [
+        "DbP7cp_CLvm"
+      ],
+      "related_skills": [
+        "gameplay-physics-stage-audio",
+        "gameplay-foliage-rustle-response"
+      ],
+      "evidence_path": "skills/gameplay-ability-audio-mix/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2215,7 +2267,8 @@
         "scene-transitions",
         "mechanical-interactions",
         "connection-transitions",
-        "room-map-navigation"
+        "room-map-navigation",
+        "paused-map-backdrop"
       ]
     },
     {
@@ -3571,7 +3624,8 @@
       "distinct_from": [
         "prop-toppling-dynamics",
         "breakables-loot",
-        "foliage-rustle-response"
+        "foliage-rustle-response",
+        "ability-audio-mix"
       ]
     },
     {
@@ -3607,7 +3661,8 @@
       "boundary": "显式允许静态待命的对象受击后进入动态模拟，保留碰撞、逻辑状态和首击；不是重心施力调参、自动休眠或直接进入破坏终态。",
       "distinct_from": [
         "prop-toppling-dynamics",
-        "breakables-loot"
+        "breakables-loot",
+        "viewpoint-vista-proxies"
       ]
     },
     {
@@ -3642,7 +3697,9 @@
       "distinct_from": [
         "state-driven-surface-motion",
         "aim-pose",
-        "raycaster-depth-correction"
+        "raycaster-depth-correction",
+        "paused-map-backdrop",
+        "viewpoint-vista-proxies"
       ]
     },
     {
@@ -3762,7 +3819,8 @@
       "boundary": "消费已有植被接触与移动速度/力度/方向调节响应，非倒伏阶段音层、视觉装饰摆动或已验证立体声算法。",
       "distinct_from": [
         "physics-stage-audio",
-        "secondary-motion"
+        "secondary-motion",
+        "ability-audio-mix"
       ]
     },
     {
@@ -3832,7 +3890,57 @@
       "distinct_from": [
         "camera-feedback",
         "completion-sequences",
-        "contextual-ui"
+        "contextual-ui",
+        "paused-map-backdrop"
+      ]
+    },
+    {
+      "id": "paused-map-backdrop",
+      "request_examples": [
+        "暂停三维地图的叠加相机与项目渲染方案冲突，想用进入时截图作背景而地图继续可操作。"
+      ],
+      "primary_skill": "gameplay-paused-map-backdrop",
+      "mechanisms": [
+        "paused-map-backdrop"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅冻结游戏世界时捕获画面并铺到三维地图后方平面，处理捕获/合成生命周期；不是房间导航、实时背景渲染或插画投影到模型。",
+      "distinct_from": [
+        "room-map-navigation",
+        "contextual-ui",
+        "fixed-camera-art-projection"
+      ]
+    },
+    {
+      "id": "viewpoint-vista-proxies",
+      "request_examples": [
+        "房间分区加载的游戏里，塔楼看不到未加载区域，想用可见部分的轻量复制体形成完整远景。"
+      ],
+      "primary_skill": "gameplay-viewpoint-vista-proxies",
+      "mechanisms": [
+        "viewpoint-vista-proxies"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在限定观景区域使用剥离无关内容的可见场景副本和低细节远物，保持远景地标；不是加载真实可玩区域、全世界流送或固定相机插画映射。",
+      "distinct_from": [
+        "fixed-camera-art-projection",
+        "impact-physics-activation"
+      ]
+    },
+    {
+      "id": "ability-audio-mix",
+      "request_examples": [
+        "感知能力隐藏环境并突出线索，想让环境声音同步变得隔离，退出后回到正常混音。"
+      ],
+      "primary_skill": "gameplay-ability-audio-mix",
+      "mechanisms": [
+        "ability-audio-mix"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "由既有能力权威状态驱动正常/过滤环境混音快照的过渡，保留项目必需声音；不是物理阶段一次性声音、植被接触或全局主音量静音。",
+      "distinct_from": [
+        "physics-stage-audio",
+        "foliage-rustle-response"
       ]
     }
   ],

@@ -1589,3 +1589,33 @@ https://www.instagram.com/100stonesinteractive/reel/Dd_BhoziQ01/
 - 限制：选房按键/邻接搜索、焦点计算、插值曲线/时间、缩放边界、墙体剖切、打断及朝向保留未知。剪辑不是交互延迟或可用性测量。 无代码执行、音频或性能验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-room-map-navigation](../skills/gameplay-room-map-navigation/SKILL.md)
+
+## DcA9WMui4NW · 暂停地图的截图背景合成
+
+https://www.instagram.com/100stonesinteractive/reel/DcA9WMui4NW/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者项目加入DLSS后相机堆叠失效，改在开地图时截图，贴到地图后方平面；作者回复确认所有菜单暂停且背景平面随相机比例缩放。实见独立地图编辑视图与游戏背景上的地图。
+- 限制：平面几何位置未直接采样，机制来自正文；截图API、UI/后处理时序、格式/HDR、回收及缩放恢复未知。超宽屏可用为作者说法，非本库设备测试；不推导通用DLSS限制。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-paused-map-backdrop](../skills/gameplay-paused-map-backdrop/SKILL.md)
+
+## Dda7r1YC8D9 · 固定观景区域的远景代理
+
+https://www.instagram.com/100stonesinteractive/reel/Dda7r1YC8D9/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者把塔楼可见区域复制入塔楼场景，移除看不见内容并以低细节版本替换许多远物。实见塔楼全景和1–6/Tower区域俯视示意。
+- 限制：六区域为案例计数，不是默认。多视点范围、动态同步、碰撞/阴影及切换规则未知；没有面数/内存/绘制调用或性能测量，逼真为作者评价。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-viewpoint-vista-proxies](../skills/gameplay-viewpoint-vista-proxies/SKILL.md)
+
+## DbP7cp_CLvm · 能力状态驱动的音频混音切换
+
+https://www.instagram.com/100stonesinteractive/reel/DbP7cp_CLvm/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者称Phase Visualizer配合Unity Mixer Snapshots在正常环境声与用低通等混音效果过滤的环境声之间混合，署名Zander/@supertonicaudio建议；实见紫色遮蔽世界和谜题符号。
+- 限制：未核听声音，未见混音编辑参数。无Hz/dB、滤波阶数、时长、总线拓扑、保留声音列表或优先级/打断规则；多环境适用为作者说法，不作测试结果。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-ability-audio-mix](../skills/gameplay-ability-audio-mix/SKILL.md)
