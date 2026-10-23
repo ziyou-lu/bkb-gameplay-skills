@@ -3003,6 +3003,23 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DdEYDqIRmaV",
+      "url": "https://www.instagram.com/p/DdEYDqIRmaV/",
+      "creator": "beakman.studios",
+      "title": "手绘眼睛序列帧用于环境粒子",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Barrow & Blade作者为缺乏生气的生物群落补背景运动；实见手绘眼睛逐帧、Unreal贴图编辑器中多姿态网格、更新SubUV动画格数字幕与材质图，以及林地/树洞中在不同间隔生成眼睛的粒子效果。",
+      "limitations": "未读清格数、尺寸、帧序、FPS、材质节点与连接；导入设置、发射器数、间隔范围/随机分布、混合/发光、朝向/玩家接近触发/裁剪未知。不推断凝视跟踪或AI响应。无源码执行、音频或运行/性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-ambient-flipbook-particles"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -1671,6 +1671,23 @@
         "gameplay-surface-aftermath"
       ],
       "evidence_path": "skills/gameplay-skeletal-planar-shadows/references/sources.md"
+    },
+    {
+      "id": "gameplay-ambient-flipbook-particles",
+      "title": "稀疏环境序列帧粒子与背景微动",
+      "category": "shared",
+      "path": "skills/gameplay-ambient-flipbook-particles/SKILL.md",
+      "mechanisms": [
+        "ambient-flipbook-particles"
+      ],
+      "source_ids": [
+        "DdEYDqIRmaV"
+      ],
+      "related_skills": [
+        "gameplay-impact-visuals",
+        "gameplay-world-readability"
+      ],
+      "evidence_path": "skills/gameplay-ambient-flipbook-particles/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1786,7 +1803,8 @@
         "speed-camera",
         "occlusion-reveal",
         "gravity-orientation-cues",
-        "rain-surface-feedback"
+        "rain-surface-feedback",
+        "ambient-flipbook-particles"
       ]
     },
     {
@@ -2686,7 +2704,8 @@
         "mechanical-interactions",
         "connection-transitions",
         "occlusion-reveal",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "ambient-flipbook-particles"
       ]
     },
     {
@@ -3455,6 +3474,23 @@
       "distinct_from": [
         "worldspace-indicators",
         "surface-aftermath"
+      ]
+    },
+    {
+      "id": "ambient-flipbook-particles",
+      "request_examples": [
+        "树林背景太静，想把手绘眼睛逐帧贴图作为间隔出现的短命粒子。",
+        "背景眼睛动画抽到邻格或所有实例同时闪，想检查SubUV格数和出现节奏。"
+      ],
+      "primary_skill": "gameplay-ambient-flipbook-particles",
+      "mechanisms": [
+        "ambient-flipbook-particles"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "用手绘贴图集与SubUV播放构建稀疏、错峰出现的环境粒子；不是角色持久动画状态机、攻击爆发、目标发现提示或凝视AI。",
+      "distinct_from": [
+        "impact-visuals",
+        "world-readability"
       ]
     }
   ],

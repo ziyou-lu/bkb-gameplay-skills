@@ -1443,3 +1443,13 @@ https://www.instagram.com/p/DdRRdDSqiiJ/
 - 限制：配方来自完整正文，未核节点/API/版本/源码或性能。没有角度/长度/面数默认，任意坡面台阶/多层接收、遮挡、真实光照响应、LOD/包围盒/深度处理未知。leader避免重复动画为作者解释，不宣称实际CPU/GPU收益。无音频/引擎执行验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-skeletal-planar-shadows](../skills/gameplay-skeletal-planar-shadows/SKILL.md)
+
+## DdEYDqIRmaV · 手绘眼睛序列帧用于环境粒子
+
+https://www.instagram.com/p/DdEYDqIRmaV/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Barrow & Blade作者为缺乏生气的生物群落补背景运动；实见手绘眼睛逐帧、Unreal贴图编辑器中多姿态网格、更新SubUV动画格数字幕与材质图，以及林地/树洞中在不同间隔生成眼睛的粒子效果。
+- 限制：未读清格数、尺寸、帧序、FPS、材质节点与连接；导入设置、发射器数、间隔范围/随机分布、混合/发光、朝向/玩家接近触发/裁剪未知。不推断凝视跟踪或AI响应。无源码执行、音频或运行/性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-ambient-flipbook-particles](../skills/gameplay-ambient-flipbook-particles/SKILL.md)
