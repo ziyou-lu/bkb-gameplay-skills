@@ -1432,7 +1432,8 @@ https://www.instagram.com/p/DezJsUWuQqo/
 - 音频核听：False；代码运行：False
 - 补齐：作者明确固定相机角度依赖；逐面投影是他人做法，不作为本案例已实现。
 - 补齐：作者说经试错开发，无已知准确教程，未来可能做长教程；不补写缺失实现。
-- 归入：[gameplay-fixed-camera-art-projection](../skills/gameplay-fixed-camera-art-projection/SKILL.md), [gameplay-skeletal-planar-shadows](../skills/gameplay-skeletal-planar-shadows/SKILL.md)
+- 补齐：新核独立来源明确生成时间写RT和当前时间比较，并展示独立地格；允许建立时间戳地效工作流。概览原本缺失的编码/到期说明不被倒填成该概览已观察，具体依据在新来源。
+- 归入：[gameplay-fixed-camera-art-projection](../skills/gameplay-fixed-camera-art-projection/SKILL.md), [gameplay-skeletal-planar-shadows](../skills/gameplay-skeletal-planar-shadows/SKILL.md), [gameplay-timestamped-ground-effects](../skills/gameplay-timestamped-ground-effects/SKILL.md)
 
 ## DdRRdDSqiiJ · 主骨骼驱动低面数副网格的平面阴影
 
@@ -1463,3 +1464,25 @@ https://www.instagram.com/p/DewcAJWjWKY/
 - 限制：非原Terraria源码或独立游戏运行验证；文中Redigit/Reddit历史归因未独立查证，不当官方事实。未示追踪算法、邻居枚举、碰撞API、网格/UV、速度、最大落差、更新或地形编辑失效机制。halfblock是格几何不是世界单位。所有样本为编辑播放，无本库代码、音频或性能测试。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-decorative-waterfall](../skills/gameplay-decorative-waterfall/SKILL.md)
+
+## DejfFjFlA18 · 射线墙柱由斜距改前向深度的解释性示例
+
+https://www.instagram.com/p/DejfFjFlA18/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者历史解释片描述平面方格恒高墙，每画面列发射一条线并以距离倒数决定高度；全斜距导致正面墙弯曲，改用观察方向分量使墙缘直。实见射线扇、弯墙与直虚线对照、平行前向深度标记及直墙结果。正文提近墙最小距离保护，未给数值。
+- 限制：作者简化迷宫/视场重建和own run标签不是本库执行或官方Wolfenstein素材证明。原源码WL_DRAW.C/CalcHeight归因未独立核；nx=gxt-gyt片段缺上下文不作完整算法。作者评论披露AI主要用于动画及动画工作室制作，解释性画面不证明原实现。64x64历史细节不是配置要求；无FOV/epsilon单位、性能、音频或目标运行验证。
+- 音频核听：False；代码运行：False
+- 补齐：作者披露AI主要用于动画侧，配合动画工作室制作；不以解释画面作为原游戏运行证明。
+- 归入：[gameplay-raycaster-depth-correction](../skills/gameplay-raycaster-depth-correction/SKILL.md)
+
+## DZVLRcvq7ay · 时间戳RenderTarget与独立地面玩法格
+
+https://www.instagram.com/p/DZVLRcvq7ay/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明地面效果分视觉和玩法：向RenderTarget画位置，由地板decal显示；RGB记录生成时刻，运行20秒生成示例写R20/G0/B0，材质与当前时间比较有效性。实见红路径纹理/对应白贴花、旧段消失的青色拖尾、圆形炸弹区域，独立地格及Surface.FrozenGround标签和冰色敌人。
+- 限制：未示RT尺寸/格式、坐标映射、时间精度、空白哨兵、覆盖重绘、寿命/淡出、清理/长会话/多层语义或节点。0到0.5秒解释序列不证明0.5秒寿命或0.1秒采样。R20是时间数据不是应夹到0至1的普通色值；格子进入/退出/到期与伤害代码未披露。其他元素为未来工作。无本库引擎、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "creation_timestamp_example", "value": 20, "unit": "s", "provenance": "caption_or_post_text", "note": "作者例：20秒时产生写R20/G0/B0，是时间数据而非归一化颜色；RT格式/编码未示。"}]
+- 归入：[gameplay-timestamped-ground-effects](../skills/gameplay-timestamped-ground-effects/SKILL.md)

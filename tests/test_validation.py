@@ -229,6 +229,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_ray_depth_and_timestamp_masks_keep_separate_boundaries(self):
+        for rid, adjacent in [('raycaster-depth-correction', ('fixed-camera-art-projection', 'camera-feedback')),
+                              ('timestamped-ground-effects', ('surface-aftermath', 'state-driven-surface-motion'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_decorative_waterfall_does_not_own_liquid_or_surface_mesh(self):
         route = self.routes['decorative-waterfall']
         self.assertEqual(route['evidence_status'], 'workflow')

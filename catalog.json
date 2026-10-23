@@ -1705,6 +1705,41 @@
         "gameplay-state-driven-surface-motion"
       ],
       "evidence_path": "skills/gameplay-decorative-waterfall/references/sources.md"
+    },
+    {
+      "id": "gameplay-raycaster-depth-correction",
+      "title": "自定义光线投射器的墙面深度纠偏",
+      "category": "shared",
+      "path": "skills/gameplay-raycaster-depth-correction/SKILL.md",
+      "mechanisms": [
+        "raycaster-depth-correction"
+      ],
+      "source_ids": [
+        "DejfFjFlA18"
+      ],
+      "related_skills": [
+        "gameplay-fixed-camera-art-projection",
+        "gameplay-camera-feedback"
+      ],
+      "evidence_path": "skills/gameplay-raycaster-depth-correction/references/sources.md"
+    },
+    {
+      "id": "gameplay-timestamped-ground-effects",
+      "title": "创建时间纹理驱动的限时地面效果",
+      "category": "shared",
+      "path": "skills/gameplay-timestamped-ground-effects/SKILL.md",
+      "mechanisms": [
+        "timestamped-ground-effects"
+      ],
+      "source_ids": [
+        "DZVLRcvq7ay",
+        "DezJsUWuQqo"
+      ],
+      "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-state-driven-surface-motion"
+      ],
+      "evidence_path": "skills/gameplay-timestamped-ground-effects/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1843,7 +1878,8 @@
         "speed-camera",
         "pointer-curvature-steering",
         "occlusion-reveal",
-        "surface-camera-up"
+        "surface-camera-up",
+        "raycaster-depth-correction"
       ]
     },
     {
@@ -2746,7 +2782,8 @@
         "sheet-curl",
         "rain-surface-feedback",
         "skeletal-planar-shadows",
-        "decorative-waterfall"
+        "decorative-waterfall",
+        "timestamped-ground-effects"
       ]
     },
     {
@@ -3139,7 +3176,8 @@
         "cut-surface-rendering",
         "sheet-curl",
         "fixed-camera-art-projection",
-        "decorative-waterfall"
+        "decorative-waterfall",
+        "timestamped-ground-effects"
       ]
     },
     {
@@ -3475,7 +3513,8 @@
       "boundary": "固定参考相机的插画投影到简单几何，不是全向纹理展开、移动UV动画或角色方向姿态。",
       "distinct_from": [
         "state-driven-surface-motion",
-        "aim-pose"
+        "aim-pose",
+        "raycaster-depth-correction"
       ]
     },
     {
@@ -3524,6 +3563,40 @@
       ],
       "evidence_status": "workflow",
       "boundary": "在明确只需装饰流水的场景中，由合格湖水/半格边缘触发独立可视水流，不消耗或生成模拟液体；不是守恒流体、泳水/伤害系统或地面水洼网格。",
+      "distinct_from": [
+        "surface-aftermath",
+        "state-driven-surface-motion"
+      ]
+    },
+    {
+      "id": "raycaster-depth-correction",
+      "request_examples": [
+        "自制逐列射线迷宫的正面墙变弯了，想把斜射线长度改成视线前向深度。",
+        "靠近墙面时柱高溢出，想检查距离语义和近墙分母而不重复鱼眼校正。"
+      ],
+      "primary_skill": "gameplay-raycaster-depth-correction",
+      "mechanisms": [
+        "raycaster-depth-correction"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅修正已有恒高墙体逐列raycaster的投影深度，不构建完整引擎、重写网格遍历或添加相机后处理。",
+      "distinct_from": [
+        "fixed-camera-art-projection",
+        "camera-feedback"
+      ]
+    },
+    {
+      "id": "timestamped-ground-effects",
+      "request_examples": [
+        "冰地拖尾每一段产生时间不同，想用时间戳纹理让旧段过期而新段保留。",
+        "地面贴花已经消失但格子仍触发减益，想同步可视时间掩码与独立玩法网格。"
+      ],
+      "primary_skill": "gameplay-timestamped-ground-effects",
+      "mechanisms": [
+        "timestamped-ground-effects"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "位置/形状写入数据纹理并保存创建时间，由贴花评估年龄；玩法网格独立权威，不是地形贴合网格生成、实体流体或普通UV滚动。",
       "distinct_from": [
         "surface-aftermath",
         "state-driven-surface-motion"
