@@ -1688,6 +1688,23 @@
         "gameplay-world-readability"
       ],
       "evidence_path": "skills/gameplay-ambient-flipbook-particles/references/sources.md"
+    },
+    {
+      "id": "gameplay-decorative-waterfall",
+      "title": "不转移液体体积的装饰瀑布",
+      "category": "shared",
+      "path": "skills/gameplay-decorative-waterfall/SKILL.md",
+      "mechanisms": [
+        "decorative-waterfall"
+      ],
+      "source_ids": [
+        "DewcAJWjWKY"
+      ],
+      "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-state-driven-surface-motion"
+      ],
+      "evidence_path": "skills/gameplay-decorative-waterfall/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2728,7 +2745,8 @@
         "cut-surface-rendering",
         "sheet-curl",
         "rain-surface-feedback",
-        "skeletal-planar-shadows"
+        "skeletal-planar-shadows",
+        "decorative-waterfall"
       ]
     },
     {
@@ -3120,7 +3138,8 @@
         "geometric-event-alignment",
         "cut-surface-rendering",
         "sheet-curl",
-        "fixed-camera-art-projection"
+        "fixed-camera-art-projection",
+        "decorative-waterfall"
       ]
     },
     {
@@ -3491,6 +3510,23 @@
       "distinct_from": [
         "impact-visuals",
         "world-readability"
+      ]
+    },
+    {
+      "id": "decorative-waterfall",
+      "request_examples": [
+        "想做持续瀑布风景，但释放真实水会抽干高处湖泊并淹没下游。",
+        "湖水接触半格边缘时只画向下水流，不改变两端液体数量，地形变化后要更新显示。"
+      ],
+      "primary_skill": "gameplay-decorative-waterfall",
+      "mechanisms": [
+        "decorative-waterfall"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在明确只需装饰流水的场景中，由合格湖水/半格边缘触发独立可视水流，不消耗或生成模拟液体；不是守恒流体、泳水/伤害系统或地面水洼网格。",
+      "distinct_from": [
+        "surface-aftermath",
+        "state-driven-surface-motion"
       ]
     }
   ],

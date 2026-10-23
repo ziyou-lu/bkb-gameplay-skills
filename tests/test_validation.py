@@ -229,6 +229,14 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_decorative_waterfall_does_not_own_liquid_or_surface_mesh(self):
+        route = self.routes['decorative-waterfall']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('surface-aftermath', 'state-driven-surface-motion'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('decorative-waterfall', self.routes[other]['distinct_from'])
+
     def test_ambient_flipbooks_are_not_combat_bursts_or_target_cues(self):
         route = self.routes['ambient-flipbook-particles']
         self.assertEqual(route['evidence_status'], 'workflow')

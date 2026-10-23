@@ -3020,6 +3020,23 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DewcAJWjWKY",
+      "url": "https://www.instagram.com/p/DewcAJWjWKY/",
+      "creator": "howitspawns",
+      "title": "作者重建示例中的装饰瀑布与液体数据分离",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者正文称影片是自己用代码做的简化方块/水/调试重建；这里只核到该声明及解释性画面，不能据外观认定实际实时运行。对照普通水从高湖流出导致上湖空、下游房屋淹没；装饰方案上湖保持满、小下池不扩大，可视细瀑布持续。调试实见两池粉色液体数据、流柱未粉色覆盖且旁有连续0标签。正文描述湖触半格时从边缘穿过空中画流至地面，不扣湖水。",
+      "limitations": "非原Terraria源码或独立游戏运行验证；文中Redigit/Reddit历史归因未独立查证，不当官方事实。未示追踪算法、邻居枚举、碰撞API、网格/UV、速度、最大落差、更新或地形编辑失效机制。halfblock是格几何不是世界单位。所有样本为编辑播放，无本库代码、音频或性能测试。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-decorative-waterfall"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }
