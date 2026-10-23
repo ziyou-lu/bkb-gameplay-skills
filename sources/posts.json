@@ -3142,6 +3142,31 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DUThd0gEn8g",
+      "url": "https://www.instagram.com/p/DUThd0gEn8g/",
+      "creator": "sillyhatstudio",
+      "title": "Crouch zone复用现有下蹲输入",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Tonikum作者称自动下蹲只是碰撞区域加模拟已有输入，不是复杂动画系统。实见低通道外直立、通道内降低姿态，Unity长矩形Crouch zone覆盖通道，Already existed与crouch input字幕，代码不可读。",
+      "limitations": "没有尺寸、输入时序、进入退出代码、重叠解算、手动优先级或站起净空测试；视觉不证明完整碰撞/运行验证。评论者顶部/底部探测或爬行扩展非作者方案。作者远距离禁用对象说明无性能实测。没有源码/音频执行验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-crouch-zone-assistance"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-23",
+          "basis": "post_text",
+          "source_url": "https://www.instagram.com/p/DUThd0gEn8g/c/18146099671457404/",
+          "change": "作者称超出玩家渲染距离的对象被禁用；不据此宣称性能收益或完整区域生命周期实现。"
+        }
+      ]
     }
   ]
 }

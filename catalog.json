@@ -1742,6 +1742,23 @@
         "gameplay-state-driven-surface-motion"
       ],
       "evidence_path": "skills/gameplay-timestamped-ground-effects/references/sources.md"
+    },
+    {
+      "id": "gameplay-crouch-zone-assistance",
+      "title": "区域辅助下蹲与已有姿态控制复用",
+      "category": "shared",
+      "path": "skills/gameplay-crouch-zone-assistance/SKILL.md",
+      "mechanisms": [
+        "crouch-zone-assistance"
+      ],
+      "source_ids": [
+        "DUThd0gEn8g"
+      ],
+      "related_skills": [
+        "gameplay-traversal-transitions",
+        "gameplay-movement-feedback"
+      ],
+      "evidence_path": "skills/gameplay-crouch-zone-assistance/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2018,7 +2035,8 @@
         "locomotion-contacts",
         "pointer-curvature-steering",
         "gait-step-scheduling",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "crouch-zone-assistance"
       ]
     },
     {
@@ -2687,7 +2705,8 @@
         "jump-input-buffer",
         "ceiling-corner-correction",
         "surface-adhesion",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "crouch-zone-assistance"
       ]
     },
     {
@@ -3604,6 +3623,23 @@
       "distinct_from": [
         "surface-aftermath",
         "state-driven-surface-motion"
+      ]
+    },
+    {
+      "id": "crouch-zone-assistance",
+      "request_examples": [
+        "通过低矮通道时希望区域自动请求已有下蹲，不再写一套动画控制。",
+        "重叠下蹲区退出一个就站起卡头，想修复区域请求与手动下蹲的归属。"
+      ],
+      "primary_skill": "gameplay-crouch-zone-assistance",
+      "mechanisms": [
+        "crouch-zone-assistance"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "显式关卡辅助区向已有下蹲控制提供独立请求，处理重叠/退出/手动输入和站起安全；不是停挂释放、通用移动动画或NPC寻路。",
+      "distinct_from": [
+        "traversal-transitions",
+        "movement-feedback"
       ]
     }
   ],

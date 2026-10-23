@@ -1508,3 +1508,14 @@ https://www.instagram.com/p/DYUzfWGqbOh/
 - 限制：最终死亡动画和驱动API未捕获，物理尝试不证明布娃娃。局部参数0.51264/-0.47/0.6无完整连接/单位，不作默认或时长；阈值方程、相位、曲线范围、数量/速度、碰撞/清理未知。无源码、音频、引擎或性能验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)
+
+## DUThd0gEn8g · Crouch zone复用现有下蹲输入
+
+https://www.instagram.com/p/DUThd0gEn8g/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Tonikum作者称自动下蹲只是碰撞区域加模拟已有输入，不是复杂动画系统。实见低通道外直立、通道内降低姿态，Unity长矩形Crouch zone覆盖通道，Already existed与crouch input字幕，代码不可读。
+- 限制：没有尺寸、输入时序、进入退出代码、重叠解算、手动优先级或站起净空测试；视觉不证明完整碰撞/运行验证。评论者顶部/底部探测或爬行扩展非作者方案。作者远距离禁用对象说明无性能实测。没有源码/音频执行验证。
+- 音频核听：False；代码运行：False
+- 补齐：作者称超出玩家渲染距离的对象被禁用；不据此宣称性能收益或完整区域生命周期实现。
+- 归入：[gameplay-crouch-zone-assistance](../skills/gameplay-crouch-zone-assistance/SKILL.md)

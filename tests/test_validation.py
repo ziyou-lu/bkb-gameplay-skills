@@ -229,6 +229,14 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_crouch_zone_request_is_not_traversal_release_or_animation(self):
+        route = self.routes['crouch-zone-assistance']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('traversal-transitions', 'movement-feedback'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('crouch-zone-assistance', self.routes[other]['distinct_from'])
+
     def test_ray_depth_and_timestamp_masks_keep_separate_boundaries(self):
         for rid, adjacent in [('raycaster-depth-correction', ('fixed-camera-art-projection', 'camera-feedback')),
                               ('timestamped-ground-effects', ('surface-aftermath', 'state-driven-surface-motion'))]:
