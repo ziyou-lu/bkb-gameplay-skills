@@ -1411,3 +1411,13 @@ https://www.instagram.com/mii_misan/reel/Da-PdjxOT9R/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "selected_scale_example", "value": 1.22, "unit": "dimensionless", "provenance": "post_text", "note": "画面示意缩放倍率，非通用默认值。"}, {"name": "unselected_scale_example", "value": 0.92, "unit": "dimensionless", "provenance": "post_text", "note": "画面示意缩放倍率，非通用默认值。"}, {"name": "item_rotation_example", "value": -8, "unit": "degrees", "provenance": "post_text", "note": "代码示意旁有-8deg图注。"}]
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DdoQR7NT_Ko · 移动朝向加鼠标限角的手电控制
+
+https://www.instagram.com/p/DdoQR7NT_Ko/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Project Lindsey Devlog5作者说明F开关，WASD移动方向与鼠标共同决定手电朝向，鼠标角度受限以保持自然。实见走廊像素角色/光束、1按键开关、2WASD转角色方向、3鼠标控制光方向，亦有关闭光束样本。
+- 限制：角度约束来自明确正文，边界行为未独立测量；无度数、限幅公式、平滑率、空闲面向、鼠标坐标映射或遮挡/阴影配方。标签提Unity2D但无代码或运行核验。不推断360度、自动转身、准确端点、延迟或紧张感收益；音频未核听。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-facing-relative-light-aim](../skills/gameplay-facing-relative-light-aim/SKILL.md)

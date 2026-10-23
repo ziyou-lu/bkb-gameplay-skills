@@ -2937,6 +2937,23 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DdoQR7NT_Ko",
+      "url": "https://www.instagram.com/p/DdoQR7NT_Ko/",
+      "creator": "cheese_eyes_games",
+      "title": "移动朝向加鼠标限角的手电控制",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Project Lindsey Devlog5作者说明F开关，WASD移动方向与鼠标共同决定手电朝向，鼠标角度受限以保持自然。实见走廊像素角色/光束、1按键开关、2WASD转角色方向、3鼠标控制光方向，亦有关闭光束样本。",
+      "limitations": "角度约束来自明确正文，边界行为未独立测量；无度数、限幅公式、平滑率、空闲面向、鼠标坐标映射或遮挡/阴影配方。标签提Unity2D但无代码或运行核验。不推断360度、自动转身、准确端点、延迟或紧张感收益；音频未核听。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-facing-relative-light-aim"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

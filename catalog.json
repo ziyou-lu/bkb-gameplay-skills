@@ -1619,6 +1619,23 @@
         "gameplay-breakables-loot"
       ],
       "evidence_path": "skills/gameplay-impact-physics-activation/references/sources.md"
+    },
+    {
+      "id": "gameplay-facing-relative-light-aim",
+      "title": "角色面向内的有限角度手电瞄准",
+      "category": "shared",
+      "path": "skills/gameplay-facing-relative-light-aim/SKILL.md",
+      "mechanisms": [
+        "facing-relative-light-aim"
+      ],
+      "source_ids": [
+        "DdoQR7NT_Ko"
+      ],
+      "related_skills": [
+        "gameplay-aim-pose",
+        "gameplay-movement-look-decoupling"
+      ],
+      "evidence_path": "skills/gameplay-facing-relative-light-aim/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2054,7 +2071,8 @@
         "action-timing",
         "contact-response",
         "movement-look-decoupling",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "facing-relative-light-aim"
       ]
     },
     {
@@ -2973,7 +2991,8 @@
         "gait-step-scheduling",
         "steering-assistance",
         "pointer-curvature-steering",
-        "surface-camera-up"
+        "surface-camera-up",
+        "facing-relative-light-aim"
       ]
     },
     {
@@ -3346,6 +3365,23 @@
       "distinct_from": [
         "prop-toppling-dynamics",
         "breakables-loot"
+      ]
+    },
+    {
+      "id": "facing-relative-light-aim",
+      "request_examples": [
+        "角色按移动方向转身，但手电可以随鼠标在身前有限角度摆动，不能照向背后。",
+        "手电在左右转身或鼠标越过背后时跳变，想检查相对角限幅和开关状态。"
+      ],
+      "primary_skill": "gameplay-facing-relative-light-aim",
+      "mechanisms": [
+        "facing-relative-light-aim"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "消费移动决定的角色面向，将鼠标目标限制到相对朝向的允许照明弧；不是分件姿态、自由观察相机、自动转身或武器瞄准。",
+      "distinct_from": [
+        "aim-pose",
+        "movement-look-decoupling"
       ]
     }
   ],
