@@ -3094,6 +3094,54 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DX7DaJxKLcz",
+      "url": "https://www.instagram.com/p/DX7DaJxKLcz/",
+      "creator": "beakman.studios",
+      "title": "攻击方向与攻击中位移独立输入",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者回复明确键鼠光标控制攻击方向、方向输入控制攻击中移动；手柄默认面向攻击，左杆移动右杆瞄准。实见骨架关键帧、Queue/Slash示意及游戏刀光方向向量。",
+      "limitations": "未捕获开头移除内容或精确重定时；编辑器60fps不是运行帧率。队列窗口/容量/过期/消费未知，死区/锁向时点/速度/位移/碰撞未给，无代码、音频或运行验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-attack-direction"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-23",
+          "basis": "post_text",
+          "source_url": "https://www.instagram.com/p/DX7DaJxKLcz/c/18128496949573668/",
+          "change": "键鼠攻击朝向由光标决定，移动输入控制攻击中的位移。"
+        },
+        {
+          "observed_date": "2026-10-23",
+          "basis": "post_text",
+          "source_url": "https://www.instagram.com/p/DX7DaJxKLcz/c/18360500644234289/",
+          "change": "手柄默认面向，左杆移动右杆瞄准，可横移攻击。"
+        }
+      ]
+    },
+    {
+      "id": "DYUzfWGqbOh",
+      "url": "https://www.instagram.com/p/DYUzfWGqbOh/",
+      "creator": "beakman.studios",
+      "title": "死亡黑化、噪声消隐与黑色团粒",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "三部分Animation/Material/VFX标题，角色黑化与噪声孔洞、可调DeathProgress、部分噪声/材质节点、随时间曲线以及场景黑色小团粒子。",
+      "limitations": "最终死亡动画和驱动API未捕获，物理尝试不证明布娃娃。局部参数0.51264/-0.47/0.6无完整连接/单位，不作默认或时长；阈值方程、相位、曲线范围、数量/速度、碰撞/清理未知。无源码、音频、引擎或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-breakables-loot"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -62,3 +62,9 @@
 - [Deh3qQ0RU4e](https://www.instagram.com/p/Deh3qQ0RU4e/)：爆炸桶反馈。
 - [DenfMc-zPPJ](https://www.instagram.com/reel/DenfMc-zPPJ/)：敌人死亡。
 - [DNODANBoEL6](https://www.instagram.com/playnomadgame/reel/DNODANBoEL6/)：伐木采集从直接消失改为倒伏与分段木料结果。
+
+## 新增：黑化、噪声消隐与团粒死亡组合
+
+- [DYUzfWGqbOh · beakman.studios](https://www.instagram.com/p/DYUzfWGqbOh/)，2026-10-23核看。实见Animation/Material/VFX三部分标题，角色原纹理变黑并产生不规则孔洞、DeathProgress可调参数、噪声贴图及部分材质节点、曲线随时间推进和场景黑色小团粒子。
+- 物理资产胶囊与失败尝试不证明最终采用布娃娃；最终动画选择未捕获。DeathProgress中间值0.51264、MinDissolveOffset -0.47及MaxDissolveOffset0.6只是局部截图，完整连接/单位/驱动未示，不作默认值、时长或可复刻方程。
+- 黑化与消隐外观有画面依据，精确相位/阈值式、曲线范围、发射数量/速度、碰撞撤销和清理未给。正文独立材质参数、归一化进度验收、稳定噪声空间、调度与对象池恢复是工程建议，不宣称作者已实现；没有代码执行、音频、引擎或性能核验。

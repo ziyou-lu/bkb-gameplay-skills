@@ -1486,3 +1486,25 @@ https://www.instagram.com/p/DZVLRcvq7ay/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "creation_timestamp_example", "value": 20, "unit": "s", "provenance": "caption_or_post_text", "note": "作者例：20秒时产生写R20/G0/B0，是时间数据而非归一化颜色；RT格式/编码未示。"}]
 - 归入：[gameplay-timestamped-ground-effects](../skills/gameplay-timestamped-ground-effects/SKILL.md)
+
+## DX7DaJxKLcz · 攻击方向与攻击中位移独立输入
+
+https://www.instagram.com/p/DX7DaJxKLcz/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者回复明确键鼠光标控制攻击方向、方向输入控制攻击中移动；手柄默认面向攻击，左杆移动右杆瞄准。实见骨架关键帧、Queue/Slash示意及游戏刀光方向向量。
+- 限制：未捕获开头移除内容或精确重定时；编辑器60fps不是运行帧率。队列窗口/容量/过期/消费未知，死区/锁向时点/速度/位移/碰撞未给，无代码、音频或运行验证。
+- 音频核听：False；代码运行：False
+- 补齐：键鼠攻击朝向由光标决定，移动输入控制攻击中的位移。
+- 补齐：手柄默认面向，左杆移动右杆瞄准，可横移攻击。
+- 归入：[gameplay-attack-direction](../skills/gameplay-attack-direction/SKILL.md)
+
+## DYUzfWGqbOh · 死亡黑化、噪声消隐与黑色团粒
+
+https://www.instagram.com/p/DYUzfWGqbOh/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：三部分Animation/Material/VFX标题，角色黑化与噪声孔洞、可调DeathProgress、部分噪声/材质节点、随时间曲线以及场景黑色小团粒子。
+- 限制：最终死亡动画和驱动API未捕获，物理尝试不证明布娃娃。局部参数0.51264/-0.47/0.6无完整连接/单位，不作默认或时长；阈值方程、相位、曲线范围、数量/速度、碰撞/清理未知。无源码、音频、引擎或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-breakables-loot](../skills/gameplay-breakables-loot/SKILL.md)

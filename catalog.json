@@ -296,7 +296,8 @@
         "DetftcbzGnS",
         "Deh3qQ0RU4e",
         "DenfMc-zPPJ",
-        "DNODANBoEL6"
+        "DNODANBoEL6",
+        "DYUzfWGqbOh"
       ],
       "related_skills": [
         "gameplay-surface-aftermath",
@@ -880,7 +881,8 @@
         "attack-direction-consistency"
       ],
       "source_ids": [
-        "DXcMn-gCGaS"
+        "DXcMn-gCGaS",
+        "DX7DaJxKLcz"
       ],
       "related_skills": [
         "gameplay-melee-feedback",
@@ -2022,7 +2024,8 @@
     {
       "id": "breakables-loot",
       "request_examples": [
-        "树挨最后一斧就消失，想让倒伏和产物有可读过程。"
+        "树挨最后一斧就消失，想让倒伏和产物有可读过程。",
+        "角色确认死亡后先变黑再噪声消隐并出黑色团粒，但不能重复发奖励或改变碰撞结算。"
       ],
       "primary_skill": "gameplay-breakables-loot",
       "mechanisms": [
@@ -2617,7 +2620,8 @@
     {
       "id": "attack-direction",
       "request_examples": [
-        "四向攻击打斜向目标要绕正交，我想评估全方向规则。"
+        "四向攻击打斜向目标要绕正交，我想评估全方向规则。",
+        "攻击时想一边后退一边向光标挥击，移动方向不要覆盖攻击瞄准。"
       ],
       "primary_skill": "gameplay-attack-direction",
       "mechanisms": [
