@@ -44,4 +44,6 @@ description: "当平台边缘或抓杆交互的停留、释放选择不符合目
 - [移动方向动画](../gameplay-movement-feedback/SKILL.md)与[落地反馈](../gameplay-landing-feedback/SKILL.md)：状态确定后的具体表现。
 - [离地跳跃宽限](../gameplay-jump-forgiveness/SKILL.md)：不同触发与许可生命周期。
 
+[环境跳板](../gameplay-launch-pad-feedback/SKILL.md)负责环境接触后的弹射与腾空全过程，不在本入口复制该编排。
+
 需要核对案例、参数出处或证据边界时，读取[来源参考](references/sources.md)。

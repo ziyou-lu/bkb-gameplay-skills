@@ -42,4 +42,6 @@ description: "当落地缺少重量或每帧接地重复播反馈时，绑定真
 - [镜头冲击](../gameplay-camera-feedback/SKILL.md)：向下事件冲击
 - [时间强调](../gameplay-hitstop/SKILL.md)：可选接触停顿
 
+[环境跳板](../gameplay-launch-pad-feedback/SKILL.md)负责环境接触后的弹射与腾空全过程，不在本入口复制该编排。
+
 需要核对案例、参数出处或证据边界时，读取[来源参考](references/sources.md)。

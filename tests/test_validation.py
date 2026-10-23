@@ -203,6 +203,17 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 if left is not right:
                     self.assertIn(right['id'], left['distinct_from'])
 
+    def test_environment_launch_lifecycle_has_its_own_owner(self):
+        route = self.routes['launch-pad-feedback']
+        self.assertEqual(route['primary_skill'], 'gameplay-launch-pad-feedback')
+        self.assertEqual(route['mechanisms'], ['launch-pad-composition'])
+        for other in ('motion-deformation', 'landing-feedback', 'stomp-combos',
+                      'traversal-transitions', 'jump-forgiveness', 'jump-input-buffer',
+                      'dash-feedback', 'mechanical-interactions', 'deformable-support'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('launch-pad-feedback', self.routes[other]['distinct_from'])
+
     def test_jump_command_eligibility_and_spatial_correction_are_distinct(self):
         self.assert_independent_workflows(
             ['jump-input-buffer', 'jump-forgiveness', 'ceiling-corner-correction'])

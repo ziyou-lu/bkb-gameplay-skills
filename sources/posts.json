@@ -2502,6 +2502,41 @@
       "observed_date": "2026-10-21",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DezQVHRCUQ9",
+      "url": "https://www.instagram.com/p/DezQVHRCUQ9/",
+      "creator": "porsukgames",
+      "title": "重锤的高举准备、接触冲击与厚重收势",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "完整正文说明以缓慢高举准备表现重量、接触瞬间短暂停顿、随武器调整镜头震动、地面冲击波与飞石，并以缓慢厚重收势补足挥动后的重量感。抽样画面可见初始灰色场景中近地锤头和 boop 字样、STEP 3 SHAKE 阶段高举锤头，以及 BONUS RECOVERY / COMMIT 阶段近地锤头与裂纹/石块。",
+      "limitations": "仅有部分阶段画面抽样，未逐段验证完整时序或时长。几帧停顿没有明确帧数或帧率，不能借其他来源补为固定数值；按武器缩放震动没有公式。COMMIT 不证明真实操作锁定、取消窗口、攻击频率或恢复规则；冲击波/裂纹/飞石不证明碰撞、伤害或半径。没有代码执行、音频核听或运行时测量。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-melee-feedback",
+        "gameplay-action-timing"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Dew0wkLDTqs",
+      "url": "https://www.instagram.com/porsukgames/reel/Dew0wkLDTqs/",
+      "creator": "porsukgames",
+      "title": "环境跳板的弹簧、起飞和腾空分层反馈",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "正文分层说明跳板下压再弹回、角色起飞拉伸与落地压缩、从跳板扩散的光环、速度尾迹和相机跟随上升、弹簧音及向上风声；附加悬浮跳板、更高弹射与双翻转。画面抽样可见灰色基线中的机器人和圆形跳板、STEP 1 SPRING、机器人在跳板上方的 STEP 2 STRETCH，以及同场景 STEP 4 TRAILS。",
+      "limitations": "部分画面抽样未建立完整阶段时序或持续时间；音频未核听，声音仅为正文说明。没有代码、弹射速度/高度、压缩量、时长/缓动、相机阻尼或接触/复位实现证据。双翻转不证明额外跳跃次数；悬浮造型不证明物理实现。激活去重、资格/中断处理和状态恢复属于本库工程迁移要求，不是作者代码事实。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-launch-pad-feedback"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

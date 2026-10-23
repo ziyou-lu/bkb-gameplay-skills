@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_date": "2026-10-22",
+  "updated_date": "2026-10-23",
   "language": "zh-CN",
   "evidence_policy": "操作步骤是基于公开视频研究与公开代码静态阅读的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码、静态核读和实测必须区分。",
   "skills": [
@@ -206,7 +206,8 @@
         "DelJO3qusJE",
         "DeqnlBQzbMY",
         "DejijtPzhYJ",
-        "DcCF3ZmBNl2"
+        "DcCF3ZmBNl2",
+        "DezQVHRCUQ9"
       ],
       "related_skills": [
         "gameplay-action-timing",
@@ -475,7 +476,8 @@
       ],
       "source_ids": [
         "DP3HI8yjFUS",
-        "DeuiO0UjRLM"
+        "DeuiO0UjRLM",
+        "DezQVHRCUQ9"
       ],
       "related_skills": [
         "gameplay-motion-deformation",
@@ -1394,6 +1396,27 @@
         "gameplay-action-timing"
       ],
       "evidence_path": "skills/gameplay-prop-toppling-dynamics/references/sources.md"
+    },
+    {
+      "id": "gameplay-launch-pad-feedback",
+      "title": "环境跳板的弹射与腾空反馈",
+      "category": "recipes",
+      "path": "skills/gameplay-launch-pad-feedback/SKILL.md",
+      "mechanisms": [
+        "launch-pad-composition"
+      ],
+      "source_ids": [
+        "Dew0wkLDTqs"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-impact-visuals",
+        "gameplay-speed-camera",
+        "gameplay-landing-feedback",
+        "gameplay-stomp-combos",
+        "gameplay-traversal-transitions"
+      ],
+      "evidence_path": "skills/gameplay-launch-pad-feedback/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1556,7 +1579,8 @@
         "deformable-support",
         "state-driven-surface-motion",
         "tool-body-coordination",
-        "prop-toppling-dynamics"
+        "prop-toppling-dynamics",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -1608,14 +1632,15 @@
     {
       "id": "melee-feedback",
       "request_examples": [
-        "剑击、普通受击和暴击缺少不同层次的命中确认。"
+        "剑击、普通受击和暴击缺少不同层次的命中确认。",
+        "重锤像轻拍，想把高举准备、接触冲击和厚重收势连起来，但不改变伤害和取消规则。"
       ],
       "primary_skill": "gameplay-melee-feedback",
       "mechanisms": [
         "melee-composition"
       ],
       "evidence_status": "workflow",
-      "boundary": "为普通近战命中、受击与暴击组合共享反馈；剑轨迹、弹反、踩踏、攻击方向规则和受击脱身使用独立入口，不凭视觉改变判定。",
+      "boundary": "为普通近战命中、受击、暴击及重武器重量组合共享反馈；剑轨迹、弹反、踩踏、攻击方向规则和受击脱身使用独立入口，不凭视觉改变判定。",
       "distinct_from": [
         "blade-trails",
         "parry-feedback",
@@ -2015,7 +2040,8 @@
         "scene-transitions",
         "connection-transitions",
         "geometric-event-alignment",
-        "state-driven-surface-motion"
+        "state-driven-surface-motion",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2056,7 +2082,8 @@
         "jump-forgiveness",
         "traversal-transitions",
         "steering-assistance",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2078,7 +2105,8 @@
         "steering-assistance",
         "locomotion-contacts",
         "gravity-orientation-cues",
-        "worldspace-indicators"
+        "worldspace-indicators",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2156,7 +2184,8 @@
         "parry-feedback",
         "hit-recovery",
         "attack-direction",
-        "attack-readability"
+        "attack-readability",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2279,7 +2308,8 @@
         "steering-assistance",
         "locomotion-contacts",
         "jump-input-buffer",
-        "ceiling-corner-correction"
+        "ceiling-corner-correction",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2303,7 +2333,8 @@
         "locomotion-contacts",
         "jump-input-buffer",
         "ceiling-corner-correction",
-        "surface-adhesion"
+        "surface-adhesion",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2471,7 +2502,8 @@
         "action-timing",
         "traversal-transitions",
         "pointer-curvature-steering",
-        "gait-step-scheduling"
+        "gait-step-scheduling",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2593,7 +2625,8 @@
         "locomotion-contacts",
         "surface-aftermath",
         "surface-adhesion",
-        "prop-appendage-contacts"
+        "prop-appendage-contacts",
+        "launch-pad-feedback"
       ]
     },
     {
@@ -2858,6 +2891,30 @@
         "prop-appendage-contacts",
         "motion-deformation",
         "action-timing"
+      ]
+    },
+    {
+      "id": "launch-pad-feedback",
+      "request_examples": [
+        "跳板踩下去直接弹飞，没有压缩回弹、起飞拉伸和上升跟随，想把全过程连起来。",
+        "角色多个碰撞体碰跳板时连续弹两次，离开后镜头偏移也不复位。"
+      ],
+      "primary_skill": "gameplay-launch-pad-feedback",
+      "mechanisms": [
+        "launch-pad-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "当环境跳板弹射缺少弹簧感、起飞与镜头脱节或接触重复触发时，编排跳板压缩、权威弹射、腾空与落地复位；不把视觉拉伸或翻转当跳高、额外跳跃或物理冲量。",
+      "distinct_from": [
+        "motion-deformation",
+        "landing-feedback",
+        "stomp-combos",
+        "traversal-transitions",
+        "jump-forgiveness",
+        "jump-input-buffer",
+        "dash-feedback",
+        "mechanical-interactions",
+        "deformable-support"
       ]
     }
   ],

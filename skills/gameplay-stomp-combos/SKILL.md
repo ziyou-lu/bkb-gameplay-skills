@@ -39,4 +39,6 @@ description: "为踩头成功、主角反弹和连续踩踏组织反馈，区分
 - [事件浮字](../gameplay-floating-numbers/SKILL.md)
 - [近战编排](../gameplay-melee-feedback/SKILL.md)
 
+[环境跳板](../gameplay-launch-pad-feedback/SKILL.md)负责环境接触后的弹射与腾空全过程，不在本入口复制该编排。
+
 需要核查出处、示例参数或证据限制时，读取[来源参考](references/sources.md)。

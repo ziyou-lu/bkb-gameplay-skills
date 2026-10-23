@@ -1225,3 +1225,23 @@ https://www.instagram.com/p/DepYLX-vnhw/
 - 限制：画面只支持局部少量残留，单次结果不建立寿命。HISM、数十万规模、低成本和整局保留全为作者声明，未核旧新 A/B、FPS/性能分析、实例配置、源码或整局运行。无动态物理转静态实例交接、对象池、碰撞、网络或重置实现证据，不推所有对象同一表示。作者规模不作预算推荐或容量保证；没有代码执行、性能/可读性测量，音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-impact-visuals](../skills/gameplay-impact-visuals/SKILL.md)
+
+## DezQVHRCUQ9 · 重锤的高举准备、接触冲击与厚重收势
+
+https://www.instagram.com/p/DezQVHRCUQ9/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：完整正文说明以缓慢高举准备表现重量、接触瞬间短暂停顿、随武器调整镜头震动、地面冲击波与飞石，并以缓慢厚重收势补足挥动后的重量感。抽样画面可见初始灰色场景中近地锤头和 boop 字样、STEP 3 SHAKE 阶段高举锤头，以及 BONUS RECOVERY / COMMIT 阶段近地锤头与裂纹/石块。
+- 限制：仅有部分阶段画面抽样，未逐段验证完整时序或时长。几帧停顿没有明确帧数或帧率，不能借其他来源补为固定数值；按武器缩放震动没有公式。COMMIT 不证明真实操作锁定、取消窗口、攻击频率或恢复规则；冲击波/裂纹/飞石不证明碰撞、伤害或半径。没有代码执行、音频核听或运行时测量。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-melee-feedback](../skills/gameplay-melee-feedback/SKILL.md), [gameplay-action-timing](../skills/gameplay-action-timing/SKILL.md)
+
+## Dew0wkLDTqs · 环境跳板的弹簧、起飞和腾空分层反馈
+
+https://www.instagram.com/porsukgames/reel/Dew0wkLDTqs/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：正文分层说明跳板下压再弹回、角色起飞拉伸与落地压缩、从跳板扩散的光环、速度尾迹和相机跟随上升、弹簧音及向上风声；附加悬浮跳板、更高弹射与双翻转。画面抽样可见灰色基线中的机器人和圆形跳板、STEP 1 SPRING、机器人在跳板上方的 STEP 2 STRETCH，以及同场景 STEP 4 TRAILS。
+- 限制：部分画面抽样未建立完整阶段时序或持续时间；音频未核听，声音仅为正文说明。没有代码、弹射速度/高度、压缩量、时长/缓动、相机阻尼或接触/复位实现证据。双翻转不证明额外跳跃次数；悬浮造型不证明物理实现。激活去重、资格/中断处理和状态恢复属于本库工程迁移要求，不是作者代码事实。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-launch-pad-feedback](../skills/gameplay-launch-pad-feedback/SKILL.md)
