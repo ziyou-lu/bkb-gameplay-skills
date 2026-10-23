@@ -1619,3 +1619,35 @@ https://www.instagram.com/100stonesinteractive/reel/DbP7cp_CLvm/
 - 限制：未核听声音，未见混音编辑参数。无Hz/dB、滤波阶数、时长、总线拓扑、保留声音列表或优先级/打断规则；多环境适用为作者说法，不作测试结果。 无代码执行、音频或性能验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-ability-audio-mix](../skills/gameplay-ability-audio-mix/SKILL.md)
+
+## DZ1zXzJCMeh · 圆形多射线扩大解谜物件选择容差
+
+https://www.instagram.com/100stonesinteractive/reel/DZ1zXzJCMeh/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者用屏幕中心周围宽圆内多条射线替换单中心射线以降低远处小型解谜物件的选择精度要求；作者回复确认相邻目标优先靠近中心者，并称射线较易处理视线关系。采样见远处橙色目标、相机射线示意和Tiny说明。
+- 限制：未披露主帖射线数量/分布、半径/单位、最大距离、过滤层、评分比较点、同分和滞回。后续Dar1vbmCviZ只捕获螺旋及首次命中相关部分字幕，完整顺序规则仍缺，不当精确算法；主页性能主张不作默认或保证。无代码执行、音频核听或项目性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-multiray-object-selection](../skills/gameplay-multiray-object-selection/SKILL.md)
+
+## DXllwikgiCC · 可调下移交互准星保留前方结果视野
+
+https://www.instagram.com/100stonesinteractive/reel/DXllwikgiCC/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者称试玩中玩家常走近物体，居中准星对准近处按钮时低头遮住周围结果，因此把准星向下偏移并提供可调与零偏移选项；范围为探索/解谜而非射击。有限采样见紫色基座占据俯视构图，另一构图中基座与准星下移、前方橙色圆柱及房间可见。约屏幕高度5%的单位由同账号后续帖的主页可见正文辅助澄清。
+- 限制：画面对照不是独立试玩或量化改善验证。未见射线代码、坐标/投影、FOV、相机高度、距离、灵敏度、设置范围/步长/保存实现；显示与拾取同源是提炼的工程要求，不是已核作者实现。后续DXtTQiegmfd只核读主页可见正文，未独立打开，未作为第二个来源或视觉验证。无代码执行、音频核听或引擎验证；约5%仅为作者项目示例。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "vertical_reticle_offset_below_center", "value": "about 5", "unit": "percent_screen_height", "provenance": "post_text", "scope": "作者项目的近似默认，不是通用最优值；主帖给出约5%，单位由后续帖主页可见正文辅助澄清，未核其完整页面。", "source_url": "https://www.instagram.com/100stonesinteractive/reel/DXtTQiegmfd/"}]
+- 补齐：仅核读个人主页可见正文，澄清约5%为屏幕高度比例，并强调无战斗/精确瞄准；未独立打开该帖，不新增独立来源记录或视觉证据。
+- 归入：[gameplay-offset-interaction-reticle](../skills/gameplay-offset-interaction-reticle/SKILL.md)
+
+## DW--zsWAnAS · 同目标同完成时长的减少动态传送
+
+https://www.instagram.com/100stonesinteractive/reel/DW--zsWAnAS/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明Memory's Reach的Translocator有剧烈移动和屏幕扭曲，可选无障碍表现禁用这些效果，改为简单暗角淡化与无沿途镜头运动的传送到同一目标；加入与普通旅行时间相应的等待以保留总完成时间，意图避免速度优势。有限画面见峡谷穿越的扭曲/模糊及VIGNETTE FADE字幕。
+- 限制：时序关系来自作者文字，采样未测量耗时一致性，不证明症状防护或全部玩法等价。无延时数值、旅行时间公式、淡化曲线/颜色/半径/时长、输入锁、物理/碰撞、伤害/无敌、网络及中断语义；评论建议不作作者实现。未核听音频、执行代码或运行游戏/引擎测试。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-reduced-motion-teleport](../skills/gameplay-reduced-motion-teleport/SKILL.md)

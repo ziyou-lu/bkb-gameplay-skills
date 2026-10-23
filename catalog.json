@@ -388,7 +388,9 @@
         "gameplay-world-readability",
         "gameplay-mechanical-interactions",
         "gameplay-connection-transitions",
-        "gameplay-scene-transitions"
+        "gameplay-scene-transitions",
+        "gameplay-multiray-object-selection",
+        "gameplay-offset-interaction-reticle"
       ],
       "evidence_path": "skills/gameplay-contextual-ui/references/sources.md"
     },
@@ -430,7 +432,8 @@
       ],
       "related_skills": [
         "gameplay-camera-feedback",
-        "gameplay-dash-feedback"
+        "gameplay-dash-feedback",
+        "gameplay-reduced-motion-teleport"
       ],
       "path": "skills/gameplay-speed-camera/SKILL.md",
       "evidence_path": "skills/gameplay-speed-camera/references/sources.md"
@@ -467,7 +470,9 @@
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-shooting-feedback",
-        "gameplay-tool-body-coordination"
+        "gameplay-tool-body-coordination",
+        "gameplay-multiray-object-selection",
+        "gameplay-offset-interaction-reticle"
       ],
       "path": "skills/gameplay-aim-pose/SKILL.md",
       "evidence_path": "skills/gameplay-aim-pose/references/sources.md"
@@ -608,7 +613,8 @@
         "gameplay-contextual-ui",
         "gameplay-gravity-orientation-cues",
         "gameplay-landing-feedback",
-        "gameplay-surface-adhesion"
+        "gameplay-surface-adhesion",
+        "gameplay-offset-interaction-reticle"
       ],
       "evidence_path": "skills/gameplay-worldspace-indicators/references/sources.md"
     },
@@ -624,7 +630,8 @@
         "DbqZZNQz95x"
       ],
       "related_skills": [
-        "gameplay-camera-feedback"
+        "gameplay-camera-feedback",
+        "gameplay-reduced-motion-teleport"
       ],
       "evidence_path": "skills/gameplay-scene-transitions/references/sources.md"
     },
@@ -681,7 +688,8 @@
       "related_skills": [
         "gameplay-motion-deformation",
         "gameplay-speed-camera",
-        "gameplay-movement-feedback"
+        "gameplay-movement-feedback",
+        "gameplay-reduced-motion-teleport"
       ],
       "evidence_path": "skills/gameplay-dash-feedback/references/sources.md"
     },
@@ -932,7 +940,8 @@
         "gameplay-contextual-ui",
         "gameplay-jump-forgiveness",
         "gameplay-movement-feedback",
-        "gameplay-landing-feedback"
+        "gameplay-landing-feedback",
+        "gameplay-reduced-motion-teleport"
       ],
       "evidence_path": "skills/gameplay-traversal-transitions/references/sources.md"
     },
@@ -992,7 +1001,9 @@
         "gameplay-worldspace-indicators",
         "gameplay-impact-visuals",
         "gameplay-occlusion-reveal",
-        "gameplay-gravity-orientation-cues"
+        "gameplay-gravity-orientation-cues",
+        "gameplay-multiray-object-selection",
+        "gameplay-offset-interaction-reticle"
       ],
       "evidence_path": "skills/gameplay-world-readability/references/sources.md"
     },
@@ -1902,6 +1913,64 @@
         "gameplay-foliage-rustle-response"
       ],
       "evidence_path": "skills/gameplay-ability-audio-mix/references/sources.md"
+    },
+    {
+      "id": "gameplay-multiray-object-selection",
+      "title": "圆形多射线的宽容物件选择",
+      "category": "shared",
+      "path": "skills/gameplay-multiray-object-selection/SKILL.md",
+      "mechanisms": [
+        "multiray-object-selection"
+      ],
+      "source_ids": [
+        "DZ1zXzJCMeh"
+      ],
+      "related_skills": [
+        "gameplay-offset-interaction-reticle",
+        "gameplay-contextual-ui",
+        "gameplay-world-readability",
+        "gameplay-aim-pose"
+      ],
+      "evidence_path": "skills/gameplay-multiray-object-selection/references/sources.md"
+    },
+    {
+      "id": "gameplay-offset-interaction-reticle",
+      "title": "交互准星偏移与前方结果可见性",
+      "category": "shared",
+      "path": "skills/gameplay-offset-interaction-reticle/SKILL.md",
+      "mechanisms": [
+        "offset-interaction-reticle"
+      ],
+      "source_ids": [
+        "DXllwikgiCC"
+      ],
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-worldspace-indicators",
+        "gameplay-world-readability",
+        "gameplay-aim-pose",
+        "gameplay-multiray-object-selection"
+      ],
+      "evidence_path": "skills/gameplay-offset-interaction-reticle/references/sources.md"
+    },
+    {
+      "id": "gameplay-reduced-motion-teleport",
+      "title": "同目标同完成时长的减少动态传送",
+      "category": "recipes",
+      "path": "skills/gameplay-reduced-motion-teleport/SKILL.md",
+      "mechanisms": [
+        "equal-duration-reduced-motion-teleport"
+      ],
+      "source_ids": [
+        "DW--zsWAnAS"
+      ],
+      "related_skills": [
+        "gameplay-traversal-transitions",
+        "gameplay-scene-transitions",
+        "gameplay-dash-feedback",
+        "gameplay-speed-camera"
+      ],
+      "evidence_path": "skills/gameplay-reduced-motion-teleport/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2268,7 +2337,9 @@
         "mechanical-interactions",
         "connection-transitions",
         "room-map-navigation",
-        "paused-map-backdrop"
+        "paused-map-backdrop",
+        "multiray-object-selection",
+        "offset-interaction-reticle"
       ]
     },
     {
@@ -2303,7 +2374,8 @@
         "impact-visuals",
         "camera-feedback",
         "surface-camera-up",
-        "gamepad-pitch-limits"
+        "gamepad-pitch-limits",
+        "reduced-motion-teleport"
       ]
     },
     {
@@ -2349,7 +2421,9 @@
         "movement-look-decoupling",
         "tool-body-coordination",
         "facing-relative-light-aim",
-        "fixed-camera-art-projection"
+        "fixed-camera-art-projection",
+        "multiray-object-selection",
+        "offset-interaction-reticle"
       ]
     },
     {
@@ -2507,7 +2581,8 @@
         "gravity-orientation-cues",
         "landing-feedback",
         "surface-adhesion",
-        "skeletal-planar-shadows"
+        "skeletal-planar-shadows",
+        "offset-interaction-reticle"
       ]
     },
     {
@@ -2528,7 +2603,8 @@
         "worldspace-indicators",
         "world-readability",
         "mechanical-interactions",
-        "connection-transitions"
+        "connection-transitions",
+        "reduced-motion-teleport"
       ]
     },
     {
@@ -2595,7 +2671,8 @@
         "steering-assistance",
         "locomotion-contacts",
         "launch-pad-feedback",
-        "dash-roll-momentum"
+        "dash-roll-momentum",
+        "reduced-motion-teleport"
       ]
     },
     {
@@ -2858,7 +2935,8 @@
         "surface-adhesion",
         "launch-pad-feedback",
         "crouch-zone-assistance",
-        "dash-roll-momentum"
+        "dash-roll-momentum",
+        "reduced-motion-teleport"
       ]
     },
     {
@@ -2933,7 +3011,9 @@
         "connection-transitions",
         "occlusion-reveal",
         "gravity-orientation-cues",
-        "ambient-flipbook-particles"
+        "ambient-flipbook-particles",
+        "multiray-object-selection",
+        "offset-interaction-reticle"
       ]
     },
     {
@@ -3941,6 +4021,64 @@
       "distinct_from": [
         "physics-stage-audio",
         "foliage-rustle-response"
+      ]
+    },
+    {
+      "id": "multiray-object-selection",
+      "request_examples": [
+        "解谜场景远处按钮很小，准星要精确对准才选得到，想在准星周围用多条射线选择合法物件。",
+        "两个可交互物挨着时要优先最靠近准星中心的对象，同时不能穿墙或扩大交互距离。"
+      ],
+      "primary_skill": "gameplay-multiray-object-selection",
+      "mechanisms": [
+        "multiray-object-selection"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "圆形屏幕区域的多射线候选采样、遮挡过滤与中心优先物件选择；不移动准星布局、不自动转镜头/提交交互，也不扩张武器命中或目标发现规则。",
+      "distinct_from": [
+        "offset-interaction-reticle",
+        "contextual-ui",
+        "world-readability",
+        "aim-pose"
+      ]
+    },
+    {
+      "id": "offset-interaction-reticle",
+      "request_examples": [
+        "探索解谜时走近低处按钮就得低头，按下后看不到前面的机关变化，想把交互准星下移并允许归零。",
+        "交互准星已经下移，但实际选择还在屏幕中心，窗口缩放后也会漂移。"
+      ],
+      "primary_skill": "gameplay-offset-interaction-reticle",
+      "mechanisms": [
+        "offset-interaction-reticle"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "调整探索/解谜交互准星的视口构图与设置，统一显示和拾取锚点并处理视口重建及零偏移恢复；不接管目标发现、交互提交状态、世界标记、角色瞄准姿态或区域选择算法，不新增武器瞄准和自动吸附。",
+      "distinct_from": [
+        "contextual-ui",
+        "worldspace-indicators",
+        "world-readability",
+        "aim-pose",
+        "multiray-object-selection"
+      ]
+    },
+    {
+      "id": "reduced-motion-teleport",
+      "request_examples": [
+        "传送的飞行镜头和屏幕扭曲太强，想加一个静止等待后直接到同一落点的选项，但总完成时间不变。",
+        "减少动态传送关掉了扭曲却还会飞越，或淡化后比普通模式更慢，想统一目标和完成门。"
+      ],
+      "primary_skill": "gameplay-reduced-motion-teleport",
+      "mechanisms": [
+        "equal-duration-reduced-motion-teleport"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为同一已获准传送计划提供普通与减少动态两种表现：取消强制镜头路径/扭曲，用可选淡化与静止等待后直接切换到相同目标，并共享普通模式完成时长；不替代加载就绪，不擅改碰撞、伤害、输入或移动许可，不据时序相等推断全部玩法等价。",
+      "distinct_from": [
+        "traversal-transitions",
+        "scene-transitions",
+        "dash-feedback",
+        "speed-camera"
       ]
     }
   ],

@@ -240,6 +240,31 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(other, route['distinct_from'])
                 self.assertIn(rid, self.routes[other]['distinct_from'])
 
+    def test_multiray_selection_is_not_reticle_layout_or_feedback(self):
+        route = self.routes['multiray-object-selection']
+        self.assertEqual(route['mechanisms'], ['multiray-object-selection'])
+        for other in ('offset-interaction-reticle', 'contextual-ui', 'world-readability', 'aim-pose'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('multiray-object-selection', self.routes[other]['distinct_from'])
+
+    def test_offset_reticle_is_not_world_marker_or_selection_algorithm(self):
+        route = self.routes['offset-interaction-reticle']
+        self.assertEqual(route['mechanisms'], ['offset-interaction-reticle'])
+        for other in ('multiray-object-selection', 'contextual-ui', 'worldspace-indicators',
+                      'world-readability', 'aim-pose'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('offset-interaction-reticle', self.routes[other]['distinct_from'])
+
+    def test_reduced_motion_teleport_is_not_loading_or_movement_permission(self):
+        route = self.routes['reduced-motion-teleport']
+        self.assertEqual(route['mechanisms'], ['equal-duration-reduced-motion-teleport'])
+        for other in ('traversal-transitions', 'scene-transitions', 'dash-feedback', 'speed-camera'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('reduced-motion-teleport', self.routes[other]['distinct_from'])
+
     def test_pitch_limits_and_room_map_are_not_camera_impulses(self):
         for rid, adjacent in [('gamepad-pitch-limits', ('camera-feedback', 'speed-camera', 'surface-camera-up')),
                               ('room-map-navigation', ('camera-feedback', 'completion-sequences', 'contextual-ui'))]:
