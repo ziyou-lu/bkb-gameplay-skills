@@ -1636,6 +1636,41 @@
         "gameplay-movement-look-decoupling"
       ],
       "evidence_path": "skills/gameplay-facing-relative-light-aim/references/sources.md"
+    },
+    {
+      "id": "gameplay-fixed-camera-art-projection",
+      "title": "固定相机插画投影与简化场景几何",
+      "category": "shared",
+      "path": "skills/gameplay-fixed-camera-art-projection/SKILL.md",
+      "mechanisms": [
+        "fixed-camera-art-projection"
+      ],
+      "source_ids": [
+        "DezJsUWuQqo"
+      ],
+      "related_skills": [
+        "gameplay-state-driven-surface-motion",
+        "gameplay-aim-pose"
+      ],
+      "evidence_path": "skills/gameplay-fixed-camera-art-projection/references/sources.md"
+    },
+    {
+      "id": "gameplay-skeletal-planar-shadows",
+      "title": "复用骨骼姿态的简化网格平面阴影",
+      "category": "shared",
+      "path": "skills/gameplay-skeletal-planar-shadows/SKILL.md",
+      "mechanisms": [
+        "skeletal-planar-shadows"
+      ],
+      "source_ids": [
+        "DdRRdDSqiiJ",
+        "DezJsUWuQqo"
+      ],
+      "related_skills": [
+        "gameplay-worldspace-indicators",
+        "gameplay-surface-aftermath"
+      ],
+      "evidence_path": "skills/gameplay-skeletal-planar-shadows/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2072,7 +2107,8 @@
         "contact-response",
         "movement-look-decoupling",
         "tool-body-coordination",
-        "facing-relative-light-aim"
+        "facing-relative-light-aim",
+        "fixed-camera-art-projection"
       ]
     },
     {
@@ -2229,7 +2265,8 @@
         "occlusion-reveal",
         "gravity-orientation-cues",
         "landing-feedback",
-        "surface-adhesion"
+        "surface-adhesion",
+        "skeletal-planar-shadows"
       ]
     },
     {
@@ -2671,7 +2708,8 @@
         "deformable-support",
         "cut-surface-rendering",
         "sheet-curl",
-        "rain-surface-feedback"
+        "rain-surface-feedback",
+        "skeletal-planar-shadows"
       ]
     },
     {
@@ -3062,7 +3100,8 @@
         "secondary-motion",
         "geometric-event-alignment",
         "cut-surface-rendering",
-        "sheet-curl"
+        "sheet-curl",
+        "fixed-camera-art-projection"
       ]
     },
     {
@@ -3382,6 +3421,40 @@
       "distinct_from": [
         "aim-pose",
         "movement-look-decoupling"
+      ]
+    },
+    {
+      "id": "fixed-camera-art-projection",
+      "request_examples": [
+        "固定相机游戏想把插画贴合盒体/圆柱而保留场景深度，不需要自由绕看。",
+        "参考视图插画对齐但游戏画幅变化后错位，想检查投影相机和几何覆盖。"
+      ],
+      "primary_skill": "gameplay-fixed-camera-art-projection",
+      "mechanisms": [
+        "fixed-camera-art-projection"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "固定参考相机的插画投影到简单几何，不是全向纹理展开、移动UV动画或角色方向姿态。",
+      "distinct_from": [
+        "state-driven-surface-motion",
+        "aim-pose"
+      ]
+    },
+    {
+      "id": "skeletal-planar-shadows",
+      "request_examples": [
+        "想让角色有跟随动画的黑色风格化地面影子，用简化骨骼副网格投影而非默认阴影。",
+        "影子网格重复算动画或角度长度难控制，想复用主骨骼并限制接收平面。"
+      ],
+      "primary_skill": "gameplay-skeletal-planar-shadows",
+      "mechanisms": [
+        "skeletal-planar-shadows"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "低面数骨骼副网格复用主姿态并在材质中投到已声明地面，非地面位置圆斑提示、任意地形贴合或物理光照求解。",
+      "distinct_from": [
+        "worldspace-indicators",
+        "surface-aftermath"
       ]
     }
   ],

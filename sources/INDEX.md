@@ -1421,3 +1421,25 @@ https://www.instagram.com/p/DdoQR7NT_Ko/
 - 限制：角度约束来自明确正文，边界行为未独立测量；无度数、限幅公式、平滑率、空闲面向、鼠标坐标映射或遮挡/阴影配方。标签提Unity2D但无代码或运行核验。不推断360度、自动转身、准确端点、延迟或紧张感收益；音频未核听。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-facing-relative-light-aim](../skills/gameplay-facing-relative-light-aim/SKILL.md)
+
+## DezJsUWuQqo · 固定相机插画与简化投影阴影概览
+
+https://www.instagram.com/p/DezJsUWuQqo/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Barrow and Blade概览可见插画棺盒与编辑器简单盒体、SIMPLE BOXES AND CYLINDERS。作者回复说明自己的方法依赖固定相机视角投影，其他人逐面投影是不同做法。阴影段实见角色黑色副网格及FLATTEN THIS ONTO THE FLOOR，多名敌人地面影子。另见地面路径信息存纹理及独立grid描述片段。
+- 限制：无UV/节点/展开配方。不能宣称全向观察适用；作者称试错开发。纹理轨迹时间通道、到期及重叠判定缺完整机制，红色0至0.5SECS标签含义未知，不提炼完整地面玩法算法。广设备/SteamDeck目标不是性能实测。无代码、音频或目标运行验证。
+- 音频核听：False；代码运行：False
+- 补齐：作者明确固定相机角度依赖；逐面投影是他人做法，不作为本案例已实现。
+- 补齐：作者说经试错开发，无已知准确教程，未来可能做长教程；不补写缺失实现。
+- 归入：[gameplay-fixed-camera-art-projection](../skills/gameplay-fixed-camera-art-projection/SKILL.md), [gameplay-skeletal-planar-shadows](../skills/gameplay-skeletal-planar-shadows/SKILL.md)
+
+## DdRRdDSqiiJ · 主骨骼驱动低面数副网格的平面阴影
+
+https://www.instagram.com/p/DdRRdDSqiiJ/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者为黑色风格化阴影使用第二个简化骨骼网格，材质将顶点投到地板，以主角色骨骼作leader避免每角色算两遍动画，副网格仅需轮廓可更低面数，影子角度长度可艺术控制。实见彩色角色与黑副网格、庭院角色与偏移黑影、森林脚边延伸平影；圆斑片段不混当骨骼方案。
+- 限制：配方来自完整正文，未核节点/API/版本/源码或性能。没有角度/长度/面数默认，任意坡面台阶/多层接收、遮挡、真实光照响应、LOD/包围盒/深度处理未知。leader避免重复动画为作者解释，不宣称实际CPU/GPU收益。无音频/引擎执行验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-skeletal-planar-shadows](../skills/gameplay-skeletal-planar-shadows/SKILL.md)

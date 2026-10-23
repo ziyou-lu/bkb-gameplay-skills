@@ -229,6 +229,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_art_projection_and_skeletal_shadows_have_distinct_owners(self):
+        for rid, adjacent in [('fixed-camera-art-projection', ('state-driven-surface-motion', 'aim-pose')),
+                              ('skeletal-planar-shadows', ('worldspace-indicators', 'surface-aftermath'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_bounded_light_aim_is_not_pose_rendering_or_free_look(self):
         route = self.routes['facing-relative-light-aim']
         self.assertEqual(route['evidence_status'], 'workflow')
