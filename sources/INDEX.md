@@ -1338,3 +1338,24 @@ https://www.instagram.com/p/DetMMkyx48K/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "local_region_count_example", "value": 6, "unit": "regions", "provenance": "post_text", "note": "IT SEES SIX SMALL ONES画面字幕，作者说明例子，不是本库默认区域数或已核商业游戏源码。"}]
 - 归入：[gameplay-hurtbox-tolerance](../skills/gameplay-hurtbox-tolerance/SKILL.md)
+
+## DekEtMxx8k- · 斜向雨线、接触溅水与水洼涟漪
+
+https://www.instagram.com/p/DekEtMxx8k-/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：游戏天气效果说明岛屿场景：字幕和画面显示斜向雨线、草地溅水、水洼环形涟漪。另显示雪花漂落与上表面积雪、分层薄雾/远景淡出、从底部弯曲树木、热浪空气波动；冰雹字幕说小冰球反弹/发出clack，雷暴仅较密雨和闪光片段；雨后阳光过渡可见，彩虹终点未抽样。
+- 限制：这是以游戏为题的效果设计说明，不是已核可玩游戏、引擎或代码实现。只将连续降雨与接收面反馈提炼为工作流；其他天气为观察背景，不据此建立完整天气控制器。没有数值、单位、碰撞/材质算法、音频核听或运行验证；冰雹声音仅字幕，雷暴延迟未知。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-rain-surface-feedback](../skills/gameplay-rain-surface-feedback/SKILL.md)
+
+## DX9nO-9tmh1 · 动态木料的重量分组、锚点与半径持握定位
+
+https://www.instagram.com/p/DX9nO-9tmh1/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Timberflow: Sawmill Simulator作者说明资源保留世界实体、动态木料无固定形状，携带采用重量分组、锚点和基于半径的放置。游戏提示Carry/Drop，细枝第一人称持握，大木料编辑器调试锚点/局部轴、第三人称及第一人称对照；Unity Inspector显示局部位置/旋转、Alignment Axis、Canonical Length/Thickness Axis、手模型偏移与校准项。
+- 限制：编辑器控件是可见配置，不是已核算法源码或执行测试。重量阈值、半径方程、堆放间距、碰撞安全、联网与双手IK求解未知。Thickness不能直接当radius；姿态与轴示例依对象坐标。手穿入深度0.06和MaxWeight2000无显示单位，不指定米或千克。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "thickness_example", "value": 0.3, "unit": "m", "provenance": "visible_editor_setting", "note": "场景读数；厚度定义未核，不能直接当半径。"}, {"name": "length_example", "value": 1.9, "unit": "m", "provenance": "visible_editor_setting", "note": "场景读数，非默认尺寸。"}, {"name": "hand_penetration_depth_example", "value": 0.06, "unit": "unspecified", "provenance": "visible_editor_setting", "note": "Inspector例值，单位未显示。"}, {"name": "max_weight_example", "value": 2000, "unit": "unspecified", "provenance": "visible_editor_setting", "note": "Inspector例值，单位未显示。"}]
+- 归入：[gameplay-dynamic-carry-alignment](../skills/gameplay-dynamic-carry-alignment/SKILL.md)

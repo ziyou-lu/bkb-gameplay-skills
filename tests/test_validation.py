@@ -229,6 +229,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_rain_and_dynamic_carry_keep_distinct_task_boundaries(self):
+        for rid, adjacent in [('rain-surface-feedback', ('surface-aftermath', 'impact-visuals')),
+                              ('dynamic-carry-alignment', ('tool-body-coordination', 'loot-pickup'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_jump_height_and_gravity_are_separate_from_permission(self):
         self.assert_independent_workflows(['variable-jump-height', 'asymmetric-jump-gravity'])
         for rid in ('variable-jump-height', 'asymmetric-jump-gravity'):

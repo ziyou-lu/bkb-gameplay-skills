@@ -1530,6 +1530,40 @@
         "gameplay-result-counting"
       ],
       "evidence_path": "skills/gameplay-bag-randomizer/references/sources.md"
+    },
+    {
+      "id": "gameplay-rain-surface-feedback",
+      "title": "降雨的斜线、溅水与水洼涟漪",
+      "category": "shared",
+      "path": "skills/gameplay-rain-surface-feedback/SKILL.md",
+      "mechanisms": [
+        "rain-surface-composition"
+      ],
+      "source_ids": [
+        "DekEtMxx8k-"
+      ],
+      "related_skills": [
+        "gameplay-surface-aftermath",
+        "gameplay-impact-visuals"
+      ],
+      "evidence_path": "skills/gameplay-rain-surface-feedback/references/sources.md"
+    },
+    {
+      "id": "gameplay-dynamic-carry-alignment",
+      "title": "动态尺寸物件的持握锚点与径向贴合",
+      "category": "shared",
+      "path": "skills/gameplay-dynamic-carry-alignment/SKILL.md",
+      "mechanisms": [
+        "dynamic-carry-alignment"
+      ],
+      "source_ids": [
+        "DX9nO-9tmh1"
+      ],
+      "related_skills": [
+        "gameplay-tool-body-coordination",
+        "gameplay-loot-pickup"
+      ],
+      "evidence_path": "skills/gameplay-dynamic-carry-alignment/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1644,7 +1678,8 @@
         "camera-feedback",
         "speed-camera",
         "occlusion-reveal",
-        "gravity-orientation-cues"
+        "gravity-orientation-cues",
+        "rain-surface-feedback"
       ]
     },
     {
@@ -2389,7 +2424,8 @@
         "completion-sequences",
         "surface-aftermath",
         "landing-tumble-recovery",
-        "bag-randomizer"
+        "bag-randomizer",
+        "dynamic-carry-alignment"
       ]
     },
     {
@@ -2556,7 +2592,8 @@
         "completion-sequences",
         "deformable-support",
         "cut-surface-rendering",
-        "sheet-curl"
+        "sheet-curl",
+        "rain-surface-feedback"
       ]
     },
     {
@@ -2965,7 +3002,8 @@
         "gait-step-scheduling",
         "secondary-motion",
         "motion-deformation",
-        "geometric-event-alignment"
+        "geometric-event-alignment",
+        "dynamic-carry-alignment"
       ]
     },
     {
@@ -3156,6 +3194,40 @@
         "reward-reveal",
         "loot-pickup",
         "result-counting"
+      ]
+    },
+    {
+      "id": "rain-surface-feedback",
+      "request_examples": [
+        "雨只有空中灰线，想让草地溅水、水洼起圈，并与斜向雨势一致。",
+        "雨停后涟漪残留无限增长，想给连续降雨的触地点反馈设置预算和退场。"
+      ],
+      "primary_skill": "gameplay-rain-surface-feedback",
+      "mechanisms": [
+        "rain-surface-composition"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "连续降雨的空中方向、接收面分类与短命涟漪编排；不是生成水洼网格、真实积水流体或整套天气模拟。",
+      "distinct_from": [
+        "surface-aftermath",
+        "impact-visuals"
+      ]
+    },
+    {
+      "id": "dynamic-carry-alignment",
+      "request_examples": [
+        "砍下的木料长短粗细不同，拿起来时总会穿手或离手，想按实际尺寸对齐。",
+        "同一实体木料在第一和第三人称持握位置不一致，想校准本地锚点和长度方向。"
+      ],
+      "primary_skill": "gameplay-dynamic-carry-alignment",
+      "mechanisms": [
+        "dynamic-carry-alignment"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "几何可变的实体物件按重量组、局部锚点/轴与半径调整携带位置；不是固定工具挥动姿态、完整IK求解器或掉落物吸附后消失。",
+      "distinct_from": [
+        "tool-body-coordination",
+        "loot-pickup"
       ]
     }
   ],
