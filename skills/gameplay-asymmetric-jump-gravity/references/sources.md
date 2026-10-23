@@ -49,3 +49,8 @@
 同一五步演示另包含 COYOTE TIME!、JUMP BUFFER! 与 SQUASH + STRETCH!，分别归入[离地宽限](../../gameplay-jump-forgiveness/SKILL.md)、[输入缓冲](../../gameplay-jump-input-buffer/SKILL.md)和[事件形变](../../gameplay-motion-deformation/SKILL.md)。它们处理许可、命令和视觉层，不能与本项相位加速度合并成一项未经区分的“跳跃优化”。
 
 完整登记由[来源索引](../../../sources/posts.json)维护。
+
+## 新增：长距离下落速度封顶
+
+- [DcqrTMNgNta · sillyhatstudio](https://www.instagram.com/sillyhatstudio/reel/DcqrTMNgNta/)，Tonikum，2026-10-23核看。作者称长落差无限加速降低反应机会，因此到最大速度后停止继续加速。实见落体画面及-20/-50/-49样本，单位与最终上限不明，不能推荐为米每秒值。
+- 单位向上轴分解后只限制下降分量、物理步限幅位置、外力/下冲豁免与对照测试为本库工程建议；作者未提供更新顺序/代码或例外语义。没有本库运行、音频、性能或反应时实验。

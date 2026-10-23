@@ -229,6 +229,16 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_rustle_and_roll_momentum_have_distinct_task_owners(self):
+        for rid, adjacent in [('foliage-rustle-response', ('physics-stage-audio', 'secondary-motion')),
+                              ('dash-roll-momentum', ('dash-feedback', 'landing-feedback', 'traversal-transitions'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_crouch_zone_request_is_not_traversal_release_or_animation(self):
         route = self.routes['crouch-zone-assistance']
         self.assertEqual(route['evidence_status'], 'workflow')

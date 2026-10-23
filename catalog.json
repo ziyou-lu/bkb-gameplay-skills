@@ -1463,7 +1463,8 @@
       ],
       "source_ids": [
         "DepixufCmyS",
-        "DezkivHxPgc"
+        "DezkivHxPgc",
+        "DcqrTMNgNta"
       ],
       "related_skills": [
         "gameplay-variable-jump-height",
@@ -1759,6 +1760,41 @@
         "gameplay-movement-feedback"
       ],
       "evidence_path": "skills/gameplay-crouch-zone-assistance/references/sources.md"
+    },
+    {
+      "id": "gameplay-foliage-rustle-response",
+      "title": "移动参数驱动的植被接触声",
+      "category": "shared",
+      "path": "skills/gameplay-foliage-rustle-response/SKILL.md",
+      "mechanisms": [
+        "foliage-rustle-response"
+      ],
+      "source_ids": [
+        "Dc3xS4OlPzi"
+      ],
+      "related_skills": [
+        "gameplay-physics-stage-audio",
+        "gameplay-secondary-motion"
+      ],
+      "evidence_path": "skills/gameplay-foliage-rustle-response/references/sources.md"
+    },
+    {
+      "id": "gameplay-dash-roll-momentum",
+      "title": "下冲转滚与滚动冲刺的动量交接",
+      "category": "shared",
+      "path": "skills/gameplay-dash-roll-momentum/SKILL.md",
+      "mechanisms": [
+        "dash-roll-momentum"
+      ],
+      "source_ids": [
+        "Dbvq1GYDI_H"
+      ],
+      "related_skills": [
+        "gameplay-dash-feedback",
+        "gameplay-landing-feedback",
+        "gameplay-traversal-transitions"
+      ],
+      "evidence_path": "skills/gameplay-dash-roll-momentum/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2178,7 +2214,8 @@
         "state-driven-surface-motion",
         "tool-body-coordination",
         "prop-appendage-contacts",
-        "sheet-curl"
+        "sheet-curl",
+        "foliage-rustle-response"
       ]
     },
     {
@@ -2445,7 +2482,8 @@
         "traversal-transitions",
         "steering-assistance",
         "locomotion-contacts",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "dash-roll-momentum"
       ]
     },
     {
@@ -2469,7 +2507,8 @@
         "gravity-orientation-cues",
         "worldspace-indicators",
         "launch-pad-feedback",
-        "landing-tumble-recovery"
+        "landing-tumble-recovery",
+        "dash-roll-momentum"
       ]
     },
     {
@@ -2706,7 +2745,8 @@
         "ceiling-corner-correction",
         "surface-adhesion",
         "launch-pad-feedback",
-        "crouch-zone-assistance"
+        "crouch-zone-assistance",
+        "dash-roll-momentum"
       ]
     },
     {
@@ -3341,14 +3381,15 @@
       "id": "asymmetric-jump-gravity",
       "request_examples": [
         "跳跃上升正常但下落漂浮，想只加快下降，不动起跳许可。",
-        "加快下落后低帧率穿地或顶点抖动，要分开检查重力相位和碰撞。"
+        "加快下落后低帧率穿地或顶点抖动，要分开检查重力相位和碰撞。",
+        "长距离下落越来越快，看不清下方平台，想只限制普通下落最大速度而不改上升和水平控制。"
       ],
       "primary_skill": "gameplay-asymmetric-jump-gravity",
       "mechanisms": [
         "asymmetric-jump-gravity"
       ],
       "evidence_status": "workflow",
-      "boundary": "当角色需要上升与下降不同重力、下落更快或有界的顶点缓降时，按运动相位配置加速度并处理相位边界；不按保持输入改变高度，不全程加重力，也不新增起跳许可。",
+      "boundary": "当角色需要上升与下降不同重力、下落更快、长落差速度封顶或有界的顶点缓降时，按运动相位配置加速度并处理相位边界；不按保持输入改变高度，不全程加重力，也不新增起跳许可。",
       "distinct_from": [
         "variable-jump-height",
         "jump-forgiveness",
@@ -3466,7 +3507,8 @@
       "boundary": "由真实物理阶段驱动局部音频事件与变体，不改倒伏力学、不把预录时长当触地事件，也不自动增加枝条声。",
       "distinct_from": [
         "prop-toppling-dynamics",
-        "breakables-loot"
+        "breakables-loot",
+        "foliage-rustle-response"
       ]
     },
     {
@@ -3640,6 +3682,41 @@
       "distinct_from": [
         "traversal-transitions",
         "movement-feedback"
+      ]
+    },
+    {
+      "id": "foliage-rustle-response",
+      "request_examples": [
+        "走过灌木总播同一段沙沙声，想让慢速经过更轻、快速撞入更强。",
+        "植被接触声每帧重启或多灌木齐爆，想按运动状态更新而非重复触发。"
+      ],
+      "primary_skill": "gameplay-foliage-rustle-response",
+      "mechanisms": [
+        "foliage-rustle-response"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "消费已有植被接触与移动速度/力度/方向调节响应，非倒伏阶段音层、视觉装饰摆动或已验证立体声算法。",
+      "distinct_from": [
+        "physics-stage-audio",
+        "secondary-motion"
+      ]
+    },
+    {
+      "id": "dash-roll-momentum",
+      "request_examples": [
+        "向下冲刺撞地后希望接滚动，将下落速度映射成向前移动而非归零。",
+        "滚动中再次冲刺想消耗保存的动量做短促加速，但不能无限连锁提速。"
+      ],
+      "primary_skill": "gameplay-dash-roll-momentum",
+      "mechanisms": [
+        "dash-roll-momentum"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅明确要求真实移动规则时处理下冲接地到滚动再到临时推进的速度/状态交接；不是冲刺残影、落地震动或无条件能量守恒。",
+      "distinct_from": [
+        "dash-feedback",
+        "landing-feedback",
+        "traversal-transitions"
       ]
     }
   ],

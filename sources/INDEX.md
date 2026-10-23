@@ -1519,3 +1519,33 @@ https://www.instagram.com/p/DUThd0gEn8g/
 - 音频核听：False；代码运行：False
 - 补齐：作者称超出玩家渲染距离的对象被禁用；不据此宣称性能收益或完整区域生命周期实现。
 - 归入：[gameplay-crouch-zone-assistance](../skills/gameplay-crouch-zone-assistance/SKILL.md)
+
+## Dc3xS4OlPzi · 移动状态参数化的灌木声原型
+
+https://www.instagram.com/sillyhatstudio/reel/Dc3xS4OlPzi/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者正文称不再只触发同一录音，读取玩家速度、移动力度与方向，慢速更轻、快速撞入更强，仍为原型。实见角色在灌木边及穿过植被，调试数字/向量不可读。
+- 限制：浏览静音，未独立核听声音、声道或波形；速度关系来自正文，方向映射未给，评论中的声道问题无作者确认。无dB/音高/混音/冷却/强度公式、代码或运行测试。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-foliage-rustle-response](../skills/gameplay-foliage-rustle-response/SKILL.md)
+
+## DcqrTMNgNta · 长落差最大下落速度限制
+
+https://www.instagram.com/sillyhatstudio/reel/DcqrTMNgNta/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明无限加速令下方平台/障碍太快，增加最大下降速度，到达后不再增速。画面竖井及空中落体显示-20、-50、-49等样本。
+- 限制：样本无单位且最终上限未核，不作米每秒或默认值。物理更新顺序、水平控制、上升/外力/冲刺例外未给，无代码、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-asymmetric-jump-gravity](../skills/gameplay-asymmetric-jump-gravity/SKILL.md)
+
+## Dbvq1GYDI_H · 下冲接滚与滚中冲刺的速度保留
+
+https://www.instagram.com/sillyhatstudio/reel/Dbvq1GYDI_H/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者称向地面冲刺接滚动时把向下速度转换为前进而非立即损失，滚中再次冲刺用保存动量短暂推进。实见RUNNING与ROLL+DASH分屏，后者越过缺口；作者承认可能破坏关卡，速度/时长/强度仍测试。
+- 限制：剪辑不是仪器速度实验，Perfectly balanced为语境反讽，不声称平衡已定。无转换比例、储存量、衰减、时长/上限、滚动资格、输入窗/复位或单位；不宣称动能守恒。无代码/音频/性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-dash-roll-momentum](../skills/gameplay-dash-roll-momentum/SKILL.md)
