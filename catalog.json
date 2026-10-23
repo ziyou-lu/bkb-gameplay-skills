@@ -1814,6 +1814,42 @@
         "gameplay-state-driven-surface-motion"
       ],
       "evidence_path": "skills/gameplay-surface-history-field/references/sources.md"
+    },
+    {
+      "id": "gameplay-gamepad-pitch-limits",
+      "title": "手柄视角边界减速",
+      "category": "shared",
+      "path": "skills/gameplay-gamepad-pitch-limits/SKILL.md",
+      "mechanisms": [
+        "gamepad-pitch-limits"
+      ],
+      "source_ids": [
+        "Dbh6DiliHux"
+      ],
+      "related_skills": [
+        "gameplay-camera-feedback",
+        "gameplay-speed-camera",
+        "gameplay-surface-camera-up"
+      ],
+      "evidence_path": "skills/gameplay-gamepad-pitch-limits/references/sources.md"
+    },
+    {
+      "id": "gameplay-room-map-navigation",
+      "title": "房间焦点驱动的三维地图导航",
+      "category": "shared",
+      "path": "skills/gameplay-room-map-navigation/SKILL.md",
+      "mechanisms": [
+        "room-map-navigation"
+      ],
+      "source_ids": [
+        "Dd_BhoziQ01"
+      ],
+      "related_skills": [
+        "gameplay-camera-feedback",
+        "gameplay-completion-sequences",
+        "gameplay-contextual-ui"
+      ],
+      "evidence_path": "skills/gameplay-room-map-navigation/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1953,7 +1989,9 @@
         "pointer-curvature-steering",
         "occlusion-reveal",
         "surface-camera-up",
-        "raycaster-depth-correction"
+        "raycaster-depth-correction",
+        "gamepad-pitch-limits",
+        "room-map-navigation"
       ]
     },
     {
@@ -2176,7 +2214,8 @@
         "world-readability",
         "scene-transitions",
         "mechanical-interactions",
-        "connection-transitions"
+        "connection-transitions",
+        "room-map-navigation"
       ]
     },
     {
@@ -2210,7 +2249,8 @@
         "hitstop",
         "impact-visuals",
         "camera-feedback",
-        "surface-camera-up"
+        "surface-camera-up",
+        "gamepad-pitch-limits"
       ]
     },
     {
@@ -2886,7 +2926,8 @@
         "reward-reveal",
         "loot-pickup",
         "surface-aftermath",
-        "surface-camera-up"
+        "surface-camera-up",
+        "room-map-navigation"
       ]
     },
     {
@@ -3143,7 +3184,8 @@
         "locomotion-contacts",
         "gravity-orientation-cues",
         "movement-look-decoupling",
-        "surface-adhesion"
+        "surface-adhesion",
+        "gamepad-pitch-limits"
       ]
     },
     {
@@ -3757,6 +3799,40 @@
         "timestamped-ground-effects",
         "surface-aftermath",
         "state-driven-surface-motion"
+      ]
+    },
+    {
+      "id": "gamepad-pitch-limits",
+      "request_examples": [
+        "手柄向上或向下看时到边界骤停，想靠近俯仰极限时减速，但鼠标保持直接对应。"
+      ],
+      "primary_skill": "gameplay-gamepad-pitch-limits",
+      "mechanisms": [
+        "gamepad-pitch-limits"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅对手柄指向俯仰边界的输入减速并保留硬限制，鼠标绕过此边界缓动；不是事件震动、速度FOV或表面法线相机上方向。",
+      "distinct_from": [
+        "camera-feedback",
+        "speed-camera",
+        "surface-camera-up"
+      ]
+    },
+    {
+      "id": "room-map-navigation",
+      "request_examples": [
+        "三维地图自由飞行难用手柄控制高度，想按房间选择并围绕房间焦点旋转缩放。"
+      ],
+      "primary_skill": "gameplay-room-map-navigation",
+      "mechanisms": [
+        "room-map-navigation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "地图独立选中房间与焦点，平滑切换房间并绕当前焦点旋转缩放；不是世界镜头冲击、完成事件镜头或普通菜单聚焦。",
+      "distinct_from": [
+        "camera-feedback",
+        "completion-sequences",
+        "contextual-ui"
       ]
     }
   ],

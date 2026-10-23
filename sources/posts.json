@@ -3252,6 +3252,40 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "Dbh6DiliHux",
+      "url": "https://www.instagram.com/p/Dbh6DiliHux/",
+      "creator": "100stonesinteractive",
+      "title": "手柄视角边界减速",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者明确手柄靠近上下视角极限减速至停止，而鼠标不加该边界平滑以保留手部位移对应；实见第一人称地面至梯子/天花板视图。",
+      "limitations": "无角度极限、缓动范围/曲线、转速或时长；无控制输入轨迹/逐帧测量，不推断所有鼠标行为或yaw。 无代码执行、音频或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-gamepad-pitch-limits"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Dd_BhoziQ01",
+      "url": "https://www.instagram.com/100stonesinteractive/reel/Dd_BhoziQ01/",
+      "creator": "100stonesinteractive",
+      "title": "房间焦点驱动的三维地图导航",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者指出三维地图自由飞行尤其不适合手柄高度导航，改为房间锁定、房间间平滑切换、围绕所选房间焦点旋转/缩放；实见多层地图与单房间居中视图。",
+      "limitations": "选房按键/邻接搜索、焦点计算、插值曲线/时间、缩放边界、墙体剖切、打断及朝向保留未知。剪辑不是交互延迟或可用性测量。 无代码执行、音频或性能验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-room-map-navigation"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

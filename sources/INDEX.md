@@ -1569,3 +1569,23 @@ https://www.instagram.com/sillyhatstudio/reel/DTYFZ2PDkhr/
 - 限制：Pixel Perfect不是已核组件名；未披露采样/量化、分辨率、随机分布/种子、逐像素调度、延迟/时长与重盖语义。10x better不作测量。 无代码执行、音频或性能验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-surface-history-field](../skills/gameplay-surface-history-field/SKILL.md)
+
+## Dbh6DiliHux · 手柄视角边界减速
+
+https://www.instagram.com/p/Dbh6DiliHux/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者明确手柄靠近上下视角极限减速至停止，而鼠标不加该边界平滑以保留手部位移对应；实见第一人称地面至梯子/天花板视图。
+- 限制：无角度极限、缓动范围/曲线、转速或时长；无控制输入轨迹/逐帧测量，不推断所有鼠标行为或yaw。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-gamepad-pitch-limits](../skills/gameplay-gamepad-pitch-limits/SKILL.md)
+
+## Dd_BhoziQ01 · 房间焦点驱动的三维地图导航
+
+https://www.instagram.com/100stonesinteractive/reel/Dd_BhoziQ01/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者指出三维地图自由飞行尤其不适合手柄高度导航，改为房间锁定、房间间平滑切换、围绕所选房间焦点旋转/缩放；实见多层地图与单房间居中视图。
+- 限制：选房按键/邻接搜索、焦点计算、插值曲线/时间、缩放边界、墙体剖切、打断及朝向保留未知。剪辑不是交互延迟或可用性测量。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-room-map-navigation](../skills/gameplay-room-map-navigation/SKILL.md)
