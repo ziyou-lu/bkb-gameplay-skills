@@ -1549,3 +1549,23 @@ https://www.instagram.com/sillyhatstudio/reel/Dbvq1GYDI_H/
 - 限制：剪辑不是仪器速度实验，Perfectly balanced为语境反讽，不声称平衡已定。无转换比例、储存量、衰减、时长/上限、滚动资格、输入窗/复位或单位；不宣称动能守恒。无代码/音频/性能验证。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-dash-roll-momentum](../skills/gameplay-dash-roll-momentum/SKILL.md)
+
+## DS5Zou0kYRF · 双缓冲纹理保存移动历史
+
+https://www.instagram.com/sillyhatstudio/reel/DS5Zou0kYRF/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者称将玩家移动存为数据，显式READ/WRITE纹理图每帧交换；实见红色历史轨迹及Smooth/Chunky表面响应对照。
+- 限制：作者的同纹理读写限制仅适用于其实现，不概括所有Unity API。格式、通道、映射、印记形状、累积算子、衰减、时序与性能未知。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-surface-history-field](../skills/gameplay-surface-history-field/SKILL.md)
+
+## DTYFZ2PDkhr · 像素对齐互动表面与空间差异恢复
+
+https://www.instagram.com/sillyhatstudio/reel/DTYFZ2PDkhr/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：实见Before模糊轨迹与Pixel Perfect ON清晰标记，以及Linear/Random snow recovery对照，后者沿轨迹恢复分布不再只有单一端点退去。
+- 限制：Pixel Perfect不是已核组件名；未披露采样/量化、分辨率、随机分布/种子、逐像素调度、延迟/时长与重盖语义。10x better不作测量。 无代码执行、音频或性能验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-surface-history-field](../skills/gameplay-surface-history-field/SKILL.md)

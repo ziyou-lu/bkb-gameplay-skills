@@ -1795,6 +1795,25 @@
         "gameplay-traversal-transitions"
       ],
       "evidence_path": "skills/gameplay-dash-roll-momentum/references/sources.md"
+    },
+    {
+      "id": "gameplay-surface-history-field",
+      "title": "双缓冲移动历史场与表面恢复",
+      "category": "shared",
+      "path": "skills/gameplay-surface-history-field/SKILL.md",
+      "mechanisms": [
+        "surface-history-field"
+      ],
+      "source_ids": [
+        "DS5Zou0kYRF",
+        "DTYFZ2PDkhr"
+      ],
+      "related_skills": [
+        "gameplay-timestamped-ground-effects",
+        "gameplay-surface-aftermath",
+        "gameplay-state-driven-surface-motion"
+      ],
+      "evidence_path": "skills/gameplay-surface-history-field/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2846,7 +2865,8 @@
         "rain-surface-feedback",
         "skeletal-planar-shadows",
         "decorative-waterfall",
-        "timestamped-ground-effects"
+        "timestamped-ground-effects",
+        "surface-history-field"
       ]
     },
     {
@@ -3240,7 +3260,8 @@
         "sheet-curl",
         "fixed-camera-art-projection",
         "decorative-waterfall",
-        "timestamped-ground-effects"
+        "timestamped-ground-effects",
+        "surface-history-field"
       ]
     },
     {
@@ -3664,7 +3685,8 @@
       "boundary": "位置/形状写入数据纹理并保存创建时间，由贴花评估年龄；玩法网格独立权威，不是地形贴合网格生成、实体流体或普通UV滚动。",
       "distinct_from": [
         "surface-aftermath",
-        "state-driven-surface-motion"
+        "state-driven-surface-motion",
+        "surface-history-field"
       ]
     },
     {
@@ -3717,6 +3739,24 @@
         "dash-feedback",
         "landing-feedback",
         "traversal-transitions"
+      ]
+    },
+    {
+      "id": "surface-history-field",
+      "request_examples": [
+        "角色走过的雪面要持续记住路径并逐步恢复，不能每帧只看到当前脚下。",
+        "互动表面历史纹理交替闪烁，想明确上一帧读取与下一帧写入并保持像素风。"
+      ],
+      "primary_skill": "gameplay-surface-history-field",
+      "mechanisms": [
+        "surface-history-field"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "逐步更新并交换独立读写纹理，保存移动历史场供表面响应，可选像素对齐与空间差异恢复；不是只存创建时刻的贴花到期、承载面网格生成或普通UV滚动。",
+      "distinct_from": [
+        "timestamped-ground-effects",
+        "surface-aftermath",
+        "state-driven-surface-motion"
       ]
     }
   ],

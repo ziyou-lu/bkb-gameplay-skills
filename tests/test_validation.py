@@ -229,6 +229,14 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_surface_history_is_not_timestamp_expiry_or_surface_mesh(self):
+        route = self.routes['surface-history-field']
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('timestamped-ground-effects', 'surface-aftermath', 'state-driven-surface-motion'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('surface-history-field', self.routes[other]['distinct_from'])
+
     def test_rustle_and_roll_momentum_have_distinct_task_owners(self):
         for rid, adjacent in [('foliage-rustle-response', ('physics-stage-audio', 'secondary-motion')),
                               ('dash-roll-momentum', ('dash-feedback', 'landing-feedback', 'traversal-transitions'))]:
