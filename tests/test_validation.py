@@ -229,6 +229,17 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(other, route['distinct_from'])
             self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
 
+    def test_audio_cutting_and_activation_are_not_generic_harvest_polish(self):
+        for rid, adjacent in [('physics-stage-audio', ('prop-toppling-dynamics', 'breakables-loot')),
+                              ('precision-branch-cutting', ('breakables-loot', 'prop-appendage-contacts', 'geometric-event-alignment', 'hurtbox-tolerance')),
+                              ('impact-physics-activation', ('prop-toppling-dynamics', 'breakables-loot'))]:
+            route = self.routes[rid]
+            self.assertEqual(route['evidence_status'], 'workflow')
+            for other in adjacent:
+                self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+                self.assertIn(other, route['distinct_from'])
+                self.assertIn(rid, self.routes[other]['distinct_from'])
+
     def test_rain_and_dynamic_carry_keep_distinct_task_boundaries(self):
         for rid, adjacent in [('rain-surface-feedback', ('surface-aftermath', 'impact-visuals')),
                               ('dynamic-carry-alignment', ('tool-body-coordination', 'loot-pickup'))]:

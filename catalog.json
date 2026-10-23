@@ -1564,6 +1564,59 @@
         "gameplay-loot-pickup"
       ],
       "evidence_path": "skills/gameplay-dynamic-carry-alignment/references/sources.md"
+    },
+    {
+      "id": "gameplay-physics-stage-audio",
+      "title": "物理阶段驱动的断裂、下落与触地音层",
+      "category": "shared",
+      "path": "skills/gameplay-physics-stage-audio/SKILL.md",
+      "mechanisms": [
+        "physics-stage-audio"
+      ],
+      "source_ids": [
+        "DVBtm4JDYKt"
+      ],
+      "related_skills": [
+        "gameplay-prop-toppling-dynamics",
+        "gameplay-breakables-loot"
+      ],
+      "evidence_path": "skills/gameplay-physics-stage-audio/references/sources.md"
+    },
+    {
+      "id": "gameplay-precision-branch-cutting",
+      "title": "枝条根部精确砍击与差异采集结果",
+      "category": "shared",
+      "path": "skills/gameplay-precision-branch-cutting/SKILL.md",
+      "mechanisms": [
+        "precision-branch-cutting"
+      ],
+      "source_ids": [
+        "DVeCNV1gTed"
+      ],
+      "related_skills": [
+        "gameplay-breakables-loot",
+        "gameplay-prop-appendage-contacts",
+        "gameplay-geometric-event-alignment",
+        "gameplay-hurtbox-tolerance"
+      ],
+      "evidence_path": "skills/gameplay-precision-branch-cutting/references/sources.md"
+    },
+    {
+      "id": "gameplay-impact-physics-activation",
+      "title": "受击时启用道具动态物理",
+      "category": "shared",
+      "path": "skills/gameplay-impact-physics-activation/SKILL.md",
+      "mechanisms": [
+        "impact-physics-activation"
+      ],
+      "source_ids": [
+        "DUoENY8jebi"
+      ],
+      "related_skills": [
+        "gameplay-prop-toppling-dynamics",
+        "gameplay-breakables-loot"
+      ],
+      "evidence_path": "skills/gameplay-impact-physics-activation/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -1861,7 +1914,10 @@
         "prop-appendage-contacts",
         "cut-surface-rendering",
         "prop-toppling-dynamics",
-        "landing-tumble-recovery"
+        "landing-tumble-recovery",
+        "physics-stage-audio",
+        "precision-branch-cutting",
+        "impact-physics-activation"
       ]
     },
     {
@@ -2732,7 +2788,8 @@
         "low-health-damage-reduction",
         "health-damage-ui",
         "ceiling-corner-correction",
-        "locomotion-contacts"
+        "locomotion-contacts",
+        "precision-branch-cutting"
       ]
     },
     {
@@ -2960,7 +3017,8 @@
         "surface-adhesion",
         "state-driven-surface-motion",
         "tool-body-coordination",
-        "cut-surface-rendering"
+        "cut-surface-rendering",
+        "precision-branch-cutting"
       ]
     },
     {
@@ -3024,7 +3082,8 @@
         "deformable-support",
         "locomotion-contacts",
         "secondary-motion",
-        "prop-toppling-dynamics"
+        "prop-toppling-dynamics",
+        "precision-branch-cutting"
       ]
     },
     {
@@ -3064,7 +3123,9 @@
         "breakables-loot",
         "prop-appendage-contacts",
         "motion-deformation",
-        "action-timing"
+        "action-timing",
+        "physics-stage-audio",
+        "impact-physics-activation"
       ]
     },
     {
@@ -3228,6 +3289,59 @@
       "distinct_from": [
         "tool-body-coordination",
         "loot-pickup"
+      ]
+    },
+    {
+      "id": "physics-stage-audio",
+      "request_examples": [
+        "倒树一长段音效总早于实际触地，想改成断裂、下落、撞地三阶段音层。",
+        "同类树倒伏时长不同，想用物理事件驱动音层变体而非固定时间线。"
+      ],
+      "primary_skill": "gameplay-physics-stage-audio",
+      "mechanisms": [
+        "physics-stage-audio"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "由真实物理阶段驱动局部音频事件与变体，不改倒伏力学、不把预录时长当触地事件，也不自动增加枝条声。",
+      "distinct_from": [
+        "prop-toppling-dynamics",
+        "breakables-loot"
+      ]
+    },
+    {
+      "id": "precision-branch-cutting",
+      "request_examples": [
+        "希望只有砍中枝根才一击脱枝，砍偏只摇晃并受较少伤害。",
+        "分支之间重叠时，想让一次砍击只处理命中的枝条根部，不误断邻枝。"
+      ],
+      "primary_skill": "gameplay-precision-branch-cutting",
+      "mechanisms": [
+        "precision-branch-cutting"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅显式玩法需求下按枝根命中位置分配脱离或减伤结果；不是纯视觉破坏、枝条地形碰撞覆盖、宽松受伤轮廓或切割时机对齐。",
+      "distinct_from": [
+        "breakables-loot",
+        "prop-appendage-contacts",
+        "geometric-event-alignment",
+        "hurtbox-tolerance"
+      ]
+    },
+    {
+      "id": "impact-physics-activation",
+      "request_examples": [
+        "大量未触碰的树仍耗物理资源，想受击时才启用动态模拟且不丢首击。",
+        "静态树切换动态时跳回原点或重复受伤，想修复身份与命中交接。"
+      ],
+      "primary_skill": "gameplay-impact-physics-activation",
+      "mechanisms": [
+        "impact-physics-activation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "显式允许静态待命的对象受击后进入动态模拟，保留碰撞、逻辑状态和首击；不是重心施力调参、自动休眠或直接进入破坏终态。",
+      "distinct_from": [
+        "prop-toppling-dynamics",
+        "breakables-loot"
       ]
     }
   ],

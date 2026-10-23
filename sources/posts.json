@@ -2822,6 +2822,57 @@
       "observed_date": "2026-10-23",
       "code_executed": false,
       "audio_verified": false
+    },
+    {
+      "id": "DVBtm4JDYKt",
+      "url": "https://www.instagram.com/bezdiga.dev/reel/DVBtm4JDYKt/",
+      "creator": "bezdiga.dev",
+      "title": "物理阶段同步的倒树分层音频",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者说明以断裂、下落、触地音层及各层变体替代单条长音频；断裂层受应力/施力及断裂速度影响，并与物理同步以免突兀截断。实见Tree_Fall波形、FallState参数Break/Falling及尚泛称Value C的项、立树斧击与倒下木料。",
+      "limitations": "未核听音频、同步时刻或源码。作者64+组合为未测声明，不能推导4×4×4。阈值、音量/音高函数、混合时长、单位、分布、并发未知；独立枝条折断声音是作者未来计划，不当现成功能。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-physics-stage-audio"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DVeCNV1gTed",
+      "url": "https://www.instagram.com/p/DVeCNV1gTed/",
+      "creator": "bezdiga.dev",
+      "title": "枝根精准命中与砍偏减效规则",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者说明倒树后剩余枝条需要切除，击中基部一击脱落，未击中基部则摇晃且伤害减少。实见斧头/手部靠近带枝倒木、早期DE-LIMING CHAOS与PROBABLY NOT、后段YOUR PRECISION。",
+      "limitations": "单次接触到脱落的逐帧因果未独立抽样，早期混乱可能为否定基线。伤害语义根据采集上下文解释为枝条所受伤害减少，具体数额/区域/阈值/冷却/碰撞未知。未核代码、音频、运行或性能。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-precision-branch-cutting"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DUoENY8jebi",
+      "url": "https://www.instagram.com/bezdiga.dev/reel/DUoENY8jebi/",
+      "creator": "bezdiga.dev",
+      "title": "静态树受击后启用物理",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者明确物理仅受击时启用；实见FULLY STATIC与TO A SECOND STATE字幕、Unity层级Damageable/Fallable及斧击倒树演示。画面有Trees:1/112FPS、Trees:3648/146FPS与移动时140FPS。",
+      "limitations": "视频显示数值不是本库基准；硬件、对照配置、物理耗时、同时活动数量未核，不宣称性能增益或容量承诺。具体API和状态图未知，不推断对象池、LOD、自动休眠/恢复。无源码、音频或运行验证。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-impact-physics-activation"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -1359,3 +1359,33 @@ https://www.instagram.com/p/DX9nO-9tmh1/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "thickness_example", "value": 0.3, "unit": "m", "provenance": "visible_editor_setting", "note": "场景读数；厚度定义未核，不能直接当半径。"}, {"name": "length_example", "value": 1.9, "unit": "m", "provenance": "visible_editor_setting", "note": "场景读数，非默认尺寸。"}, {"name": "hand_penetration_depth_example", "value": 0.06, "unit": "unspecified", "provenance": "visible_editor_setting", "note": "Inspector例值，单位未显示。"}, {"name": "max_weight_example", "value": 2000, "unit": "unspecified", "provenance": "visible_editor_setting", "note": "Inspector例值，单位未显示。"}]
 - 归入：[gameplay-dynamic-carry-alignment](../skills/gameplay-dynamic-carry-alignment/SKILL.md)
+
+## DVBtm4JDYKt · 物理阶段同步的倒树分层音频
+
+https://www.instagram.com/bezdiga.dev/reel/DVBtm4JDYKt/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明以断裂、下落、触地音层及各层变体替代单条长音频；断裂层受应力/施力及断裂速度影响，并与物理同步以免突兀截断。实见Tree_Fall波形、FallState参数Break/Falling及尚泛称Value C的项、立树斧击与倒下木料。
+- 限制：未核听音频、同步时刻或源码。作者64+组合为未测声明，不能推导4×4×4。阈值、音量/音高函数、混合时长、单位、分布、并发未知；独立枝条折断声音是作者未来计划，不当现成功能。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-physics-stage-audio](../skills/gameplay-physics-stage-audio/SKILL.md)
+
+## DVeCNV1gTed · 枝根精准命中与砍偏减效规则
+
+https://www.instagram.com/p/DVeCNV1gTed/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明倒树后剩余枝条需要切除，击中基部一击脱落，未击中基部则摇晃且伤害减少。实见斧头/手部靠近带枝倒木、早期DE-LIMING CHAOS与PROBABLY NOT、后段YOUR PRECISION。
+- 限制：单次接触到脱落的逐帧因果未独立抽样，早期混乱可能为否定基线。伤害语义根据采集上下文解释为枝条所受伤害减少，具体数额/区域/阈值/冷却/碰撞未知。未核代码、音频、运行或性能。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-precision-branch-cutting](../skills/gameplay-precision-branch-cutting/SKILL.md)
+
+## DUoENY8jebi · 静态树受击后启用物理
+
+https://www.instagram.com/bezdiga.dev/reel/DUoENY8jebi/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者明确物理仅受击时启用；实见FULLY STATIC与TO A SECOND STATE字幕、Unity层级Damageable/Fallable及斧击倒树演示。画面有Trees:1/112FPS、Trees:3648/146FPS与移动时140FPS。
+- 限制：视频显示数值不是本库基准；硬件、对照配置、物理耗时、同时活动数量未核，不宣称性能增益或容量承诺。具体API和状态图未知，不推断对象池、LOD、自动休眠/恢复。无源码、音频或运行验证。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-impact-physics-activation](../skills/gameplay-impact-physics-activation/SKILL.md)
