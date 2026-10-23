@@ -1285,3 +1285,34 @@ https://www.instagram.com/p/DezkivHxPgc/
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "coyote_window_example", "value": 6, "unit": "frames", "provenance": "post_text", "note": "画面文字6 FRAMES，与无窗口对照；帧率未知，不转换秒数或默认值。"}, {"name": "apex_arrow_annotation", "value": 0.2, "unit": "unspecified multiplier annotation", "provenance": "post_text", "note": "向下箭头的x0.2标签，所乘量未确定，不命名为重力/速度/时间倍率。"}]
 - 归入：[gameplay-variable-jump-height](../skills/gameplay-variable-jump-height/SKILL.md), [gameplay-asymmetric-jump-gravity](../skills/gameplay-asymmetric-jump-gravity/SKILL.md), [gameplay-motion-deformation](../skills/gameplay-motion-deformation/SKILL.md), [gameplay-landing-feedback](../skills/gameplay-landing-feedback/SKILL.md), [gameplay-jump-forgiveness](../skills/gameplay-jump-forgiveness/SKILL.md), [gameplay-jump-input-buffer](../skills/gameplay-jump-input-buffer/SKILL.md)
+
+## DepIL1tPW6x · 按游戏进度控制的薄片顶点卷曲
+
+https://www.instagram.com/p/DepIL1tPW6x/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者完整正文说明用无骨骼的顶点着色器处理纸/布：对象空间沿长度归一化为0到1，阈值以下保持平坦，超过阈值的位置重映射到圆，半径决定卷层厚度，角度取决于越过阈值的距离；游戏事件/系统驱动阈值，并叠加正弦摆动。画面可见编辑器蓝色选中薄片波动边缘、卷为圆筒的纸张，以及游戏内 LIZARD DECOY 图纸与爬行蜥蜴。
+- 限制：没有可读代码/节点图、具体角度方程、半径单位/数值、细分密度、正弦幅频或动画时长。性能优于多余骨骼是作者未经基准测试的声明。形变不证明碰撞体同步、布料物理或自碰撞；音频未核听，代码未运行。执行入口的连续圆弧方案、法线/切线/包围盒和测试为工程指导，不当作者已核算法。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "normalized_length_domain", "value": [0, 1], "unit": "dimensionless", "provenance": "caption_or_post_text", "note": "对象空间长度映射的作者说明；需确认网格端点及方向。"}, {"name": "curl_threshold_example", "value": 0.5, "unit": "dimensionless", "provenance": "caption_or_post_text", "note": "作者半卷示例。小于阈值保持平坦，大于阈值卷曲；不是默认参数。"}]
+- 归入：[gameplay-sheet-curl](../skills/gameplay-sheet-curl/SKILL.md)
+
+## DcOqIu4PK8u · 不良落地的翻倒、短晕与掉物取舍
+
+https://www.instagram.com/p/DcOqIu4PK8u/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者正文及本人评论说明 Sticky Feet 中以过高速度落在不良角度表面可能翻倒/布娃娃并短暂眩晕，携带物掉落，玩家选择是否冒险追取，附近角色可能调查声响。抽样画面可见蜥蜴在窄/倾斜家具处，以及暗表面横卧姿态和附近人腿。
+- 限制：画面仅支持场景和姿态，不能验证隐藏接触条件、携带物归属或准确事件时序。没有速度/角度阈值、晕眩时长、声音半径、概率、关节/控制切换算法或源码。声响/调查是作者玩法说明，未核音频或AI实现；代码未执行。掉物去重、支撑检查和恢复流程是项目工程建议，不自动添加为普通落地润色。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-landing-tumble-recovery](../skills/gameplay-landing-tumble-recovery/SKILL.md)
+
+## Db2yk8FPyNs · 钥匙、锁销、把手到舱盖开启的因果阶段
+
+https://www.instagram.com/p/Db2yk8FPyNs/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者正文明确可收集钥匙使锁销弹出、金属把手解锁，再打开罐形舱口以进入新区。抽样画面可见蜥蜴携带钥匙状物、收集钥匙字幕、舱盖机关和打开的盖/入口。
+- 限制：并未逐帧抽样全部中间锁销阶段，完整顺序依据正文。无钥匙验证/消耗、保存状态、通行生效、时间、角度、行程或代码；音频未核听，代码未运行。编排器幂等、资格检查和通行门控属于工程迁移，不把动画当实际钥匙规则。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-mechanical-interactions](../skills/gameplay-mechanical-interactions/SKILL.md)

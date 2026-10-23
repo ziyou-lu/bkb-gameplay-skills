@@ -33,4 +33,6 @@ description: "当机器已运行但皮带等表面仍静止，或材质滚动与
 
 [机关驱动](../gameplay-mechanical-interactions/SKILL.md)管理通行，[形变](../gameplay-motion-deformation/SKILL.md)改变形体，[装饰跟随](../gameplay-secondary-motion/SKILL.md)管理滞后，[几何事件](../gameplay-geometric-event-alignment/SKILL.md)决定切断边界。
 
+需要纸张/布片真实视觉顶点卷曲时使用[薄片卷曲](../gameplay-sheet-curl/SKILL.md)，不要用UV滚动替代几何变化。
+
 需要核对机制出处、示例参数或证据边界时，读取[来源参考](references/sources.md)。

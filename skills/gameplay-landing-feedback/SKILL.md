@@ -44,4 +44,6 @@ description: "当落地缺少重量或每帧接地重复播反馈时，绑定真
 
 [环境跳板](../gameplay-launch-pad-feedback/SKILL.md)负责环境接触后的弹射与腾空全过程，不在本入口复制该编排。
 
+仅在任务明确要求增加真实落地惩罚时使用[翻倒与恢复](../gameplay-landing-tumble-recovery/SKILL.md)；普通落地润色不增加晕眩、掉物或敌人感知。
+
 需要核对案例、参数出处或证据边界时，读取[来源参考](references/sources.md)。

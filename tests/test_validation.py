@@ -203,6 +203,24 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 if left is not right:
                     self.assertIn(right['id'], left['distinct_from'])
 
+    def test_sheet_curl_is_not_transform_uv_or_physical_support(self):
+        route = self.routes['sheet-curl']
+        self.assertEqual(route['mechanisms'], ['sheet-curl-deformation'])
+        for other in ('motion-deformation', 'state-driven-surface-motion', 'secondary-motion',
+                      'deformable-support', 'cut-surface-rendering', 'surface-aftermath'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('sheet-curl', self.routes[other]['distinct_from'])
+
+    def test_landing_tumble_rules_are_not_cosmetic_landing(self):
+        route = self.routes['landing-tumble-recovery']
+        self.assertEqual(route['mechanisms'], ['landing-tumble-composition'])
+        for other in ('landing-feedback', 'hit-recovery', 'breakables-loot',
+                      'loot-pickup', 'launch-pad-feedback', 'contact-response'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('landing-tumble-recovery', self.routes[other]['distinct_from'])
+
     def test_jump_height_and_gravity_are_separate_from_permission(self):
         self.assert_independent_workflows(['variable-jump-height', 'asymmetric-jump-gravity'])
         for rid in ('variable-jump-height', 'asymmetric-jump-gravity'):

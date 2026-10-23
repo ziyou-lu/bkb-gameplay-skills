@@ -55,4 +55,6 @@ description: "在接触、弹跳、按钮反馈或快速出招缺少受力和轮
 - [落地反馈](../gameplay-landing-feedback/SKILL.md)与[冲刺反馈](../gameplay-dash-feedback/SKILL.md)
 - [射击反馈](../gameplay-shooting-feedback/SKILL.md)与[法术生命周期](../gameplay-projectile-spells/SKILL.md)
 
+连续薄片沿长度卷成圆弧使用[薄片卷曲](../gameplay-sheet-curl/SKILL.md)，不把顶点坐标映射当作整体缩放。
+
 需要核对案例、参数出处或证据边界时，读取[来源参考](references/sources.md)。

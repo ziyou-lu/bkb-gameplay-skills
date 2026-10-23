@@ -47,3 +47,7 @@
 完整观察、证据类型、未证项和参数 provenance 见 [来源登记](../../../sources/posts.json)。来源不证明本文件工程建议已在原帖实现。
 
 - [DeY6lNdTxTe](https://www.instagram.com/p/DeY6lNdTxTe/)：压板机关门的机械运动、接地反馈与分段变化。
+
+## 钥匙机关阶段补充：Db2yk8FPyNs
+
+来源：[kennethchanny 锁销与舱盖](https://www.instagram.com/p/Db2yk8FPyNs/)，2026-10-23。正文明确钥匙使锁销弹出→把手解锁→舱盖打开，画面抽样支持携带钥匙与打开入口，不是每个中间帧验证。没有时长/角度、钥匙消耗、读档或通行实现。执行入口的资格、事务去重、阶段门控与重入恢复是项目工程建议；具体事实和未知项见 [来源登记](../../../sources/posts.json)。
