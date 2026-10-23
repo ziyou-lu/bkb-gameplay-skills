@@ -60,3 +60,10 @@
 - [DelJO3qusJE](https://www.instagram.com/p/DelJO3qusJE/)：受击七步。
 - [DejijtPzhYJ](https://www.instagram.com/reel/DejijtPzhYJ/)：组合战斗反馈。
 - [DcZxryBoCFw](https://www.instagram.com/p/DcZxryBoCFw/)：Godot 双层延迟血条。
+
+## DdhLtbTlTRG 补充核看（2026-10-23）
+
+- [已核页面](https://www.instagram.com/p/DdhLtbTlTRG/)作者为 pebbles_dev，注明重制 mii_misan 血条教程；这是既有主来源补证，不另计数量。原0.75秒填充/0.4秒残影滞后及50%/25%阈值已登记，不当新机制重复添加；0.4秒是作者描述的滞后，不证明具体计时器语义或完整排空时长。
+- 新抽样见03 THE HIT、82/100的绿色填充与亮损失段；04低血量24/100为红色。可见函数先 p<=0.25 返回RED，再 p<=0.5 返回AMBER，最后GREEN。最终普通与强化两条均22/100，普通绿、强化红，不据此推断用户反应收益。
+- 画面tween示意有FLASH/0.03、Color.WHITE/0.14，x到kx-9.0/0.05；只记录静态参数，没有核API、单位或执行。返回基准、连续受击和治疗分支未捕获，不声称作者已实现这些健壮性处理。
+- 正文的低阈值优先、真实HP分级与当前危险色恢复、独立位移归零及旧回调撤销，是基于所见机制写的工程指导；并非复刻完整源码。未核听音频或目标项目运行。

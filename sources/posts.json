@@ -72,7 +72,7 @@
     {
       "id": "DdhLtbTlTRG",
       "url": "https://www.instagram.com/reel/DdhLtbTlTRG/",
-      "creator": null,
+      "creator": "pebbles_dev",
       "title": "血条延迟扣血与残影",
       "status": "included",
       "evidence_basis": "caption_and_partial_visual",
@@ -109,7 +109,15 @@
       ],
       "observed_date": "2026-10-20",
       "code_executed": false,
-      "audio_verified": false
+      "audio_verified": false,
+      "evidence_updates": [
+        {
+          "observed_date": "2026-10-23",
+          "basis": "caption_and_partial_visual",
+          "source_url": "https://www.instagram.com/p/DdhLtbTlTRG/",
+          "change": "核实作者pebbles_dev并署名重制mii_misan教程；原参数已有登记。新可见低血量函数先<=0.25 RED再<=0.5 AMBER，以及普通/强化均22/100对照。受击闪色与x偏移示意存在，0.03/0.14/0.05参数未核单位/API，返回基准/重入/治疗未捕获。0.4秒仅作者滞后描述，不证明具体计时器语义；无代码执行或音频核听。"
+        }
+      ]
     },
     {
       "id": "DeikuCgOkof",
@@ -2886,6 +2894,45 @@
       "parameters": [],
       "skill_ids": [
         "gameplay-attack-readability"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "Da-PdjxOT9R",
+      "url": "https://www.instagram.com/mii_misan/reel/Da-PdjxOT9R/",
+      "creator": "mii_misan",
+      "title": "菜单焦点反色缩放与错峰入场",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "渲染菜单教程捕获01/03–07/09：强色背景、倾斜底板、级联位置、错峰进入、选中放大反色与其余缩小变暗、三角焦点、整板kick及遮挡wipe；有普通与完成效果对照。",
+      "limitations": "02/08未捕获，不补步骤。示意调用并非已核引擎API或执行源码，精确状态/业务提交/加载语义未知。stagger0.1、flash0.2、sweep0.4没有单位，不写秒；stagepunch1.02参数语义未核。级联坐标/板尺寸没有确认像素单位。无音频或目标运行验证。",
+      "parameters": [
+        {
+          "name": "selected_scale_example",
+          "value": 1.22,
+          "unit": "dimensionless",
+          "provenance": "post_text",
+          "note": "画面示意缩放倍率，非通用默认值。"
+        },
+        {
+          "name": "unselected_scale_example",
+          "value": 0.92,
+          "unit": "dimensionless",
+          "provenance": "post_text",
+          "note": "画面示意缩放倍率，非通用默认值。"
+        },
+        {
+          "name": "item_rotation_example",
+          "value": -8,
+          "unit": "degrees",
+          "provenance": "post_text",
+          "note": "代码示意旁有-8deg图注。"
+        }
+      ],
+      "skill_ids": [
+        "gameplay-contextual-ui"
       ],
       "observed_date": "2026-10-23",
       "code_executed": false,

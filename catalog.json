@@ -375,7 +375,8 @@
       "source_ids": [
         "DejFnl2Ru9N",
         "Dej1DUjzTrh",
-        "DYCKURdRJQn"
+        "DYCKURdRJQn",
+        "Da-PdjxOT9R"
       ],
       "related_skills": [
         "gameplay-reward-reveal",
@@ -1959,7 +1960,8 @@
     {
       "id": "contextual-ui",
       "request_examples": [
-        "按住按钮取消后仍播放成功，拾取提示和实际结果不同步。"
+        "按住按钮取消后仍播放成功，拾取提示和实际结果不同步。",
+        "菜单选中项不突出，想让选中放大反色、其他缩小变暗并错峰入场，但不能误提交。"
       ],
       "primary_skill": "gameplay-contextual-ui",
       "mechanisms": [

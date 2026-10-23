@@ -55,3 +55,11 @@
 - [DejFnl2Ru9N](https://www.instagram.com/p/DejFnl2Ru9N/)：实体按钮反馈。
 - [Dej1DUjzTrh](https://www.instagram.com/cheese_eyes_games/reel/Dej1DUjzTrh/)：手电拾取交互。
 - [DYCKURdRJQn](https://www.instagram.com/mii_misan/reel/DYCKURdRJQn/)：RPG 战斗指令菜单。
+
+## 新增：菜单选择对比与入场层次
+
+- [Da-PdjxOT9R · mii_misan](https://www.instagram.com/mii_misan/reel/Da-PdjxOT9R/)，2026-10-23 核看。渲染教程从 MY GAME/START/OPTIONS/QUIT 的普通菜单逐层演示，最终并列对照。捕获01、03–07、09，02/08未捕获，不补全九步。
+- 实见强色背景、斜标题/平行四边形底板、级联排列、错峰弹入；选中项1.22倍并反转明暗，未选中0.92倍且变暗，另有三角焦点标记。1.22与0.92是无量纲示例，不是默认比例。
+- 可见 itemrotation=-8 且图注-8deg；slabshear=26无单位。级联 x=-200+i*80、y=-30+i*130 是项目显示坐标，未确认像素单位。
+- 示意调用 stagger:0.1/BACK、flash(0.2)、stagepunch(1.02)、panelsweep(0.4)；这些调用没有完整函数定义或参数单位，特别不能将0.1/0.2/0.4写成秒。stagepunch略放大整板可见，但1.02的API语义未核。末段黑板追红板覆盖切换，slab(1500,1700)只是项目尺寸例；没有加载/提交实现证据。
+- 正文逻辑焦点与视觉变换分离、命中区域策略、异步结果、旧动画取消、可访问性/闪光开关和输入门控是工程补充，不是教程源码；未执行代码、核听音频或验证引擎运行。没有将面板遮罩再建为独立菜单技能。

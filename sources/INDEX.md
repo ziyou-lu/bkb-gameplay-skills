@@ -51,6 +51,7 @@ https://www.instagram.com/reel/DdhLtbTlTRG/
 - 限制：未运行源代码；未完整核听音频；未给出的参数不补全。
 - 音频核听：False；代码运行：False
 - 示例参数：[{"name": "drain_duration", "value": 0.75, "unit": "s", "provenance": "caption_or_post_text"}, {"name": "ghost_delay", "value": 0.4, "unit": "s", "provenance": "caption_or_post_text"}, {"name": "amber_threshold", "value": 50, "unit": "percent_hp", "provenance": "caption_or_post_text"}, {"name": "red_threshold", "value": 25, "unit": "percent_hp", "provenance": "caption_or_post_text"}]
+- 补齐：核实作者pebbles_dev并署名重制mii_misan教程；原参数已有登记。新可见低血量函数先<=0.25 RED再<=0.5 AMBER，以及普通/强化均22/100对照。受击闪色与x偏移示意存在，0.03/0.14/0.05参数未核单位/API，返回基准/重入/治疗未捕获。0.4秒仅作者滞后描述，不证明具体计时器语义；无代码执行或音频核听。
 - 归入：[gameplay-health-damage-ui](../skills/gameplay-health-damage-ui/SKILL.md)
 
 ## DeikuCgOkof · 金币拾取反馈
@@ -1399,3 +1400,14 @@ https://www.instagram.com/p/DdATuwMSQe0/
 - 限制：预警含义有作者正文支持，但准确生命周期时序、穿墙策略与渲染实现未示。没有线宽/颜色/持续时间数值、源码、目标运行、音频核听或玩家反应测试，不主张红色普遍可访问或效果已证改善。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-attack-readability](../skills/gameplay-attack-readability/SKILL.md)
+
+## Da-PdjxOT9R · 菜单焦点反色缩放与错峰入场
+
+https://www.instagram.com/mii_misan/reel/Da-PdjxOT9R/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：渲染菜单教程捕获01/03–07/09：强色背景、倾斜底板、级联位置、错峰进入、选中放大反色与其余缩小变暗、三角焦点、整板kick及遮挡wipe；有普通与完成效果对照。
+- 限制：02/08未捕获，不补步骤。示意调用并非已核引擎API或执行源码，精确状态/业务提交/加载语义未知。stagger0.1、flash0.2、sweep0.4没有单位，不写秒；stagepunch1.02参数语义未核。级联坐标/板尺寸没有确认像素单位。无音频或目标运行验证。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "selected_scale_example", "value": 1.22, "unit": "dimensionless", "provenance": "post_text", "note": "画面示意缩放倍率，非通用默认值。"}, {"name": "unselected_scale_example", "value": 0.92, "unit": "dimensionless", "provenance": "post_text", "note": "画面示意缩放倍率，非通用默认值。"}, {"name": "item_rotation_example", "value": -8, "unit": "degrees", "provenance": "post_text", "note": "代码示意旁有-8deg图注。"}]
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
