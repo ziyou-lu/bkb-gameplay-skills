@@ -1692,3 +1692,40 @@ https://www.instagram.com/100stonesinteractive/reel/Dei8naPCWAT/
 - 音频核听：False；代码运行：False
 - 补齐：同日补看确认作者游戏左侧黑色 OPTIONS 面板与右侧峡谷同时可见，补齐实际紧凑面板视觉证据；没有补出精确选项、数值、快捷键或逐项生效差异。
 - 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DXETU-NETOc · 非物理菜单散开退出与焦点表现
+
+https://www.instagram.com/mii_misan/reel/DXETU-NETOc/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：菜单教程可见文字绘制、滑入、悬停缩放、其他项变暗、指针尾迹与淡出转动离开的按钮。可读静态片段为 LÖVE 风格绘字、back_out 后位置插值、悬停尺度插值及变暗 alpha。作者回复明确退出不使用物理，而是为每个按钮随机选择向外方向，插值外移/转动、随机化尺度并淡出。
+- 限制：没有完整运行源码、轨迹方程、随机分布、旋转目标分配、持续时间、取消或业务提交实现。dt 单位和 lerp 钳制未建立；指针尾迹的淘汰/寿命未示，不算完整 trail 算法。API 片段不证明整个项目引擎；作者对物理的意见不推广为通用禁令。未核听音频、运行游戏/引擎或测量性能、可访问性、帧率独立性。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "hover_scale_example", "value": 1.15, "unit": "dimensionless", "provenance": "visible_code", "note": "悬停目标示例，不是通用默认值。"}, {"name": "scale_lerp_factor_example", "value": "dt * 8", "unit": "unspecified", "provenance": "visible_code", "note": "dt 单位与钳制未知，不当作已验证时间常数或无条件稳定方案。"}, {"name": "dim_alpha_target_example", "value": 0.3, "unit": "dimensionless", "provenance": "visible_code", "note": "从 1 插值到此值的变暗示例，需检查目标项目文字可读性。"}]
+- 补齐：展开作者回复确认本例退出使用随机方向与插值外移、转动、尺度变化和淡出，而非物理模拟；未取得完整方程或执行代码。
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## DXJzEuEDkkv · 自制引擎的网格背包拖放、整块足迹校验与物品提示
+
+https://www.instagram.com/p/DXJzEuEDkkv/
+
+- 分类：included；证据：shown_pseudocode
+- 观察：作者正文称受 Resident Evil 4 启发且使用自制引擎。分段画面/可见示意代码展示拖动位置向鼠标以 dt*8.f 插值；网格吸附先置 valid=true，再逐物品格检查 occupied 或 oob，绿色格表示放置预览；另有琥珀色悬停足迹。上下文菜单显示 equip/combine/discard 并按 item.grid_pos 定位；数量示意在 count>0 时绘制，画面有数量与 E 标记。后段 R=rotate/N=spawn 帮助和物品竖向显示支持存在旋转展示，未读到旋转算法。
+- 限制：仅作者正文、分段画面和可见示意代码；没有执行源项目/代码、核听音频、测帧率或玩家测试。不是 Godot 教程。格尺寸、吸附/抓取点、取消/无效松开、旋转步长/枢轴、存档和控制器导航未知；菜单/数量不证明装备、合成、丢弃、堆叠、弹药消耗或事务实现。正文的身份/版本、占用分离、自重叠豁免、原子提交、90度变换候选、异步协调和验收是工程补充，不是作者已验证实现；不复制来源美术。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "drag_position_lerp_dt_multiplier", "value": 8, "unit": "dt multiplier; dt time unit and lerp clamping not established", "provenance": "shown_pseudocode"}]
+- 归入：[gameplay-grid-inventory-placement](../skills/gameplay-grid-inventory-placement/SKILL.md)
+
+## Da5c59STLtg · 精灵朝向变化下的法线光照一致性
+
+https://www.instagram.com/p/Da5c59STLtg/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：Star Lane 作者全文 caption 讨论像素画法线及同一精灵可能需要多图。采样见宇航员与暖橙灯、可能翻面的字幕、方向色轮及紫/青法线图；NORMAL MAPS MAY NOT BE FLIPPED 是作者工作流内警告，不是所有渲染器的普遍规律。
+- 限制：未核引擎/版本、法线空间/编码、shader公式、方向资产数、材质切换、导入/过滤或性能。音频未核听，未检查项目/纹理文件或执行代码。方向资产是作者方案，不能推广为每个镜像都需新图；官方历史问题与修复仅佐证渲染器可承担纠正，Unity为独立设置补充。正文的诊断、单一纠正层、帧配对、实例隔离和测试为工程指导，目标运行未验证。
+- 音频核听：False；代码运行：False
+- 补齐：作者交叉发布链接其 Instagram 并指认同一 Star Lane 日志，称翻面/旋转需要方向法线图；仅佐证作者表述，不是独立运行验证或普适要求。
+- 补齐：官方 Godot 4.0 beta10 Sprite2D 翻面反向受光问题说明特定渲染路径可缺少法线分量修正；不是原帖引擎版本证据。
+- 补齐：对应官方修复已于2023-01-17合并，说明渲染器侧能处理该问题；文件diff读取失败，精确实现未审计，不能推断所有版本/后端、旋转或负缩放均受支持。
+- 补齐：独立补充官方 Unity secondary textures 法线与2D灯设置及额外深度预处理/层批次纹理成本提示；不是原视频管线、翻面实现或实测性能证据。
+- 归入：[gameplay-sprite-normal-orientation](../skills/gameplay-sprite-normal-orientation/SKILL.md)

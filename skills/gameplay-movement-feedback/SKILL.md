@@ -46,3 +46,5 @@ description: "当四向/八向移动动画或跑姿与真实运动朝向不一�
 - [移动接触表示](../gameplay-locomotion-contacts/SKILL.md)
 
 需要核查出处、示例参数或证据限制时，读取[来源参考](references/sources.md)。
+
+方向帧正确但翻面后的受光反向时，使用[精灵法线朝向](../gameplay-sprite-normal-orientation/SKILL.md)检查贴图与渲染变换；不要用更改角色面向掩盖光照问题。

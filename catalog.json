@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_date": "2026-10-23",
+  "updated_date": "2026-10-24",
   "language": "zh-CN",
   "evidence_policy": "操作步骤是基于公开视频研究与公开代码静态阅读的迁移建议，不是已运行的引擎实现；作者文本、画面、可见代码、静态核读和实测必须区分。",
   "skills": [
@@ -280,7 +280,8 @@
         "gameplay-jump-input-buffer",
         "gameplay-ceiling-corner-correction",
         "gameplay-gait-step-scheduling",
-        "gameplay-movement-look-decoupling"
+        "gameplay-movement-look-decoupling",
+        "gameplay-sprite-normal-orientation"
       ],
       "evidence_path": "skills/gameplay-movement-feedback/references/sources.md"
     },
@@ -379,7 +380,8 @@
         "DYCKURdRJQn",
         "Da-PdjxOT9R",
         "DcS1OCXitiy",
-        "Dei8naPCWAT"
+        "Dei8naPCWAT",
+        "DXETU-NETOc"
       ],
       "related_skills": [
         "gameplay-reward-reveal",
@@ -395,7 +397,8 @@
         "gameplay-offset-interaction-reticle",
         "gameplay-hold-to-multitap",
         "gameplay-room-secret-markers",
-        "gameplay-paused-map-backdrop"
+        "gameplay-paused-map-backdrop",
+        "gameplay-grid-inventory-placement"
       ],
       "evidence_path": "skills/gameplay-contextual-ui/references/sources.md"
     },
@@ -477,7 +480,8 @@
         "gameplay-shooting-feedback",
         "gameplay-tool-body-coordination",
         "gameplay-multiray-object-selection",
-        "gameplay-offset-interaction-reticle"
+        "gameplay-offset-interaction-reticle",
+        "gameplay-sprite-normal-orientation"
       ],
       "path": "skills/gameplay-aim-pose/SKILL.md",
       "evidence_path": "skills/gameplay-aim-pose/references/sources.md"
@@ -580,7 +584,8 @@
       ],
       "related_skills": [
         "gameplay-contextual-ui",
-        "gameplay-reward-reveal"
+        "gameplay-reward-reveal",
+        "gameplay-grid-inventory-placement"
       ],
       "evidence_path": "skills/gameplay-card-interaction/references/sources.md"
     },
@@ -862,7 +867,8 @@
         "gameplay-camera-feedback",
         "gameplay-breakables-loot",
         "gameplay-loot-pickup",
-        "gameplay-completion-sequences"
+        "gameplay-completion-sequences",
+        "gameplay-grid-inventory-placement"
       ],
       "path": "skills/gameplay-reward-reveal/SKILL.md",
       "evidence_path": "skills/gameplay-reward-reveal/references/sources.md"
@@ -882,7 +888,8 @@
         "gameplay-breakables-loot",
         "gameplay-reward-reveal",
         "gameplay-impact-visuals",
-        "gameplay-floating-numbers"
+        "gameplay-floating-numbers",
+        "gameplay-grid-inventory-placement"
       ],
       "path": "skills/gameplay-loot-pickup/SKILL.md",
       "evidence_path": "skills/gameplay-loot-pickup/references/sources.md"
@@ -1345,7 +1352,8 @@
         "gameplay-mechanical-interactions",
         "gameplay-motion-deformation",
         "gameplay-secondary-motion",
-        "gameplay-geometric-event-alignment"
+        "gameplay-geometric-event-alignment",
+        "gameplay-sprite-normal-orientation"
       ],
       "evidence_path": "skills/gameplay-state-driven-surface-motion/references/sources.md"
     },
@@ -1513,7 +1521,8 @@
         "gameplay-secondary-motion",
         "gameplay-deformable-support",
         "gameplay-cut-surface-rendering",
-        "gameplay-surface-aftermath"
+        "gameplay-surface-aftermath",
+        "gameplay-sprite-normal-orientation"
       ],
       "evidence_path": "skills/gameplay-sheet-curl/references/sources.md"
     },
@@ -1656,7 +1665,8 @@
       ],
       "related_skills": [
         "gameplay-aim-pose",
-        "gameplay-movement-look-decoupling"
+        "gameplay-movement-look-decoupling",
+        "gameplay-sprite-normal-orientation"
       ],
       "evidence_path": "skills/gameplay-facing-relative-light-aim/references/sources.md"
     },
@@ -2018,6 +2028,45 @@
         "gameplay-contextual-ui"
       ],
       "evidence_path": "skills/gameplay-room-secret-markers/references/sources.md"
+    },
+    {
+      "id": "gameplay-grid-inventory-placement",
+      "title": "网格背包的足迹校验与拖放提交",
+      "category": "shared",
+      "path": "skills/gameplay-grid-inventory-placement/SKILL.md",
+      "mechanisms": [
+        "grid-inventory-placement"
+      ],
+      "source_ids": [
+        "DXJzEuEDkkv"
+      ],
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-card-interaction",
+        "gameplay-loot-pickup",
+        "gameplay-reward-reveal"
+      ],
+      "evidence_path": "skills/gameplay-grid-inventory-placement/references/sources.md"
+    },
+    {
+      "id": "gameplay-sprite-normal-orientation",
+      "title": "精灵朝向变化下的法线光照一致性",
+      "category": "shared",
+      "path": "skills/gameplay-sprite-normal-orientation/SKILL.md",
+      "mechanisms": [
+        "sprite-normal-orientation"
+      ],
+      "source_ids": [
+        "Da5c59STLtg"
+      ],
+      "related_skills": [
+        "gameplay-movement-feedback",
+        "gameplay-aim-pose",
+        "gameplay-facing-relative-light-aim",
+        "gameplay-state-driven-surface-motion",
+        "gameplay-sheet-curl"
+      ],
+      "evidence_path": "skills/gameplay-sprite-normal-orientation/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2297,7 +2346,8 @@
         "pointer-curvature-steering",
         "gait-step-scheduling",
         "movement-look-decoupling",
-        "crouch-zone-assistance"
+        "crouch-zone-assistance",
+        "sprite-normal-orientation"
       ]
     },
     {
@@ -2368,7 +2418,8 @@
         "按住按钮取消后仍播放成功，拾取提示和实际结果不同步。",
         "菜单选中项不突出，想让选中放大反色、其他缩小变暗并错峰入场，但不能误提交。",
         "不想每到一个房间就开常驻扫描视图，想保留正常画面，只在靠近可扫描物时提示并由玩家明确扫描。",
-        "图形设置菜单遮住场景，想用侧边紧凑面板直接调节并看真实变化，不把等待重启或冻结截图当实时生效。"
+        "图形设置菜单遮住场景，想用侧边紧凑面板直接调节并看真实变化，不把等待重启或冻结截图当实时生效。",
+        "点击菜单后想让按钮各自随机向外转动、缩放并淡出，不用刚体物理，也不重复执行场景切换。"
       ],
       "primary_skill": "gameplay-contextual-ui",
       "mechanisms": [
@@ -2376,7 +2427,7 @@
         "charge-state-ui"
       ],
       "evidence_status": "workflow",
-      "boundary": "为按钮、按住操作、拾取/近物扫描提示、指令选择及侧边图形设置反馈区分焦点、请求与真实结果；扫描不自动触发，设置预览只接已有应用/回读接口且保持实际场景可见，不实现渲染器、配置存储或显示模式回退。卡牌、对话、机关、连接、切场与冻结截图背景使用独立入口。",
+      "boundary": "为按钮、按住操作、拾取/近物扫描提示、指令选择及侧边图形设置反馈区分焦点、请求与真实结果，菜单退出用有界非物理表现且不重复提交；扫描不自动触发，设置预览只接已有应用/回读接口且保持实际场景可见，不实现渲染器、配置存储或显示模式回退。卡牌、对话、机关、连接、切场与冻结截图背景使用独立入口。",
       "distinct_from": [
         "card-interaction",
         "dialogue-presentation",
@@ -2390,7 +2441,8 @@
         "multiray-object-selection",
         "offset-interaction-reticle",
         "hold-to-multitap",
-        "room-secret-markers"
+        "room-secret-markers",
+        "grid-inventory-placement"
       ]
     },
     {
@@ -2474,7 +2526,8 @@
         "facing-relative-light-aim",
         "fixed-camera-art-projection",
         "multiray-object-selection",
-        "offset-interaction-reticle"
+        "offset-interaction-reticle",
+        "sprite-normal-orientation"
       ]
     },
     {
@@ -2583,7 +2636,8 @@
         "world-readability",
         "scene-transitions",
         "mechanical-interactions",
-        "connection-transitions"
+        "connection-transitions",
+        "grid-inventory-placement"
       ]
     },
     {
@@ -2890,7 +2944,8 @@
         "loot-pickup",
         "completion-sequences",
         "surface-aftermath",
-        "bag-randomizer"
+        "bag-randomizer",
+        "grid-inventory-placement"
       ]
     },
     {
@@ -2912,7 +2967,8 @@
         "surface-aftermath",
         "landing-tumble-recovery",
         "bag-randomizer",
-        "dynamic-carry-alignment"
+        "dynamic-carry-alignment",
+        "grid-inventory-placement"
       ]
     },
     {
@@ -3490,7 +3546,8 @@
         "fixed-camera-art-projection",
         "decorative-waterfall",
         "timestamped-ground-effects",
-        "surface-history-field"
+        "surface-history-field",
+        "sprite-normal-orientation"
       ]
     },
     {
@@ -3668,7 +3725,8 @@
         "secondary-motion",
         "deformable-support",
         "cut-surface-rendering",
-        "surface-aftermath"
+        "surface-aftermath",
+        "sprite-normal-orientation"
       ]
     },
     {
@@ -3814,7 +3872,8 @@
       "boundary": "消费移动决定的角色面向，将鼠标目标限制到相对朝向的允许照明弧；不是分件姿态、自由观察相机、自动转身或武器瞄准。",
       "distinct_from": [
         "aim-pose",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "sprite-normal-orientation"
       ]
     },
     {
@@ -4172,6 +4231,45 @@
         "room-map-navigation",
         "world-readability",
         "contextual-ui"
+      ]
+    },
+    {
+      "id": "grid-inventory-placement",
+      "request_examples": [
+        "想做多格背包拖放，松开前预览整块物品是否越界或撞到别的物品，不只检查鼠标所在格。",
+        "物品移到自己原来占的格子会被误判冲突，旋转贴边或无效松开还会丢物，想统一足迹校验和提交。"
+      ],
+      "primary_skill": "gameplay-grid-inventory-placement",
+      "mechanisms": [
+        "grid-inventory-placement"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "同一网格容器内已有物品的拖放候选、全足迹边界/占用校验、可选直角旋转和权威落位；分开真实占用与视觉跟随，处理自重叠、无效放置和状态变更。菜单/数量只接既有业务，不实现入账、跨容器、自动交换/整理、装备、合成、丢弃或堆叠，也不把手牌布局和结果演出归为占格。",
+      "distinct_from": [
+        "contextual-ui",
+        "card-interaction",
+        "loot-pickup",
+        "reward-reveal"
+      ]
+    },
+    {
+      "id": "sprite-normal-orientation",
+      "request_examples": [
+        "精灵左右翻面后高光像从反方向照来，想先确认渲染器有没有自动处理法线，不直接为每个方向重画贴图。",
+        "单独翻面正常，但旋转加父级负缩放或动画换帧后光照跳变，想修复法线空间、配对和重复补偿。"
+      ],
+      "primary_skill": "gameplay-sprite-normal-orientation",
+      "mechanisms": [
+        "sprite-normal-orientation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "检查精灵颜色/法线配对、导入约定、有效朝向和已有渲染变换，再选择唯一纠正层并验收方向、动画与实例隔离；不强制每个镜像方向新建法线图，不盲目反相通道，不接管方向动画、灯控制、UV速度或几何形变。",
+      "distinct_from": [
+        "movement-feedback",
+        "aim-pose",
+        "facing-relative-light-aim",
+        "state-driven-surface-motion",
+        "sheet-curl"
       ]
     }
   ],

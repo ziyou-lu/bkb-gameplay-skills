@@ -267,6 +267,37 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
             self.assertIn(source_id, owner['source_ids'])
         self.assertEqual(self.routes['contextual-ui']['primary_skill'], owner['id'])
 
+    def test_nonphysical_menu_exit_enriches_existing_interaction_owner(self):
+        catalog = json.loads((ROOT / 'catalog.json').read_text())
+        posts = {p['id']: p for p in json.loads((ROOT / 'sources/posts.json').read_text())['posts']}
+        owners = [s for s in catalog['skills'] if 'DXETU-NETOc' in s['source_ids']]
+        self.assertEqual([s['id'] for s in owners], ['gameplay-contextual-ui'])
+        self.assertEqual(owners[0]['mechanisms'], ['in-game-interaction-state', 'charge-state-ui'])
+        self.assertEqual(posts['DXETU-NETOc']['skill_ids'], ['gameplay-contextual-ui'])
+        self.assertNotEqual(self.routes['contextual-ui']['primary_skill'],
+                            self.routes['scene-transitions']['primary_skill'])
+        self.assertIn('scene-transitions', self.routes['contextual-ui']['distinct_from'])
+        self.assertIn('contextual-ui', self.routes['scene-transitions']['distinct_from'])
+
+    def test_grid_inventory_is_not_feedback_card_layout_or_reward_transaction(self):
+        route = self.routes['grid-inventory-placement']
+        self.assertEqual(route['mechanisms'], ['grid-inventory-placement'])
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('contextual-ui', 'card-interaction', 'loot-pickup', 'reward-reveal'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('grid-inventory-placement', self.routes[other]['distinct_from'])
+
+    def test_sprite_normal_correction_is_not_pose_light_control_or_surface_motion(self):
+        route = self.routes['sprite-normal-orientation']
+        self.assertEqual(route['mechanisms'], ['sprite-normal-orientation'])
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('movement-feedback', 'aim-pose', 'facing-relative-light-aim',
+                      'state-driven-surface-motion', 'sheet-curl'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('sprite-normal-orientation', self.routes[other]['distinct_from'])
+
     def test_multiray_selection_is_not_reticle_layout_or_feedback(self):
         route = self.routes['multiray-object-selection']
         self.assertEqual(route['mechanisms'], ['multiray-object-selection'])
