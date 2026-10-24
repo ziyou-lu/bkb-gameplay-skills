@@ -54,3 +54,5 @@ description: "在输入后动作看起来迟迟不响应，或整体加速让动
 - [射击事件](../gameplay-shooting-feedback/SKILL.md)与[法术生命周期](../gameplay-projectile-spells/SKILL.md)
 
 需要核对案例、参数出处或证据边界时，读取[来源参考](references/sources.md)。
+
+已有翻转需要随预计腾空时间收束时，使用[腾空招式对齐](../gameplay-airtime-trick-alignment/SKILL.md)；不要把它当删前摇或改真实起跳轨迹。

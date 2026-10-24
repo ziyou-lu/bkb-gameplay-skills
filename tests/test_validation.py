@@ -279,6 +279,39 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
         self.assertIn('scene-transitions', self.routes['contextual-ui']['distinct_from'])
         self.assertIn('contextual-ui', self.routes['scene-transitions']['distinct_from'])
 
+    def test_jump_horizontal_momentum_is_not_eligibility_vertical_or_roll_rules(self):
+        route = self.routes['jump-horizontal-momentum']
+        self.assertEqual(route['mechanisms'], ['jump-horizontal-momentum'])
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('jump-input-buffer', 'jump-forgiveness', 'variable-jump-height',
+                      'asymmetric-jump-gravity', 'dash-roll-momentum'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('jump-horizontal-momentum', self.routes[other]['distinct_from'])
+
+    def test_airtime_playback_is_not_input_physics_contacts_or_recorded_replay(self):
+        route = self.routes['airtime-trick-alignment']
+        self.assertEqual(route['mechanisms'], ['airtime-trick-alignment'])
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('action-timing', 'landing-feedback', 'landing-tumble-recovery',
+                      'variable-jump-height', 'asymmetric-jump-gravity', 'launch-pad-feedback',
+                      'geometric-event-alignment', 'gait-step-scheduling', 'traversal-transitions',
+                      'dash-roll-momentum', 'jump-horizontal-momentum', 'rig-replay-interpolation'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('airtime-trick-alignment', self.routes[other]['distinct_from'])
+
+    def test_rig_replay_is_not_live_pose_generation_deformation_or_gameplay(self):
+        route = self.routes['rig-replay-interpolation']
+        self.assertEqual(route['mechanisms'], ['rig-replay-interpolation'])
+        self.assertEqual(route['evidence_status'], 'workflow')
+        for other in ('motion-deformation', 'secondary-motion', 'gait-step-scheduling',
+                      'tool-body-coordination', 'skeletal-planar-shadows',
+                      'landing-tumble-recovery', 'movement-feedback', 'airtime-trick-alignment'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('rig-replay-interpolation', self.routes[other]['distinct_from'])
+
     def test_grid_inventory_is_not_feedback_card_layout_or_reward_transaction(self):
         route = self.routes['grid-inventory-placement']
         self.assertEqual(route['mechanisms'], ['grid-inventory-placement'])

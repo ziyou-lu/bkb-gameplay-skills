@@ -48,3 +48,5 @@ description: "当四向/八向移动动画或跑姿与真实运动朝向不一�
 需要核查出处、示例参数或证据限制时，读取[来源参考](references/sources.md)。
 
 方向帧正确但翻面后的受光反向时，使用[精灵法线朝向](../gameplay-sprite-normal-orientation/SKILL.md)检查贴图与渲染变换；不要用更改角色面向掩盖光照问题。
+
+已有录制骨架在插帧时缩短肢体或 seek 姿态不一致，使用[回放姿态插值](../gameplay-rig-replay-interpolation/SKILL.md)；它不重跑实时方向选择或输入响应。

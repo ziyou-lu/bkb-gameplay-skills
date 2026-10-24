@@ -135,7 +135,8 @@
         "gameplay-dash-feedback",
         "gameplay-shooting-feedback",
         "gameplay-projectile-spells",
-        "gameplay-deformable-support"
+        "gameplay-deformable-support",
+        "gameplay-rig-replay-interpolation"
       ],
       "path": "skills/gameplay-motion-deformation/SKILL.md",
       "evidence_path": "skills/gameplay-motion-deformation/references/sources.md"
@@ -281,7 +282,8 @@
         "gameplay-ceiling-corner-correction",
         "gameplay-gait-step-scheduling",
         "gameplay-movement-look-decoupling",
-        "gameplay-sprite-normal-orientation"
+        "gameplay-sprite-normal-orientation",
+        "gameplay-rig-replay-interpolation"
       ],
       "evidence_path": "skills/gameplay-movement-feedback/references/sources.md"
     },
@@ -459,7 +461,8 @@
       ],
       "related_skills": [
         "gameplay-motion-deformation",
-        "gameplay-movement-feedback"
+        "gameplay-movement-feedback",
+        "gameplay-rig-replay-interpolation"
       ],
       "path": "skills/gameplay-secondary-motion/SKILL.md",
       "evidence_path": "skills/gameplay-secondary-motion/references/sources.md"
@@ -504,7 +507,8 @@
         "gameplay-melee-feedback",
         "gameplay-shooting-feedback",
         "gameplay-projectile-spells",
-        "gameplay-hold-to-multitap"
+        "gameplay-hold-to-multitap",
+        "gameplay-airtime-trick-alignment"
       ],
       "path": "skills/gameplay-action-timing/SKILL.md",
       "evidence_path": "skills/gameplay-action-timing/references/sources.md"
@@ -721,7 +725,8 @@
         "gameplay-motion-deformation",
         "gameplay-impact-visuals",
         "gameplay-camera-feedback",
-        "gameplay-hitstop"
+        "gameplay-hitstop",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-landing-feedback/references/sources.md"
     },
@@ -932,7 +937,8 @@
         "gameplay-dash-feedback",
         "gameplay-landing-feedback",
         "gameplay-jump-input-buffer",
-        "gameplay-ceiling-corner-correction"
+        "gameplay-ceiling-corner-correction",
+        "gameplay-jump-horizontal-momentum"
       ],
       "evidence_path": "skills/gameplay-jump-forgiveness/references/sources.md"
     },
@@ -954,7 +960,8 @@
         "gameplay-jump-forgiveness",
         "gameplay-movement-feedback",
         "gameplay-landing-feedback",
-        "gameplay-reduced-motion-teleport"
+        "gameplay-reduced-motion-teleport",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-traversal-transitions/references/sources.md"
     },
@@ -1076,7 +1083,8 @@
         "gameplay-jump-forgiveness",
         "gameplay-ceiling-corner-correction",
         "gameplay-landing-feedback",
-        "gameplay-hold-to-multitap"
+        "gameplay-hold-to-multitap",
+        "gameplay-jump-horizontal-momentum"
       ],
       "evidence_path": "skills/gameplay-jump-input-buffer/references/sources.md"
     },
@@ -1225,7 +1233,9 @@
         "gameplay-secondary-motion",
         "gameplay-action-timing",
         "gameplay-locomotion-contacts",
-        "gameplay-jump-input-buffer"
+        "gameplay-jump-input-buffer",
+        "gameplay-airtime-trick-alignment",
+        "gameplay-rig-replay-interpolation"
       ],
       "evidence_path": "skills/gameplay-gait-step-scheduling/references/sources.md"
     },
@@ -1333,7 +1343,8 @@
         "gameplay-breakables-loot",
         "gameplay-contact-response",
         "gameplay-surface-adhesion",
-        "gameplay-cut-surface-rendering"
+        "gameplay-cut-surface-rendering",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-geometric-event-alignment/references/sources.md"
     },
@@ -1374,7 +1385,8 @@
         "gameplay-gait-step-scheduling",
         "gameplay-secondary-motion",
         "gameplay-motion-deformation",
-        "gameplay-geometric-event-alignment"
+        "gameplay-geometric-event-alignment",
+        "gameplay-rig-replay-interpolation"
       ],
       "evidence_path": "skills/gameplay-tool-body-coordination/references/sources.md"
     },
@@ -1454,7 +1466,8 @@
         "gameplay-speed-camera",
         "gameplay-landing-feedback",
         "gameplay-stomp-combos",
-        "gameplay-traversal-transitions"
+        "gameplay-traversal-transitions",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-launch-pad-feedback/references/sources.md"
     },
@@ -1477,7 +1490,9 @@
         "gameplay-ceiling-corner-correction",
         "gameplay-motion-deformation",
         "gameplay-launch-pad-feedback",
-        "gameplay-hold-to-multitap"
+        "gameplay-hold-to-multitap",
+        "gameplay-jump-horizontal-momentum",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-variable-jump-height/references/sources.md"
     },
@@ -1500,7 +1515,9 @@
         "gameplay-jump-input-buffer",
         "gameplay-ceiling-corner-correction",
         "gameplay-motion-deformation",
-        "gameplay-launch-pad-feedback"
+        "gameplay-launch-pad-feedback",
+        "gameplay-jump-horizontal-momentum",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-asymmetric-jump-gravity/references/sources.md"
     },
@@ -1543,7 +1560,9 @@
         "gameplay-breakables-loot",
         "gameplay-loot-pickup",
         "gameplay-launch-pad-feedback",
-        "gameplay-contact-response"
+        "gameplay-contact-response",
+        "gameplay-airtime-trick-alignment",
+        "gameplay-rig-replay-interpolation"
       ],
       "evidence_path": "skills/gameplay-landing-tumble-recovery/references/sources.md"
     },
@@ -1701,7 +1720,8 @@
       ],
       "related_skills": [
         "gameplay-worldspace-indicators",
-        "gameplay-surface-aftermath"
+        "gameplay-surface-aftermath",
+        "gameplay-rig-replay-interpolation"
       ],
       "evidence_path": "skills/gameplay-skeletal-planar-shadows/references/sources.md"
     },
@@ -1822,7 +1842,9 @@
       "related_skills": [
         "gameplay-dash-feedback",
         "gameplay-landing-feedback",
-        "gameplay-traversal-transitions"
+        "gameplay-traversal-transitions",
+        "gameplay-jump-horizontal-momentum",
+        "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-dash-roll-momentum/references/sources.md"
     },
@@ -2067,6 +2089,77 @@
         "gameplay-sheet-curl"
       ],
       "evidence_path": "skills/gameplay-sprite-normal-orientation/references/sources.md"
+    },
+    {
+      "id": "gameplay-jump-horizontal-momentum",
+      "title": "合法起跳事件的水平动量修正",
+      "category": "shared",
+      "path": "skills/gameplay-jump-horizontal-momentum/SKILL.md",
+      "mechanisms": [
+        "jump-horizontal-momentum"
+      ],
+      "source_ids": [
+        "DUzPhcAirdV"
+      ],
+      "related_skills": [
+        "gameplay-jump-input-buffer",
+        "gameplay-jump-forgiveness",
+        "gameplay-variable-jump-height",
+        "gameplay-asymmetric-jump-gravity",
+        "gameplay-dash-roll-momentum",
+        "gameplay-airtime-trick-alignment"
+      ],
+      "evidence_path": "skills/gameplay-jump-horizontal-momentum/references/sources.md"
+    },
+    {
+      "id": "gameplay-airtime-trick-alignment",
+      "title": "腾空预测驱动的招式播放与接地衔接",
+      "category": "shared",
+      "path": "skills/gameplay-airtime-trick-alignment/SKILL.md",
+      "mechanisms": [
+        "airtime-trick-alignment"
+      ],
+      "source_ids": [
+        "DdB_vskNz1C"
+      ],
+      "related_skills": [
+        "gameplay-action-timing",
+        "gameplay-landing-feedback",
+        "gameplay-landing-tumble-recovery",
+        "gameplay-variable-jump-height",
+        "gameplay-asymmetric-jump-gravity",
+        "gameplay-launch-pad-feedback",
+        "gameplay-geometric-event-alignment",
+        "gameplay-gait-step-scheduling",
+        "gameplay-traversal-transitions",
+        "gameplay-dash-roll-momentum",
+        "gameplay-jump-horizontal-momentum",
+        "gameplay-rig-replay-interpolation"
+      ],
+      "evidence_path": "skills/gameplay-airtime-trick-alignment/references/sources.md"
+    },
+    {
+      "id": "gameplay-rig-replay-interpolation",
+      "title": "保留骨架结构的回放姿态插值",
+      "category": "shared",
+      "path": "skills/gameplay-rig-replay-interpolation/SKILL.md",
+      "mechanisms": [
+        "rig-replay-interpolation"
+      ],
+      "source_ids": [
+        "DbtLcj7t4QU"
+      ],
+      "related_skills": [
+        "gameplay-motion-deformation",
+        "gameplay-secondary-motion",
+        "gameplay-gait-step-scheduling",
+        "gameplay-tool-body-coordination",
+        "gameplay-skeletal-planar-shadows",
+        "gameplay-landing-tumble-recovery",
+        "gameplay-movement-feedback",
+        "gameplay-airtime-trick-alignment"
+      ],
+      "evidence_path": "skills/gameplay-rig-replay-interpolation/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2238,7 +2331,8 @@
         "launch-pad-feedback",
         "variable-jump-height",
         "asymmetric-jump-gravity",
-        "sheet-curl"
+        "sheet-curl",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -2347,7 +2441,8 @@
         "gait-step-scheduling",
         "movement-look-decoupling",
         "crouch-zone-assistance",
-        "sprite-normal-orientation"
+        "sprite-normal-orientation",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -2502,7 +2597,8 @@
         "tool-body-coordination",
         "prop-appendage-contacts",
         "sheet-curl",
-        "foliage-rustle-response"
+        "foliage-rustle-response",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -2551,7 +2647,8 @@
         "geometric-event-alignment",
         "tool-body-coordination",
         "prop-toppling-dynamics",
-        "hold-to-multitap"
+        "hold-to-multitap",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -2803,7 +2900,8 @@
         "worldspace-indicators",
         "launch-pad-feedback",
         "landing-tumble-recovery",
-        "dash-roll-momentum"
+        "dash-roll-momentum",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3016,7 +3114,8 @@
         "ceiling-corner-correction",
         "launch-pad-feedback",
         "variable-jump-height",
-        "asymmetric-jump-gravity"
+        "asymmetric-jump-gravity",
+        "jump-horizontal-momentum"
       ]
     },
     {
@@ -3044,7 +3143,8 @@
         "launch-pad-feedback",
         "crouch-zone-assistance",
         "dash-roll-momentum",
-        "reduced-motion-teleport"
+        "reduced-motion-teleport",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3227,7 +3327,8 @@
         "launch-pad-feedback",
         "variable-jump-height",
         "asymmetric-jump-gravity",
-        "hold-to-multitap"
+        "hold-to-multitap",
+        "jump-horizontal-momentum"
       ]
     },
     {
@@ -3404,7 +3505,9 @@
         "gravity-orientation-cues",
         "movement-look-decoupling",
         "surface-adhesion",
-        "tool-body-coordination"
+        "tool-body-coordination",
+        "airtime-trick-alignment",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -3521,7 +3624,8 @@
         "state-driven-surface-motion",
         "tool-body-coordination",
         "cut-surface-rendering",
-        "precision-branch-cutting"
+        "precision-branch-cutting",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3569,7 +3673,8 @@
         "secondary-motion",
         "motion-deformation",
         "geometric-event-alignment",
-        "dynamic-carry-alignment"
+        "dynamic-carry-alignment",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -3660,7 +3765,8 @@
         "deformable-support",
         "variable-jump-height",
         "asymmetric-jump-gravity",
-        "landing-tumble-recovery"
+        "landing-tumble-recovery",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3682,7 +3788,9 @@
         "ceiling-corner-correction",
         "motion-deformation",
         "launch-pad-feedback",
-        "hold-to-multitap"
+        "hold-to-multitap",
+        "jump-horizontal-momentum",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3704,7 +3812,9 @@
         "jump-input-buffer",
         "ceiling-corner-correction",
         "motion-deformation",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "jump-horizontal-momentum",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -3747,7 +3857,9 @@
         "breakables-loot",
         "loot-pickup",
         "launch-pad-feedback",
-        "contact-response"
+        "contact-response",
+        "airtime-trick-alignment",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -3910,7 +4022,8 @@
       "boundary": "低面数骨骼副网格复用主姿态并在材质中投到已声明地面，非地面位置圆斑提示、任意地形贴合或物理光照求解。",
       "distinct_from": [
         "worldspace-indicators",
-        "surface-aftermath"
+        "surface-aftermath",
+        "rig-replay-interpolation"
       ]
     },
     {
@@ -4032,7 +4145,9 @@
       "distinct_from": [
         "dash-feedback",
         "landing-feedback",
-        "traversal-transitions"
+        "traversal-transitions",
+        "jump-horizontal-momentum",
+        "airtime-trick-alignment"
       ]
     },
     {
@@ -4270,6 +4385,77 @@
         "facing-relative-light-aim",
         "state-driven-surface-motion",
         "sheet-curl"
+      ]
+    },
+    {
+      "id": "jump-horizontal-momentum",
+      "request_examples": [
+        "角色按方向起跳后还被旧水平惯性带走，想只在合法起跳那一刻重新定向，不增加空中跳。",
+        "地面起跳想给方向速度做增加而非全部替换，但同向连跳和移动平台不能造成无限增速或重复继承。"
+      ],
+      "primary_skill": "gameplay-jump-horizontal-momentum",
+      "mechanisms": [
+        "jump-horizontal-momentum"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "在已接受起跳的单次事件内按声明方向替换或增加可控横向速度，区分地面/空中策略、参照系、上限和外力；不改变起跳许可、命令缓冲、竖向高度/重力或每帧漂移控制，不把增加分支称为永不反向。",
+      "distinct_from": [
+        "jump-input-buffer",
+        "jump-forgiveness",
+        "variable-jump-height",
+        "asymmetric-jump-gravity",
+        "dash-roll-momentum",
+        "airtime-trick-alignment"
+      ]
+    },
+    {
+      "id": "airtime-trick-alignment",
+      "request_examples": [
+        "翻转总是在飞行一半就做完，之后直挺挺掉下来，想用预计剩余腾空时间安排招式播放而不改跳跃物理。",
+        "想让正常招式在预计接地前收束，但保留玩家选的快招和独立自由落体控制；预测失效或提前碰地不能强行播完。"
+      ],
+      "primary_skill": "gameplay-airtime-trick-alignment",
+      "mechanisms": [
+        "airtime-trick-alignment"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "以有效剩余腾空预测、招式相位和已选模式形成有界播放计划，处理极短/无效预测、重规划及真实接触后的交接；起飞前承诺依项目设计，保留快速招式与独立自由落体模式。不构建预测/接地/角动量/根运动求解器，不为对齐改变物理或把动画结束当落地；影响物理的调速需先有兼容控制器契约。",
+      "distinct_from": [
+        "action-timing",
+        "landing-feedback",
+        "landing-tumble-recovery",
+        "variable-jump-height",
+        "asymmetric-jump-gravity",
+        "launch-pad-feedback",
+        "geometric-event-alignment",
+        "gait-step-scheduling",
+        "traversal-transitions",
+        "dash-roll-momentum",
+        "jump-horizontal-momentum",
+        "rig-replay-interpolation"
+      ]
+    },
+    {
+      "id": "rig-replay-interpolation",
+      "request_examples": [
+        "已有骨骼回放在快速扭转插帧时手脚变短，想保持骨架层级和真实伸缩，而不是每根骨骼世界位置各自 lerp。",
+        "同一录制片段暂停、变速、倒放或直接跳到某时刻姿态不一致，想统一按记录时间求值，并避免再次触发伤害或掉物。"
+      ],
+      "primary_skill": "gameplay-rig-replay-interpolation",
+      "mechanisms": [
+        "rig-replay-interpolation"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "仅修复已有骨骼回放的姿态保真：兼容层级、根与局部姿态通道、旋转插值和采样边界，以及可随机访问的无玩法副作用求值。保留真实动画平移/缩放；缺旋转或转数信息时报告不可恢复范围。不构建录制、网络同步、事件重演、物理重建、视频导出或渲染管线迁移，也不重跑实时步态/IK来伪造原姿态。",
+      "distinct_from": [
+        "motion-deformation",
+        "secondary-motion",
+        "gait-step-scheduling",
+        "tool-body-coordination",
+        "skeletal-planar-shadows",
+        "landing-tumble-recovery",
+        "movement-feedback",
+        "airtime-trick-alignment"
       ]
     }
   ],

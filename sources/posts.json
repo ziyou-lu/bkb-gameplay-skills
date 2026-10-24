@@ -3595,6 +3595,57 @@
           "change": "独立补充官方 Unity secondary textures 法线与2D灯设置及额外深度预处理/层批次纹理成本提示；不是原视频管线、翻面实现或实测性能证据。"
         }
       ]
+    },
+    {
+      "id": "DUzPhcAirdV",
+      "url": "https://www.instagram.com/p/DUzPhcAirdV/",
+      "creator": "tafaar.real",
+      "title": "起跳时方向性水平速度修正与地面增加变体",
+      "status": "included",
+      "evidence_basis": "post_text",
+      "observations": "作者正文称其为 Momentum Correction 但不确定既定名称，描述按跳时将水平速度设为当前期望方向的最大漂移速度；地面起跳可考虑增加该方向速度，并明确决定能否超过最大漂移速度。页面与 impoundrumble 共显示，正文标为 Impound Rumble。最初采样是其他商业游戏比较，后续见作者低模角色与 Without Momentum 标记，未量测输入/速度。",
+      "limitations": "无游戏/代码执行、音频核听、速度轨迹或操控收益测量；无速度数值/单位、dt、碰撞/加速度实现、无方向/摇杆、平台、外力或特殊跳跃规则。比较素材不证明其他游戏精确机制。作者文字为控制策略建议，增加分支不保证所有旧速度下均不反向。正文接受事件与去重、参照分量、上限和生命周期为工程补充，非作者已核代码。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-jump-horizontal-momentum"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DdB_vskNz1C",
+      "url": "https://www.instagram.com/p/DdB_vskNz1C/",
+      "creator": "tricking.videogame",
+      "title": "Tricking 0 的腾空预测、招式速度与接地衔接",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "作者说明自己的 Tricking 0 在起飞前决定/触发翻转，预测腾空时间并调整招式速度，以避免翻转中途结束后只是下落；玩家也可选更快的 throw。作者声称起飞产生的角动量在空中保留，并说明独立 freefall/active-ragdoll 模式可直接控制身体姿态。有限自身游戏画面显示码头角色、控制器叠层和错层木平台旁腾空倒立翻转；主页将创作者识别为 Charles Couprie。",
+      "limitations": "依据此前完整作者正文及有限画面记录，本次未重新浏览。预测公式、接地检测、弹道假设/采样/碰撞、角动量/阻尼、动画/根运动权威、模式交接、播放限幅与数值均未知。角动量保留只是作者声明；比较游戏镜头和作者对另一游戏输入的推测不作 Tricking 实现证据。未执行代码、试玩、测时或核听音频。正文的有效性接口、D/(T−L) 播放候选、有限速率、重规划、实际接触优先、中断回收与验收都是工程补充，不是已核来源算法或测试结论；不把前置承诺推广为通用禁用空中输入。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-airtime-trick-alignment"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
+    },
+    {
+      "id": "DbtLcj7t4QU",
+      "url": "https://www.instagram.com/tricking.videogame/reel/DbtLcj7t4QU/",
+      "creator": "tricking.videogame",
+      "title": "骨骼回放从独立位置插值转向旋转与结构保持",
+      "status": "included",
+      "evidence_basis": "caption_and_partial_visual",
+      "observations": "Tricking 0 summer Alpha5 作者全文 caption 说明旧回放线性插值骨骼位置，快速扭转时导致肢体缩短或运动走捷径；改用骨骼旋转与改进插值以保持 rig。局部采样仅见团队介绍及小型游戏视图上的 EXPORTING VIDEO 进度覆盖层，不构成受控旧/新姿态对照。另有高分辨率/高帧率输出及 HDRP→URP 迁移描述，本技能不收录为实施能力。",
+      "limitations": "没有源码、执行或音频核听；骨架/根/局部通道 schema、采样率、坐标、静止偏移、平移/缩放支持、四元数 API、时钟、seek、事件、物理重建和压缩未知。改进插值不证明 slerp、cubic 或特定精确算法。正文的层级表示、符号/归一化、断点、纯求值、驱动隔离与验收均为新增工程选择，不是作者已验证实现。没有独立骨长、旋转路径、导出规格或性能测量；更高显示采样频率不能恢复未记录转数/事件。",
+      "parameters": [],
+      "skill_ids": [
+        "gameplay-rig-replay-interpolation"
+      ],
+      "observed_date": "2026-10-23",
+      "code_executed": false,
+      "audio_verified": false
     }
   ]
 }

@@ -35,3 +35,5 @@ description: "当落地前略早按跳被丢弃时，设计有限期的跳跃命
 [按住高度](../gameplay-variable-jump-height/SKILL.md)控制已合法起跳后的顶点；[分段重力](../gameplay-asymmetric-jump-gravity/SKILL.md)控制项目声明支持的腾空阶段，也可包括走落平台。不要用它们新增或延长起跳许可。
 
 需要核对机制出处、示例参数或证据边界时，读取[来源参考](references/sources.md)。
+
+一次起跳已获准后若需调整横向惯性，使用[起跳水平动量](../gameplay-jump-horizontal-momentum/SKILL.md)；缓冲保留期间和被拒绝跳跃都不得提前改速。
