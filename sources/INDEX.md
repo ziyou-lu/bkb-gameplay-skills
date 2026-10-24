@@ -1651,3 +1651,44 @@ https://www.instagram.com/100stonesinteractive/reel/DW--zsWAnAS/
 - 限制：时序关系来自作者文字，采样未测量耗时一致性，不证明症状防护或全部玩法等价。无延时数值、旅行时间公式、淡化曲线/颜色/半径/时长、输入锁、物理/碰撞、伤害/无敌、网络及中断语义；评论建议不作作者实现。未核听音频、执行代码或运行游戏/引擎测试。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-reduced-motion-teleport](../skills/gameplay-reduced-motion-teleport/SKILL.md)
+
+## DWs9WTUAmrc · 按住动作的可选多次轻点入口
+
+https://www.instagram.com/p/DWs9WTUAmrc/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明 Memory's Reach 为难以持续按住按钮的玩家提供可选多次轻点替代方式，并称适用于该游戏需要按住的动作。完整读取作者正文；有限视频采样仅见第一人称谜题按钮和房间背景，未独立核验输入过程。
+- 限制：未核验次数、单次贡献、轻点间隔/衰减、进度响应、触发与完成、取消/切换、尾部输入处理。无双击、开关保持、QTE、固定节奏、必须快速连点或相同完成时长证据；该游戏的适用范围不能推广为所有持续防御、跳跃或蓄力。未核听音频、读取代码或输入轨迹、运行游戏/引擎测试。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-hold-to-multitap](../skills/gameplay-hold-to-multitap/SKILL.md)
+
+## Dc5kKiiii8u · 后期解锁的房间级秘密提示而不揭示位置与数量
+
+https://www.instagram.com/100stonesinteractive/reel/Dc5kKiiii8u/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者称一个较难找到的后期物品解锁收集用地图标记，仅指出哪些房间仍有未发现秘密，不揭示具体位置或剩余数量。本作标识下局部画面可见棕色多房间三维地图及白色菱形标记；信息限制依据来自正文，不由画面图标计数推出。
+- 限制：未展示聚合算法或运行时数据流；房间归属、准确解锁条件、类别和未探索房间政策、锚点、缺失数据处理、存档及性能未知。蓝色地图比较段不归为本作实现。每房间布尔聚合、权威记录输入、信息预算审计和故障验收是新增工程方案，不是作者已验证实现；无代码执行、音频核听或玩家测试。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-room-secret-markers](../skills/gameplay-room-secret-markers/SKILL.md)
+
+## DcS1OCXitiy · 普通探索视图中的近物扫描提示
+
+https://www.instagram.com/100stonesinteractive/reel/DcS1OCXitiy/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明在普通视图扫描，仅靠近可扫描物时显示UI，不要求持续扫描面罩；减少对象密度，每项提供局部叙事或附近谜题线索。后续Memory's Reach采样见正常棕色室内上的白色圆形扫描指示与物体轮廓。
+- 限制：Outer Wilds与Metroid Prime对比画面不是作者实现。未确认距离、遮挡、焦点排序、滞回、扫描时长、已读/取消/存档或输入规则；提示出现不证明自动扫描。无源码执行、音频核听、运行项目或用户测试；工程状态与内容审查为迁移建议。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)
+
+## Dei8naPCWAT · 紧凑侧边图形设置与实时结果可见性
+
+https://www.instagram.com/100stonesinteractive/reel/Dei8naPCWAT/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者以嵌套设置和不透明菜单遮住结果为问题，正文说明用屏幕侧边紧凑悬浮面板即时观察设置结果并可快捷访问。补看实见作者游戏左侧黑色 OPTIONS 面板、右侧仍可见的峡谷及键盘旁实拍手部；前段嵌套菜单对照来自另一游戏，不混作作者界面。
+- 限制：即时应用与快捷访问为作者正文说明，尚未独立核验逐项设置前后连续画面；选项名称、数值和精确快捷键不可靠可读。暂停、输入焦点、持久化、重启、撤销及渲染 API 未知；不借同作者地图截图案例补全。正文的值回读、跨面板会话串行合并请求及状态回读、会话清理与验收为工程建议，非来源已实现。无代码执行、目标运行或音频核听。
+- 音频核听：False；代码运行：False
+- 补齐：同日补看确认作者游戏左侧黑色 OPTIONS 面板与右侧峡谷同时可见，补齐实际紧凑面板视觉证据；没有补出精确选项、数值、快捷键或逐项生效差异。
+- 归入：[gameplay-contextual-ui](../skills/gameplay-contextual-ui/SKILL.md)

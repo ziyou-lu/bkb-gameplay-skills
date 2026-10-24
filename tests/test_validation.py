@@ -240,6 +240,33 @@ class ReviewedWorkflowBoundaryTests(unittest.TestCase):
                 self.assertIn(other, route['distinct_from'])
                 self.assertIn(rid, self.routes[other]['distinct_from'])
 
+    def test_optional_multitap_is_input_strategy_not_feedback_or_jump(self):
+        route = self.routes['hold-to-multitap']
+        self.assertEqual(route['mechanisms'], ['optional-hold-to-multitap'])
+        for other in ('contextual-ui', 'action-timing', 'jump-input-buffer', 'variable-jump-height'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('hold-to-multitap', self.routes[other]['distinct_from'])
+
+    def test_room_secret_presence_is_not_map_camera_or_world_prompt(self):
+        route = self.routes['room-secret-markers']
+        self.assertEqual(route['mechanisms'], ['room-secret-presence-markers'])
+        for other in ('room-map-navigation', 'world-readability', 'contextual-ui'):
+            self.assertNotEqual(route['primary_skill'], self.routes[other]['primary_skill'])
+            self.assertIn(other, route['distinct_from'])
+            self.assertIn('room-secret-markers', self.routes[other]['distinct_from'])
+
+    def test_scan_and_live_settings_enrich_existing_interaction_owner(self):
+        catalog = json.loads((ROOT / 'catalog.json').read_text())
+        posts = {p['id']: p for p in json.loads((ROOT / 'sources/posts.json').read_text())['posts']}
+        skills = {s['id']: s for s in catalog['skills']}
+        owner = skills['gameplay-contextual-ui']
+        self.assertEqual(owner['mechanisms'], ['in-game-interaction-state', 'charge-state-ui'])
+        for source_id in ('DcS1OCXitiy', 'Dei8naPCWAT'):
+            self.assertEqual(posts[source_id]['skill_ids'], [owner['id']])
+            self.assertIn(source_id, owner['source_ids'])
+        self.assertEqual(self.routes['contextual-ui']['primary_skill'], owner['id'])
+
     def test_multiray_selection_is_not_reticle_layout_or_feedback(self):
         route = self.routes['multiray-object-selection']
         self.assertEqual(route['mechanisms'], ['multiray-object-selection'])

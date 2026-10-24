@@ -46,6 +46,8 @@ description: "为多层 3D 地图实现以选中房间为中心的导航：房�
 
 ## 相邻工作流
 
+后期解锁后只显示房间是否仍有秘密，使用[房间剩余秘密标记](../gameplay-room-secret-markers/SKILL.md)；它按发现记录聚合，不由当前地图焦点或相机状态判断。
+
 选中/不可用样式复用[交互状态反馈](../gameplay-contextual-ui/SKILL.md)；它不拥有地图焦点或环绕状态。单次事件的短促镜头效果见[镜头冲击](../gameplay-camera-feedback/SKILL.md)，结算到下一状态的交接见[完成事件组合](../gameplay-completion-sequences/SKILL.md)，不要将持续地图浏览并入这两类流程。
 
 需要核查出处和实现选择边界时，读取[来源参考](references/sources.md)。

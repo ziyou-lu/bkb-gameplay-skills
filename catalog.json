@@ -377,7 +377,9 @@
         "DejFnl2Ru9N",
         "Dej1DUjzTrh",
         "DYCKURdRJQn",
-        "Da-PdjxOT9R"
+        "Da-PdjxOT9R",
+        "DcS1OCXitiy",
+        "Dei8naPCWAT"
       ],
       "related_skills": [
         "gameplay-reward-reveal",
@@ -390,7 +392,10 @@
         "gameplay-connection-transitions",
         "gameplay-scene-transitions",
         "gameplay-multiray-object-selection",
-        "gameplay-offset-interaction-reticle"
+        "gameplay-offset-interaction-reticle",
+        "gameplay-hold-to-multitap",
+        "gameplay-room-secret-markers",
+        "gameplay-paused-map-backdrop"
       ],
       "evidence_path": "skills/gameplay-contextual-ui/references/sources.md"
     },
@@ -494,7 +499,8 @@
         "gameplay-attack-readability",
         "gameplay-melee-feedback",
         "gameplay-shooting-feedback",
-        "gameplay-projectile-spells"
+        "gameplay-projectile-spells",
+        "gameplay-hold-to-multitap"
       ],
       "path": "skills/gameplay-action-timing/SKILL.md",
       "evidence_path": "skills/gameplay-action-timing/references/sources.md"
@@ -1003,7 +1009,8 @@
         "gameplay-occlusion-reveal",
         "gameplay-gravity-orientation-cues",
         "gameplay-multiray-object-selection",
-        "gameplay-offset-interaction-reticle"
+        "gameplay-offset-interaction-reticle",
+        "gameplay-room-secret-markers"
       ],
       "evidence_path": "skills/gameplay-world-readability/references/sources.md"
     },
@@ -1061,7 +1068,8 @@
       "related_skills": [
         "gameplay-jump-forgiveness",
         "gameplay-ceiling-corner-correction",
-        "gameplay-landing-feedback"
+        "gameplay-landing-feedback",
+        "gameplay-hold-to-multitap"
       ],
       "evidence_path": "skills/gameplay-jump-input-buffer/references/sources.md"
     },
@@ -1460,7 +1468,8 @@
         "gameplay-jump-input-buffer",
         "gameplay-ceiling-corner-correction",
         "gameplay-motion-deformation",
-        "gameplay-launch-pad-feedback"
+        "gameplay-launch-pad-feedback",
+        "gameplay-hold-to-multitap"
       ],
       "evidence_path": "skills/gameplay-variable-jump-height/references/sources.md"
     },
@@ -1858,7 +1867,8 @@
       "related_skills": [
         "gameplay-camera-feedback",
         "gameplay-completion-sequences",
-        "gameplay-contextual-ui"
+        "gameplay-contextual-ui",
+        "gameplay-room-secret-markers"
       ],
       "evidence_path": "skills/gameplay-room-map-navigation/references/sources.md"
     },
@@ -1971,6 +1981,43 @@
         "gameplay-speed-camera"
       ],
       "evidence_path": "skills/gameplay-reduced-motion-teleport/references/sources.md"
+    },
+    {
+      "id": "gameplay-hold-to-multitap",
+      "title": "按住动作的可选多次轻点入口",
+      "category": "recipes",
+      "path": "skills/gameplay-hold-to-multitap/SKILL.md",
+      "mechanisms": [
+        "optional-hold-to-multitap"
+      ],
+      "source_ids": [
+        "DWs9WTUAmrc"
+      ],
+      "related_skills": [
+        "gameplay-contextual-ui",
+        "gameplay-action-timing",
+        "gameplay-jump-input-buffer",
+        "gameplay-variable-jump-height"
+      ],
+      "evidence_path": "skills/gameplay-hold-to-multitap/references/sources.md"
+    },
+    {
+      "id": "gameplay-room-secret-markers",
+      "title": "进度解锁的房间剩余秘密标记",
+      "category": "shared",
+      "path": "skills/gameplay-room-secret-markers/SKILL.md",
+      "mechanisms": [
+        "room-secret-presence-markers"
+      ],
+      "source_ids": [
+        "Dc5kKiiii8u"
+      ],
+      "related_skills": [
+        "gameplay-room-map-navigation",
+        "gameplay-world-readability",
+        "gameplay-contextual-ui"
+      ],
+      "evidence_path": "skills/gameplay-room-secret-markers/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2319,7 +2366,9 @@
       "id": "contextual-ui",
       "request_examples": [
         "按住按钮取消后仍播放成功，拾取提示和实际结果不同步。",
-        "菜单选中项不突出，想让选中放大反色、其他缩小变暗并错峰入场，但不能误提交。"
+        "菜单选中项不突出，想让选中放大反色、其他缩小变暗并错峰入场，但不能误提交。",
+        "不想每到一个房间就开常驻扫描视图，想保留正常画面，只在靠近可扫描物时提示并由玩家明确扫描。",
+        "图形设置菜单遮住场景，想用侧边紧凑面板直接调节并看真实变化，不把等待重启或冻结截图当实时生效。"
       ],
       "primary_skill": "gameplay-contextual-ui",
       "mechanisms": [
@@ -2327,7 +2376,7 @@
         "charge-state-ui"
       ],
       "evidence_status": "workflow",
-      "boundary": "为游戏内按钮、按住操作、拾取提示和指令选择区分可用、焦点、执行中、成功/失败；卡牌布局、对话、机关、连接和切场使用独立入口。",
+      "boundary": "为按钮、按住操作、拾取/近物扫描提示、指令选择及侧边图形设置反馈区分焦点、请求与真实结果；扫描不自动触发，设置预览只接已有应用/回读接口且保持实际场景可见，不实现渲染器、配置存储或显示模式回退。卡牌、对话、机关、连接、切场与冻结截图背景使用独立入口。",
       "distinct_from": [
         "card-interaction",
         "dialogue-presentation",
@@ -2339,7 +2388,9 @@
         "room-map-navigation",
         "paused-map-backdrop",
         "multiray-object-selection",
-        "offset-interaction-reticle"
+        "offset-interaction-reticle",
+        "hold-to-multitap",
+        "room-secret-markers"
       ]
     },
     {
@@ -2446,7 +2497,8 @@
         "gait-step-scheduling",
         "geometric-event-alignment",
         "tool-body-coordination",
-        "prop-toppling-dynamics"
+        "prop-toppling-dynamics",
+        "hold-to-multitap"
       ]
     },
     {
@@ -3013,7 +3065,8 @@
         "gravity-orientation-cues",
         "ambient-flipbook-particles",
         "multiray-object-selection",
-        "offset-interaction-reticle"
+        "offset-interaction-reticle",
+        "room-secret-markers"
       ]
     },
     {
@@ -3117,7 +3170,8 @@
         "gait-step-scheduling",
         "launch-pad-feedback",
         "variable-jump-height",
-        "asymmetric-jump-gravity"
+        "asymmetric-jump-gravity",
+        "hold-to-multitap"
       ]
     },
     {
@@ -3570,7 +3624,8 @@
         "jump-input-buffer",
         "ceiling-corner-correction",
         "motion-deformation",
-        "launch-pad-feedback"
+        "launch-pad-feedback",
+        "hold-to-multitap"
       ]
     },
     {
@@ -3971,7 +4026,8 @@
         "camera-feedback",
         "completion-sequences",
         "contextual-ui",
-        "paused-map-backdrop"
+        "paused-map-backdrop",
+        "room-secret-markers"
       ]
     },
     {
@@ -4079,6 +4135,43 @@
         "scene-transitions",
         "dash-feedback",
         "speed-camera"
+      ]
+    },
+    {
+      "id": "hold-to-multitap",
+      "request_examples": [
+        "玩家难以一直按住谜题按钮，想增加可选多次轻点完成方式，但原按住操作也要保留。",
+        "轻点替代按住后会和保持计时一起推进，切换目标还带着旧进度，完成后的余下轻点又重复触发。"
+      ],
+      "primary_skill": "gameplay-hold-to-multitap",
+      "mechanisms": [
+        "optional-hold-to-multitap"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "为已确认替代语义的按住动作增加可选多次轻点输入策略，并把完成意图接回既有权威动作；保留原按住路线，逐动作确定推进、中断和重新激活，防止双推进、跨目标进度与重复结果。不是 QTE、开关保持或通用输入重写，不预设快速连点、次数或等时，不自动改写持续防御、跳高和蓄力。",
+      "distinct_from": [
+        "contextual-ui",
+        "action-timing",
+        "jump-input-buffer",
+        "variable-jump-height"
+      ]
+    },
+    {
+      "id": "room-secret-markers",
+      "request_examples": [
+        "拿到后期道具后，想让地图只提示哪些房间还有秘密，不告诉具体位置或剩余数量。",
+        "房间卸载后地图把秘密误判清空，想改为按权威发现记录输出房间级有无提示，并防止读档串状态。"
+      ],
+      "primary_skill": "gameplay-room-secret-markers",
+      "mechanisms": [
+        "room-secret-presence-markers"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "根据项目权威秘密发现记录、明确房间归属及进度解锁条件，产生每房间一个剩余存在性信号，限制坐标、数量和类别分布泄露并区分未知数据；不接管地图浏览、世界内目标发现、交互提交、进度系统或流式加载架构。",
+      "distinct_from": [
+        "room-map-navigation",
+        "world-readability",
+        "contextual-ui"
       ]
     }
   ],
