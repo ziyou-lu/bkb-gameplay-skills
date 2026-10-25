@@ -1759,3 +1759,25 @@ https://www.instagram.com/tricking.videogame/reel/DbtLcj7t4QU/
 - 限制：没有源码、执行或音频核听；骨架/根/局部通道 schema、采样率、坐标、静止偏移、平移/缩放支持、四元数 API、时钟、seek、事件、物理重建和压缩未知。改进插值不证明 slerp、cubic 或特定精确算法。正文的层级表示、符号/归一化、断点、纯求值、驱动隔离与验收均为新增工程选择，不是作者已验证实现。没有独立骨长、旋转路径、导出规格或性能测量；更高显示采样频率不能恢复未记录转数/事件。
 - 音频核听：False；代码运行：False
 - 归入：[gameplay-rig-replay-interpolation](../skills/gameplay-rig-replay-interpolation/SKILL.md)
+
+## DYJmBg9CEAN · 模拟摇杆的无时间加速响应曲线
+
+https://www.instagram.com/100stonesinteractive/reel/DYJmBg9CEAN/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者说明以静态曲线把当前归一化摇杆偏移映射为相机/玩家移动命令，为细调保留更多杆程，外缘提供较大/最快响应。0为中心、1为边缘，半杆0.5可能对应约0.2仅是说明性例子。作者回复明确低死区、不随保持时间增速；可调死区/曲线选项仍在考虑。有限画面见手操作红色手柄、第一人称游戏与半速/微调字幕。
+- 限制：没有可读曲线图、输入输出测量、源码或引擎测试；曲线类型/指数/控制点、径向或逐轴、斜向/符号、死区数字、校准、平滑、最大速度单位和API未知。约0.2不是精确关键帧或默认；不能假定硬件线性或已提供设置菜单。鼠标行为未知；命令无时间加速不证明下游物理无惯性。正文公式、单次处理、异常恢复与测试为工程建议，不是来源已核实现；无音频核听。
+- 音频核听：False；代码运行：False
+- 示例参数：[{"name": "illustrative_stick_deflection", "value": 0.5, "unit": "normalized deflection", "provenance": "caption_or_post_text", "note": "与约0.2配对的说明性输入，非测量或公布的精确曲线控制点。"}, {"name": "illustrative_approximate_response", "value": 0.2, "unit": "normalized response; approximate example", "provenance": "caption_or_post_text", "note": "仅半杆0.5可能对应的约值，不是默认、实测或固定关系。"}]
+- 补齐：作者回复明确死区较低、没有随保持时间增长的加速；允许玩家调死区/选曲线只是考虑项，不作已实现功能。
+- 归入：[gameplay-stick-response](../skills/gameplay-stick-response/SKILL.md)
+
+## DXRACBAAjXA · 三维地图只显示选中房间的隔离切换
+
+https://www.instagram.com/100stonesinteractive/reel/DXRACBAAjXA/
+
+- 分类：included；证据：caption_and_partial_visual
+- 观察：作者新增Isolate Room按钮，隐藏其它地图房间，只保留当前选择以查看环境谜题线索与秘密；改善复杂地图尤其手柄使用是其意图。有限画面见Central Gallery室内近景、单房间浮于世界背景及ISOLATE ROOM BUTTON字幕。
+- 限制：未读运行时代码或渲染器实现；键位、显隐动画、隔离时选房、关闭恢复、标签图标及探索限制未知。相机聚焦与可见过滤是独立控制，不把旧焦点来源的单房间居中倒填为隔离证据。正文地图专属过滤贡献、实时交集、选择/呈现代次、导航候选分离及退出验收为工程建议，不是作者已核实现；无代码执行、音频或可用性测试。
+- 音频核听：False；代码运行：False
+- 归入：[gameplay-room-map-navigation](../skills/gameplay-room-map-navigation/SKILL.md)

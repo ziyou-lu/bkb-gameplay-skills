@@ -41,6 +41,8 @@ description: "当手柄抬头/低头在视角上、下限突然撞停时，为�
 
 ## 相邻任务
 
+- [静态摇杆响应](../gameplay-stick-response/SKILL.md)：仅按当前杆量调整基础命令，先完成曲线与角速度换算，再进入本页按角度距离计算的边界减速；两层独立记录，不能用本页替代全杆程微调。
+
 - [镜头冲击](../gameplay-camera-feedback/SKILL.md)：处理事件驱动的临时偏移，不管理基础观察输入。
 - [速度镜头](../gameplay-speed-camera/SKILL.md)：处理速度到 FOV/边缘效果，不管理俯仰限位。
 - [表面相机上方向](../gameplay-surface-camera-up/SKILL.md)：确定 up 参考；在其确定的局部观察坐标内实施本页，不复制其表面查询。

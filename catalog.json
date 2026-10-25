@@ -979,7 +979,8 @@
       "related_skills": [
         "gameplay-locomotion-contacts",
         "gameplay-speed-camera",
-        "gameplay-pointer-curvature-steering"
+        "gameplay-pointer-curvature-steering",
+        "gameplay-stick-response"
       ],
       "evidence_path": "skills/gameplay-steering-assistance/references/sources.md"
     },
@@ -1173,7 +1174,8 @@
       ],
       "related_skills": [
         "gameplay-steering-assistance",
-        "gameplay-locomotion-contacts"
+        "gameplay-locomotion-contacts",
+        "gameplay-stick-response"
       ],
       "evidence_path": "skills/gameplay-pointer-curvature-steering/references/sources.md"
     },
@@ -1299,7 +1301,8 @@
         "gameplay-gait-step-scheduling",
         "gameplay-steering-assistance",
         "gameplay-pointer-curvature-steering",
-        "gameplay-surface-camera-up"
+        "gameplay-surface-camera-up",
+        "gameplay-stick-response"
       ],
       "evidence_path": "skills/gameplay-movement-look-decoupling/references/sources.md"
     },
@@ -1881,20 +1884,23 @@
       "related_skills": [
         "gameplay-camera-feedback",
         "gameplay-speed-camera",
-        "gameplay-surface-camera-up"
+        "gameplay-surface-camera-up",
+        "gameplay-stick-response"
       ],
       "evidence_path": "skills/gameplay-gamepad-pitch-limits/references/sources.md"
     },
     {
       "id": "gameplay-room-map-navigation",
-      "title": "房间焦点驱动的三维地图导航",
+      "title": "房间焦点导航与选中房间隔离",
       "category": "shared",
       "path": "skills/gameplay-room-map-navigation/SKILL.md",
       "mechanisms": [
-        "room-map-navigation"
+        "room-map-navigation",
+        "selected-room-map-isolation"
       ],
       "source_ids": [
-        "Dd_BhoziQ01"
+        "Dd_BhoziQ01",
+        "DXRACBAAjXA"
       ],
       "related_skills": [
         "gameplay-camera-feedback",
@@ -2160,6 +2166,26 @@
         "gameplay-airtime-trick-alignment"
       ],
       "evidence_path": "skills/gameplay-rig-replay-interpolation/references/sources.md"
+    },
+    {
+      "id": "gameplay-stick-response",
+      "title": "模拟摇杆的静态响应曲线",
+      "category": "shared",
+      "path": "skills/gameplay-stick-response/SKILL.md",
+      "mechanisms": [
+        "static-stick-response"
+      ],
+      "source_ids": [
+        "DYJmBg9CEAN"
+      ],
+      "related_skills": [
+        "gameplay-gamepad-pitch-limits",
+        "gameplay-pointer-curvature-steering",
+        "gameplay-steering-assistance",
+        "gameplay-movement-look-decoupling",
+        "gameplay-contextual-ui"
+      ],
+      "evidence_path": "skills/gameplay-stick-response/references/sources.md"
     }
   ],
   "mechanism_aliases": {
@@ -2230,7 +2256,11 @@
     "工具持握协调": "constrained-tool-body-coordination",
     "branch-collision-response": "prop-appendage-contact",
     "cut-cap": "cut-surface-rendering",
-    "center-of-mass-toppling": "prop-toppling-dynamics"
+    "center-of-mass-toppling": "prop-toppling-dynamics",
+    "stick response curve": "static-stick-response",
+    "摇杆响应曲线": "static-stick-response",
+    "isolate room": "selected-room-map-isolation",
+    "地图房间隔离": "selected-room-map-isolation"
   },
   "task_routes": [
     {
@@ -3166,7 +3196,8 @@
         "traversal-transitions",
         "locomotion-contacts",
         "pointer-curvature-steering",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "stick-response"
       ]
     },
     {
@@ -3433,7 +3464,8 @@
         "camera-feedback",
         "movement-feedback",
         "locomotion-contacts",
-        "movement-look-decoupling"
+        "movement-look-decoupling",
+        "stick-response"
       ]
     },
     {
@@ -3575,7 +3607,8 @@
         "steering-assistance",
         "pointer-curvature-steering",
         "surface-camera-up",
-        "facing-relative-light-aim"
+        "facing-relative-light-aim",
+        "stick-response"
       ]
     },
     {
@@ -4182,20 +4215,23 @@
       "distinct_from": [
         "camera-feedback",
         "speed-camera",
-        "surface-camera-up"
+        "surface-camera-up",
+        "stick-response"
       ]
     },
     {
       "id": "room-map-navigation",
       "request_examples": [
-        "三维地图自由飞行难用手柄控制高度，想按房间选择并围绕房间焦点旋转缩放。"
+        "三维地图自由飞行难用手柄控制高度，想按房间选择并围绕房间焦点旋转缩放。",
+        "三维地图房间太密，想只显示当前选中房间看线索，同时仍能换房；关闭隔离不能揭露未探索房间或改变真实世界。"
       ],
       "primary_skill": "gameplay-room-map-navigation",
       "mechanisms": [
-        "room-map-navigation"
+        "room-map-navigation",
+        "selected-room-map-isolation"
       ],
       "evidence_status": "workflow",
-      "boundary": "地图独立选中房间与焦点，平滑切换房间并绕当前焦点旋转缩放；不是世界镜头冲击、完成事件镜头或普通菜单聚焦。",
+      "boundary": "地图独立选中房间与焦点，平滑切换并绕焦点旋转缩放；可叠加本会话的选中房间隔离过滤，重算当前基础可见集合并在关闭时仅撤销自身贡献。聚焦与过滤独立，不改世界房间、探索或秘密状态；不是背景截图、世界镜头冲击、完成演出或普通菜单聚焦。",
       "distinct_from": [
         "camera-feedback",
         "completion-sequences",
@@ -4456,6 +4492,25 @@
         "landing-tumble-recovery",
         "movement-feedback",
         "airtime-trick-alignment"
+      ]
+    },
+    {
+      "id": "stick-response",
+      "request_examples": [
+        "摇杆稍微推一点镜头或角色就动得太快，想把中低杆程留给细调，但满杆保持原最大速度，不按住越久越快。",
+        "想比较摇杆径向和逐轴响应，避免双重死区、斜向超速或移动控制器把小输入重新归一化成全速。"
+      ],
+      "primary_skill": "gameplay-stick-response",
+      "mechanisms": [
+        "static-stick-response"
+      ],
+      "evidence_status": "workflow",
+      "boundary": "只把当前已校准模拟杆量经单次死区与无历史曲线映射为命令，保留声明的零点、满杆、方向/斜向政策及消费者单位；不新增时间加速或滤波，不接管按角度距离的俯仰限位、鼠标轨迹、车辆状态辅助、移动观察关系或设置持久化。",
+      "distinct_from": [
+        "gamepad-pitch-limits",
+        "pointer-curvature-steering",
+        "steering-assistance",
+        "movement-look-decoupling"
       ]
     }
   ],
