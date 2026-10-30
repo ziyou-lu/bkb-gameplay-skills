@@ -11,7 +11,7 @@ description: "修复已有平面方格、等高墙 raycaster 用斜射线全长�
 
 左侧为使用前，右侧为使用后；4 秒循环，用途示意（非引擎实测）。
 
-![直墙不该弯成鱼眼：使用前后对比](assets/before-after.gif)
+![直墙不该弯成鱼眼：使用前后对比](assets/before-after.webp)
 
 ## 触发条件与输入
 

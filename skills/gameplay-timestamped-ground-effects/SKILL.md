@@ -11,7 +11,7 @@ description: "把地面效果的生成时间写入渲染目标，由地板 decal
 
 左侧为使用前，右侧为使用后；4 秒循环，用途示意（非引擎实测）。
 
-![每一块冰，各算各的时间：使用前后对比](assets/before-after.gif)
+![每一块冰，各算各的时间：使用前后对比](assets/before-after.webp)
 
 ## 触发与输入
 

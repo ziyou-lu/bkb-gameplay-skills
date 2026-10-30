@@ -11,7 +11,7 @@ description: "维护游戏创建 Agent 的技能库：把已研究案例转换�
 
 左侧为使用前，右侧为使用后；4 秒循环，用途示意（非引擎实测）。
 
-![先去重，再把案例写成技能：使用前后对比](assets/before-after.gif)
+![先去重，再把案例写成技能：使用前后对比](assets/before-after.webp)
 
 ## 触发与输入
 

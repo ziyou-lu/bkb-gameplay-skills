@@ -11,7 +11,7 @@ description: "当角色刚离开平台便无法起跳时，评估 coyote time �
 
 左侧为使用前，右侧为使用后；4 秒循环，用途示意（非引擎实测）。
 
-![刚离开平台，也给一次按跳机会：使用前后对比](assets/before-after.gif)
+![刚离开平台，也给一次按跳机会：使用前后对比](assets/before-after.webp)
 
 ## 触发条件
 

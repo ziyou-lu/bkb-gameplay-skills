@@ -11,7 +11,7 @@ description: "为 Boss 入场、阶段转换和死亡高潮编排可中断的反
 
 左侧为使用前，右侧为使用后；4 秒循环，用途示意（非引擎实测）。
 
-![Boss 进入下一阶段，要看得出来：使用前后对比](assets/before-after.gif)
+![Boss 进入下一阶段，要看得出来：使用前后对比](assets/before-after.webp)
 
 ## 触发与输入
 
